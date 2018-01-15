@@ -1,6 +1,6 @@
 # bulkit
 
-![](https://cssninja.io/themes/cssninja/assets/images/themes/bulkit.png | width=100)
+![](https://cssninja.io/themes/cssninja/assets/images/themes/bulkit.png)
 
 Bulkit is a premium Html theme designed and  developed by [Css Ninja](https://cssninja.io/themes/)
 
