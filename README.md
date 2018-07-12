@@ -1,4 +1,4 @@
-# bulkit
+# Bulkit
 
 ![](https://cssninja.io/themes/cssninja/assets/images/themes/bulkit.png)
 
