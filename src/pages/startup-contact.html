@@ -1,0 +1,161 @@
+---
+layout: startup
+title: Contact
+---
+
+<!-- Hero (Parallax) and nav -->
+<div class="hero parallax is-cover is-relative is-default is-bold"
+    data-background="https://via.placeholder.com/1920x1280" data-color="#000" data-color-opacity="0.3"
+    data-demo-background="assets/img/demo/startup/contact.jpg">
+
+    {{> navbar-fade-startup}}
+
+    <!-- Hero text -->
+    <div id="main-hero" class="hero-body pt-80 pb-80">
+        <div class="container has-text-centered">
+            <div class="columns is-vcentered">
+                <div class="column is-6 is-offset-3 has-text-centered is-header-caption">
+                    <h1 class="title main-title is-2">
+                        Contact us
+                    </h1>
+                    <h2 class="subtitle is-5 is-light">
+                        We are looking forward to hear from you. Don't hesitate, just tell us what's on your mind.
+                    </h2>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Form section -->
+<div class="section section-feature-grey is-medium">
+    <div class="container">
+        <!-- Title -->
+        <div class="section-title-wrapper">
+            <div class="bg-number"><i class="material-icons">domain</i></div>
+            <h2 class="title section-title has-text-centered dark-text"> Get in Touch.</h2>
+            <div class="subtitle section-subtitle has-text-centered"><b>Call us</b>, <b>send us</b> a message, or
+                come <b>visit us</b>.</div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns">
+                <!-- Side content -->
+                <div class="column is-4 is-offset-1">
+                    <p class="pb-20 body-color">Lorem ipsum dolor sit amet, an sea posse homero ceteros, etiam persecuti
+                        te vis,
+                        dolore nominavi
+                        voluptua sed ad. Ne elit volutpat pro, ne vim interesset ullamcorper, autem tibique omnesque cu
+                        eam.</p>
+
+                    <!-- Contact info -->
+                    <div class="content">
+                        <!-- Card -->
+                        <div class="flex-card contact-card light-bordered hover-inset padding-15">
+                            <div class="icon">
+                                <i class="im im-icon-Email"></i>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Email</div>
+                                <div class="contact-details">
+                                    <span class="details-text"><b>hello@bulkit.io</b></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="flex-card contact-card light-bordered hover-inset padding-15">
+                            <div class="icon">
+                                <i class="im im-icon-Phone-Wifi"></i>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Phone</div>
+                                <div class="contact-details">
+                                    <span class="details-text"><b>+1 515 863 485</b></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="flex-card contact-card light-bordered hover-inset padding-15">
+                            <div class="icon">
+                                <i class="im im-icon-Map-Marker"></i>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name">Address</div>
+                                <div class="contact-details">
+                                    <span class="details-text"><b>15, Church St 45851 NY, USA</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Contact form -->
+                <div class="column is-6 is-offset-1">
+                    <form>
+                        <div class="columns is-multiline">
+                            <div class="column is-6">
+                                <!-- Input -->
+                                <div class="field">
+                                    <label>First name *</label>
+                                    <div class="control">
+                                        <input class="input is-medium" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <!-- Input -->
+                                <div class="field">
+                                    <label>Last name *</label>
+                                    <div class="control">
+                                        <input class="input is-medium" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <!-- Input -->
+                                <div class="field">
+                                    <label>Email *</label>
+                                    <div class="control">
+                                        <input class="input is-medium" type="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <!-- Input -->
+                                <div class="field">
+                                    <label>Company</label>
+                                    <div class="control">
+                                        <input class="input is-medium" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+                                <!-- textarea -->
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea is-default-focus" rows="5"
+                                            placeholder="Your message ..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+                                <!-- Submit -->
+                                <button type="submit"
+                                    class="button button-cta btn-align primary-btn startup-contact-button raised no-lh is-fullwidth is-bold">Send
+                                    Message</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Map -->
+<div id="google-map" class="section is-large"></div>
+
+{{> footer-dark}}

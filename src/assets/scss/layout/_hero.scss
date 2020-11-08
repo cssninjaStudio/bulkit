@@ -1,0 +1,401 @@
+/*! _hero.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Hero related styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Hero general styles
+1. Hero body
+2. Hero footer
+3. Parallax Overlay
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Hero general styles
+========================================================================== */
+.hero {
+    &.is-relative {
+        position: relative;
+    }
+
+    &.is-cover {
+        background-size: cover !important;
+    }
+
+    &.is-theme-primary {
+        background-color: $primary;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-theme-secondary {
+        background-color: $secondary;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-theme-accent {
+        background-color: $accent;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-theme-info {
+        background-color: $blue;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-theme-success {
+        background-color: $green;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-theme-warning {
+        background-color: $orange;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-theme-danger {
+        background-color: $red;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-feature-grey {
+        background-color: $section-grey;
+
+        .title {
+            color: $blue-grey;
+        }
+
+        .subtitle {
+            color: $blue-grey;
+        }
+    }
+
+    &.is-app-grey {
+        background-color: $widget-grey;
+
+        .title {
+            color: $blue-grey !important;
+        }
+
+        .subtitle {
+            color: $blue-grey;
+        }
+    }
+
+    &.is-light-grey {
+        background-color: $light-grey;
+        background-image: -webkit-linear-gradient(309deg, #d0e0ec 0%, #f5f7fa 71%, white 100%);
+        background-image: linear-gradient(141deg, #d0e0ec 0%, #f5f7fa 71%, white 100%);
+
+        .title.dark {
+            color: $blue-grey;
+        }
+
+        .title.theme {
+            color: $primary;
+        }
+
+        .subtitle {
+            margin-top: 0 !important;
+            padding-right: 20%;
+            line-height: 1.6 !important;
+        }
+    }
+
+    &.is-coal {
+        background-color: $coal;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    .hero-foot {
+        &.is-pulled {
+            margin-top: -65px;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Hero body 
+========================================================================== */
+.hero-body {
+    position: relative;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    z-index: 6;
+
+    &.is-start {
+        align-items: flex-start !important;
+        position: relative;
+        z-index: 2 !important;
+
+        .is-hero-caption {
+            margin-top: -25px;
+            z-index: 2;
+
+            .title {
+                font-size: 3rem;
+            }
+        
+            .subtitle {
+                color: $muted-grey !important;
+                margin: 0 auto 20px auto !important;
+                font-size: 1.4rem;
+            }
+        
+            .button {
+                margin: 0 6px;
+            }
+        }
+    }
+
+    .is-header-caption {
+        padding: 100px 0;
+
+        &.is-centered {
+            text-align: center;
+        }
+
+        .buttons {
+            .button {
+                min-width: 160px;
+            }
+        }
+    }
+
+    .is-hero-caption {
+        &.is-centered {
+            .title {
+                margin-bottom: 1rem !important;
+            }
+
+            .subtitle {
+                max-width: 100%;
+            }
+
+            .buttons {
+                margin-top: 1rem;
+                margin-bottom: .75rem;
+                justify-content: center;
+            }
+        }
+
+        &.is-pushed {
+            margin-top: 60px !important;
+        }
+    }
+
+    .title {
+        &.main-title {
+            color: $white;
+            z-index: 999;
+            font-size: 3.5rem;
+        }
+
+        &.big-title {
+            color: $blue-grey;
+            z-index: 999;
+            font-size: 4rem;
+        }
+
+        &.page-title {
+            font-size: 3.5rem;
+        }
+
+        &.medium-title {
+            font-size: 2.5rem;
+        }
+
+        &.small-title {
+            font-size: 2rem;
+        }
+    }
+
+    .subtitle {
+        &.page-subtitle {
+            font-size: 1.8rem;
+        }
+    }
+
+    .clients-small {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        padding: 15px 0;
+
+        img {
+            height: 42px;
+            margin: 0 5px;
+        }
+
+        &.centered {
+            justify-content: center !important;
+        }
+    }
+
+    &.is-relative {
+        position: relative;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-body {
+        &.is-start {
+            .columns {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .is-hero-caption {
+        margin-top: 110px !important;
+    }
+
+}
+
+/* ==========================================================================
+2. Hero footer
+========================================================================== */
+
+.hero-foot {
+    img.partner-logo {
+        height: 70px !important;
+    }
+}
+
+/* ==========================================================================
+3. Parallax Overlay
+========================================================================== */
+
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #333;
+    opacity: 0.4;
+}
+
+@media only screen and (max-width: 767px) {
+    .is-header-caption {
+        text-align: center !important;
+
+        .buttons {
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .is-header-caption {
+        text-align: center !important;
+
+        .buttons {
+            justify-content: center;
+        }
+    }
+
+}
+
+/* ==========================================================================
+3. Hero Scroll Button
+========================================================================== */
+
+.scroll-button {
+    position: absolute;
+    bottom: -27px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 54px;
+    height: 54px;
+    border: 1px solid $fade-grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover {
+        background: $accent;
+        border-color: $accent;
+
+        i {
+            color: $smoke-white;
+            transform: rotate(360deg);
+        }
+    }
+
+    i {
+        font-size: 20px;
+        font-weight: 600;
+        color: $placeholder;
+        transition: all .3s;
+    }
+}

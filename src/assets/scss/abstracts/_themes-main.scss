@@ -1,0 +1,67 @@
+/*! themes/_main.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Main theme variables and styles (Main theme is used in "Startup Kit", in "Landing kit v1" and in all components pages)
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Theme color variables
+1. Theme gradient
+2. Pageloader
+3. Theme specific Hero
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Theme color variables
+========================================================================== */
+$primary: #8c8cf9;
+$secondary: #7F00FF;
+$accent: #ad5cff;
+
+/* ==========================================================================
+1. Theme gradient
+========================================================================== */
+$webkit-hero-prime-gradient: linear-gradient(to right, $primary, darken($primary, 12%));
+$hero-prime-gradient: linear-gradient(to top, $primary, darken($primary, 12%));
+
+$webkit-hero-gradient: linear-gradient(to right, $secondary, $accent);
+$hero-gradient: linear-gradient(to top, $secondary, $accent);
+
+/* ==========================================================================
+2. Pageloader
+========================================================================== */
+.pageloader {
+    background-color: $primary !important;
+}
+
+/* ==========================================================================
+3. Theme specific Hero
+========================================================================== */
+.hero, .section {
+    &.is-theme-primary {
+        background-color: $primary;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-theme-secondary {
+        background-color: $secondary;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+}

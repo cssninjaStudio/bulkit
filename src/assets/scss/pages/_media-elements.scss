@@ -1,0 +1,149 @@
+/*! _media-elements.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Media Elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Featured Images
+    1. Dotted App
+***/
+
+/* ==========================================================================
+0. Featured Images
+========================================================================== */
+
+.featured-svg {
+    max-width: 450px;
+
+    &.is-large {
+        max-width: 540px;
+    }
+}
+
+.featured-svg-lg {
+    max-width: 550px;
+    max-height: 550px;
+}
+
+.vivus-svg {
+    max-height: 450px;
+    width: 450px;
+}
+
+.featured-drawing {
+    max-width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .featured-svg, .featured-svg-lg, .featured-drawing {
+        max-width: 100% !important;
+    }
+}
+
+
+/* ==========================================================================
+1. Dotted App
+========================================================================== */
+
+.dotted-app {
+    display: block;
+    max-width: 940px;
+    margin: 40px auto 0 auto;
+    box-shadow: $light-box-shadow;
+}
+
+.mockup-dots {
+    .dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: block;
+        background-color: $primary;
+        z-index: 5;
+
+        &:before {
+            position: absolute;
+            background: $primary;
+            content: '';
+            top: 0;
+            left: 0;
+            border: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: dotPulse 2s ease-out infinite;
+        }
+
+        &.first {
+            top: 42%;
+            left: 20%;
+
+            &:hover + .dot-tip.tip-first {
+                display: block;
+            }
+        }
+
+        &.second {
+            top: 65%;
+            left: 20%;
+
+            &:hover + .dot-tip.tip-second {
+                display: block;
+            }
+        }
+
+        &.third {
+            top: 55%;
+            right: 20%;
+
+            &:hover + .dot-tip.tip-third {
+                display: block;
+            }
+        }
+    }
+
+    .dot-tip {
+        padding: 15px 20px;
+        background-color: $primary;
+        color: $white;
+        border-radius: 10px 10px 0 10px;
+        font-size: 13px;
+        display: none;
+        z-index: 4;
+
+        &.tip-first {
+            position: absolute;
+            top: 38%;
+            left: 0;
+        }
+
+        &.tip-second {
+            position: absolute;
+            top: 60%;
+            left: 0;
+        }
+
+        &.tip-third {
+            position: absolute;
+            top: 50%;
+            right: 24%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .dotted-app {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) and (orientation: portrait) {
+    .dotted-app {
+        max-width: 100%;
+    }
+}

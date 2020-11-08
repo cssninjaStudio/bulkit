@@ -1,0 +1,640 @@
+/*! _footer.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Footer styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Dark footer
+1. Light Footer
+2. Light left Footer
+3. Dark left Footer
+4. Light medium footer
+5. Colored footer
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Dark footer
+========================================================================== */
+footer.footer-dark {
+    background: $blue-grey;
+    color: $white;
+    position: relative;
+
+    .columns {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-logo {
+        padding: 10px 0;
+
+        &.square-logo {
+            img {
+                max-width: 40px;
+            }
+        }
+
+        img {
+            height: 25px;
+        }
+    }
+
+    .footer-column {
+        .footer-header {
+            padding: 10px 0;
+
+            h3 {
+                font-family: $font-main;
+                font-weight: 400;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 0 !important;
+                color: $light-grey;
+            }
+        }
+
+        ul.link-list {
+            line-height: 30px;
+            font-size: 1rem;
+
+            a {
+                color: $light-blue-grey;
+                font-weight: 400;
+                transition: all 0.5s;
+            }
+
+            :hover {
+                color: $smoke-white;
+            }
+        }
+
+        .level-item .icon {
+            color: $primary;
+            transition: all 0.5s;
+
+            i {
+                font-size: 20px;
+            }
+
+            :hover {
+                color: $smoke-white;
+            }
+        }
+
+        .copyright {
+            padding: 10px 0;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Light Footer
+========================================================================== */
+footer.footer-light {
+    background: $white !important;
+    color: $blue-grey;
+    position: relative;
+
+    .columns {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-logo {
+        padding: 10px 0;
+
+        &.square-logo {
+            img {
+                max-width: 40px;
+            }
+        }
+
+        img {
+            height: 25px;
+        }
+    }
+
+    .footer-column {
+        .footer-header {
+            padding: 10px 0;
+
+            h3 {
+                font-family: $font-main;
+                font-weight: 400;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 0 !important;
+                color: $blue-grey;
+            }
+        }
+
+        ul.link-list {
+            line-height: 30px;
+            font-size: 1rem;
+
+            a {
+                color: $light-blue-grey;
+                font-weight: 400;
+                transition: all 0.5s;
+            }
+
+            :hover {
+                color: $primary;
+            }
+        }
+
+        .level-item .icon {
+            color: $muted-grey;
+            transition: all 0.5s;
+
+            i {
+                font-size: 20px;
+            }
+
+            :hover {
+                color: $secondary;
+            }
+        }
+
+        .copyright {
+            padding: 10px 0;
+        }
+    }
+}
+
+//Footer columns adjustment on mobile
+@media (max-width: 768px) {
+    .footer-columns.is-flex-mobile {
+        flex-wrap: wrap !important;
+    }
+}
+
+/* ==========================================================================
+2. Light left Footer
+========================================================================== */
+footer.footer-light-left {
+    padding: 5rem 1.5rem !important;
+    background: $widget-grey;
+
+    .footer-nav-right {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+
+        .footer-nav-link {
+            margin: 0 10px;
+            padding: 20px 0;
+            color: $blue-grey !important;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                color: $muted-grey !important;
+                border-bottom: 2px solid $muted-grey;
+            }
+
+            &.is-active {
+                color: $primary !important;
+                border-bottom: 2px solid $primary !important;
+            }
+        }
+    }
+
+    .level-item .icon {
+        color: $placeholder;
+        transition: all 0.5s;
+
+        :hover {
+            color: $primary;
+        }
+    }
+
+    .moto {
+        color: $muted-grey;
+    }
+}
+
+//Mobile adjustment
+@media (max-width: 768px) {
+    .footer-nav-right {
+        margin-top: 0 !important;
+    }
+}
+
+/* ==========================================================================
+3. Dark left Footer
+========================================================================== */
+footer.footer-dark-left {
+    padding: 5rem 1.5rem !important;
+    background: $blue-grey;
+
+    .footer-nav-right {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+
+        .footer-nav-link {
+            margin: 0 10px;
+            padding: 20px 0;
+            color: $white !important;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                color: $smoke-white !important;
+                border-bottom: 2px solid $white;
+            }
+
+            &.is-active {
+                color: $primary !important;
+                border-bottom: 2px solid $primary !important;
+            }
+        }
+    }
+
+    .level-item .icon {
+        color: $white;
+        transition: all 0.5s;
+
+        :hover {
+            color: $primary;
+        }
+    }
+
+    .moto {
+        color: $white;
+    }
+}
+
+/* ==========================================================================
+4. Light medium footer
+========================================================================== */
+.footer-light-medium {
+    padding-bottom: 0 !important;
+    padding-top: 4rem !important;
+    background: lighten($fade-grey, 5%);
+
+    .footer-head {
+        padding-bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid darken($fade-grey, 4%);
+
+        .head-text {
+            h3 {
+                font-family: 'Nexa Bold', sans-serif;
+                font-size: 1.8rem;
+                color: $blue-grey;
+            }
+
+            p {
+                font-size: 1.1rem;
+                color: $muted-grey;
+            }
+        }
+
+        .head-action {
+            .buttons {
+                .button {
+                    &.action-button {
+                        height: 36px;
+                        min-width: 140px;
+                    }
+
+                    &.chat-button {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                        color: $primary;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-body {
+        padding-top: 3rem;
+
+        .footer-column {
+            padding-top: 20px;
+
+            .column-header {
+                font-family: 'Nexa Light', sans-serif;
+                text-transform: uppercase;
+                color: $blue-grey;
+                font-size: 1rem;
+                font-weight: 700;
+                margin: 10px 0;
+            }
+
+            .column-item {
+                padding-bottom: 10px;
+
+                a {
+                    color: $muted-grey;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 0;
+
+            a {
+                color: $muted-grey;
+                margin: 0 5px;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        .footer-description {
+            color: $muted-grey;
+            padding: 10px 0;
+        }
+
+        .moto {
+            color: $muted-grey;
+        }
+
+        .small-footer-logo {
+            height: 24px;
+        }
+    }
+
+    .footer-copyright {
+        color: $muted-grey;
+        padding: 4rem 0 2rem 0;
+
+        a {
+            color: $muted-grey;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-light-medium {
+        .footer-head {
+            flex-direction: column;
+            text-align: center;
+
+            .head-text {
+                padding-bottom: 20px;
+            }
+        }
+
+        .footer-body {
+            padding: 1rem !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .footer-light-medium {
+        .footer-head {
+            padding: 1rem !important;
+        }
+
+        .footer-body {
+            display: flex;
+            padding: 2rem 1rem !important;
+
+            .column.is-4 {
+                width: 42%;
+                max-width: 42%;
+                flex-shrink: 1;
+            }
+
+            .is-offset-2 .columns {
+                display: flex !important;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+5. Colored footer
+========================================================================== */
+footer.colored-footer {
+    background: $primary;
+    padding: 0;
+
+    .footer-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10rem 0;
+        text-align: center;
+
+        .footer-form {
+            width: 460px;
+
+            img {
+                max-width: 120px;
+            }
+
+            .control {
+                position: relative;
+                margin-top: 20px;
+
+                .input {
+                    font-size: 1.1rem;
+                    height: 44px;
+                    background: transparent;
+                    border: 1px solid $smoke-white;
+                    color: $smoke-white;
+                    padding-bottom: 8px;
+                    padding-right: 158px;
+
+                    &::-webkit-input-placeholder {
+                        color: $smoke-white;
+                    }
+
+                    &::-moz-placeholder {
+                        color: $smoke-white;
+                    }
+
+                    &:-ms-input-placeholder {
+                        color: $smoke-white;
+                    }
+
+                    &:-moz-placeholder {
+                        color: $smoke-white;
+                    }
+                }
+
+                .input-button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 44px;
+                    color: $secondary;
+                    border: 1px solid $smoke-white;
+                    border-radius: 0 100px 100px 0;
+                    width: 130px;
+                    font-size: 0.9rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    transition: all .3s;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-footer {
+        padding: 25px 0;
+        border-top: 1px solid darken($smoke-white, 10%);
+
+        .footer-block {
+            width: 33%;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .designed-by {
+                color: $smoke-white;
+                font-size: 1rem;
+
+                .fa {
+                    margin: 0 4px;
+                }
+            }
+
+            .links {
+                a {
+                    color: $smoke-white;
+                    margin: 0 12px;
+                }
+            }
+
+            .social {
+                a {
+                    margin: 0 4px;
+
+                    i {
+                        font-size: 20px;
+                        color: $smoke-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .colored-footer {
+        .footer-form {
+            padding: 0 20px;
+        }
+
+        .footer-inner {
+            flex-direction: column;
+
+            .footer-block {
+                width: 100% !important;
+                display: flex;
+                justify-content: center !important;
+                padding: 8px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .colored-footer {
+        .footer-form {
+            padding: 0 20px;
+        }
+
+        .footer-inner {
+            flex-direction: column;
+
+            .footer-block {
+                width: 100% !important;
+                display: flex;
+                justify-content: center !important;
+                padding: 8px 0;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+4. Landing Dark Footer
+========================================================================== */
+
+.footer {
+    &.landing-dark-footer {
+        background: $sidebar;
+        padding: 8rem 1.5rem 4rem 1.5rem;
+
+        .footer-logo {
+            &.square-logo {
+                max-width: 40px !important;
+            }
+        }
+
+        .footer-logo-text {
+            margin-top: 16px;
+            color: $smoke-white;
+            padding-right: 20px;
+        }
+
+        .footer-menu {
+            li {
+                padding: 8px 0;
+                color: $smoke-white;
+
+                a {
+                    color: $smoke-white;
+                }
+            }
+        }
+
+        .copyright {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8rem;
+
+            .copyright-logo {
+                display: block;
+                max-width: 100px;
+            }
+
+            .copyright-text {
+                font-weight: 500;
+                font-size: .9rem;
+                color: $smoke-white;
+            }
+        }
+    }
+}

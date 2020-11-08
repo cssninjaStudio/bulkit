@@ -1,0 +1,388 @@
+/*! _sections.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Sections related styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Sections general styles
+1. Quick flex block
+2. Divider
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Sections general styles
+========================================================================== */
+.section {
+    position: relative;
+
+    &.section-light-grey {
+        background-color: $light-grey;
+    }
+
+    &.section-feature-grey {
+        background-color: $section-grey;
+    }
+
+    &.section-header-grey {
+        background-color: $header-grey;
+    }
+
+    &.section-feature-grey-accent {
+        background-color: $section-grey-accent;
+    }
+
+    &.section-primary {
+        background-color: $primary;
+    }
+
+    &.section-secondary {
+        background-color: $secondary;
+    }
+
+    &.section-focus {
+        background: #f2f2fa;
+    }
+
+    &.has-border-bottom {
+        border-bottom: 1px solid $fade-grey;
+    }
+
+    &.has-border-top {
+        border-top: 1px solid $fade-grey;
+    }
+
+    &.is-relative {
+        position: relative;
+    }
+
+    &.is-cover {
+        background-size: cover !important;
+    }
+
+    &.is-theme-grey {
+        background: #f6fbfe;
+    }
+
+    &.no-margin {
+        margin: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    &.section-half {
+        height: 75vh !important;
+    }
+
+    &.is-skewed-sm {
+        transform: skew(0deg, -3deg) translate(0, -45px);
+        padding-top: 140px;
+    }
+
+    &.is-grey {
+        background: $section-grey;
+    }
+
+    &.is-reversed {
+        .columns {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &.has-triangle-right {
+        position: relative;
+
+        .triangle-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+    }
+
+    &.has-triangle-left {
+        position: relative;
+
+        .triangle-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+    }
+
+    &.has-circles {
+        position: relative;
+
+        .primary-circle {
+            position: absolute;
+            right: 35%;
+            top: 5%;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background: $primary;
+            z-index: 0;
+        }
+
+        .primary-bold-circle {
+            position: absolute;
+            left: 15%;
+            bottom: 10%;
+            height: 210px;
+            width: 210px;
+            border-radius: 50%;
+            background: darken($primary, 6%);
+            z-index: 1;
+        }
+
+        .accent-circle {
+            position: absolute;
+            right: 65%;
+            top: 18%;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: $accent;
+        }
+    }
+
+    &.is-pricing {
+        background-image: url(../img/graphics/legacy/circles-and-shapes.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &.is-grey {
+        background: $section-grey;
+    }
+
+    &.is-dark {
+        background: $sidebar;
+    }
+
+    &.is-reversed {
+        .columns {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &.is-ice-pricing {
+        background-image: url(../img/graphics/legacy/ice.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 500px;
+        background-position-y: 50%;
+    }
+
+    .container {
+        z-index: 1;
+
+        &.is-reverse-skewed-sm {
+            transform: skew(0deg, 3deg) translate(0, 45px);
+        }
+
+        &.slanted-container {
+            margin-top: -100px;
+        }
+    }
+
+    .content-wrapper {
+        padding-top: 40px;
+    }
+
+    .bottom-spacer {
+        padding-bottom: 200px;
+    }
+
+    .title {
+        &.section-title {
+            font-size: 2.7rem;
+            color: $title-grey;
+            font-weight: bold;
+            font-family: $font-main;
+        }
+
+        &.section-subtitle {
+            font-size: 1.8rem;
+            color: $title-grey;
+        }
+
+        &.quick-feature {
+            font-size: 2.7rem;
+            color: $blue-grey;
+            position: relative;
+
+            .bg-number, .bg-symbol {
+                position: absolute;
+                font-weight: bolder;
+                top: -100px;
+                left: 40px;
+                font-size: 14rem;
+                z-index: 0;
+                opacity: 0.1;
+                color: #999;
+            }
+        }
+
+        &.feature-title {
+            font-weight: 600;
+            color: $blue-grey;
+            font-size: 2.2rem;
+        }
+    }
+
+    .icon-subtitle i {
+        font-size: 2.4rem;
+        color: $primary;
+    }
+
+    .title-divider {
+        margin: 10px 0;
+        width: 80px;
+        height: 5px;
+        background: $primary;
+
+        &.is-right {
+            margin-left: auto;
+        }
+
+        &.is-centered {
+            margin: 0 auto;
+        }
+    }
+
+    .feature-headline {
+        color: $primary !important;
+        line-height: 1.2;
+        padding: 5px 0;
+        margin-bottom: 0 !important;
+    }
+
+    .section-feature-description {
+        color: $basaltic-grey;
+    }
+
+    .media.icon-box {
+        border-top: none !important;
+
+        .media-content .content p {
+            span.icon-box-title {
+                color: $blue-grey;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            span.icon-box-text {
+                color: $title-grey;
+                font-size: 1.1rem;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .flex-wrapper {
+        display: flex;
+        align-content: center;
+        align-items: center;
+
+        &.flex-center {
+            justify-content: center;
+        }
+
+        &.flex-start {
+            justify-content: flex-start;
+        }
+
+        &.flex-end {
+            justify-content: flex-end;
+        }
+
+        img {
+            width: 23%;
+        }
+    }
+
+    .featured-image {
+        max-width: 540px !important;
+        margin: 0 auto;
+    }
+
+    .section-title.is-demo, .section-feature-description {
+        max-width: 460px !important;
+        margin: 0 auto !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .section {
+        .featured-image {
+            max-width: 540px !important;
+            margin: 0 auto;
+        }
+
+        .section-title.is-demo, .section-feature-description {
+            max-width: 460px !important;
+            margin: 0 auto !important;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Quick flex block
+========================================================================== */
+.content.content-flex, .content-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+    &.center-flex {
+        justify-content: center !important;
+    }
+
+    h5 {
+        padding: 0 !important;
+    }
+}
+
+/* ==========================================================================
+2. Divider
+========================================================================== */
+.divider {
+    display: table;
+    white-space: nowrap;
+    margin-top: 20px;
+    padding: 0 20px;
+
+    .before-divider, .after-divider {
+        display: table-cell;
+        width: 50%;
+        border-bottom: 1px solid $fade-grey;
+        transform: translateY(-50%);
+        color: $muted-grey;
+    }
+
+    .children {
+        padding: 0 20px;
+        font-size: 14px;
+        color: $placeholder;
+    }
+}
+
+#component-page {
+    .section-title-wrapper {
+        padding: 20px 0 60px 0;
+
+        .bg-number {
+            top: -40px;
+        }
+    }
+}

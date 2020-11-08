@@ -1,0 +1,530 @@
+/*! _tabs.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Navigation tabs and pills styles
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Tabs nav
+1. Navigation tabs
+2. Partner tabs
+3. Tabbed reviews
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Tabs nav
+========================================================================== */
+
+.tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    //container
+    .tabs-container {
+        overflow: hidden;
+        width: 100%;
+
+        &.type-2 {
+            border-radius: 3px;
+        }
+
+        &.type-1 {
+            .tab-content {
+                border: none;
+                border-top: 1px solid #e0e0e0;
+                padding: 30px 0 0 0;
+            }
+        }
+
+        .tab-content {
+            padding: 28px 33px;
+            position: relative;
+            z-index: 10;
+            display: inline-block;
+            width: 100%;
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    li {
+        float: left;
+        line-height: 45px;
+        padding: 0;
+        margin-right: 4px;
+        position: relative;
+        z-index: 12;
+
+        &.active {
+            .tab-reviews {
+                color: $white;
+                transition: all 0.25s ease-in-out;
+            }
+
+            a, a:hover {
+                border-color: $primary;
+                color: $primary !important;
+                z-index: 11;
+
+                i {
+                    padding-right: 5px;
+                    font-size: 16px;
+                    top: 1px;
+                    position: relative;
+                }
+            }
+        }
+
+        a {
+            border-bottom: 2px solid transparent;
+            color: #333;
+            display: inline-block;
+            outline: none;
+            padding: 7px 15px;
+            text-decoration: none;
+            font-size: 15px;
+            z-index: 11;
+            position: relative;
+            margin-bottom: -1px;
+            transition: all 0.25s ease-in-out;
+
+            &:hover {
+                border-color: #66676b;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. Navigation tabs
+========================================================================== */
+
+.navigation-tabs {
+    overflow: hidden;
+
+    //faded tabs
+    &.animated-tabs {
+        .navtab-content {
+            animation-name: fadeInLeft;
+            animation-duration: 0.5s;
+        }
+    }
+
+    //translated tabs
+    &.translated-tabs {
+        .navtab-content {
+            animation-name: translateLeft;
+            animation-duration: 0.5s;
+        }
+    }
+
+    // Simple tabs
+    &.simple-tabs {
+        .tabs ul li {
+            &:hover {
+                a {
+                    border-bottom-color: $primary;
+                }
+            }
+
+            &.is-active {
+                a {
+                    color: $blue-grey;
+                    border-bottom: 2px solid $primary;
+
+                    .icon i {
+                        color: $primary;
+                    }
+                }
+            }
+
+            a {
+                color: $title-grey;
+            }
+        }
+    }
+
+    //boxed tabs
+    &.boxed-tabs {
+        .tabs ul li {
+            &.is-active {
+                a {
+                    color: $primary;
+                }
+            }
+
+            a {
+                color: $title-grey;
+            }
+        }
+    }
+
+    //outlined pills
+    &.outlined-pills {
+        &.rounded-pills {
+            .tabs ul {
+                li {
+                    a {
+                        border-radius: 100px !important;
+                    }
+                }
+            }
+        }
+
+        .tabs ul {
+            border-bottom: 1px solid transparent !important;
+
+            li {
+                &.is-active {
+                    a {
+                        color: $title-grey;
+                        margin-bottom: 5px;
+                        color: $primary;
+                        border: 1px solid $primary;
+                        border-radius: 3px;
+
+                        &:hover {
+                            border: 1px solid $primary;
+                        }
+                    }
+                }
+
+                a {
+                    border: 1px solid transparent;
+
+                    &:hover {
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    //full pills
+    &.full-pills {
+        &.rounded {
+            .tabs ul {
+                li {
+                    a {
+                        border-radius: 100px !important;
+                    }
+                }
+            }
+        }
+
+        //pills colors
+        &.custom {
+            .tabs {
+                ul {
+                    li {
+                        &.is-active {
+                            &.purple-tab {
+                                a {
+                                    border: 1px solid $secondary !important;
+                                    background-color: $secondary;
+                                }
+                            }
+
+                            &.deep-blue-tab {
+                                a {
+                                    border: 1px solid #0082C8 !important;
+                                    background-color: #0082C8;
+                                }
+                            }
+
+                            &.sky-blue-tab {
+                                a {
+                                    border: 1px solid #039BE5 !important;
+                                    background-color: #039BE5;
+                                }
+                            }
+
+                            &.light-blue-tab {
+                                a {
+                                    border: 1px solid #0F7CFF !important;
+                                    background-color: #0F7CFF;
+                                }
+                            }
+
+                            &.dark-blue-tab {
+                                a {
+                                    border: 1px solid #4A00E0 !important;
+                                    background-color: #4A00E0;
+                                }
+                            }
+
+                            &.green-tab {
+                                a {
+                                    border: 1px solid #00B289 !important;
+                                    background-color: #00B289;
+                                }
+                            }
+
+                            &.light-green-tab {
+                                a {
+                                    border: 1px solid #00D1B2 !important;
+                                    background-color: #00D1B2;
+                                }
+                            }
+
+                            &.red-tab {
+                                a {
+                                    border: 1px solid #FF3131 !important;
+                                    background-color: #FF3131;
+                                }
+                            }
+
+                            a {
+                                color: $white;
+                                border-radius: 3px;
+                                box-shadow: $light-box-shadow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.primary {
+            .tabs ul li {
+                &.is-active {
+                    a {
+                        color: $white;
+                        border: 1px solid $primary;
+                        background-color: $primary;
+                        border-radius: 3px;
+                        box-shadow: $light-box-shadow;
+                    }
+                }
+            }
+        }
+
+        &.secondary {
+            .tabs ul li {
+                &.is-active {
+                    a {
+                        color: $white;
+                        border: 1px solid $secondary;
+                        background-color: $secondary;
+                        border-radius: 3px;
+                        box-shadow: $light-box-shadow;
+                    }
+                }
+            }
+        }
+
+        &.accent {
+            .tabs ul li {
+                &.is-active {
+                    a {
+                        color: $white;
+                        border: 1px solid $accent;
+                        background-color: $accent;
+                        border-radius: 3px;
+                        box-shadow: $light-box-shadow;
+                    }
+                }
+            }
+        }
+
+        .tabs ul {
+            border-bottom: 1px solid transparent !important;
+            padding-bottom: 10px;
+
+            li {
+                &.is-active {
+                    a {}
+                }
+
+                a {
+                    border-color: transparent !important;
+                    color: $title-grey;
+                    margin-bottom: 5px;
+                    border-radius: 100px !important;
+                }
+            }
+        }
+    }
+
+    //square pills
+    &.square-pills {
+        //rounded style
+        &.circle-pills {
+            .tabs ul {
+                li {
+                    a {
+                        border-radius: 50% !important;
+                    }
+                }
+            }
+        }
+
+        .tabs ul {
+            padding: 20px;
+            border-bottom: none !important;
+
+            li {
+                &.is-active {
+                    a {
+                        background-color: $primary;
+                        color: $white;
+                        box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.18);
+                    }
+                }
+
+                a {
+                    border-radius: 30px;
+                    padding: 0 15.5px;
+                    text-align: center;
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 3px;
+                    font-weight: 400;
+                    color: #9a9a9a;
+                    margin-right: 19px;
+                    background-color: rgba(222, 222, 222, 0.3);
+                    border-bottom: none !important;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        border-bottom: none !important;
+                    }
+
+                    i {
+                        display: block;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    //navtab content
+    .navtab-content {
+        display: none;
+        padding: 15px;
+        min-height: 190px;
+
+        &.is-active {
+            display: block;
+        }
+
+        &.navtab-modal {
+            max-height: 350px;
+            overflow: auto;
+        }
+    }
+}
+
+/* ==========================================================================
+2. Partner tabs
+========================================================================== */
+
+.tabs {
+    &.partner-tabs {
+        ul {
+            border-bottom: 1px transparent !important;
+        }
+    }
+}
+
+/* ==========================================================================
+3. Tabbed reviews
+========================================================================== */
+
+.tab-reviews {
+    color: #aaa;
+}
+
+/* ==========================================================================
+4. Vertical tabs
+========================================================================== */
+
+@media only screen and (max-width: 767px) {
+    .vertical-tabs-wrapper {
+        .tabs {
+            ul {
+                li {
+                    &.is-active {
+                        a {
+                            color: $secondary;
+                            border-bottom-color: $secondary;
+                        }
+                    }
+
+                    a {
+                        color: $muted-grey;
+                    }
+                }
+            }
+        }
+
+        .content-wrap {
+            .tab-content {
+                padding-top: 12px;
+                display: none;
+                animation: fadeInLeft .5s;
+
+                &.is-active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .vertical-tabs-wrapper {
+        display: flex;
+
+        .tabs {
+            min-width: 25%;
+            max-width: 25%;
+            margin-right: 30px;
+
+            ul {
+                display: block;
+                text-align: left;
+                border-bottom-color: transparent !important;
+
+                li {
+                    display: block;
+
+                    &.is-active {
+                        a {
+                            color: $secondary;
+                            border-right-color: $secondary;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        border-bottom-color: transparent !important;
+                        border-right: 2px solid #dbdbdb;
+                        color: $muted-grey;
+                    }
+                }
+            }
+        }
+
+        .content-wrap {
+            flex-grow: 2;
+
+            .tab-content {
+                display: none;
+                animation: fadeInLeft .5s;
+
+                &.is-active {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+---
+layout: landing
+title: Login
+---
+
+<div class="hero is-app-grey is-fullheight" data-switcher-visible>
+
+    {{> navbar-fade-solid-kit2}}
+
+    <!-- Hero image -->
+    <div id="main-hero" class="hero-body">
+        <div class="container has-text-centered">
+            <div class="columns is-vcentered">
+                <div class="column is-6 is-offset-3">
+                    <!-- Login form -->
+                    <div id="login-card" class="animated preFadeInLeft fadeInLeft">
+                        <div class="flex-card clean-login-card">
+                            <h2>Login</h2>
+                            <form>
+                                <div class="control-material is-primary">
+                                    <input class="material-input" type="text" required>
+                                    <span class="material-highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Username</label>
+                                </div>
+                                <div class="control-material is-primary">
+                                    <input class="material-input" type="text" required>
+                                    <span class="material-highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="field remember-wrap is-grouped pt-20">
+                                    <div class="control">
+                                        <label class="slide-toggle">
+                                            <input type="checkbox">
+                                            <span class="toggler">
+                                                <span class="active">
+                                                    <i data-feather="check"></i>
+                                                </span>
+                                                <span class="inactive">
+                                                    <i data-feather="circle"></i>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="control">
+                                        <span>Remember me?</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-20">
+                                    <button
+                                        class="button button-cta btn-align primary-btn is-fullwidth raised no-lh">Login</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <p class="has-text-centered mt-30">
+                            <a id="show-recover" class="no-account  primary-text" href="#">Lost your password?</a>
+                        </p>
+                    </div>
+
+                    <!-- Recover form -->
+                    <div id="recover-card" class="animated preFadeInLeft fadeInLeft is-hidden">
+                        <div class="flex-card clean-login-card">
+                            <h2>Reset Password</h2>
+                            <form>
+                                <div class="control-material is-primary">
+                                    <input class="material-input" type="text" required>
+                                    <span class="material-highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Email *</label>
+                                </div>
+
+                                <div class="mt-20">
+                                    <button
+                                        class="button button-cta btn-align primary-btn is-fullwidth raised no-lh">Reset
+                                        Password</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <p class="has-text-centered mt-40">
+                            <a id="show-login" class="no-account primary-text" href="#">Back to login</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer-side-light}}

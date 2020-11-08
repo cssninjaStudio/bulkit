@@ -1,0 +1,56 @@
+
+/* ==========================================================================
+4. Predefined box shadows
+========================================================================== */
+
+$base-shadow: rgba(0, 0, 0, 0.12);
+
+//Orange box shadow
+$orange-shadow-from: rgba(237, 165, 20, 0.42);
+$orange-shadow-to: rgba(237, 165, 20, 0.2);
+$orange-box-shadow: 0 14px 26px -12px $orange-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $orange-shadow-to !important;
+
+//Green box shadow
+$green-shadow-from: rgba(0, 178, 137, 0.42);
+$green-shadow-to: rgba(0, 178, 137, 0.2);
+$green-box-shadow: 0 14px 26px -12px $green-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $green-shadow-to !important;
+
+//Red box shadow
+$red-shadow-from: rgba(255, 114, 115, 0.42);
+$red-shadow-to: rgba(255, 114, 115, 0.2);
+$red-box-shadow: 0 14px 26px -12px $red-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $red-shadow-to !important;
+
+//Blue box shadow
+$blue-shadow-from: rgba(3, 155, 229, 0.42);
+$blue-shadow-to: rgba(3, 155, 229, 0.2);
+$blue-box-shadow: 0 14px 26px -12px $blue-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $blue-shadow-to !important;
+
+/* ==========================================================================
+2. Box shadows
+========================================================================== */
+
+//Light box shadow
+$light-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+
+//Primary box shadow
+$primary-shadow-from: rgba($primary, 0.42);
+$primary-shadow-to: rgba($primary, 0.2);
+$primary-box-shadow: 0 14px 26px -12px $primary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $primary-shadow-to !important;
+
+//Secondary box shadow
+$secondary-shadow-from: rgba($secondary, 0.42);
+$secondary-shadow-to: rgba($secondary, 0.2);
+$secondary-box-shadow: 0 14px 26px -12px $secondary-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $secondary-shadow-to !important;
+
+//Accent box shadow
+$accent-shadow-from: rgba($accent, 0.42);
+$accent-shadow-to: rgba($accent, 0.2);
+$accent-box-shadow: 0 14px 26px -12px $accent-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $accent-shadow-to !important;
+
+//Success box shadow
+$success-shadow-from: rgba($green, 0.42);
+$success-shadow-to: rgba($green, 0.2);
+$success-box-shadow: 0 14px 26px -12px $success-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $success-shadow-to !important;
+
+$morph-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+$morph-shadow-primary: 20px 20px 60px #6f6cad, -20px -20px 60px #9792e9;

@@ -1,0 +1,222 @@
+/*! _contact-elements.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Contact elements Kit SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Contact form
+    1. Google Map
+    2. Startup contact button
+***/
+
+/* ==========================================================================
+0. Contact form
+========================================================================== */
+
+.contact-form-wrapper {
+    min-height: 500px;
+    padding: 50px 0;
+    background: $fade-grey;
+
+    .container {
+        padding: 50px 0;
+    }
+
+    .columns {
+        padding: 30px 0;
+    }
+
+    .form-title {
+        font-family: $font-main;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $blue-grey;
+    }
+
+    .shadow-title {
+        font-family: $font-sub;
+    }
+
+    .shadow-description {
+        font-family: $font-main;
+    }
+}
+
+/* ==========================================================================
+1. Landing Contact Form
+========================================================================== */
+
+.contact-title {
+    margin-top: 200px;
+}
+
+.contact-form {
+    width: 100%;
+    padding: 40px 20px;
+
+    &.is-bigger {
+        width: 100%;
+        border: 1px solid $fade-grey;
+        box-shadow: $light-box-shadow;
+        border-radius: 8px;
+        background: $white;
+        padding: 50px;
+
+        p {
+            color: $med-grey;
+            font-size: .9rem;
+            margin-bottom: 40px;
+        }
+
+        .button-wrap {
+            margin-top: 50px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: $font-main;
+
+            .button {
+                height: 54px;
+                line-height: 1 !important;
+            }
+        }
+    }
+
+    label {
+        font-weight: 500;
+        color: $blue-grey;
+    }
+
+    .submit-wrapper {
+        text-align: right;
+    }
+}
+
+.contact-toggler {
+    padding: 40px 0;
+
+    .tabbed-links {
+        li {
+            display: inline-block;
+            padding: 10px;
+            color: $placeholder;
+            border-top: 2px solid transparent;
+            cursor: pointer;
+
+            &.is-active {
+                color: $blue-grey;
+                font-weight: 500;
+                border-top: 2px solid $secondary;
+            }
+        }
+    }
+
+    .contact-blocks {
+        .contact-block {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 0;
+
+            .contact-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $primary;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+
+                i {
+                    font-size: 1.3rem;
+                    color: $white;
+                }
+            }
+
+            .contact-info {
+                padding: 0 10px;
+
+                span {
+                    display: block;
+
+                    &:first-child {
+                        font-weight: 500;
+                        color: $blue-grey;
+                    }
+
+                    &:nth-child(2) {
+                        font-weight: 500;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .submit-wrapper {
+        text-align: center !important;
+    }
+}
+
+/* ==========================================================================
+5. Contact Form 2
+========================================================================== */
+
+.contact-title-2 {
+    margin-top: 200px;
+}
+
+.contact-form-2 {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto 60px auto;
+    border: 1px solid $fade-grey;
+    box-shadow: $light-box-shadow;
+    border-radius: 8px;
+    background: $white;
+    padding: 50px;
+
+    p {
+        color: $med-grey;
+        font-size: .9rem;
+        margin-bottom: 40px;
+    }
+
+    .button-wrap {
+        margin-top: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: 'Nexa Bold', sans-serif;
+
+        .button {
+            height: 54px;
+            line-height: 3 !important;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Google Map
+========================================================================== */
+.half-map {
+    min-height: 550px;
+}
+
+@media (max-width: 767px) {
+    #google-map {
+        min-height: 50vh;
+    }
+}
+
+/* ==========================================================================
+2. Startup contact button
+========================================================================== */
+
+.startup-contact-button {
+    max-width: 320px;
+    margin: 0 auto;
+    height: 44px;
+}

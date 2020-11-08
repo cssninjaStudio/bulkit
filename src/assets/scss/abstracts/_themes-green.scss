@@ -1,0 +1,71 @@
+/*! _themes-green.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Green Theme
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Theme color variables
+1. Theme gradient
+2. Box shadows
+3. Pageloader
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Theme color variables
+========================================================================== */
+$primary: #00b289;
+$secondary: #00b289;
+$accent: #06f4b6;
+
+/* ==========================================================================
+1. Theme gradient
+========================================================================== */
+$webkit-hero-prime-gradient: linear-gradient(to right, $primary, darken($primary, 12%));
+$hero-prime-gradient: linear-gradient(to top, $primary, darken($primary, 12%));
+
+$webkit-hero-gradient: linear-gradient(to right, $secondary, $accent);
+$hero-gradient: linear-gradient(to top, $secondary, $accent);
+
+/* ==========================================================================
+2. Pageloader
+========================================================================== */
+.pageloader {
+    background-color: $primary !important;
+}
+
+/* ==========================================================================
+3. Theme specific Hero
+========================================================================== */
+.hero, .section {
+    &.is-theme-primary {
+        background-color: $primary;
+        background: $webkit-hero-prime-gradient;
+        background: $hero-prime-gradient;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+
+    &.is-theme-secondary {
+        background-color: $secondary;
+        background: $webkit-hero-gradient;
+        background: $hero-gradient;
+
+        .title {
+            color: $white;
+        }
+
+        .subtitle {
+            color: $white;
+        }
+    }
+}

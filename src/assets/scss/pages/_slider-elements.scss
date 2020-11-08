@@ -1,0 +1,371 @@
+/*! _slider-elements.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Slider elements Kit SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Wallop v1
+1. Wallop v2
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Wallop v1
+========================================================================== */
+
+.Wallop--v1 {
+    top: -65px;
+
+    .Wallop-list {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Wallop-item {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .Wallop-buttonPrevious, .Wallop-buttonNext {
+        position: absolute;
+        top: calc(50% - 27px);
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 6;
+
+        &:hover {
+            i {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        i {
+            font-size: 3.5rem;
+            color: $white;
+            transition: all .4s;
+        }
+
+        &:active, &:focus {
+            outline: none !important;
+        }
+    }
+
+    .Wallop-buttonPrevious {
+        left: 20px;
+    }
+
+    .Wallop-buttonNext {
+        right: 20px;
+    }
+
+    .Wallop-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+    }
+
+    //Pagination
+    .Wallop-pagination {
+        text-align: center;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 40px;
+        z-index: 5;
+    }
+
+    .Wallop-dot {
+        text-indent: -9999px;
+        border: 0;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        margin: 5px;
+        background-color: #ccc;
+        cursor: pointer;
+        -webkit-appearance: none;
+
+        &:active, &:focus {
+            outline: none !important;
+        }
+    }
+
+    .Wallop-dot--current {
+        background-color: $primary;
+    }
+
+    .Wallop-caption-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    .Wallop-caption {
+        font-family: $font-main;
+
+        &.is-centered {
+            font-size: 3rem;
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            color: $white;
+            z-index: 5;
+            text-align: center;
+
+            .main-inner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1 {
+                font-weight: bolder !important;
+                text-transform: uppercase;
+            }
+
+            h4 {
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+                font-size: 40%;
+                padding: 0;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .caption-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+
+        a {
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .Wallop--v1 {
+        .Wallop-caption {
+            font-size: 2.8rem !important;
+
+            h1, h4 {
+                padding: 0 10% !important;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. Wallop v2
+========================================================================== */
+.Wallop--v2 {
+    top: -65px;
+
+    .Wallop-list {
+        width: 100%;
+        height: 100%;
+    }
+
+    .Wallop-item {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .Wallop-buttonPrevious, .Wallop-buttonNext {
+        position: absolute;
+        top: 48%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 6;
+
+        &:hover {
+            i {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        i {
+            font-size: 3.5rem;
+            color: $white;
+            transition: all .4s;
+        }
+
+        &:active, &:focus {
+            outline: none !important;
+        }
+    }
+
+    .Wallop-buttonPrevious {
+        left: 20px;
+    }
+
+    .Wallop-buttonNext {
+        right: 20px;
+    }
+
+    .Wallop-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+    }
+
+    /* Pagination */
+    .Wallop-pagination {
+        text-align: center;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 40px;
+        z-index: 100;
+    }
+
+    .Wallop-dot {
+        text-indent: -9999px;
+        border: 0;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        margin: 5px;
+        background-color: #ccc;
+        cursor: pointer;
+        -webkit-appearance: none;
+
+        &:active, &:focus {
+            outline: none !important;
+        }
+    }
+
+    .Wallop-dot--current {
+        background-color: $primary;
+    }
+
+    //Slider caption
+    .Wallop-caption-wrapper {
+        align-items: center;
+        min-height: 100vh;
+        position: relative;
+        z-index: 99;
+
+        .container {
+            position: relative;
+            min-height: 500px;
+            height: 100vh;
+            display: flex;
+
+            .caption-inner {
+                /*position: absolute;
+                top: calc(50% - 135px);
+                left: 20px;
+                max-width: 40%;*/
+                h1 {
+                    font-family: $font-main;
+                    font-weight: 700;
+                    font-size: 3.8rem;
+                    line-height: 3.8rem;
+                    color: $white;
+                }
+
+                .caption-divider {
+                    width: 30%;
+                    height: 3px;
+                    background: $white;
+                    margin: 10px 0;
+                }
+
+                .caption-text {
+                    //max-width: 90%;
+                    //padding: 10px 0;
+                    color: $white;
+                    font-size: 1.25rem;
+                    font-weight: 400;
+
+                    .action {
+                        padding: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .Wallop--v2 {
+        .caption-inner {
+            max-width: 100% !important;
+            top: 30% !important;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+
+            .caption-divider {
+                height: 3px !important;
+                margin: 10px auto !important;
+            }
+
+            h1 {
+                font-size: 3.2rem !important;
+            }
+
+            .caption-text span {
+                margin: 0 20px;
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .Wallop--v2 {
+        .caption-inner {
+            text-align: center;
+            position: relative;
+            top: 40vh !important;
+
+            .caption-divider {
+                margin: 10px auto !important;
+                height: 3px !important;
+            }
+
+            .caption-text {
+                padding: 0 15%;
+            }
+        }
+
+        .is-tablet-padded {
+            padding: 0 20% !important;
+        }
+    }
+}

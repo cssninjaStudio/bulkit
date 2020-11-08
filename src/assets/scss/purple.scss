@@ -1,0 +1,89 @@
+/*! purple.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Purple Theme
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. CSS Imports
+=============================================================================
+***/
+
+/* ==========================================================================
+0. CSS Imports
+========================================================================== */
+
+@import "abstracts/variables";
+@import "abstracts/themes-purple";
+@import "abstracts/shadows";
+
+@import "layout/utils";
+@import "layout/navbar";
+@import "layout/navbar-landing";
+@import "layout/sections";
+@import "layout/hero";
+@import "layout/footer";
+@import "layout/animations";
+@import "layout/navigation";
+@import "layout/pageloader";
+
+@import "components/accordion";
+@import "components/buttons";
+@import "components/cards";
+@import "components/boxes";
+@import "components/tabs";
+@import "components/testimonials";
+@import "components/dialogs";
+@import "components/forms";
+@import "components/tables";
+@import "components/lists";
+@import "components/labels";
+@import "components/messages";
+@import "components/pricing";
+@import "components/dropdowns";
+@import "components/checkboxes";
+@import "components/badge";
+@import "components/range";
+@import "components/ribbon";
+@import "components/slider";
+@import "components/switch";
+@import "components/timeline";
+@import "components/uploader";
+@import "components/iconpicker";
+@import "components/calendar";
+@import "components/wallop";
+
+@import "pages/demo-landing";
+
+@import "pages/heading-elements";
+@import "pages/text-elements";
+@import "pages/hero-elements";
+@import "pages/section-elements";
+@import "pages/button-elements";
+@import "pages/card-elements";
+@import "pages/team-elements";
+@import "pages/slider-elements";
+@import "pages/portfolio-elements";
+@import "pages/carousel-elements";
+@import "pages/blog-elements";
+@import "pages/contact-elements";
+@import "pages/auth-elements";
+@import "pages/media-elements";
+@import "pages/ui-elements";
+@import "pages/error-elements";
+
+@import "utilities/hover-effects";
+@import "utilities/material-shadows";
+@import "utilities/video-embed";
+@import "utilities/video-background";
+
+@import "layout/helpers";
+@import "layout/responsive";
+
+$slick-font-path: "/assets/fonts/";
+$slick-loader-path: "/assets/fonts/";
+
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
