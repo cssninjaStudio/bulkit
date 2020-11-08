@@ -19,6 +19,16 @@ initPageLoader()
 
 $(document).ready(function ($) {
 
+	const el = document.querySelectorAll('[data-lazy-load]');
+    const observer = lozad(el, {
+        loaded: function(el) {
+            // Custom implementation on a loaded element
+            el.parentNode.classList.add('loaded');
+        }
+	});
+	
+    observer.observe();
+
 	//Global functions
 
 	if (env === 'development') {
@@ -154,6 +164,7 @@ $(document).ready(function ($) {
 	
 	initAnimations();
 	initCanvas();
+	initParticles();
 	initAnimatedSvg();
 	initChatWidget();
 	initContactToggler();

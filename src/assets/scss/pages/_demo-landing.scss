@@ -490,12 +490,12 @@ TABLE OF CONTENTS
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background: $primary;
+        background: $secondary;
         transform: scale(1);
         transition: all 0.5s;
         z-index: 1;
 
-        &.is-landing {
+        /*&.is-landing {
             background: $secondary;
         }
 
@@ -529,7 +529,7 @@ TABLE OF CONTENTS
 
         &.is-op1, &.is-landing-v8 {
             background: darken($red, 15%);
-        }
+        }*/
     }
 
     .demo-info {

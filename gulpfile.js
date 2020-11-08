@@ -210,6 +210,7 @@ function concatPlugins() {
   console.log('---------------CONCATENATE JS PLUGINS---------------');
   return src([
     nodepath + 'jquery/dist/jquery.min.js',
+    nodepath + 'lozad/dist/lozad.min.js',
     nodepath + 'izitoast/dist/js/iziToast.min.js',
     nodepath + 'chosen-js/chosen.jquery.min.js',
     nodepath + 'slick-carousel/slick/slick.min.js',

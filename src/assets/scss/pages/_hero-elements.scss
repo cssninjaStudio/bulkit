@@ -298,6 +298,62 @@ body {
             }
         }
     }
+
+    &.is-theme-green {
+        .hero {
+            &.is-wavy:before {
+                background: transparent url(../img/graphics/legacy/wavy-green.svg) no-repeat scroll 0 (bottom / 100%) auto;
+            }
+        }
+    }
+
+    &.is-theme-azur {
+        .hero {
+            &.is-wavy:before {
+                background: transparent url(../img/graphics/legacy/wavy-azur.svg) no-repeat scroll 0 (bottom / 100%) auto;
+            }
+        }
+    }
+
+    &.is-theme-blue {
+        .hero {
+            &.is-wavy:before {
+                background: transparent url(../img/graphics/legacy/wavy-blue.svg) no-repeat scroll 0 (bottom / 100%) auto;
+            }
+        }
+    }
+
+    &.is-theme-night {
+        .hero {
+            &.is-wavy:before {
+                background: transparent url(../img/graphics/legacy/wavy-night.svg) no-repeat scroll 0 (bottom / 100%) auto;
+            }
+        }
+    }
+
+    &.is-theme-yellow {
+        .hero {
+            &.is-wavy:before {
+                background: transparent url(../img/graphics/legacy/wavy-yellow.svg) no-repeat scroll 0 (bottom / 100%) auto;
+            }
+        }
+    }
+
+    &.is-theme-orange {
+        .hero {
+            &.is-wavy:before {
+                background: transparent url(../img/graphics/legacy/wavy-orange.svg) no-repeat scroll 0 (bottom / 100%) auto;
+            }
+        }
+    }
+
+    &.is-theme-red {
+        .hero {
+            &.is-wavy:before {
+                background: transparent url(../img/graphics/legacy/wavy-red.svg) no-repeat scroll 0 (bottom / 100%) auto;
+            }
+        }
+    }
 }
 
 /* ==========================================================================
@@ -313,6 +369,7 @@ body {
             top: 0;
         }
     }
+
     &.waves-bottom {
         .animated-waves {
             bottom: 0;
@@ -323,7 +380,7 @@ body {
         position: absolute;
         left: 0;
         width: 100%;
-        
+
         &.is-reversed {
             transform: rotate(180deg);
         }
@@ -334,23 +391,23 @@ body {
     .animated-waves {
         .parallax > use {
             &:first-child {
-                fill: rgba($primary,0.7) !important;
+                fill: rgba($primary, 0.7) !important;
             }
 
             &:nth-child(2) {
-                fill: rgba($primary,0.5) !important;
+                fill: rgba($primary, 0.5) !important;
             }
 
             &:nth-child(3) {
-                fill: rgba($primary,0.3) !important;
+                fill: rgba($primary, 0.3) !important;
             }
 
             &:nth-child(4) {
-                fill: rgba($primary,1) !important;
+                fill: rgba($primary, 1) !important;
             }
 
             &:last-child {
-                fill: rgba($primary,0.7) !important;
+                fill: rgba($primary, 0.7) !important;
             }
         }
     }
@@ -528,7 +585,7 @@ body {
 
     .is-hero-title {
         z-index: 2;
-    
+
         h1, h2 {
             color: $white;
         }
@@ -583,16 +640,16 @@ body {
         &.gradient-hero {
             .is-hero-title {
                 text-align: center !important;
-    
+
                 .buttons {
                     justify-content: center;
                 }
             }
         }
-    
+
         &.rounded-hero {
             min-height: 75vh !important;
-    
+
             .hero-body {
                 .hero-mockup {
                     max-width: 610px !important;
@@ -610,7 +667,6 @@ body {
     position: relative;
 
     &.type-1 {
-        
         &.is-cover {
             background-size: cover !important;
         }
@@ -700,7 +756,6 @@ body {
                 .field {
                     margin-bottom: 4px;
 
-                    
                     .control:first-child {
                         flex-grow: 2;
                     }
@@ -1069,7 +1124,7 @@ App Showcase
     .showcase-wrap {
         width: 100%;
         height: 100%;
-    
+
         .app-showcase {
             border-radius: 4px;
             border: 1px solid $fade-grey;
@@ -1082,7 +1137,7 @@ App Showcase
             left: 0;
             z-index: -1;
         }
-    
+
         &.is-active {
             .app-showcase {
                 transform: translateX(0);
@@ -1250,4 +1305,97 @@ Geo Canvas
     overflow: visible;
     position: absolute;
     top: 10%;
+}
+
+/* ==========================================================================
+Star Fall
+========================================================================== */
+
+$size: 8;
+$total: 40;
+
+.starfall {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    z-index: 0;
+
+    .falling-star {
+        width: $size + px;
+        height: $size + px;
+        background: $primary;
+        position: absolute;
+        border-radius: 50%;
+        opacity: .5;
+    }
+}
+
+@for $i from 1 through $total {
+    $x: random(100);
+
+    .falling-star:nth-child(#{$i}) {
+        transform: translateX($x + vw) translateY(-$size + px);
+        animation: anim#{$i} 4s infinite;
+        animation-delay: $i * 0.3s;
+    }
+
+    @keyframes anim#{$i} {
+        10% {
+            opacity: .5;
+        }
+
+        12% {
+            opacity: 1;
+            box-shadow: 0 0 3px 0 white;
+        }
+
+        15% {
+            opacity: 0.5;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX($x + 20 + vw) translateY(100vh);
+            opacity: 0;
+        }
+    }
+}
+
+/* ==========================================================================
+Particles
+========================================================================== */
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    z-index: 200;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% ,90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(45vw);
+        opacity: 0;
+    }
 }

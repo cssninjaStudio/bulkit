@@ -69,6 +69,7 @@
     "jquery-waypoints": "^2.0.5",
     "jquery.counterup": "^2.1.0",
     "feather-icons": "^4.7.0",
+    "lozad": "^1.16.0",
     "paper": "^0.12.11",
     "wallop": "^2.4.1",
     "scrollreveal": "^3.4.0",
