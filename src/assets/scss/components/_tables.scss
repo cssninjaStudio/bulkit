@@ -126,7 +126,6 @@ TABLE OF CONTENTS
     overflow: hidden;
     box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
 
-    //colored headers
     &.is-primary tr:first-child {
         background: $primary;
     }
@@ -186,7 +185,6 @@ TABLE OF CONTENTS
         padding: .5em 1em;
     }
 
-    //Responsive behaviour
     @media screen and (max-width: 601px) {
         tr:nth-child(2) {
             border-top: none;

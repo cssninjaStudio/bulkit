@@ -10,11 +10,7 @@ TABLE OF CONTENTS
     1. Section title
     2. Parallax title
     3. Clean Section title
-    4. Feature text
-    5. Quick Feature
-    6. Side Feature
-    7. Title wrapper
-    8. Minimal Feature
+    4. Title wrapper
 ***/
 
 /* ==========================================================================
@@ -127,8 +123,6 @@ TABLE OF CONTENTS
         align-items: center;
         justify-content: space-between;
 
-        .title-wrap {}
-
         .actions {
             .link-wrap {
                 position: relative;
@@ -222,14 +216,6 @@ TABLE OF CONTENTS
         line-height: 1.2;
         margin-bottom: 1rem !important;
     }
-
-    /*.section-subtitle, .feature-title {
-        font-family: $font-main !important;
-        font-weight: 500 !important;
-        font-size: 2rem !important;
-        margin-bottom: 0 !important;
-        padding: 5px 0 !important;
-    }*/
 
     .section-title-landing {
         font-family: $font-main;
@@ -352,103 +338,7 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-4. Feature text
-========================================================================== */
-
-.body-subtitle {
-    font-family: $font-main;
-    font-weight: 600;
-    color: $blue-grey;
-    font-size: 1.8rem;
-    line-height: 30px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: .5rem !important;
-
-    &.is-inverted {
-        color: $white;
-    }
-}
-
-.body-text {
-    color: $blue-grey-light;
-    font-family: $font-text;
-    font-size: 1.2rem;
-}
-
-.detailed-feature-subtitle {
-    text-transform: uppercase;
-    font-family: $font-sub;
-    font-size: .9rem;
-    letter-spacing: 3px;
-    color: $title-grey;
-    font-weight: 600;
-}
-
-/* ==========================================================================
-5. Quick Feature
-========================================================================== */
-
-.quick-feature-wrap {
-    .button-wrap {
-        padding: 10px 0;
-    }
-}
-
-.quick-feature {
-    &.has-numbers {
-        font-size: 2.1rem !important;
-        font-family: $font-main;
-        font-weight: 400 !important;
-        margin-bottom: 0.8rem !important;
-
-        .bg-number {
-            padding-right: 10px !important;
-            font-family: $font-text !important;
-        }
-    }
-
-    > span {
-        font-size: 2rem;
-        font-family: $font-main;
-    }
-}
-
-.small-feature {
-    padding: 5px 0;
-    font-family: $font-main;
-    font-size: 1.3rem;
-}
-
-/* ==========================================================================
-6. Side Feature
-========================================================================== */
-
-.is-clean, .clean-text {
-    font-family: $font-main !important;
-}
-
-.side-feature-text {
-    padding: 20px;
-
-    h2 {
-        font-size: 1.75rem;
-        margin-bottom: 12px !important;
-    }
-
-    p {
-        color: $blue-grey;
-        margin-bottom: 12px;
-    }
-}
-
-.feature-content {
-    font-family: $font-text;
-    color: $blue-grey-light;
-}
-
-/* ==========================================================================
-7. Title wrapper
+4. Title wrapper
 ========================================================================== */
 
 .title-wrapper {
@@ -489,88 +379,3 @@ TABLE OF CONTENTS
     }
 }
 
-/* ==========================================================================
-8. Minimal Feature
-========================================================================== */
-
-.minimal-feature {
-    .minimal-title {
-        font-family: $font-main;
-        font-size: 2rem;
-        font-weight: 500;
-        color: $blue-grey;
-        padding: 10px 0;
-        margin-bottom: 0 !important;
-    }
-}
-
-.minimal-feature-image {
-    position: relative;
-
-    .main-image {
-        position: relative;
-        z-index: 2;
-    }
-
-    .image-bg {
-        position: absolute;
-        top: 10%;
-        left: -20%;
-        right: 0;
-        margin: 0 auto;
-        max-width: 1096px;
-        width: 120%;
-        z-index: 0;
-    }
-}
-
-/* ==========================================================================
-9. Dividers
-========================================================================== */
-
-.special-divider {
-    margin: 30px auto;
-
-    span {
-        display: block;
-        height: 2px;
-        width: 60px;
-        background: $primary;
-        border-radius: 50px;
-        margin: 15px auto;
-        transform: rotate(-45deg);
-    }
-
-    &.is-inverted {
-        span {
-            background: $white;
-        }
-    }
-}
-
-.title-divider {
-    background: $primary !important;
-    height: 3px;
-    border-radius: 50px;
-}
-
-.divider-container {
-    position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-
-    .divider-bar {
-        height: 160px;
-        width: 1.4px;
-        background: lighten($muted-grey, 25%);
-    }
-
-    .divider-text {
-        font-weight: 600;
-        color: $blue-grey;
-        margin: 16px;
-    }
-}

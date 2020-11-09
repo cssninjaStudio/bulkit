@@ -15,6 +15,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Pageloader
 ========================================================================== */
+
 .pageloader {
     position: fixed;
     top: 0;
@@ -30,7 +31,6 @@ TABLE OF CONTENTS
     transform: translateY(-100%);
     will-change: transform;
 
-    //Active state
     &.is-active {
         -webkit-transform: translateY(0);
         transform: translateY(0);
@@ -68,7 +68,6 @@ TABLE OF CONTENTS
     }
 }
 
-//loader Keyframes
 @-webkit-keyframes page-loader-inner {
     0%,40% {
         -webkit-transform: scale(0);
@@ -124,6 +123,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 1. Infraloader
 ========================================================================== */
+
 .infraloader {
     position: fixed;
     top: 0;
@@ -135,7 +135,6 @@ TABLE OF CONTENTS
     opacity: 0;
     transition: opacity .35s;
 
-    //Active state
     &.is-active {
         opacity: 1;
         z-index: 999997;

@@ -29,7 +29,6 @@ TABLE OF CONTENTS
 .button {
     transition: all 0.5s;
 
-    //Sign up buttons
     &.button-signup {
         padding: 22px 40px !important;
 
@@ -39,7 +38,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //CTA buttons
     &.button-cta {
         padding: 22px 40px !important;
 
@@ -49,17 +47,14 @@ TABLE OF CONTENTS
         }
     }
 
-    //Line height fix class
     &.no-lh {
         line-height: 0 !important;
     }
 
-    //Action button
     &.button-action {
         padding: 25px 40px !important;
     }
 
-    //Button text alignments
     &.btn-align {
         padding: 3px 13px 6px 13px;
     }
@@ -72,23 +67,19 @@ TABLE OF CONTENTS
         padding: 6px 15px 18px 15px;
     }
 
-    //Uppercase buttons
     &.btn-upper {
         text-transform: uppercase;
     }
 
-    //Rounded buttons
     &.rounded {
         border-radius: 500px;
     }
 
-    //Hover raised buttons
     &.raised:hover {
         box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
         opacity: 0.8;
     }
 
-    //Raised buttons
     &.is-raised {
         box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
     }
@@ -97,16 +88,13 @@ TABLE OF CONTENTS
         font-weight: 500;
     }
 
-    //Fade buttons
     &.btn-fade:hover {
         opacity: 0.6;
     }
 
-    //Outlined buttons
     &.btn-outlined {
         background: transparent;
 
-        //Light buttons
         &.light-btn {
             border-color: $white;
             color: $white;
@@ -116,35 +104,28 @@ TABLE OF CONTENTS
                 color: $blue-grey;
             }
         }
-
-        //bold outlined buttons
         &.is-bold {
             border-width: 2px;
             font-weight: 600;
         }
     }
 
-    //Padded button
     &.btn-padding {
         padding: 6px 13px 16px 13px !important;
     }
 
-    //Default button
     &.default-btn {
         color: $placeholder !important;
     }
 
-    //Link buttons
     &.is-link {
         text-decoration: none !important;
     }
 
-    //Icon buttons
     &.has-icon-right i {
         padding-left: 8px;
     }
 
-    //Default border
     &:focus {
         border-color: $default-input;
     }
@@ -163,7 +144,6 @@ TABLE OF CONTENTS
         text-align: center !important;
     }
 
-    //Buttons with icons
     i {
         position: relative;
         top: 1px;
@@ -183,7 +163,6 @@ TABLE OF CONTENTS
         justify-content: center;
         align-items: center;
 
-        //Button sizes
         &.is-small {
             width: 36px;
             height: 36px;
@@ -198,8 +177,6 @@ TABLE OF CONTENTS
             width: 64px;
             height: 64px;
         }
-
-        //Icon sizes
         i {
             font-size: 21px;
             padding: 0 !important;
@@ -222,6 +199,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 2. Link buttons
 ========================================================================== */
+
 .button {
     &.is-link {
         background: transparent !important;
@@ -258,6 +236,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 3. Primary button
 ========================================================================== */
+
 .button {
     &.primary-btn {
         outline: none;
@@ -295,6 +274,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 4. Secondary button
 ========================================================================== */
+
 .button {
     &.secondary-btn {
         outline: none;
@@ -332,6 +312,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 5. Accent button
 ========================================================================== */
+
 .button {
     &.accent-btn {
         outline: none;
@@ -369,6 +350,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 6. Success button
 ========================================================================== */
+
 .button {
     &.success-btn {
         outline: none;
@@ -406,6 +388,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 7. Warning button
 ========================================================================== */
+
 .button {
     &.warning-btn {
         outline: none;
@@ -443,6 +426,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 8. Danger button
 ========================================================================== */
+
 .button {
     &.danger-btn {
         outline: none;
@@ -480,6 +464,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 9. Info button
 ========================================================================== */
+
 .button {
     &.info-btn {
         outline: none;
@@ -517,6 +502,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 10. Social buttons
 ========================================================================== */
+
 .button {
     &.social-btn {
         color: $white;
@@ -546,6 +532,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 11. Ripple effect
 ========================================================================== */
+
 .ripple {
     overflow: hidden;
 }
@@ -559,7 +546,6 @@ TABLE OF CONTENTS
     animation: ripple-animation 2s;
 }
 
-//Ripple animation keyframes
 @keyframes ripple-animation {
     from {
         transform: scale(1);

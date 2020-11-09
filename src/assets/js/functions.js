@@ -23,6 +23,15 @@ TABLE OF CONTENTS
 =============================================================================
 ***/
 
+//Set environment variable (Used for development and demo)
+/* 
+	Possible values:
+	1. development
+	2. demo
+	3. customization
+*/
+var env = 'development';
+
 /* ==========================================================================
 0. Theme Variables
 ========================================================================== */
@@ -1350,6 +1359,24 @@ function initVideoEmbed() {
 function initBackgroundVideo() {
     if ($('.covervid-video').length) {
         $('.covervid-video').coverVid(1920, 1080);
+    }
+}
+
+//Custom Plyr Players
+function initPlayers() {
+    if ($('.bulkit-player').length) {
+        if (env === 'development') {
+            $('[data-demo-poster]').each(function () {
+                var poster = $(this).attr('data-demo-poster');
+                if (poster !== undefined) {
+                    $(this).attr('data-poster', poster);
+                }
+            });
+            const players = Array.from(document.querySelectorAll('.bulkit-player')).map(p => new Plyr(p));
+        } else {
+            const players = Array.from(document.querySelectorAll('.bulkit-player')).map(p => new Plyr(p));
+        }
+        
     }
 }
 

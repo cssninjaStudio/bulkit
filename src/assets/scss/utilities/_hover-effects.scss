@@ -16,7 +16,6 @@ TABLE OF CONTENTS
 0. Image hover effects setup
 ========================================================================== */
 
-//Base setup
 .image-grid {
     .image-title {
         font-size: 1.1rem;
@@ -99,8 +98,8 @@ TABLE OF CONTENTS
 /* ==========================================================================
 1. Hover effects and team hover effects
 ========================================================================== */
+
 figure {
-    // Rounded caption on hover
     &.round-corner {
         background: -webkit-linear-gradient(-45deg, #000 0%, #fff 100%);
         background: linear-gradient(-45deg, #000 0%, #fff 100%);
@@ -185,7 +184,6 @@ figure {
         }
     }
 
-    // Corner caption on hover
     &.cornered {
         img {
             max-width: none;
@@ -234,7 +232,6 @@ figure {
         }
     }
 
-    //Team section hover effect
     &.team-hover {
         figcaption {
             top: auto;
@@ -353,7 +350,6 @@ figure {
         }
     }
 
-    //Team section slanted hover effect
     &.team-slanted {
         background: #162633;
         text-align: left;
@@ -439,9 +435,6 @@ figure {
 
         &:hover figcaption::before {
             opacity: 0.9;
-
-            //-webkit-transform: rotate3d(0,60deg,1,0);
-            //transform: rotate3d(0,60deg,1,0);
             transform: rotate(-15deg);
         }
 

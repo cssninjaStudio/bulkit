@@ -50,7 +50,6 @@ TABLE OF CONTENTS
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
     }
 
-    //Cloned fixed navbar
     &.is-cloned {
         position: fixed;
         top: 0;
@@ -208,7 +207,6 @@ TABLE OF CONTENTS
         width: 4.6rem;
     }
 
-    //Light navbar
     &.navbar-light {
         .icon-box-toggle {
             span i {
@@ -340,7 +338,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //Active Transparent navbar modifiers
     &.navbar-faded {
         background: $white;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
@@ -364,6 +361,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 9. Account avatar
 ========================================================================== */
+
 .account {
     position: relative;
     right: 20px;
@@ -398,8 +396,9 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-10. Scrollnav (component pages spyscroll nav)
+10. Scrollnav 
 ========================================================================== */
+
 .scroll-nav-wrapper {
     width: 100%;
     height: 60px;
@@ -444,6 +443,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 11. Hamburger menu icon
 ========================================================================== */
+
 .menu-toggle {
     font-size: 20px;
     color: #666;

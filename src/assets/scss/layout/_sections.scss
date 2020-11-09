@@ -16,8 +16,17 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Sections general styles
 ========================================================================== */
+
 .section {
     position: relative;
+
+    &.is-relative {
+        position: relative;
+    }
+
+    &.is-cover {
+        background-size: cover !important;
+    }
 
     &.section-light-grey {
         background-color: $light-grey;
@@ -47,24 +56,24 @@ TABLE OF CONTENTS
         background: #f2f2fa;
     }
 
+    &.is-theme-grey {
+        background: #f6fbfe;
+    }
+
+    &.is-grey {
+        background: $section-grey;
+    }
+
+    &.is-dark {
+        background: $sidebar;
+    }
+
     &.has-border-bottom {
         border-bottom: 1px solid $fade-grey;
     }
 
     &.has-border-top {
         border-top: 1px solid $fade-grey;
-    }
-
-    &.is-relative {
-        position: relative;
-    }
-
-    &.is-cover {
-        background-size: cover !important;
-    }
-
-    &.is-theme-grey {
-        background: #f6fbfe;
     }
 
     &.no-margin {
@@ -80,10 +89,6 @@ TABLE OF CONTENTS
     &.is-skewed-sm {
         transform: skew(0deg, -3deg) translate(0, -45px);
         padding-top: 140px;
-    }
-
-    &.is-grey {
-        background: $section-grey;
     }
 
     &.is-reversed {
@@ -158,20 +163,6 @@ TABLE OF CONTENTS
         background-image: url(../img/graphics/legacy/circles-and-shapes.png);
         background-size: cover;
         background-repeat: no-repeat;
-    }
-
-    &.is-grey {
-        background: $section-grey;
-    }
-
-    &.is-dark {
-        background: $sidebar;
-    }
-
-    &.is-reversed {
-        .columns {
-            flex-direction: row-reverse;
-        }
     }
 
     &.is-ice-pricing {
@@ -270,20 +261,22 @@ TABLE OF CONTENTS
         color: $basaltic-grey;
     }
 
-    .media.icon-box {
-        border-top: none !important;
-
-        .media-content .content p {
-            span.icon-box-title {
-                color: $blue-grey;
-                font-size: 1.2rem;
-                font-weight: 600;
-            }
-
-            span.icon-box-text {
-                color: $title-grey;
-                font-size: 1.1rem;
-                font-weight: 400;
+    .media {
+        &.icon-box {
+            border-top: none !important;
+    
+            .media-content .content p {
+                span.icon-box-title {
+                    color: $blue-grey;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+    
+                span.icon-box-text {
+                    color: $title-grey;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
             }
         }
     }
@@ -338,6 +331,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 1. Quick flex block
 ========================================================================== */
+
 .content.content-flex, .content-flex {
     display: flex;
     justify-content: flex-start;
@@ -356,6 +350,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 2. Divider
 ========================================================================== */
+
 .divider {
     display: table;
     white-space: nowrap;

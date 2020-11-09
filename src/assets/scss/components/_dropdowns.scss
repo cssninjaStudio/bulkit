@@ -17,14 +17,16 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Hover dropdowns
 ========================================================================== */
+
 .is-drop {
     position: relative;
     cursor: pointer;
 
-    //caret
-    i.sl-icon-arrow-down {
-        font-size: 8px !important;
-        top: 2px !important;
+    i {
+        &.sl-icon-arrow-down {
+            font-size: 8px !important;
+            top: 2px !important;
+        }
     }
 
     .drop-caret {
@@ -32,7 +34,6 @@ TABLE OF CONTENTS
         top: 5px;
     }
 
-    //container
     .dropContain {
         width: 220px;
         position: absolute;
@@ -41,7 +42,6 @@ TABLE OF CONTENTS
         margin-left: -165px;
         top: -500vh;
 
-        //dropdown
         .dropOut {
             width: 220px;
             background: $white;
@@ -63,7 +63,6 @@ TABLE OF CONTENTS
             transition: all .5s ease-out;
         }
 
-        //arrow
         .dropOut .triangle {
             width: 0;
             height: 0;
@@ -76,7 +75,6 @@ TABLE OF CONTENTS
             margin-left: -8px;
         }
 
-        //menu items
         .dropOut ul li {
             text-align: left;
             float: left;
@@ -98,7 +96,6 @@ TABLE OF CONTENTS
                 cursor: pointer;
             }
 
-            //icons
             i.drop-icon {
                 position: relative;
                 top: 4px;
@@ -112,7 +109,6 @@ TABLE OF CONTENTS
             }
         }
 
-        //menu container
         .dropOut ul {
             float: left;
             padding: 10px 0;
@@ -133,7 +129,6 @@ TABLE OF CONTENTS
                 }
             }
 
-            //divider
             li.dropdown-divider {
                 padding: 0 !important;
                 border-radius: 0 !important;
@@ -146,7 +141,6 @@ TABLE OF CONTENTS
             }
         }
 
-        //Menu item hover colors
         .dropOut {
             &.is-primary ul li:hover {
                 background: $primary;
@@ -165,7 +159,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //Active state
     &:hover .dropContain {
         top: 30px !important;
     }
@@ -180,19 +173,21 @@ TABLE OF CONTENTS
     }
 
     &.is-centered .dropContain {
-        margin-left: -110px; /* half of width */
+        margin-left: -110px;
     }
 
     &.is-right .dropContain {
-        margin-left: -55px; /* quarter of width */
+        margin-left: -55px;
     }
 }
 
 button {
-    i.sl-icon-arrow-down {
-        font-size: 8px !important;
-        top: 2px !important;
-        padding-left: 8px !important;
+    i {
+        &.sl-icon-arrow-down {
+            font-size: 8px !important;
+            top: 2px !important;
+            padding-left: 8px !important;
+        }
     }
 }
 
@@ -314,15 +309,12 @@ button {
     }
 }
 
-//Customizations
 .jq-dropdown {
-    //default
     .jq-dropdown-menu li > a:hover, .jq-dropdown .jq-dropdown-menu label:hover {
         background-color: $light-grey;
         color: inherit;
     }
 
-    //primary
     &.is-primary {
         .jq-dropdown-menu li > a:hover, .jq-dropdown .jq-dropdown-menu label:hover {
             background-color: $primary;
@@ -330,7 +322,6 @@ button {
         }
     }
 
-    //secondary
     &.is-secondary {
         .jq-dropdown-menu li > a:hover, .jq-dropdown .jq-dropdown-menu label:hover {
             background-color: $secondary;
@@ -338,7 +329,6 @@ button {
         }
     }
 
-    //accent
     &.is-accent {
         .jq-dropdown-menu li > a:hover, .jq-dropdown .jq-dropdown-menu label:hover {
             background-color: $accent;

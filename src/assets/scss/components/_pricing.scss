@@ -7,12 +7,20 @@ Pricing tables styles
 /***
 TABLE OF CONTENTS
 =============================================================================
-0. Classic pricing
-1. Minimal pricing
-2. Clean pricing
-3. Fancy pricing
-4. Colored headers pricing
-5. Switch Pricing
+    0. Classic pricing
+    1. Minimal pricing
+    2. Clean pricing
+    3. Fancy pricing
+    4. Colored headers pricing
+    5. Switch Pricing
+    6. One Page Pricing v1
+    7. Pricing Card
+    8. Boxed Pricing
+    9. One Page Pricing v2
+    10. Sophisticated Pricing
+    11. Ecommerce Pricing
+    12. Clean Pricing
+    13. Ice Pricing
 =============================================================================
 ***/
 
@@ -1007,6 +1015,18 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .header-pricing {
+    &.is-wavy {
+        .flex-card {
+            border: none !important;
+
+            .plan-name {
+                font-family: $font-main;
+                text-transform: none;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
     .header-pricing-card {
         text-align: center;
         border-radius: 15px 15px 0 15px;
@@ -1251,9 +1271,8 @@ TABLE OF CONTENTS
     }
 }
 
-
 /* ==========================================================================
-0. One Page Pricing
+6. One Page Pricing v1
 ========================================================================== */
 
 .pricing-wrap {
@@ -1383,7 +1402,7 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-0. Pricing Card
+7. Pricing Card
 ========================================================================== */
 
 .pricing-card {
@@ -1446,7 +1465,7 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-0. Boxed Pricing
+8. Boxed Pricing
 ========================================================================== */
 
 .billing-switcher-wrapper {
@@ -1666,7 +1685,7 @@ TABLE OF CONTENTS
 
 
 /* ==========================================================================
-5. One Page Pricing 1
+9. One Page Pricing v2
 ========================================================================== */
 
 .pricing-sub {
@@ -1735,7 +1754,7 @@ TABLE OF CONTENTS
 
 
 /* ==========================================================================
-9. Sophisticated Pricing
+10. Sophisticated Pricing
 ========================================================================== */
 
 .pricing-wrapper {
@@ -2272,7 +2291,7 @@ TABLE OF CONTENTS
 
 
 /* ==========================================================================
-8. Ecommerce Pricing
+11. Ecommerce Pricing
 ========================================================================== */
 
 .pricing-wrapper {
@@ -2346,6 +2365,38 @@ TABLE OF CONTENTS
     .pricing-wrapper {
         .columns {
             display: flex;
+        }
+    }
+}
+
+/* ==========================================================================
+12. Clean Pricing
+========================================================================== */
+
+.clean-pricing {
+    padding-top: 80px !important;
+}
+
+@media (max-width: 768px) {
+    .clean-pricing {
+        .column.is-5 {
+            text-align: center !important;
+        }
+
+        .period-select {
+            margin: 0 auto;
+        }
+    }
+}
+
+/* ==========================================================================
+13. Ice Pricing
+========================================================================== */
+
+@media (max-width: 767px) {
+    .is-ice-pricing {
+        .pricing-card {
+            padding: 24px !important;
         }
     }
 }

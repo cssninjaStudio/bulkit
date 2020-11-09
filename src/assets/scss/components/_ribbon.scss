@@ -17,6 +17,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Variables
 ========================================================================== */
+
 $ribbon-color: $muted-grey !default;
 $ribbon-background-color: $white !default;
 $ribbon-border: 0.1rem solid $fade-grey !default;
@@ -28,7 +29,7 @@ $size-large: 1.6rem !important;
 /* ==========================================================================
 1. Ribbon Mixins
 ========================================================================== */
-// The ribbon sizes use mixins so they can be used at different breakpoints
+
 @mixin ribbon-small {
     font-size: $size-small;
 }
@@ -44,12 +45,11 @@ $size-large: 1.6rem !important;
 /* ==========================================================================
 2. Ribbon position
 ========================================================================== */
-//Class to attach to a box
+
 .has-ribbon {
     position: relative;
 }
 
-//left position
 .has-ribbon-left {
     position: relative;
 
@@ -61,7 +61,6 @@ $size-large: 1.6rem !important;
     }
 }
 
-//bottom position
 .has-ribbon-bottom {
     position: relative;
 
@@ -74,6 +73,7 @@ $size-large: 1.6rem !important;
 /* ==========================================================================
 3. Ribbon styles
 ========================================================================== */
+
 .ribbon {
     background-color: $ribbon-background-color;
     border: $ribbon-border;
@@ -93,7 +93,6 @@ $size-large: 1.6rem !important;
     font-weight: 400;
     z-index: 2;
 
-    //Ribbon colors
     &.is-primary {
         background-color: $primary;
         color: $white;
@@ -136,7 +135,6 @@ $size-large: 1.6rem !important;
         border-color: $blue;
     }
 
-    // Sizes
     &.is-small {
         @include ribbon-small;
     }
@@ -149,7 +147,6 @@ $size-large: 1.6rem !important;
         @include ribbon-large;
     }
 
-    //outlined style
     &.is-outlined {
         background-color: transparent;
     }

@@ -16,12 +16,12 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Base modal class
 ========================================================================== */
+
 .modal {
     transition: all 0.5s;
     transform: scale(0);
     z-index: 1000;
 
-    //modal content default styles
     .modal-content {
         transition: all 0.4s;
         transform: scale(0);
@@ -29,7 +29,6 @@ TABLE OF CONTENTS
         z-index: 99 !important;
     }
 
-    //modal close default styles
     .modal-close {
         transition: all 0.4s;
         z-index: 100 !important;
@@ -47,163 +46,151 @@ TABLE OF CONTENTS
 /* ==========================================================================
 1. Modal active state
 ========================================================================== */
-.modal.is-active {
-    transform: scale(1);
 
-    //modal overlay
-    .modal-background {
-        background: $webkit-modal-gradient;
-        background: $modal-gradient;
-        background-color: $primary;
-        width: 1000px;
-        height: 1000px;
-        border-radius: 10000px;
-        transition: all 0.5s;
-        transform: scale(0);
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 98 !important;
-        overflow: hidden !important;
+.modal {
+    &.is-active {
+        transform: scale(1);
 
-        &.scaleInCircle {
-            transform: scale(7);
-        }
-    }
-
-    //modal-content
-    .modal-content {
-        //scale in entrance
-        &.scaleIn {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    //close button z-index
-    .modal-close {
-        z-index: 100 !important;
-    }
-
-    //image modal variation
-    &.image-modal {
         .modal-background {
-            background: $webkit-coal-gradient;
-            background: $coal-gradient;
-            background-color: $blue-grey;
-        }
+            background: $webkit-modal-gradient;
+            background: $modal-gradient;
+            background-color: $primary;
+            width: 1000px;
+            height: 1000px;
+            border-radius: 10000px;
+            transition: all 0.5s;
+            transform: scale(0);
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 98 !important;
+            overflow: hidden !important;
 
-        img {
-            border-radius: 6px;
-        }
-
-        .gallery-item figure {
-            background: none;
-        }
-    }
-
-    //Modal card
-    .modal-card {
-        .modal-card-head, .modal-card-foot {
-            padding: 15px;
-        }
-
-        //header
-        .modal-card-head {
-            background-color: $white;
-
-            p {
-                color: $blue-grey;
-            }
-
-            //close button
-            .delete {
-                background: transparent !important;
-                transition: all 0.3s;
-
-                &:before {
-                    background: $accent;
-                }
-
-                &:after {
-                    background: $accent;
-                }
-
-                &:hover {
-                    transform: rotate(180deg);
-                }
+            &.scaleInCircle {
+                transform: scale(7);
             }
         }
 
-        //card body
-        .modal-card-body::-webkit-scrollbar {
-            width: 10px;
+        .modal-content {
+            &.scaleIn {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
-        .modal-card-body::-webkit-scrollbar-thumb {
-            border-radius: 5px;
-            background: rgba(0, 0, 0, 0.2);
+        .modal-close {
+            z-index: 100 !important;
         }
 
-        //card footer
-        .modal-card-foot {
-            background-color: $white;
-            justify-content: flex-end;
-            border-top: none;
-        }
-    }
+        &.image-modal {
+            .modal-background {
+                background: $webkit-coal-gradient;
+                background: $coal-gradient;
+                background-color: $blue-grey;
+            }
 
-    //small modal
-    &.modal-sm {
-        .modal-card-body {
-            max-height: 400px;
-        }
-    }
+            img {
+                border-radius: 6px;
+            }
 
-    //current theme gradient overlay color
-    &.modal-hero {
-        .modal-background {
-            background: $webkit-hero-gradient;
-            background: $hero-gradient;
-            background-color: $secondary;
+            .gallery-item figure {
+                background: none;
+            }
         }
-    }
 
-    //success overlay
-    &.modal-success {
-        .modal-background {
-            background: $green;
+        .modal-card {
+            .modal-card-head, .modal-card-foot {
+                padding: 15px;
+            }
+
+            .modal-card-head {
+                background-color: $white;
+
+                p {
+                    color: $blue-grey;
+                }
+
+                .delete {
+                    background: transparent !important;
+                    transition: all 0.3s;
+
+                    &:before {
+                        background: $accent;
+                    }
+
+                    &:after {
+                        background: $accent;
+                    }
+
+                    &:hover {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .modal-card-body {
+                &::-webkit-scrollbar {
+                    width: 10px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 5px;
+                    background: rgba(0, 0, 0, 0.2);
+                }
+            }
+
+            .modal-card-foot {
+                background-color: $white;
+                justify-content: flex-end;
+                border-top: none;
+            }
         }
-    }
 
-    //error overlay
-    &.modal-error {
-        .modal-background {
-            background: $red;
+        &.modal-sm {
+            .modal-card-body {
+                max-height: 400px;
+            }
         }
-    }
 
-    //warning overlay
-    &.modal-warning {
-        .modal-background {
-            background: $orange;
+        &.modal-hero {
+            .modal-background {
+                background: $webkit-hero-gradient;
+                background: $hero-gradient;
+                background-color: $secondary;
+            }
         }
-    }
 
-    //info overlay
-    &.modal-info {
-        .modal-background {
-            background: $blue;
+        &.modal-success {
+            .modal-background {
+                background: $green;
+            }
         }
-    }
 
-    //message modals icon
-    .modal-svg {
-        max-width: 110px;
-        margin: 0 auto !important;
+        &.modal-error {
+            .modal-background {
+                background: $red;
+            }
+        }
+
+        &.modal-warning {
+            .modal-background {
+                background: $orange;
+            }
+        }
+
+        &.modal-info {
+            .modal-background {
+                background: $blue;
+            }
+        }
+
+        .modal-svg {
+            max-width: 110px;
+            margin: 0 auto !important;
+        }
     }
 }
 
@@ -211,7 +198,6 @@ TABLE OF CONTENTS
 2. Media queries
 ========================================================================== */
 
-//Mobile adjutment
 @media screen and (min-width: 769px) {
     .modal.modal-lg {
         .modal-card, .modal-content {

@@ -6,15 +6,6 @@ Website core JS file (see function.js for complete function reference)
 
 "use strict";
 
-//Set environment variable (Used for development and demo)
-/* 
-	Possible values:
-	1. development
-	2. demo
-	3. customization
-*/
-var env = 'development';
-
 initPageLoader()
 
 $(document).ready(function ($) {
@@ -102,6 +93,7 @@ $(document).ready(function ($) {
 
 	initVideoEmbed();
 	initBackgroundVideo();
+	initPlayers();
 
 	//7. Counters
 

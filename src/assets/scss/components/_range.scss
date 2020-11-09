@@ -16,6 +16,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Variables
 ========================================================================== */
+
 $slider-radius: 50px !default;
 $slider-track-background: $placeholder !default;
 $slider-track-radius: 50px !default;
@@ -38,11 +39,11 @@ $output-minus: 1.2rem;
 /* ==========================================================================
 1. Slider Mixin
 ========================================================================== */
+
 @mixin slider-size($size) {
     $track-height: $size / 2;
     $thumb-size: $size;
 
-    //normal orientation
     &:not([orient="vertical"]) {
         &::-webkit-slider-runnable-track {
             height: $track-height;
@@ -57,7 +58,6 @@ $output-minus: 1.2rem;
         }
     }
 
-    //vertical orientation
     &[orient="vertical"] {
         &::-webkit-slider-runnable-track {
             width: $track-height;
@@ -72,7 +72,6 @@ $output-minus: 1.2rem;
         }
     }
 
-    //Slider thumbs
     &::-webkit-slider-thumb {
         height: $thumb-size;
         width: $thumb-size;
@@ -100,15 +99,14 @@ $output-minus: 1.2rem;
 /* ==========================================================================
 2. Range input
 ========================================================================== */
+
 input[type=range] {
-    //base class
     &.slider {
         -webkit-appearance: none;
         appearance: none;
         margin: 1rem 0;
         background: transparent;
 
-        //fullwidth
         &.is-fullwidth {
             display: block;
             width: 100%;
@@ -131,7 +129,6 @@ input[type=range] {
                 width: 100%;
             }
 
-            //output tooltip
             &.has-output,
             &.has-output-tooltip {
                 + output {
@@ -174,7 +171,6 @@ input[type=range] {
             }
         }
 
-        //vertical orientation (slider thumb not rendering on Chrome in vertical mode is a known browser issue)
         &[orient="vertical"] {
             -webkit-appearance: slider-vertical;
             writing-mode: bt-lr;
@@ -200,7 +196,6 @@ input[type=range] {
             }
         }
 
-        //Slider track
         &::-webkit-slider-runnable-track {
             cursor: pointer;
             animate: 0.2s;
@@ -236,7 +231,6 @@ input[type=range] {
             background: $light-grey;
         }
 
-        //Slider thumbs
         &::-webkit-slider-thumb {
             box-shadow: $slider-thumb-shadow;
             border: $slider-thumb-border;
@@ -291,7 +285,6 @@ input[type=range] {
             }
         }
 
-        //Disabled state
         &:disabled {
             opacity: 0.5;
             cursor: not-allowed;
@@ -314,7 +307,6 @@ input[type=range] {
             }
         }
 
-        //Sizes
         @include slider-size($size-normal);
 
         &.is-small {
@@ -329,7 +321,6 @@ input[type=range] {
             @include slider-size($size-large);
         }
 
-        //Colors
         &.is-primary {
             &::-webkit-slider-runnable-track {
                 background: $primary;

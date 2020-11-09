@@ -24,6 +24,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Variables
 ========================================================================== */
+
 $main-color: #01c9ca;
 $track-color: #cecece !default;
 $thumb-color: $main-color !default;
@@ -44,7 +45,7 @@ $contrast: 0% !default;
 /* ==========================================================================
 1. Mixins
 ========================================================================== */
-//track mixin
+
 @mixin track {
     width: $track-width;
     height: $track-height;
@@ -52,7 +53,6 @@ $contrast: 0% !default;
     transition: all 0.2s ease;
 }
 
-//Thumb mixins
 @mixin thumb {
     position: relative;
     border: $thumb-border-width solid $thumb-border-color;
@@ -100,6 +100,7 @@ $contrast: 0% !default;
 /* ==========================================================================
 2. Bubble
 ========================================================================== */
+
 .bubble-range {
     -webkit-appearance: none;
     margin: ($thumb-height / 2) 0;
@@ -109,7 +110,6 @@ $contrast: 0% !default;
         outline: none;
     }
 
-    //thumb
     &::-webkit-slider-thumb {
         @include thumb;
 
@@ -137,7 +137,6 @@ $contrast: 0% !default;
         background: lighten($track-color, $contrast);
     }
 
-    //track
     &::-webkit-slider-runnable-track {
         @include track;
 
@@ -179,6 +178,7 @@ $contrast: 0% !default;
 /* ==========================================================================
 3. Range input
 ========================================================================== */
+
 .range {
     box-sizing: border-box;
     position: relative;
@@ -191,7 +191,6 @@ $contrast: 0% !default;
         }
     }
 
-    //primary color
     &.is-primary {
         .bubble-label .drop {
             background: $primary !important;
@@ -215,7 +214,6 @@ $contrast: 0% !default;
         }
     }
 
-    //secondary color
     &.is-secondary {
         .bubble-label .drop {
             background: $secondary !important;
@@ -239,7 +237,6 @@ $contrast: 0% !default;
         }
     }
 
-    //accent color
     &.is-accent {
         .bubble-label .drop {
             background: $accent !important;
@@ -267,6 +264,7 @@ $contrast: 0% !default;
 /* ==========================================================================
 4. Bubble label
 ========================================================================== */
+
 .bubble-label {
     position: relative;
     top: 0;
@@ -275,7 +273,6 @@ $contrast: 0% !default;
     width: 80px;
     transform: scale(0.8);
 
-    //value
     .value {
         position: absolute;
         top: 30px;
@@ -304,6 +301,7 @@ $contrast: 0% !default;
 /* ==========================================================================
 5. Input box
 ========================================================================== */
+
 .input-box {
     position: relative;
     margin: 0 -12.5px;
@@ -328,7 +326,6 @@ $contrast: 0% !default;
         z-index: 0;
     }
 
-    //position function
     @for $i from 0 through 100 {
         &[data-value='#{$i}'] .bar {
             margin-right: 25px;

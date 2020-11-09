@@ -24,12 +24,13 @@ $timeline-color: $primary-color;
 /* ==========================================================================
 1. Timeline
 ========================================================================== */
+
 .timeline {
     width: 100%;
     margin: 30px auto;
     position: relative;
     padding: 0 10px;
-    transition: all .4s ease;;
+    transition: all .4s ease;
 
     *, *:before, *:after {
         box-sizing: border-box;
@@ -63,14 +64,12 @@ $timeline-color: $primary-color;
         width: 100%;
     }
 
-    //item
     .timeline-item {
         margin-bottom: 50px;
         position: relative;
 
         @extend %clearfix;
 
-        //icon
         .timeline-icon {
             background: $timeline-color;
             width: 50px;
@@ -99,7 +98,6 @@ $timeline-color: $primary-color;
             }
         }
 
-        //content
         .timeline-content {
             width: 45%;
             background: #fff;
@@ -108,7 +106,6 @@ $timeline-color: $primary-color;
             border-radius: 5px;
             transition: all .3s;
 
-            //header
             .content-header {
                 padding: 10px;
                 background: $white;
@@ -123,7 +120,6 @@ $timeline-color: $primary-color;
                 }
             }
 
-            //body
             .content-body {
                 position: relative;
                 display: flex;
@@ -166,7 +162,6 @@ $timeline-color: $primary-color;
                 border-left: 7px solid $white;
             }
 
-            //right position
             &.right {
                 float: right;
 
@@ -181,7 +176,6 @@ $timeline-color: $primary-color;
         }
     }
 
-    //doted style
     &.doted .timeline-icon {
         background: white;
         border: 2px solid #ededed;
@@ -200,6 +194,7 @@ $timeline-color: $primary-color;
 /* ==========================================================================
 2. Responsive styles
 ========================================================================== */
+
 @media screen and (max-width: 768px) {
     .timeline {
         margin: 10px;
@@ -237,6 +232,7 @@ $timeline-color: $primary-color;
 /* ==========================================================================
 3. Activity feed
 ========================================================================== */
+
 .simple-feed {
     padding: 15px;
     list-style: none;
@@ -245,7 +241,6 @@ $timeline-color: $primary-color;
         color: $accent;
     }
 
-    //item
     .feed-item {
         position: relative;
         top: -10px;
@@ -255,20 +250,17 @@ $timeline-color: $primary-color;
         display: flex;
         align-items: center;
 
-        //name
         .name {
             font-weight: 600;
             color: $blue-grey;
         }
 
-        //image
         img {
             border-radius: 100px;
             width: 45px;
             height: 45px;
         }
 
-        //text
         .feed-item-text {
             margin-left: 15px;
         }
@@ -286,7 +278,6 @@ $timeline-color: $primary-color;
             border: 2px solid $fade-grey;
         }
 
-        //date
         .date {
             display: block;
             position: relative;

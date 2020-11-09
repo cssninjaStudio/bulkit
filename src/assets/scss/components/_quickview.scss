@@ -18,12 +18,14 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Variables
 ========================================================================== */
+
 $quickview-shadow: 5px 0px 13px 3px rgba(0, 0, 0, 0.1) !default;
 $quickview-divider: 1px solid $light-grey !default;
 
 /* ==========================================================================
 1. Base styles
 ========================================================================== */
+
 .quickview {
     display: flex;
     flex-direction: column;
@@ -41,12 +43,10 @@ $quickview-divider: 1px solid $light-grey !default;
     perspective: 1000;
     will-change: transform;
 
-    //active state
     &.is-active {
         right: 0;
         box-shadow: $quickview-shadow;
 
-        //left position
         &.is-left {
             left: 0;
         }
@@ -56,6 +56,7 @@ $quickview-divider: 1px solid $light-grey !default;
 /* ==========================================================================
 2. Header
 ========================================================================== */
+
 .quickview-header {
     display: flex;
     justify-content: space-between;
@@ -64,12 +65,10 @@ $quickview-divider: 1px solid $light-grey !default;
     min-height: 66px !important;
     border-bottom: $quickview-divider;
 
-    //title
     .title {
         margin-bottom: 0;
     }
 
-    //secondary header
     &.is-secondary {
         background: $secondary;
 
@@ -85,7 +84,6 @@ $quickview-divider: 1px solid $light-grey !default;
         }
     }
 
-    //close icon
     .cross-container {
         transition: transform 0.3s;
 
@@ -98,6 +96,7 @@ $quickview-divider: 1px solid $light-grey !default;
 /* ==========================================================================
 3. Body
 ========================================================================== */
+
 .quickview-body {
     -webkit-box-flex: 1;
     flex: 1 1 0%;
@@ -106,6 +105,7 @@ $quickview-divider: 1px solid $light-grey !default;
 /* ==========================================================================
 4. Footer
 ========================================================================== */
+
 .quickview-footer {
     display: flex;
     justify-content: center;

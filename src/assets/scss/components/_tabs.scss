@@ -24,7 +24,6 @@ TABLE OF CONTENTS
     padding: 0;
     width: 100%;
 
-    //container
     .tabs-container {
         overflow: hidden;
         width: 100%;
@@ -109,7 +108,6 @@ TABLE OF CONTENTS
 .navigation-tabs {
     overflow: hidden;
 
-    //faded tabs
     &.animated-tabs {
         .navtab-content {
             animation-name: fadeInLeft;
@@ -117,7 +115,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //translated tabs
     &.translated-tabs {
         .navtab-content {
             animation-name: translateLeft;
@@ -125,7 +122,6 @@ TABLE OF CONTENTS
         }
     }
 
-    // Simple tabs
     &.simple-tabs {
         .tabs ul li {
             &:hover {
@@ -151,7 +147,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //boxed tabs
     &.boxed-tabs {
         .tabs ul li {
             &.is-active {
@@ -166,7 +161,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //outlined pills
     &.outlined-pills {
         &.rounded-pills {
             .tabs ul {
@@ -207,7 +201,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //full pills
     &.full-pills {
         &.rounded {
             .tabs ul {
@@ -219,7 +212,6 @@ TABLE OF CONTENTS
             }
         }
 
-        //pills colors
         &.custom {
             .tabs {
                 ul {
@@ -353,9 +345,7 @@ TABLE OF CONTENTS
         }
     }
 
-    //square pills
     &.square-pills {
-        //rounded style
         &.circle-pills {
             .tabs ul {
                 li {
@@ -406,7 +396,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //navtab content
     .navtab-content {
         display: none;
         padding: 15px;

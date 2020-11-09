@@ -159,7 +159,8 @@ form {
 /* ==========================================================================
 4. Textareas
 ========================================================================== */
-textarea.textarea {
+
+.textarea {
     color: $basaltic-grey;
     box-shadow: none;
     transition: all 0.8s;
@@ -218,7 +219,6 @@ textarea.textarea {
         }
     }
 
-    //growing textarea
     &.is-grow {
         min-height: 40px !important;
         height: 40px;
@@ -232,7 +232,6 @@ textarea.textarea {
         }
     }
 
-    //embeded button inside textarea
     &.is-button {
         min-height: 50px !important;
         height: 50px !important;
@@ -278,7 +277,6 @@ textarea.textarea {
     &.required {
         position: relative;
 
-        //success state
         &.has-success {
             .input {
                 border-color: $green;
@@ -295,7 +293,6 @@ textarea.textarea {
             }
         }
 
-        //error state
         &.has-error {
             .input {
                 border-color: $red;
@@ -397,7 +394,6 @@ textarea.textarea {
 6. Material Inputs
 ========================================================================== */
 
-//Material control
 .control-material {
     position: relative;
     margin-bottom: 2em;
@@ -406,7 +402,97 @@ textarea.textarea {
         border-radius: 0 !important;
     }
 
-    //primary colors
+    &.has-icon {
+        position: relative;
+
+        input {
+            padding-right: 54px;
+
+            &:focus, &:valid {
+                ~ i {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        i {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            color: $placeholder;
+            transition: all .3s;
+        }
+    }
+
+    &.required {
+        position: relative;
+
+        input {
+            padding-right: 54px;
+        }
+
+        i {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            color: $placeholder;
+            display: none;
+        }
+
+        .validation-info {
+            display: none;
+            font-size: 0.8rem;
+        }
+
+        &.has-success {
+            input {
+                border-bottom-color: $green !important;
+            }
+
+            .bar:after, .bar:before {
+                background: $green !important;
+            }
+
+            .success i {
+                color: $green !important;
+                display: block;
+            }
+
+            label {
+                color: $green !important;
+            }
+
+            small.validation-info.success {
+                color: $green;
+                display: block;
+            }
+        }
+
+        &.has-error {
+            input {
+                border-bottom-color: $red !important;
+            }
+
+            .bar:after, .bar:before {
+                background: $red !important;
+            }
+
+            .error i {
+                color: $red !important;
+                display: block;
+            }
+
+            label {
+                color: $red !important;
+            }
+
+            small.validation-info.error {
+                color: $red;
+                display: block;
+            }
+        }
+    }
+
     &.is-primary {
         input.material-input:focus ~ label,
         input:valid ~ label,
@@ -432,7 +518,6 @@ textarea.textarea {
         }
     }
 
-    //secondary colors
     &.is-secondary {
         input.material-input:focus ~ label,
         input:valid ~ label,
@@ -458,7 +543,6 @@ textarea.textarea {
         }
     }
 
-    //accent colors
     &.is-accent {
         input.material-input:focus ~ label,
         input:valid ~ label,
@@ -484,7 +568,6 @@ textarea.textarea {
         }
     }
 
-    //light colors
     &.is-light {
         input.material-input:focus ~ label,
         input:valid ~ label,
@@ -501,7 +584,6 @@ textarea.textarea {
         }
     }
 
-    //basic material styles
     .material-input, textarea {
         width: 100% !important;
         font-size: 18px;
@@ -517,7 +599,6 @@ textarea.textarea {
         }
     }
 
-    //Floating label
     label {
         font-family: $font-text;
         color: $placeholder;
@@ -534,14 +615,12 @@ textarea.textarea {
 
     .material-input:focus ~ label,
     input:valid ~ label,
-    textarea:focus ~ label/*,
-    textarea:valid ~ label*/ {
+    textarea:focus ~ label {
         top: -8px;
         left: -2px;
         font-size: 12px;
     }
 
-    //bottom bar
     .bar {
         position: relative;
         display: block;
@@ -571,101 +650,6 @@ textarea.textarea {
     textarea:focus ~ .bar:before,
     textarea:focus ~ .bar:after {
         width: 50%;
-    }
-
-    //with icon
-    &.has-icon {
-        position: relative;
-
-        input {
-            padding-right: 54px;
-
-            &:focus, &:valid {
-                ~ i {
-                    margin-top: 10px;
-                }
-            }
-        }
-
-        i {
-            position: absolute;
-            right: 15px;
-            top: 12px;
-            color: $placeholder;
-            transition: all .3s;
-        }
-    }
-
-    //validation
-    &.required {
-        position: relative;
-
-        input {
-            padding-right: 54px;
-        }
-
-        i {
-            position: absolute;
-            right: 15px;
-            top: 12px;
-            color: $placeholder;
-            display: none;
-        }
-
-        .validation-info {
-            display: none;
-            font-size: 0.8rem;
-        }
-
-        //success state
-        &.has-success {
-            input {
-                border-bottom-color: $green !important;
-            }
-
-            .bar:after, .bar:before {
-                background: $green !important;
-            }
-
-            .success i {
-                color: $green !important;
-                display: block;
-            }
-
-            label {
-                color: $green !important;
-            }
-
-            small.validation-info.success {
-                color: $green;
-                display: block;
-            }
-        }
-
-        //error state
-        &.has-error {
-            input {
-                border-bottom-color: $red !important;
-            }
-
-            .bar:after, .bar:before {
-                background: $red !important;
-            }
-
-            .error i {
-                color: $red !important;
-                display: block;
-            }
-
-            label {
-                color: $red !important;
-            }
-
-            small.validation-info.error {
-                color: $red;
-                display: block;
-            }
-        }
     }
 
     .material-select {
@@ -745,7 +729,6 @@ textarea.textarea {
 7. Native select box
 ========================================================================== */
 
-//base class
 .control {
     &.has-icons-left {
         .select {
@@ -753,21 +736,18 @@ textarea.textarea {
                 padding-left: 2.5rem;
             }
 
-            //small size
             &.is-small {
                 select {
                     padding-left: 1.75rem;
                 }
             }
 
-            //medium size
             &.is-medium {
                 select {
                     padding-left: 3rem;
                 }
             }
 
-            //large size
             &.is-large {
                 + .icon {
                     font-size: 1.6rem;
@@ -877,13 +857,11 @@ textarea.textarea {
 10. File inputs
 ========================================================================== */
 
-//wrappers
 .file-input-wrapper .control {
     display: flex;
     justify-content: center;
     position: relative;
 
-    //hide native input
     .inputfile {
         width: 0.1px;
         height: 0.1px;
@@ -893,7 +871,6 @@ textarea.textarea {
         z-index: -1;
     }
 
-    //File input label
     .inputfile + label {
         max-width: 80%;
         font-size: 1.05rem;
@@ -928,11 +905,9 @@ textarea.textarea {
     }
 }
 
-//Field style file input
 .field-input-wrapper {
     box-sizing: border-box;
 
-    //wrapper
     .field-input {
         display: flex;
         align-items: center;
@@ -944,7 +919,6 @@ textarea.textarea {
         border-radius: 3px;
     }
 
-    //hide native input
     .field-input > [type='file'] {
         position: absolute;
         top: 0;
@@ -956,7 +930,6 @@ textarea.textarea {
         cursor: pointer;
     }
 
-    //button
     .field-input > .button {
         display: inline-block;
         cursor: pointer;
@@ -966,7 +939,6 @@ textarea.textarea {
         line-height: 1;
     }
 
-    //label
     .field-input > .label {
         color: $blue-grey;
         font-weight: 400;
@@ -1003,7 +975,6 @@ textarea.textarea {
 11. Checkboxes and radios
 ========================================================================== */
 
-//Material Checkbox wrapper
 .label--checkbox {
     position: relative;
     margin: .5rem;
@@ -1020,7 +991,6 @@ textarea.textarea {
     }
 }
 
-//checkbox
 .md-checkbox {
     position: relative;
     top: -0.375rem;
@@ -1065,44 +1035,16 @@ textarea.textarea {
     }
 }
 
-//Checked animation
-@-webkit-keyframes slideUp {
-    0% {
-        -webkit-transform: translateY(6.25rem);
-        transform: translateY(6.25rem);
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@-moz-keyframes slideUp {
-    0% {
-        -moz-transform: translateY(6.25rem);
-        transform: translateY(6.25rem);
-    }
-
-    100% {
-        -moz-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
 @keyframes slideUp {
     0% {
-        -webkit-transform: translateY(6.25rem);
         transform: translateY(6.25rem);
     }
 
     100% {
-        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 }
 
-//mobile adjustments
 @media (min-width: 769px) {
     input.md-checkbox:focus {
         border-bottom-color: transparent !important;
@@ -1110,11 +1052,10 @@ textarea.textarea {
         box-shadow: none !important;
         outline: none !important;
         outline-offset: 0 !important;
-        background: #fff !important;
+        background: $white !important;
     }
 }
 
-//Basic Checkbox and radio
 %controller {
     position: relative;
     cursor: pointer;
@@ -1124,7 +1065,6 @@ textarea.textarea {
         background: transparent;
     }
 
-    //d-checkbox, b-radio
     input.d-checkbox + span, input.b-radio + span {
         background: $white;
         content: "";
@@ -1144,12 +1084,10 @@ textarea.textarea {
         }
     }
 
-    //checked state
     input.d-checkbox:checked + span::after, input.b-radio:checked + span::after {
         transform: scale(1);
     }
 
-    //hide native input
     input.d-checkbox, input.b-radio {
         position: absolute;
         cursor: pointer;
@@ -1157,11 +1095,9 @@ textarea.textarea {
     }
 }
 
-//checkbox style
 .checkbox-wrap {
     @extend %controller;
 
-    //check symbol
     input + span {
         border-radius: 2px;
 
@@ -1173,7 +1109,6 @@ textarea.textarea {
         }
     }
 
-    //check symbol medium
     &.is-medium input + span {
         width: 1.4em;
         height: 1.4em;
@@ -1186,7 +1121,6 @@ textarea.textarea {
         }
     }
 
-    //check symbol small
     &.is-small input + span {
         width: 1em;
         height: 1em;
@@ -1200,11 +1134,9 @@ textarea.textarea {
     }
 }
 
-//Radio group style
 .radio-wrap {
     @extend %controller;
 
-    //base
     input + span {
         border-radius: 1000px;
 
@@ -1216,12 +1148,10 @@ textarea.textarea {
         }
     }
 
-    //checked state
     input:checked + span::after {
         background: $blue-grey;
     }
 
-    //sizes
     &.is-small span {
         transform: scale(0.6) !important;
 
@@ -1238,7 +1168,6 @@ textarea.textarea {
         }
     }
 
-    //colors
     &.is-primary {
         input:checked + span::after {
             background: $primary;
@@ -1528,18 +1457,15 @@ textarea.textarea {
 15. Combo boxes
 ========================================================================== */
 
-//Wrapper
 .is-combo {
     margin-bottom: 20px;
 
-    //Label
     .combo-label {
         font-weight: 500;
         font-size: .9rem;
         color: $muted-grey;
     }
 
-    //Combo box types
     .combo-box, .image-combo-box, .stacked-combo-box, .user-combo-box {
         position: relative;
         background: $white;
@@ -1556,20 +1482,17 @@ textarea.textarea {
             }
         }
 
-        //Combo box inner
         .box-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            //Selected item
             .combo-item {
                 display: flex;
                 align-items: center;
                 height: 40px;
                 padding-left: 8px;
 
-                //icon
                 i {
                     color: $secondary;
                     font-size: 20px;
@@ -1602,17 +1525,13 @@ textarea.textarea {
                     }
                 }
 
-                //image
                 img {
                     display: block;
                     height: 26px;
                     width: 26px;
-
-                    //border-radius: 50%;
                     object-fit: contain;
                     margin-right: 8px;
 
-                    //Modifier for stacked mode
                     &.is-stacked {
                         height: 26px;
                         width: 26px;
@@ -1656,7 +1575,6 @@ textarea.textarea {
                     }
                 }
 
-                //Text
                 span {
                     display: block;
                     color: $blue-grey;
@@ -1667,7 +1585,6 @@ textarea.textarea {
             }
         }
 
-        //Box caret
         .box-chevron {
             position: absolute;
             top: 0;
@@ -1694,7 +1611,6 @@ textarea.textarea {
             }
         }
 
-        //Combo dropdown
         .box-dropdown {
             position: absolute;
             top: 32px;
@@ -1706,7 +1622,6 @@ textarea.textarea {
             pointer-events: none;
             transition: all .3s;
 
-            //Modifier
             &.is-dropup {
                 top: -165px;
                 height: 148px;
@@ -1716,7 +1631,6 @@ textarea.textarea {
                 }
             }
 
-            //Dropdown inner
             .dropdown-inner {
                 position: relative;
                 width: 100%;
@@ -1728,11 +1642,9 @@ textarea.textarea {
                 max-height: 190px;
                 overflow-y: auto;
 
-                //List
                 ul {
                     padding: 10px 0;
 
-                    //List item
                     li {
                         padding: 6px 8px;
                         display: flex;
@@ -1740,7 +1652,6 @@ textarea.textarea {
                         align-items: center;
                         width: 100%;
 
-                        //Icon
                         .item-icon {
                             position: relative;
                             display: flex;
@@ -1781,13 +1692,10 @@ textarea.textarea {
                                 }
                             }
 
-                            //Image
                             img {
                                 display: block;
                                 height: 22px;
                                 width: 22px;
-
-                                // border-radius: 50%;
                                 object-fit: contain;
                                 transition: opacity .3s;
 
@@ -1814,7 +1722,6 @@ textarea.textarea {
                             }
                         }
 
-                        //Checkmark
                         .checkmark {
                             display: flex;
                             justify-content: center;
@@ -1850,7 +1757,6 @@ textarea.textarea {
                             background: lighten($fade-grey, 2%);
                         }
 
-                        //Active state
                         &.is-active {
                             .item-icon {
                                 i {
@@ -1875,7 +1781,6 @@ textarea.textarea {
             }
         }
 
-        //Combo box active state
         &.is-active {
             border-color: $secondary;
 
@@ -1891,13 +1796,11 @@ textarea.textarea {
         }
     }
 
-    //Help text
     .help-text {
         font-size: .75rem;
         color: $muted-grey;
     }
 
-    //Big combo box with description
     .big-combo-box {
         position: relative;
         background: $white;
@@ -1908,14 +1811,12 @@ textarea.textarea {
         cursor: pointer;
         transition: all .3s;
 
-        //Inner
         .box-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 100%;
 
-            //Selected item
             .combo-item {
                 display: flex;
                 align-items: center;
@@ -1927,7 +1828,6 @@ textarea.textarea {
                     font-size: 1.6rem;
                 }
 
-                //Text
                 .combo-text {
                     margin-left: 16px;
 
@@ -1953,7 +1853,6 @@ textarea.textarea {
             }
         }
 
-        //Caret
         .box-chevron {
             position: absolute;
             top: 0;
@@ -1973,7 +1872,6 @@ textarea.textarea {
             }
         }
 
-        //Combo box dropdown
         .box-dropdown {
             position: absolute;
             top: 54px;
@@ -1985,7 +1883,6 @@ textarea.textarea {
             pointer-events: none;
             transition: all .3s;
 
-            //Dropdown inner
             .dropdown-inner {
                 position: relative;
                 width: 100%;
@@ -1998,11 +1895,9 @@ textarea.textarea {
                 overflow-y: auto;
                 overflow-x: hidden;
 
-                //List
                 ul {
                     padding: 10px 0;
 
-                    //List item
                     li {
                         padding: 6px 8px;
                         display: flex;
@@ -2010,7 +1905,6 @@ textarea.textarea {
                         align-items: center;
                         width: 100%;
 
-                        //Icon
                         .item-icon {
                             display: flex;
                             justify-content: center;
@@ -2027,7 +1921,6 @@ textarea.textarea {
                             }
                         }
 
-                        //Content
                         .item-name {
                             span {
                                 display: block;
@@ -2052,7 +1945,6 @@ textarea.textarea {
                             background: lighten($fade-grey, 2%);
                         }
 
-                        //Active state
                         &.is-active {
                             .item-icon i {
                                 color: $secondary;
@@ -2067,7 +1959,6 @@ textarea.textarea {
             }
         }
 
-        //Big combo box active state
         &.is-active {
             border-color: $secondary;
 

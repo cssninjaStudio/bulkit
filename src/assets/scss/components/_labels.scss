@@ -7,7 +7,7 @@ Badges
 /***
 TABLE OF CONTENTS
 =============================================================================
-0. Badges
+0. Badge
 1. Tags
 =============================================================================
 ***/
@@ -15,6 +15,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Badge
 ========================================================================== */
+
 .b-badge {
     height: 20px;
     min-width: 20px;
@@ -29,19 +30,16 @@ TABLE OF CONTENTS
     text-align: center;
     border-radius: 3px;
 
-    //rounded style
     &.rounded {
         border-radius: 200px;
     }
 
-    //outlined style
     &.badge-outlined {
         background: transparent;
         border: 1px solid $muted-grey;
         color: $muted-grey;
     }
 
-    //colors
     &.is-primary {
         background: $primary;
 
@@ -120,17 +118,14 @@ TABLE OF CONTENTS
 .tag {
     margin-bottom: 5px;
 
-    //square style
     &.squared {
         border-radius: 2px !important;
     }
 
-    //outlined style
     &.is-outlined {
         border: 1px solid $muted-grey;
     }
 
-    //colors
     &.is-primary {
         background: $primary;
         color: $white;
@@ -219,75 +214,69 @@ TABLE OF CONTENTS
         }
     }
 
-    &.is-medium {
-        //padding-bottom: 3px !important;
-   
-    }
-
-    &.is-large {
-        //padding-bottom: 5px !important;
-   
-    }
-
     span.delete {
         top: 2px;
     }
 }
 
-//Tags with addons
-.tags.has-addons {
-    span:first-child {
-        border-bottom-right-radius: 0 !important;
-        border-top-right-radius: 0 !important;
-        margin-right: 0;
+.tags {
+    &.has-addons {
+        span:first-child {
+            border-bottom-right-radius: 0 !important;
+            border-top-right-radius: 0 !important;
+            margin-right: 0;
+        }
+    
+        span:last-child {
+            border-bottom-left-radius: 0 !important;
+            border-top-left-radius: 0 !important;
+            margin-left: -5px;
+        }
+    
+        &.is-centered {
+            justify-content: center;
+        }
     }
+}
 
-    span:last-child {
-        border-bottom-left-radius: 0 !important;
-        border-top-left-radius: 0 !important;
-        margin-left: -5px;
-    }
-
-    &.is-centered {
+.control {
+    &.tag-group {
+        display: flex;
         justify-content: center;
     }
 }
 
-//tag group wrapper
-.control.tag-group {
-    display: flex;
-    justify-content: center;
-}
-
-//tag with close icon
-.tag.is-delete {
-    margin-left: 1px;
-    padding: 0;
-    position: relative;
-    width: 2em;
-    border-radius: 0 2px 2px 0 !important;
-    margin-left: -5px;
-
-    &:before {
-        height: 1px;
-        width: 50%;
+.tag {
+    &.is-delete {
+        margin-left: 1px;
+        padding: 0;
+        position: relative;
+        width: 2em;
+        border-radius: 0 2px 2px 0 !important;
+        margin-left: -5px;
+    
+        &:before {
+            height: 1px;
+            width: 50%;
+        }
+    
+        &:after {
+            height: 50%;
+            width: 1px;
+        }
+    
+        &:before, &:after {
+            background-color: currentColor;
+            content: "";
+            display: block;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+        }
     }
-
-    &:after {
-        height: 50%;
-        width: 1px;
-    }
-
-    &:before, &:after {
-        background-color: currentColor;
-        content: "";
-        display: block;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        -webkit-transform-origin: center center;
-        transform-origin: center center;
-    }
+    
 }

@@ -607,3 +607,37 @@ a:not(.button) {
         padding-bottom: 8px;
     }
 }
+
+
+/* ==========================================================================
+2. Update Pill
+========================================================================== */
+
+.update-pill {
+    display: inline-flex;
+    align-items: center;
+    background: $white;
+    border: 1px solid darken($fade-grey, 3%);
+    box-shadow: $light-box-shadow;
+    margin-bottom: 1rem;
+    padding: 8px 12px 8px 8px;
+    border-radius: 10px;
+    font-family: $font-text;
+
+    .inner-tag {
+        height: 26px;
+        background: $primary;
+        color: $white;
+        font-size: .85rem;
+        font-weight: 500;
+        padding: 0 8px;
+        line-height: 2.2;
+        border-radius: 8px;
+    }
+
+    .inner-text {
+        color: $blue-grey-light;
+        font-size: .9rem;
+        margin-left: 8px;
+    }
+}

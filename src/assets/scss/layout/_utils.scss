@@ -252,19 +252,19 @@ body #backtotop a {
 3. Input placeholders
 ========================================================================== */
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
     color: $placeholder;
 }
 
-::-moz-placeholder { /* Firefox 19+ */
+::-moz-placeholder {
     color: $placeholder;
 }
 
-:-ms-input-placeholder { /* IE 10+ */
+:-ms-input-placeholder {
     color: $placeholder;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {
     color: $placeholder;
 }
 

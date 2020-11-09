@@ -8,6 +8,13 @@ Carousel elements Kit SCSS file
 TABLE OF CONTENTS
     0. Client logos carousel
     1. People carousel
+    2. Testimonials Basic Carousel
+    3. Colorful Testimonials
+    4. CSS Carousel
+    5. Corporate testimonials   
+    6. Focus Testimonials Carousel
+    7. Customer Testimonials
+    8. Characters Testimonials
 ***/
 
 /* ==========================================================================
@@ -227,7 +234,7 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-7. Colorful Testimonials
+3. Colorful Testimonials
 ========================================================================== */
 
 .testimonials-wrapper {
@@ -387,7 +394,7 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-7. CSS Carousel
+4. CSS Carousel
 ========================================================================== */
 
 .testimonials-cover {
@@ -586,7 +593,7 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-7. Corporate testimonials
+5. Corporate testimonials
 ========================================================================== */
 
 .carousel-wrap {
@@ -885,7 +892,7 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-4. Focus Testimonials Carousel
+6. Focus Testimonials Carousel
 ========================================================================== */
 
 .carousel-wrapper {
@@ -945,7 +952,7 @@ TABLE OF CONTENTS
 
 
 /* ==========================================================================
-6. Customer Testimonials
+7. Customer Testimonials
 ========================================================================== */
 
 .customer-testimonials-wrapper {
@@ -1032,8 +1039,6 @@ TABLE OF CONTENTS
                         display: block;
                         margin: 0 auto;
                         width: auto;
-
-                        //max-width: 180px;
                         max-height: 478px;
                     }
                 }
@@ -1067,7 +1072,7 @@ TABLE OF CONTENTS
 }
 
 /* ==========================================================================
-4. Characters Testimonials
+8. Characters Testimonials
 ========================================================================== */
 
 .carousel-wrapper {

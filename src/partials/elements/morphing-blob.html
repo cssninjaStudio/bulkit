@@ -1,0 +1,17 @@
+<div class="blob-inner levitate">
+    <svg class="organic-blob" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter class="goo">
+                <!-- tympanus.net/codrops/creative-gooey-effects -->
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+        </defs>
+        <circle class="Circle1"></circle>
+        <circle class="Circle2"></circle>
+        <circle class="Circle3"></circle>
+        <circle class="Circle4"></circle>
+    </svg>
+</div>

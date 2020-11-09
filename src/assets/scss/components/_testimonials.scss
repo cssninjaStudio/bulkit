@@ -23,12 +23,10 @@ TABLE OF CONTENTS
     display: block;
     box-sizing: border-box;
 
-    //item
     .testimonial-item {
         margin: 40px;
         outline: none !important;
 
-        //avatar
         .testimonial-avatar {
             display: flex;
             justify-content: center;
@@ -42,7 +40,6 @@ TABLE OF CONTENTS
             }
         }
 
-        //meta
         .testimonial-name {
             text-align: center;
 
@@ -63,7 +60,6 @@ TABLE OF CONTENTS
             }
         }
 
-        //content
         .testimonial-content {
             p {
                 padding: 0 30px 30px 30px;
@@ -72,7 +68,6 @@ TABLE OF CONTENTS
     }
 }
 
-//Pagination dots
 .slick-dots li.slick-active button:before {
     opacity: .75;
     color: $accent !important;
@@ -86,7 +81,6 @@ TABLE OF CONTENTS
     max-width: 640px;
     margin: 0 auto;
 
-    //item
     .vtestimonial-item {
         margin: 5px 80px;
         border-radius: 12px;
@@ -95,13 +89,11 @@ TABLE OF CONTENTS
             margin-bottom: 100px;
         }
 
-        //avatar
         .vt-avatar {
             height: 55px;
             border-radius: 100px;
         }
 
-        //content
         .vt-content {
             margin: 0 10px;
 
@@ -128,13 +120,11 @@ TABLE OF CONTENTS
         }
     }
 
-    //active testimonial card
     .slick-current.slick-active.slick-center {
         transform: scale(1.1);
         box-shadow: inset rgba(143, 160, 241, 0.2) 0 0 0 1px, rgba(213, 220, 247, 0.59) 0 10px 20px;
     }
 
-    //fade out non active cards
     .slick-slide {
         &:not(.slick-current) {
             opacity: 0.1 !important;
@@ -147,11 +137,9 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .flat-testimonials {
-    //item
     .flat-testimonial-item {
         margin: 0 20px 50px 20px;
 
-        //image
         .image-container {
             position: relative;
             overflow: hidden;
@@ -161,7 +149,6 @@ TABLE OF CONTENTS
                 box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.18);
             }
 
-            //image overlay
             .skewed-overlay {
                 position: absolute;
                 top: 95%;
@@ -174,7 +161,6 @@ TABLE OF CONTENTS
             }
         }
 
-        //Content
         .testimonial-text {
             .quoted-text {
                 color: $basaltic-grey;
@@ -204,7 +190,6 @@ TABLE OF CONTENTS
             }
         }
 
-        //colors
         &.primary {
             .skewed-overlay {
                 background: $primary;

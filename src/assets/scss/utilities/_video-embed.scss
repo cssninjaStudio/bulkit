@@ -1,4 +1,4 @@
-/*! _details.scss | Bulkit | CSS Ninja */
+/*! _video-embed.scss | Bulkit | CSS Ninja */
 
 /* ==========================================================================
 Miscellaneous styles
@@ -8,6 +8,7 @@ Miscellaneous styles
 TABLE OF CONTENTS
 =============================================================================
 0. Video embed
+1. Plyr Player
 =============================================================================
 ***/
 
@@ -49,8 +50,6 @@ TABLE OF CONTENTS
 
             .video-overlay {
                 position: absolute;
-
-                /*height: 100%;*/
                 width: 100%;
                 background-size: cover;
                 filter: alpha(opacity = 35);
@@ -79,3 +78,59 @@ TABLE OF CONTENTS
     }
 }
 
+/* ==========================================================================
+1. Plyr Player
+========================================================================== */
+
+.bulkit-player-container {
+    height: 440px;
+    width: 480px;
+    margin: 0 auto;
+
+    &.reversed-play {
+        .plyr--full-ui.plyr--video .plyr__control--overlaid {
+            background: $white !important;
+            border: 1px solid $primary;
+            color: $primary !important;
+
+            svg {
+                fill: none;
+                stroke: $primary;
+                stroke-width: 1.6px;
+            }
+        }
+    }
+}
+
+.plyr--full-ui.plyr--video .plyr__control--overlaid {
+    background: $primary !important;
+    box-shadow: $primary-box-shadow;
+}
+
+.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true],
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+    background: $primary;
+}
+
+.plyr--full-ui input[type=range] {
+    color: $primary;
+}
+
+.plyr__controls {
+    transition: all .3s;
+}
+
+.plyr--paused, .plyr--stopped {
+    .plyr__controls {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .bulkit-player-container {
+        height: 303px;
+        width: 330px;
+    }
+}

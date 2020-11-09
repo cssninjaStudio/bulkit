@@ -17,6 +17,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Hero general styles
 ========================================================================== */
+
 .hero {
     &.is-relative {
         position: relative;
@@ -176,6 +177,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 1. Hero body 
 ========================================================================== */
+
 .hero-body {
     position: relative;
     background-size: cover !important;
@@ -194,13 +196,13 @@ TABLE OF CONTENTS
             .title {
                 font-size: 3rem;
             }
-        
+
             .subtitle {
                 color: $muted-grey !important;
                 margin: 0 auto 20px auto !important;
                 font-size: 1.4rem;
             }
-        
+
             .button {
                 margin: 0 6px;
             }
@@ -311,7 +313,6 @@ TABLE OF CONTENTS
     .is-hero-caption {
         margin-top: 110px !important;
     }
-
 }
 
 /* ==========================================================================
@@ -350,7 +351,6 @@ TABLE OF CONTENTS
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-
     .is-header-caption {
         text-align: center !important;
 
@@ -358,7 +358,6 @@ TABLE OF CONTENTS
             justify-content: center;
         }
     }
-
 }
 
 /* ==========================================================================

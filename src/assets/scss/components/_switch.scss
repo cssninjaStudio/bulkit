@@ -16,6 +16,7 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Variables
 ========================================================================== */
+
 $switch-background: $fade-grey !default;
 $switch-border: 0.1rem solid transparent !default;
 $switch-background-active: $basaltic-grey !default;
@@ -34,6 +35,7 @@ $radius-large: 100px;
 /* ==========================================================================
 1. Switch mixin
 ========================================================================== */
+
 @mixin switch-size($size) {
     $switch-height: $size * 1.5;
     $switch-width: $switch-height * 2;
@@ -259,6 +261,7 @@ $radius-large: 100px;
 /* ==========================================================================
 2. Switch styles
 ========================================================================== */
+
 .switch[type="checkbox"] {
     outline: 0;
     user-select: none;
@@ -268,7 +271,6 @@ $radius-large: 100px;
     width: 100%;
     height: 100%;
 
-    //disabled state
     &[disabled] {
         cursor: not-allowed;
 
@@ -290,7 +292,6 @@ $radius-large: 100px;
         }
     }
 
-    //sizes
     @include switch-size($size-normal);
 
     &.is-small {
@@ -305,7 +306,6 @@ $radius-large: 100px;
         @include switch-size($size-large);
     }
 
-    //Primary color
     &.is-primary {
         &:checked {
             + label {
@@ -391,7 +391,6 @@ $radius-large: 100px;
         }
     }
 
-    //Secondary color
     &.is-secondary {
         &:checked {
             + label {
@@ -477,7 +476,6 @@ $radius-large: 100px;
         }
     }
 
-    //Accent color
     &.is-accent {
         &:checked {
             + label {
@@ -563,7 +561,6 @@ $radius-large: 100px;
         }
     }
 
-    //Info color
     &.is-info {
         &:checked {
             + label {
@@ -649,7 +646,6 @@ $radius-large: 100px;
         }
     }
 
-    //Success color
     &.is-success {
         &:checked {
             + label {
@@ -735,7 +731,6 @@ $radius-large: 100px;
         }
     }
 
-    //Warning color
     &.is-warning {
         &:checked {
             + label {
@@ -821,7 +816,6 @@ $radius-large: 100px;
         }
     }
 
-    //Danger color
     &.is-danger {
         &:checked {
             + label {

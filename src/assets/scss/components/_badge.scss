@@ -26,6 +26,7 @@ $size-large: 2rem !default;
 /* ==========================================================================
 1. Badge Mixin
 ========================================================================== */
+
 @mixin badge-size($size) {
     $badgeSize: $size;
     $leftPosition: calc(100% - ( #{$badgeSize} / 2 ));
@@ -75,7 +76,6 @@ $size-large: 2rem !default;
     white-space: nowrap;
     position: relative;
 
-    //data-badge attribute
     &[data-badge]::after {
         position: absolute;
         left: 100%;
@@ -107,7 +107,6 @@ $size-large: 2rem !default;
         vertical-align: inherit;
     }
 
-    //outlined badges colors
     &.is-badge-outlined {
         &[data-badge]::after {
             background-color: $white;
@@ -159,7 +158,6 @@ $size-large: 2rem !default;
         }
     }
 
-    //Sizes
     @include badge-size($size-normal);
 
     &.is-badge-small {
@@ -174,7 +172,6 @@ $size-large: 2rem !default;
         @include badge-size($size-large);
     }
 
-    //Plain colors
     &.badge-primary::after {
         background: $primary;
     }

@@ -16,13 +16,13 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Messages
 ========================================================================== */
+
 .message {
-    //header
+
     .message-header {
         background: $muted-grey;
     }
 
-    //primary style
     &.msg-primary {
         .message-header {
             background: $primary;
@@ -33,7 +33,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //secondary style
     &.msg-secondary {
         .message-header {
             background: $secondary;
@@ -44,7 +43,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //accent style
     &.msg-accent {
         .message-header {
             background: $accent;
@@ -55,7 +53,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //info style
     &.msg-info {
         .message-header {
             background: $blue;
@@ -66,7 +63,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //success style
     &.msg-success {
         .message-header {
             background: $green;
@@ -77,7 +73,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //warning style
     &.msg-warning {
         .message-header {
             background: $orange;
@@ -88,7 +83,6 @@ TABLE OF CONTENTS
         }
     }
 
-    //danger style
     &.msg-danger {
         .message-header {
             background: $red;
@@ -99,11 +93,9 @@ TABLE OF CONTENTS
         }
     }
 
-    //icon messages
     &.icon-msg {
         position: relative;
 
-        //body
         .message-body {
             padding: 1em 3em 1em 1.5em;
 
@@ -115,7 +107,6 @@ TABLE OF CONTENTS
             }
         }
 
-        //icon
         i {
             position: absolute;
             top: -35px;
@@ -127,7 +118,6 @@ TABLE OF CONTENTS
             color: $white;
         }
 
-        //color styles
         &.primary-msg i {
             background: $primary;
         }
