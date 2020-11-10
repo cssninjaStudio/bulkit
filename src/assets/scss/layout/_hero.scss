@@ -209,6 +209,16 @@ TABLE OF CONTENTS
         }
     }
 
+    .header-caption-wrapper {
+        &.is-pulled {
+            margin-top: -100px;
+
+            .image img {
+                margin-top: -60px;
+            }
+        }
+    }
+
     .is-header-caption {
         padding: 100px 0;
 

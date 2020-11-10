@@ -83,9 +83,29 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .bulkit-player-container {
-    height: 440px;
-    width: 480px;
     margin: 0 auto;
+    overflow: hidden;
+
+    &.is-square {
+        height: 440px;
+        width: 480px;
+    }
+
+    &.is-16by9 {
+        position: relative;
+        padding-top: 56.25%;
+        width: 100%;
+        max-width: 840px;
+
+        .plyr {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+    }
 
     &.reversed-play {
         .plyr--full-ui.plyr--video .plyr__control--overlaid {
@@ -93,12 +113,27 @@ TABLE OF CONTENTS
             border: 1px solid $primary;
             color: $primary !important;
 
+            &:hover {
+                background: $primary !important;
+                border-color: $primary !important;
+                color: $white !important;
+
+                svg {
+                    fill: $white !important;
+                    stroke: $white !important;
+                }
+            }
+
             svg {
                 fill: none;
                 stroke: $primary;
                 stroke-width: 1.6px;
             }
         }
+    }
+
+    video {
+        background-color: transparent !important;
     }
 }
 
@@ -127,10 +162,11 @@ TABLE OF CONTENTS
     }
 }
 
-
 @media only screen and (max-width: 767px) {
     .bulkit-player-container {
-        height: 303px;
-        width: 330px;
+        &.is-square {
+            height: 303px;
+            width: 330px;
+        }
     }
 }

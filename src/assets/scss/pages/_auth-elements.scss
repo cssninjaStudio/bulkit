@@ -267,6 +267,17 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .signup-block {
+
+    &.is-rounded {
+        .input, button {
+            border-radius: 100px;
+        }
+
+        .input {
+            padding-left: 20px !important;
+        }
+    }
+
     .control {
         position: relative;
         width: 80%;
@@ -276,6 +287,10 @@ TABLE OF CONTENTS
             padding-left: 10px;
             padding-right: 140px;
             font-size: 1rem;
+
+            &:focus {
+                box-shadow: $light-box-shadow !important;
+            }
 
             &::placeholder {
                 color: $placeholder;
