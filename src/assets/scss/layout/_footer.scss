@@ -309,7 +309,7 @@ footer {
 
         .head-text {
             h3 {
-                font-family: 'Nexa Bold', sans-serif;
+                font-family: $font-main;
                 font-size: 1.8rem;
                 color: $blue-grey;
             }
@@ -348,7 +348,7 @@ footer {
             padding-top: 20px;
 
             .column-header {
-                font-family: 'Nexa Light', sans-serif;
+                font-family: $font-sub;
                 text-transform: uppercase;
                 color: $blue-grey;
                 font-size: 1rem;

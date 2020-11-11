@@ -475,7 +475,7 @@ TABLE OF CONTENTS
     .content-container {
         h3 {
             padding: 10px 0;
-            font-family: 'Nexa Bold', sans-serif;
+            font-family: $font-main;
         }
 
         p {
@@ -535,7 +535,7 @@ TABLE OF CONTENTS
 
         h3 {
             color: $blue-grey;
-            font-family: 'Nexa Bold', sans-serif;
+            font-family: $font-main;
             font-weight: 500;
             font-size: 1.2rem;
             margin-bottom: 6px;
@@ -621,7 +621,7 @@ TABLE OF CONTENTS
             }
 
             .box-title {
-                font-family: 'Nexa Bold', sans-serif;
+                font-family: $font-main;
                 color: $blue-grey;
                 padding: 10px 0;
             }
@@ -656,7 +656,7 @@ TABLE OF CONTENTS
             }
 
             .box-title {
-                font-family: 'Nexa Bold', sans-serif;
+                font-family: $font-main;
                 color: $blue-grey;
                 padding: 6px 0;
             }
@@ -681,7 +681,7 @@ TABLE OF CONTENTS
         top: -70px;
         left: 0;
         font-size: 7rem;
-        font-family: 'Nexa Bold', sans-serif;
+        font-family: $font-main;
         font-weight: 700;
         color: $blue-grey;
         opacity: .1;

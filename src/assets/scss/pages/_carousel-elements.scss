@@ -302,7 +302,7 @@ TABLE OF CONTENTS
         }
 
         .testimonial-author {
-            font-family: 'Nexa Bold', sans-serif;
+            font-family: $font-main;
             font-style: normal;
             font-size: 22px;
             line-height: 1.1;
@@ -941,7 +941,7 @@ TABLE OF CONTENTS
                     display: block;
                     font-size: 1.1rem;
                     font-weight: 600;
-                    font-family: 'Nexa Bold', sans-serif;
+                    font-family: $font-main;
                     color: $blue-grey;
                     margin-left: 10px;
                 }
@@ -1141,7 +1141,7 @@ TABLE OF CONTENTS
                         &:first-child {
                             font-size: 1.1rem;
                             font-weight: 600;
-                            font-family: 'Nexa Bold', sans-serif;
+                            font-family: $font-main;
                             color: $blue-grey;
                         }
 

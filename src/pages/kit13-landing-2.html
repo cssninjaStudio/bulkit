@@ -1,0 +1,1066 @@
+---
+layout: landing
+title: Home
+---
+
+<!-- Hero -->
+<div class="hero parallax is-cover is-relative is-fullheight jobs-hero" data-background="https://via.placeholder.com/1920x1280"
+    data-color="#837FCB" data-color-opacity=".7"
+    data-demo-background="https://images.pexels.com/photos/4345107/pexels-photo-4345107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+
+    <!--Nav-->
+    {{> navbar-fade-kit13}}
+
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns has-text-centered">
+                <!-- Caption -->
+                <div class="column is-12 is-hero-caption is-centered">
+                    <h1 class="title is-1 is-light">Find a Job</h1>
+                    <h2 class="subtitle is-5 pt-10 is-light">
+                        Discover a beautiful and full featured invoicing
+                        software.
+                    </h2>
+
+                    <!--Search Box-->
+                    <div class="search-box-wrapper">
+                        <div class="columns box search-box">
+                            <div class="column is-4 is-paddingless">
+                                <form class="search-block">
+                                    <label class="search-label label">
+                                        <span>Keywords</span>
+                                    </label>
+                                    <input class="search-input home-input" placeholder="Enter some keywords"
+                                        type="/search" value="" autofocus>
+                                </form>
+                            </div>
+                            <div class="column is-3 is-paddingless">
+                                <form class="price-block">
+                                    <label class="price-label label">
+                                        <span>Salary</span>
+                                    </label>
+                                    <a class="button" href="#" title="Salary">
+                                        <span>Your monthly salary</span>
+                                    </a>
+                                    <div class="dropdown-container">
+                                        <div class="dropdown">
+                                            <div class="range-container">
+                                                <div class="left-input">
+                                                    <input class="minSalaryInput input" maxlength="6"
+                                                        placeholder="Min" type="number">
+                                                </div>
+                                                <div class="right-input">
+                                                    <input class="maxSalaryInput input" maxlength="6" placeholder="Max"
+                                                        type="number">
+                                                </div>
+                                            </div>
+                                            <div class="salary-options-container">
+                                                <ul class="min-options">
+                                                    <li class="dark-text">No Min</li>
+                                                    <li>$1,000</li>
+                                                    <li>$2,000</li>
+                                                    <li>$3,000</li>
+                                                    <li>$4,000</li>
+                                                    <li>$5,000</li>
+                                                    <li>$6,000</li>
+                                                </ul>
+                                                <ul class="max-options">
+                                                    <li class="dark-text">No Max</li>
+                                                    <li>$8,000</li>
+                                                    <li>$10,000</li>
+                                                    <li>$14,000</li>
+                                                    <li>$18,000</li>
+                                                    <li>$25,000</li>
+                                                    <li>$30,000</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="column is-3 is-paddingless">
+                                <div class="price-block">
+                                    <label class="price-label label">
+                                        <span>Options</span>
+                                    </label>
+                                    <a class="button" href="#" title="Job Options">
+                                        <span>Filter your search</span>
+                                    </a>
+                                    <div class="dropdown-container">
+                                        <div class="dropdown">
+                                            <div class="options-container has-slimscroll">
+                                                <p>Roles</p>
+                                                <div class="checkbox">
+                                                    <label for="allRoles">
+                                                        <input id="allRoles" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>All</span>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="developerRole">
+                                                        <input id="developerRole" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>Developer</span>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="engineerRole">
+                                                        <input id="engineerRole" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>Engineer</span>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="architectRole">
+                                                        <input id="architectRole" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>Architect</span>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="deveopsRole">
+                                                        <input id="deveopsRole" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>DevOps</span>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="analystRole">
+                                                        <input id="analystRole" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>Analyst</span>
+                                                </div>
+                                            </div>
+                                            <div class="options-container has-slimscroll">
+                                                <p>Skills</p>
+                                                <div class="checkbox">
+                                                    <label for="allSkills">
+                                                        <input id="allSkills" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>All</span>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="javascriptSkill">
+                                                        <input id="javascriptSkill" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>Javascript</span>
+                                                    <div class="end">
+                                                        <img src="assets/img/logos/stacks/js.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="angularSkill">
+                                                        <input id="angularSkill" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>Angular</span>
+                                                    <div class="end">
+                                                        <img src="assets/img/logos/stacks/angular.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="csharpSkill">
+                                                        <input id="csharpSkill" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>C Sharp</span>
+                                                    <div class="end">
+                                                        <img src="assets/img/logos/stacks/csharp.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="nodeSkill">
+                                                        <input id="nodeSkill" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>NodeJS</span>
+                                                    <div class="end">
+                                                        <img src="assets/img/logos/stacks/nodejs.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="reactSkill">
+                                                        <input id="reactSkill" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>ReactJS</span>
+                                                    <div class="end">
+                                                        <img src="assets/img/logos/stacks/reactjs.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="htmlSkill">
+                                                        <input id="htmlSkill" type="checkbox">
+                                                        <span class="checkbox-material">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                    <span>Html5</span>
+                                                    <div class="end">
+                                                        <img src="assets/img/logos/stacks/html5.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-2 is-paddingless">
+                                <a class="button is-primary is-large search-button">Search</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Clients -->
+    <div class="hero-foot">
+        <div class="container">
+            <div class="tabs partner-tabs is-centered">
+                <ul>
+                    <li><a><img class="partner-logo" src="assets/img/logos/custom/covenant-light.svg" alt=""></a></li>
+                    <li><a><img class="partner-logo" src="assets/img/logos/custom//infinite-light.svg" alt=""></a></li>
+                    <li><a><img class="partner-logo" src="assets/img/logos/custom/phasekit-light.svg" alt=""></a></li>
+                    <li><a><img class="partner-logo" src="assets/img/logos/custom/grubspot-light.svg" alt=""></a></li>
+                    <li><a><img class="partner-logo" src="assets/img/logos/custom/gutwork-light.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section is-medium">
+    <div class="container">
+
+        <!--Title-->
+        <div class="title-wrap has-text-centered">
+            <h2 class="title is-spaced is-2">Featured Jobs</h2>
+            <h3>Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit.</h3>
+            <img src="assets/img/graphics/legacy/divider.svg" class="special-divider" alt="">
+        </div>
+
+        <!-- Wrapper -->
+        <div class="content-wrapper">
+
+            <div class="columns is-multiline">
+
+                <!--Featured Job -->
+                <div class="column is-4">
+                    <a href="#" class="flex-card featured-job-box">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="https://via.placeholder.com/250x250" alt=""
+                                data-demo-src="assets/img/demo/brands/airbnb.svg" alt="">
+                        </div>
+                        <div class="content-container">
+                            <h3>UI/UX Designer</h3>
+                            <div class="job-summary">
+                                <span class="company">Airbnb</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-diamond"></i>
+                                    <span>$10K - $15K</span>
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag is-rounded is-success is-pastel">Design</span>
+                                <span class="tag is-rounded is-info is-pastel">Full-time</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Featured Job -->
+                <div class="column is-4">
+                    <a href="#" class="flex-card featured-job-box">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="https://via.placeholder.com/250x250" alt=""
+                                data-demo-src="assets/img/demo/brands/gitlab.svg" alt="">
+                        </div>
+                        <div class="content-container">
+                            <h3>Web Developer</h3>
+                            <div class="job-summary">
+                                <span class="company">Gitlab</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-diamond"></i>
+                                    <span>$8K - $13K</span>
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag is-rounded is-yellow is-pastel">Development</span>
+                                <span class="tag is-rounded is-info is-pastel">Full-time</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Featured Job -->
+                <div class="column is-4">
+                    <a href="#" class="flex-card featured-job-box">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="https://via.placeholder.com/250x250" alt=""
+                                data-demo-src="assets/img/demo/brands/slack.svg" alt="">
+                        </div>
+                        <div class="content-container">
+                            <h3>Product Manager</h3>
+                            <div class="job-summary">
+                                <span class="company">Slack</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-diamond"></i>
+                                    <span>$15K - $20K</span>
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag is-rounded is-purple is-pastel">Product</span>
+                                <span class="tag is-rounded is-info is-pastel">Full-time</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Featured Job -->
+                <div class="column is-4">
+                    <a href="#" class="flex-card featured-job-box">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="https://via.placeholder.com/250x250" alt=""
+                                data-demo-src="assets/img/demo/brands/dribbble.svg" alt="">
+                        </div>
+                        <div class="content-container">
+                            <h3>Project Manager</h3>
+                            <div class="job-summary">
+                                <span class="company">Dribbble</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-diamond"></i>
+                                    <span>$15K - $20K</span>
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag is-rounded is-purple is-pastel">Project</span>
+                                <span class="tag is-rounded is-info is-pastel">Full-time</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Featured Job -->
+                <div class="column is-4">
+                    <a href="#" class="flex-card featured-job-box">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="https://via.placeholder.com/250x250" alt=""
+                                data-demo-src="assets/img/demo/brands/facebook.svg" alt="">
+                        </div>
+                        <div class="content-container">
+                            <h3>UI/UX Designer</h3>
+                            <div class="job-summary">
+                                <span class="company">Facebook</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-diamond"></i>
+                                    <span>$10K - $15K</span>
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag is-rounded is-success is-pastel">Design</span>
+                                <span class="tag is-rounded is-info is-pastel">Full-time</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Featured Job -->
+                <div class="column is-4">
+                    <a href="#" class="flex-card featured-job-box">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="https://via.placeholder.com/250x250" alt=""
+                                data-demo-src="assets/img/demo/brands/github.svg" alt="">
+                        </div>
+                        <div class="content-container">
+                            <h3>Web Developer</h3>
+                            <div class="job-summary">
+                                <span class="company">GitHub</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-diamond"></i>
+                                    <span>$11K - $14K</span>
+                                </span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag is-rounded is-yellow is-pastel">Development</span>
+                                <span class="tag is-rounded is-purple is-pastel">Part-time</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-wrapper has-text-centered is-title-reveal pt-60">
+                <a href="kit5-login.html" class="button button-cta is-bold btn-align primary-btn raised">
+                    View More Jobs Near You
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="section is-medium is-app-grey">
+    <div class="container">
+
+        <!--Title-->
+        <div class="title-wrap has-text-centered">
+            <h2 class="title is-spaced is-2">Popular Categories</h2>
+            <h3>Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit.</h3>
+            <img src="assets/img/graphics/legacy/divider.svg" class="special-divider" alt="">
+        </div>
+
+        <!-- Wrapper -->
+        <div class="content-wrapper">
+
+            <div class="job-categories">
+                <div class="job-categories-inner">
+
+                    <!--Category-->
+                    <a href="#" class="job-category tilt-card rounded">
+                        <div class="job-category-overlay">
+                        </div>
+                        <div class="job-category-image">
+                            <img src="https://via.placeholder.com/940x650" alt=""
+                                data-demo-src="https://images.pexels.com/photos/340152/pexels-photo-340152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="" />
+                        </div>
+                        <div class="job-category-heading">
+                            <span class="small">Web Development</span>
+                            <h2>JS Frontend</h2>
+                        </div>
+                    </a>
+
+                    <!--Category-->
+                    <a href="#" class="job-category tilt-card rounded">
+                        <div class="job-category-overlay">
+                        </div>
+                        <div class="job-category-image">
+                            <img src="https://via.placeholder.com/940x650" alt=""
+                                data-demo-src="https://images.pexels.com/photos/3584974/pexels-photo-3584974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="" />
+                        </div>
+                        <div class="job-category-heading">
+                            <span class="small">Design</span>
+                            <h2>UI Design</h2>
+                        </div>
+                    </a>
+
+                    <!--Category-->
+                    <a href="#" class="job-category tilt-card rounded">
+                        <div class="job-category-overlay">
+                        </div>
+                        <div class="job-category-image">
+                            <img src="https://via.placeholder.com/940x650" alt=""
+                                data-demo-src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="" />
+                        </div>
+                        <div class="job-category-heading">
+                            <span class="small">Design</span>
+                            <h2>UX Design</h2>
+                        </div>
+                    </a>
+
+                    <!--Category-->
+                    <a href="#" class="job-category tilt-card rounded">
+                        <div class="job-category-overlay">
+                        </div>
+                        <div class="job-category-image">
+                            <img src="https://via.placeholder.com/940x650" alt=""
+                                data-demo-src="https://images.pexels.com/photos/3059748/pexels-photo-3059748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="" />
+                        </div>
+                        <div class="job-category-heading">
+                            <span class="small">Web Development</span>
+                            <h2>Database Design</h2>
+                        </div>
+                    </a>
+
+                    <!--Category-->
+                    <a href="#" class="job-category tilt-card rounded">
+                        <div class="job-category-overlay">
+                        </div>
+                        <div class="job-category-image">
+                            <img src="https://via.placeholder.com/940x650" alt=""
+                                data-demo-src="https://images.pexels.com/photos/3861961/pexels-photo-3861961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="" />
+                        </div>
+                        <div class="job-category-heading">
+                            <span class="small">Web Development</span>
+                            <h2>Backend</h2>
+                        </div>
+                    </a>
+
+                    <!--Category-->
+                    <a href="#" class="job-category tilt-card rounded">
+                        <div class="job-category-overlay">
+                        </div>
+                        <div class="job-category-image">
+                            <img src="https://via.placeholder.com/940x650" alt=""
+                                data-demo-src="https://images.pexels.com/photos/618613/pexels-photo-618613.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="" />
+                        </div>
+                        <div class="job-category-heading">
+                            <span class="small">Business</span>
+                            <h2>Analytics</h2>
+                        </div>
+                    </a>
+
+                    <!--Category-->
+                    <a href="#" class="job-category tilt-card rounded">
+                        <div class="job-category-overlay">
+                        </div>
+                        <div class="job-category-image">
+                            <img src="https://via.placeholder.com/940x650" alt=""
+                                data-demo-src="https://images.pexels.com/photos/373945/pexels-photo-373945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="" />
+                        </div>
+                        <div class="job-category-heading">
+                            <span class="small">Management</span>
+                            <h2>Products</h2>
+                        </div>
+                    </a>
+
+                    <!--Category-->
+                    <a href="#" class="job-category tilt-card rounded">
+                        <div class="job-category-overlay">
+                        </div>
+                        <div class="job-category-image">
+                            <img src="https://via.placeholder.com/940x650" alt=""
+                                data-demo-src="https://images.pexels.com/photos/3585088/pexels-photo-3585088.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="" />
+                        </div>
+                        <div class="job-category-heading">
+                            <span class="small">Development</span>
+                            <h2>Mobile Apps</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-wrapper has-text-centered is-title-reveal pt-60">
+                <a href="#" class="button button-cta is-bold btn-align primary-btn raised">
+                    View All Categories
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="section is-medium">
+    <div class="container">
+
+        <!--Title-->
+        <div class="title-wrap has-text-centered">
+            <h2 class="title is-spaced is-2">Hot Topics</h2>
+            <h3>Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit.</h3>
+            <img src="assets/img/graphics/legacy/divider.svg" class="special-divider" alt="">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns is-multiline">
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/js.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>Vanilla Javascript</h3>
+                            <div class="job-summary">
+                                <span class="company">Frontend</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>6749</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/angular.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>Angular 11</h3>
+                            <div class="job-summary">
+                                <span class="company">Frontend</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>3921</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/csharp.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>C Sharp</h3>
+                            <div class="job-summary">
+                                <span class="company">Backend</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>6478</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/css3.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>CSS3</h3>
+                            <div class="job-summary">
+                                <span class="company">Web Design</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>10.9K</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/html5.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>Html5</h3>
+                            <div class="job-summary">
+                                <span class="company">Web Design</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>24.2K</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/nodejs.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>NodeJS</h3>
+                            <div class="job-summary">
+                                <span class="company">Backend</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>1271</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/python.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>Python</h3>
+                            <div class="job-summary">
+                                <span class="company">Backend</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>18.3K</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/php.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>PhP</h3>
+                            <div class="job-summary">
+                                <span class="company">Backend</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>15.1K</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/reactjs.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>ReactJS</h3>
+                            <div class="job-summary">
+                                <span class="company">Frontend</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>9211</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/vuejs.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>VueJS</h3>
+                            <div class="job-summary">
+                                <span class="company">Frontend</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>10.7K</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/wordpress.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>WordPress</h3>
+                            <div class="job-summary">
+                                <span class="company">Web Design</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>19.6K</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Hot Topic-->
+                <div class="column is-4">
+                    <a href="#" class="flex-card job-topic">
+                        <div class="icon-container is-first is-icon-reveal">
+                            <img src="assets/img/logos/stacks/illustrator.svg" alt="">
+                        </div>
+                        <div class="meta">
+                            <h3>Illustrator</h3>
+                            <div class="job-summary">
+                                <span class="company">Web Design</span>
+                                <span class="salary">
+                                    <i class="sl sl-icon-people"></i>
+                                    <span>5263</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-wrapper has-text-centered is-title-reveal pt-60">
+                <a href="#" class="button button-cta is-bold btn-align primary-btn raised">
+                    View All Topics
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="section is-medium is-app-grey">
+    <div class="container">
+
+        <!--Title-->
+        <div class="title-wrap has-text-centered">
+            <h2 class="title is-spaced is-2">Recently Joined</h2>
+            <h3>Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit.</h3>
+            <img src="assets/img/graphics/legacy/divider.svg" class="special-divider" alt="">
+        </div>
+
+        <!-- Wrapper -->
+        <div class="content-wrapper">
+            <div class="columns">
+
+                <!--User-->
+                <div class="column is-3">
+                    <div class="job-user">
+                        <div class="avatar-wrap">
+                            <img class="avatar" src="https://via.placeholder.com/250x250" alt=""
+                            data-demo-src="assets/img/avatars/helen.jpg">
+                            <img class="badge" src="assets/img/logos/stacks/vuejs.svg" alt="">
+                        </div>
+                        <h3>Helen Miller</h3>
+                        <p>Web Developer, Los Angeles</p>
+                        <div class="tags">
+                            <span class="tag is-rounded is-purple is-pastel">Full-Time</span>
+                            <span class="tag is-rounded is-yellow is-pastel">Fullstack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--User-->
+                <div class="column is-3">
+                    <div class="job-user">
+                        <div class="avatar-wrap">
+                            <img class="avatar" src="https://via.placeholder.com/250x250" alt=""
+                            data-demo-src="assets/img/avatars/nick.jpg">
+                            <img class="badge" src="assets/img/logos/stacks/js.svg" alt="">
+                        </div>
+                        <h3>Nick Motta</h3>
+                        <p>Frontend Developer, Seatlle</p>
+                        <div class="tags">
+                            <span class="tag is-rounded is-info is-pastel">Part-Time</span>
+                            <span class="tag is-rounded is-yellow is-pastel">Fullstack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--User-->
+                <div class="column is-3">
+                    <div class="job-user">
+                        <div class="avatar-wrap">
+                            <img class="avatar" src="https://via.placeholder.com/250x250" alt=""
+                            data-demo-src="assets/img/avatars/lakisha.jpg">
+                            <img class="badge" src="assets/img/logos/stacks/csharp.svg" alt="">
+                        </div>
+                        <h3>Lakisha Williams</h3>
+                        <p>Backend Developer, Houston</p>
+                        <div class="tags">
+                            <span class="tag is-rounded is-success is-pastel">Freelance</span>
+                            <span class="tag is-rounded is-orange is-pastel">Backend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--User-->
+                <div class="column is-3">
+                    <div class="job-user">
+                        <div class="avatar-wrap">
+                            <img class="avatar" src="https://via.placeholder.com/250x250" alt=""
+                            data-demo-src="assets/img/avatars/alex.jpg">
+                            <img class="badge" src="assets/img/logos/stacks/reactjs.svg" alt="">
+                        </div>
+                        <h3>Alex Walsh</h3>
+                        <p>Fullstack Developer, DC</p>
+                        <div class="tags">
+                            <span class="tag is-rounded is-info is-pastel">Part-Time</span>
+                            <span class="tag is-rounded is-yellow is-pastel">Fullstack</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Testimonials -->
+<div id="card-testimonials" class="section is-medium is-skewed-sm">
+    <div class="container is-reverse-skewed-sm">
+        <!--Title-->
+        <div class="title-wrap has-text-centered">
+            <h2 class="title is-spaced is-2">They Love Us</h2>
+            <h3>Lorem ipsum dolor sit amet, clita laoreet ne cum. His cu harum inermis iudicabit.</h3>
+            <img src="assets/img/graphics/legacy/divider.svg" class="special-divider" alt="">
+        </div>
+
+        <div class="content-wrapper">
+            <div class="columns is-vcentered">
+                <div class="column is-hidden-mobile"></div>
+                <div class="column is-10">
+                    <div class="columns is-vcentered">
+                        <div class="column is-6">
+                            <div class="flex-card testimonial-card light-bordered light-raised padding-20">
+                                <div class="testimonial-title">
+                                    Amazed by the product
+                                </div>
+                                <div class="testimonial-text">
+                                    Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire
+                                    incorrupte. Vis mutat altera percipit ad.
+                                </div>
+                                <div class="user-id">
+                                    <img class="" src="https://via.placeholder.com/250x250" alt=""
+                                        data-demo-src="assets/img/avatars/dan.png">
+                                    <div class="info">
+                                        <div class="name">Dan Shwartz</div>
+                                        <div class="position">Software engineer</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-card testimonial-card light-bordered light-raised padding-20">
+                                <div class="testimonial-title">
+                                    My tasks are now painless
+                                </div>
+                                <div class="testimonial-text">
+                                    Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire
+                                    incorrupte. Vis mutat altera percipit ad.
+                                </div>
+                                <div class="user-id">
+                                    <img class="" src="https://via.placeholder.com/250x250" alt=""
+                                        data-demo-src="assets/img/avatars/janet.jpg">
+                                    <div class="info">
+                                        <div class="name">Jane Guzmann</div>
+                                        <div class="position">CFO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-6">
+                            <div class="flex-card testimonial-card light-bordered light-raised padding-20">
+                                <div class="testimonial-title">
+                                    Very nice support
+                                </div>
+                                <div class="testimonial-text">
+                                    Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire
+                                    incorrupte. Vis mutat altera percipit ad.
+                                </div>
+                                <div class="user-id">
+                                    <img class="" src="https://via.placeholder.com/250x250" alt=""
+                                        data-demo-src="assets/img/avatars/barry.jpg">
+                                    <div class="info">
+                                        <div class="name">Barry Lindon</div>
+                                        <div class="position">Accountant</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-card testimonial-card light-bordered light-raised padding-20">
+                                <div class="testimonial-title">
+                                    My income has doubled
+                                </div>
+                                <div class="testimonial-text">
+                                    Lorem ipsum dolor sit amet, vim quidam blandit voluptaria no, has eu lorem convenire
+                                    incorrupte. Vis mutat altera percipit ad.
+                                </div>
+                                <div class="user-id">
+                                    <img class="" src="https://via.placeholder.com/250x250" alt=""
+                                        data-demo-src="assets/img/avatars/anthony.jpg">
+                                    <div class="info">
+                                        <div class="name">Anthony Leblanc</div>
+                                        <div class="position">Founder at Hereby</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column is-hidden-mobile"></div>
+            </div>
+
+            <div class="grid-clients three-grid mt-60">
+                <div class="columns is-vcentered">
+                    <div class="column"></div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom/systek.svg" alt=""></a>
+                    </div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom/phasekit.svg" alt=""></a>
+                    </div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom/grubspot.svg" alt=""></a>
+                    </div>
+                    <div class="column"></div>
+                </div>
+                <div class="columns is-vcentered is-separator">
+                    <div class="column"></div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom/tribe.svg" alt=""></a>
+                    </div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom/kromo.svg" alt=""></a>
+                    </div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom/covenant.svg" alt=""></a>
+                    </div>
+                    <div class="column"></div>
+                </div>
+                <div class="columns is-vcentered is-separator">
+                    <div class="column"></div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom/infinite.svg" alt=""></a>
+                    </div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom//gutwork.svg" alt=""></a>
+                    </div>
+                    <div class="column">
+                        <a><img class="client" src="assets/img/logos/custom/proactive.svg" alt=""></a>
+                    </div>
+                    <div class="column"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer-spaced-light}}

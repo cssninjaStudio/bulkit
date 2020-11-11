@@ -616,12 +616,12 @@ TABLE OF CONTENTS
 
     .left .content h2 {
         color: $smoke-white;
-        font-family: 'Nexa Light', sans-serif;
+        font-family: $font-sub;
     }
 
     .right .content h2 {
         color: $blue-grey;
-        font-family: 'Nexa Light', sans-serif;
+        font-family: $font-sub;
     }
 
     .form-element {

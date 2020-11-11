@@ -1342,7 +1342,7 @@ TABLE OF CONTENTS
 
             .price {
                 font-size: 3.6rem;
-                font-family: 'Nexa Bold', sans-serif;
+                font-family: $font-main;
                 font-weight: bolder;
                 color: $blue-grey;
                 transition: color .3s;
@@ -1361,7 +1361,7 @@ TABLE OF CONTENTS
                     transition: color .3s;
 
                     &:first-child {
-                        font-family: 'Nexa Bold', sans-serif;
+                        font-family: $font-main;
                         font-size: 1.1rem;
                     }
 
@@ -1414,7 +1414,7 @@ TABLE OF CONTENTS
 
     .pricing-title {
         color: $blue-grey;
-        font-family: 'Nexa Bold', sans-serif;
+        font-family: $font-main;
         font-size: 2rem;
         margin-bottom: 20px;
     }
@@ -1441,13 +1441,13 @@ TABLE OF CONTENTS
 
                 &:first-child {
                     color: $blue-grey;
-                    font-family: 'Nexa Bold', sans-serif;
+                    font-family: $font-main;
                     font-size: 1.1rem;
                 }
 
                 &:nth-child(2) {
                     color: $blue-grey;
-                    font-family: 'Nexa Bold', sans-serif;
+                    font-family: $font-main;
                     font-size: 1.1rem;
                 }
 
@@ -1717,7 +1717,7 @@ TABLE OF CONTENTS
     }
 
     .plan-name {
-        font-family: 'Nexa Bold', sans-serif;
+        font-family: $font-main;
         font-size: 1.1rem;
         padding: 20px 0;
         border-bottom: 1px solid $fade-grey;
@@ -1921,7 +1921,7 @@ TABLE OF CONTENTS
                         span {
                             display: block;
                             font-size: 1.4rem;
-                            font-family: 'Nexa Bold', sans-serif;
+                            font-family: $font-main;
                             color: $blue-grey;
                             transition: color .3s;
                         }
@@ -2024,7 +2024,7 @@ TABLE OF CONTENTS
                         span {
                             display: block;
                             font-size: 1.4rem;
-                            font-family: 'Nexa Bold', sans-serif;
+                            font-family: $font-main;
                             color: $blue-grey;
                             transition: color .3s;
                         }

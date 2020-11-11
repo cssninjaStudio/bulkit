@@ -108,7 +108,7 @@ TABLE OF CONTENTS
             }
 
             .clean-title {
-                font-family: 'Nexa Bold', sans-serif;
+                font-family: $font-main;
                 font-weight: 700;
                 font-size: 3.4rem;
                 color: $blue-grey;
@@ -646,6 +646,44 @@ body {
     }
 }
 
+@media (max-width: 767px) {
+    .blob-hero {
+        .morphing-blob-wrapper {
+            &.is-blob-1 {
+                top: 17%;
+                right: -27%;
+                transform: scale(0.1);
+            }
+
+            &.is-blob-2 {
+                display: none;
+            }
+
+            &.is-blob-3 {
+                bottom: -1%;
+                right: -26%;
+            }
+
+            &.is-blob-4 {
+                top: -3%;
+                left: 46%;
+            }
+
+            &.is-blob-5 {
+                bottom: 45%;
+                left: -38%;
+            }
+
+            &.is-blob-6 {
+                bottom: -9%;
+                left: -17%;
+            }
+
+            &.is-blob-7 {}
+        }
+    }
+}
+
 /* ==========================================================================
 10. Ecommerce hero
 ========================================================================== */
@@ -1066,5 +1104,15 @@ body {
         margin: 0 auto;
         width: 100%;
         max-width: 640px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .jobs-hero {
+        .hero-body {
+            .container > .columns {
+                padding: 0 0;
+            }
+        }
     }
 }

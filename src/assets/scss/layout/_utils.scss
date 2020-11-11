@@ -20,6 +20,11 @@ TABLE OF CONTENTS
 0. Resets and base setup
 ========================================================================== */
 
+*::selection { 
+    background: $primary; 
+    color: $white;
+}
+
 body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     overflow: hidden !important;
@@ -27,6 +32,10 @@ body {
 
 a, a:active, i, i:active, div, div:active, div:focus, span:focus, span:active {
     outline: none !important;
+}
+
+a:focus {
+    color: $primary;
 }
 
 .button.is-active, .button:active, .button:focus {
