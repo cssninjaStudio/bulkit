@@ -60,6 +60,10 @@ TABLE OF CONTENTS
         background: #f6fbfe;
     }
 
+    &.is-app-grey {
+        background-color: $widget-grey;
+    }
+
     &.is-grey {
         background: $section-grey;
     }

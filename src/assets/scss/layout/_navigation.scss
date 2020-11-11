@@ -160,7 +160,7 @@ TABLE OF CONTENTS
 
         li {
             &.has-children {
-                &.is-active {
+                &.active {
                     background: lighten($sidebar, 5%);
 
                     span {

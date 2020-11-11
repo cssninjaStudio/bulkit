@@ -235,8 +235,14 @@ TABLE OF CONTENTS
 
     .is-hero-caption {
         &.is-centered {
+            text-align: center;
+
             .title {
                 margin-bottom: 1rem !important;
+
+                &.is-large {
+                    font-size: 4rem;
+                }
             }
 
             .subtitle {
@@ -247,6 +253,14 @@ TABLE OF CONTENTS
                 margin-top: 1rem;
                 margin-bottom: .75rem;
                 justify-content: center;
+            }
+
+            .signup-block {
+                .control {
+                    width: 100%;
+                    max-width: 380px;
+                    margin: 0 auto 20px auto;
+                }
             }
         }
 

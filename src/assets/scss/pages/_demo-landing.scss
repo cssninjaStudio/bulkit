@@ -453,6 +453,40 @@ TABLE OF CONTENTS
     }
 }
 
+.demo-section {
+    margin-bottom: 100px;
+
+    .demo-section-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 100px;
+        }
+
+        .title-meta {
+            margin-left: 12px;
+            line-height: 1.2;
+
+            h3 {
+                font-family: $font-main;
+                font-weight: 500;
+                font-size: 1.3rem;
+                color: $blue-grey;
+            }
+
+            p {
+                font-family: $font-text;
+                font-size: 1.1rem;
+                color: $blue-grey-light;
+            }
+        }
+    }
+}
+
 .demo-wrapper {
     position: relative;
     overflow: hidden;
@@ -1183,10 +1217,6 @@ TABLE OF CONTENTS
         padding: 0;
         margin-bottom: 0 !important;
     }
-}
-
-.section-title {
-    font-family: 'Open Sans', sans-serif;
 }
 
 //Demo section title adjustment

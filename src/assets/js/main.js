@@ -53,6 +53,7 @@ $(document).ready(function ($) {
 	//Cards
 
 	initMediaCards();
+	initTiltCards();
 
 	//Form controls
 
@@ -147,6 +148,7 @@ $(document).ready(function ($) {
 	initOnePagePricing();
 
 	initBlog();
+	initSearchBox();
 
 	initNavigationDots();
 

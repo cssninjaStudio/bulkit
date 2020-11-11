@@ -25,10 +25,10 @@ TABLE OF CONTENTS
 
 //Set environment variable (Used for development and demo)
 /* 
-	Possible values:
-	1. development
-	2. demo
-	3. customization
+    Possible values:
+    1. development
+    2. demo
+    3. customization
 */
 var env = 'development';
 
@@ -1025,6 +1025,13 @@ function initRangeInputs() {
     });
 }
 
+//Jobs Search Box
+function initSearchBox() {
+    $('.price-block a').on('click', function () {
+        $('.price-block').find('.dropdown-container').toggleClass('is-open');
+    });
+}
+
 /* ==========================================================================
 6. Components | Popups
 ========================================================================== */
@@ -1109,13 +1116,16 @@ function initModals() {
         var resetSuccess = $('#success-icon svg');//declare element to reset it at modal close
         //trigger svg animation
         $('.success-trigger').on("click", function () {
-            new Vivus('success-icon', {
-                type: 'oneByOne',
-                duration: 60,
-                animTimingFunction: Vivus.EASE_OUT_BOUNCE,
-                selfDestroy: true,
-                file: 'assets/img/illustrations/icons/modals/success.svg'
-            });
+            setTimeout(function () {
+                new Vivus('success-icon', {
+                    type: 'oneByOne',
+                    duration: 60,
+                    delay: 300,
+                    animTimingFunction: Vivus.EASE_OUT_BOUNCE,
+                    selfDestroy: true,
+                    file: 'assets/img/illustrations/icons/modals/success.svg'
+                });
+            }, 300);
         })
         //Reset element with initial clone
         $('.modal-close, .modal-dismiss').on("click", function () {
@@ -1127,13 +1137,15 @@ function initModals() {
         var resetError = $('#error-icon svg');//declare element to reset it at modal close
         //trigger svg animation
         $('.error-trigger').on("click", function () {
-            new Vivus('error-icon', {
-                type: 'oneByOne',
-                duration: 60,
-                animTimingFunction: Vivus.EASE_OUT_BOUNCE,
-                selfDestroy: true,
-                file: 'assets/img/illustrations/icons/modals/error.svg'
-            });
+            setTimeout(function () {
+                new Vivus('error-icon', {
+                    type: 'oneByOne',
+                    duration: 60,
+                    animTimingFunction: Vivus.EASE_OUT_BOUNCE,
+                    selfDestroy: true,
+                    file: 'assets/img/illustrations/icons/modals/error.svg'
+                });
+            }, 300);
         })
         //Reset element with initial clone
         $('.modal-close, .modal-dismiss').on("click", function () {
@@ -1145,13 +1157,15 @@ function initModals() {
         var resetWarning = $('#warning-icon svg');//declare element to reset it at modal close
         //trigger svg animation
         $('.warning-trigger').on("click", function () {
-            new Vivus('warning-icon', {
-                type: 'oneByOne',
-                duration: 60,
-                animTimingFunction: Vivus.EASE_OUT_BOUNCE,
-                selfDestroy: true,
-                file: 'assets/img/illustrations/icons/modals/warning.svg'
-            });
+            setTimeout(function () {
+                new Vivus('warning-icon', {
+                    type: 'oneByOne',
+                    duration: 60,
+                    animTimingFunction: Vivus.EASE_OUT_BOUNCE,
+                    selfDestroy: true,
+                    file: 'assets/img/illustrations/icons/modals/warning.svg'
+                });
+            }, 300);
         })
         //Reset element with initial clone
         $('.modal-close, .modal-dismiss').on("click", function () {
@@ -1163,13 +1177,15 @@ function initModals() {
         var resetInfo = $('#info-icon svg');//declare element to reset it at modal close
         //trigger svg animation
         $('.info-trigger').on("click", function () {
-            new Vivus('info-icon', {
-                type: 'oneByOne',
-                duration: 60,
-                animTimingFunction: Vivus.EASE_OUT_BOUNCE,
-                selfDestroy: true,
-                file: 'assets/img/illustrations/icons/modals/info.svg'
-            });
+            setTimeout(function () {
+                new Vivus('info-icon', {
+                    type: 'oneByOne',
+                    duration: 60,
+                    animTimingFunction: Vivus.EASE_OUT_BOUNCE,
+                    selfDestroy: true,
+                    file: 'assets/img/illustrations/icons/modals/info.svg'
+                });
+            }, 1000);
         })
         //Reset element with initial clone
         $('.modal-close, .modal-dismiss').on("click", function () {
@@ -1376,7 +1392,7 @@ function initPlayers() {
         } else {
             const players = Array.from(document.querySelectorAll('.bulkit-player')).map(p => new Plyr(p));
         }
-        
+
     }
 }
 
@@ -2631,7 +2647,7 @@ function initAnchorScroll() {
     scroll_if_anchor(window.location.hash);
 
     // Intercept all anchor clicks
-    $("body").on("click", "a", scroll_if_anchor);
+    $("body").on("click", ".scroll-link", scroll_if_anchor);
 }
 
 
@@ -3387,7 +3403,7 @@ function initCanvas() {
 }
 
 function initAnimatedSvg() {
-    if ($('.vivus-svg').length) {
+    if ($('#chat-widget-ui, #chat-ui').length) {
         new Vivus('chat-widget-ui', {
             duration: 150,
             file: 'assets/img/graphics/compositions/chat-widget-core.svg'
@@ -3498,4 +3514,35 @@ function initParticles() {
     }
 
 
+}
+
+//Perspective plugin
+$.fn.tilt = function() {
+    var perspective = '300px',
+        delta = 20,
+        width = this.width(),
+        height = this.height(),
+        midWidth = width / 2,
+        midHeight = height / 2;
+    this.on({
+        mousemove: function(e) {
+            var pos = $(this).offset(),
+                cursPosX = e.pageX - pos.left,
+                cursPosY = e.pageY - pos.top,
+                cursCenterX = midWidth - cursPosX,
+                cursCenterY = midHeight - cursPosY;
+
+            $(this).css('transform', 'perspective(' + perspective + ') rotateX(' + (cursCenterY / delta) + 'deg) rotateY(' + -(cursCenterX / delta) + 'deg)');
+            $(this).removeClass('is-out');
+        },
+        mouseleave: function() {
+            $(this).addClass('is-out');
+        }
+    });
+    //Return
+    return this;
+};
+
+function initTiltCards() {
+    $('.tilt-card').tilt();
 }

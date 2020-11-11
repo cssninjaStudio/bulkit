@@ -8,9 +8,17 @@ UI Elements SCSS file
 TABLE OF CONTENTS
     0. Pricing Pickers
     1. Giant input
+    2. Slide toggle
     3. Floating Circles
     4. Feature Matrix
     5. Compare Table
+    6. Chat widget button
+    7. Chat widget
+    8. Links
+    9. Subscription combo
+    10. Update Pill
+    11. Search Box
+
 ***/
 
 /* ==========================================================================
@@ -43,12 +51,12 @@ TABLE OF CONTENTS
         background: $section-grey-accent;
         border-radius: 100px;
         margin: 20px 0;
-    
+
         .giant-input {
             position: relative;
             min-width: 300px;
             max-width: 100%;
-    
+
             input {
                 padding: 20px 165px 20px 20px;
                 width: 100%;
@@ -60,13 +68,13 @@ TABLE OF CONTENTS
                 transition: all 0.5s;
                 border: 1px solid rgba(213, 220, 247, 0.59);
                 border-radius: 100px;
-    
+
                 &:focus {
                     outline: none !important;
                     box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.18) !important;
                 }
             }
-    
+
             button.inner {
                 position: absolute;
                 right: 7px;
@@ -75,8 +83,6 @@ TABLE OF CONTENTS
         }
     }
 }
-
-
 
 /* ==========================================================================
 2. Slide toggle
@@ -167,7 +173,6 @@ TABLE OF CONTENTS
     }
 }
 
-
 /* ==========================================================================
 3. Floating Circles
 ========================================================================== */
@@ -181,7 +186,6 @@ TABLE OF CONTENTS
         padding: 40px 0;
     }
 }
-
 
 /* ==========================================================================
 4. Feature Matrix
@@ -200,7 +204,6 @@ TABLE OF CONTENTS
 .device-table {
     margin: 0 auto;
 }
-
 
 /* ==========================================================================
 6. Chat widget button
@@ -283,9 +286,8 @@ body #bulchat div {
     transition: all 0.5s ease;
 }
 
-
 /* ==========================================================================
-11. Chat widget
+7. Chat widget
 ========================================================================== */
 
 #chat-widget {
@@ -542,9 +544,8 @@ body #bulchat div {
     }
 }
 
-
 /* ==========================================================================
-5. Links
+8. Links
 ========================================================================== */
 
 a:not(.button) {
@@ -554,7 +555,7 @@ a:not(.button) {
 }
 
 /* ==========================================================================
-1. Subscription combo
+9. Subscription combo
 ========================================================================== */
 
 .subscription-combo {
@@ -608,9 +609,8 @@ a:not(.button) {
     }
 }
 
-
 /* ==========================================================================
-2. Update Pill
+10. Update Pill
 ========================================================================== */
 
 .update-pill {
@@ -639,5 +639,351 @@ a:not(.button) {
         color: $blue-grey-light;
         font-size: .9rem;
         margin-left: 8px;
+    }
+}
+
+/* ==========================================================================
+11. Search Box
+========================================================================== */
+
+.search-box-wrapper {
+    margin: 30px 0 40px 0;
+
+    .search-box {
+        height: 80px;
+        padding: 10px 0 10px 10px;
+        text-align: left;
+
+        .search-button {
+            width: 100%;
+            height: 80px;
+            font-family: $font-text;
+            margin-top: -10px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background: $primary;
+        }
+    }
+
+    .search-block, .price-block, .extras-block {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        margin-top: -10px;
+        border-right: 2px solid rgba(10, 10, 10, 0.1);
+        background: $white;
+        transition: all 0.3s ease;
+
+        &.focus {
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .price-block {
+        .button {
+            display: flex;
+            align-items: center;
+            outline: none;
+            border: 1px solid #b1b1b1;
+            text-align: left;
+            width: 100%;
+            height: 100%;
+            font-size: 1em;
+            margin-right: 4px;
+            color: #4c4c4c;
+            padding: 0 .825em;
+            z-index: 0;
+            border-radius: 0px;
+            border: 0px;
+
+            span {
+                position: absolute;
+                top: 40px;
+                left: 10px;
+                font-family: $font-text;
+                padding-bottom: 5px;
+                font-size: 1.1rem;
+                background: none;
+                color: $blue-grey-light;
+                width: 90%;
+                height: 30px;
+                border: none;
+                appearance: none;
+                outline: none;
+            }
+        }
+
+        .dropdown-container {
+            padding-bottom: 0;
+            width: 100%;
+            border-radius: 0;
+            border-top: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 10;
+            font-size: 14px;
+            padding: 0;
+            background-color: $white;
+            box-shadow: rgba(0, 0, 0, 0.172549) 0 6px 12px 0;
+            visibility: hidden;
+
+            &.is-open {
+                visibility: visible;
+            }
+
+            .dropdown {
+                display: inline-block;
+                margin: 0;
+                border-top: 1px solid $default-input;
+                width: 100%;
+
+                .range-container {
+                    height: 60px;
+                    margin: 20px 0 10px;
+                    border-bottom: 1px solid $default-input;
+
+                    .left-input {
+                        position: relative;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        float: left;
+                        width: 50%;
+                        z-index: 11;
+
+                        input {
+                            width: 100%;
+                            max-width: 100% !important;
+                            line-height: 26px;
+                            height: 40px;
+                            padding-left: 6px;
+                            background-color: $white;
+                            text-align: center;
+                            border: solid 1px $default-input;
+                            outline-width: 1px;
+                            outline-color: #009688;
+                        }
+                    }
+
+                    .right-input {
+                        position: relative;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        float: left;
+                        width: 50%;
+                        z-index: 11;
+
+                        input {
+                            width: 100%;
+                            max-width: 100% !important;
+                            line-height: 26px;
+                            height: 40px;
+                            padding-left: 6px;
+                            background-color: $white;
+                            text-align: center;
+                            border: solid 1px $default-input;
+                            outline: none;
+                        }
+                    }
+
+                    &:before {
+                        content: "-";
+                        color: $default-input;
+                        position: absolute;
+                        text-align: center;
+                        width: 100%;
+                        font-size: 2em;
+                        left: 0;
+                        z-index: 10;
+                    }
+                }
+
+                .salary-options-container {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 0 10px 20px 10px;
+
+                    ul {
+                        height: 245px;
+                        overflow-y: auto;
+                        text-align: center;
+                        padding: 0;
+
+                        li {
+                            font-family: $font-text;
+                            font-size: .95rem;
+                            width: 100%;
+                            height: 35px;
+                            min-width: 80px;
+                            line-height: 35px;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            color: $blue-grey-light;
+                            padding: 0;
+                            transition: all .3s;
+
+                            &:not(.dark-text):hover {
+                                background: $primary;
+                                box-shadow: $primary-box-shadow;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+
+                .options-container {
+                    width: 100%;
+                    height: 178px;
+                    margin: 0px;
+                    padding: 10px 15px;
+                    border-bottom: 1px solid $default-input;
+                    overflow-y: auto;
+
+                    p {
+                        font-weight: 500;
+                    }
+
+                    ul {
+                        min-height: 245px;
+                        list-style: none;
+                        padding-left: 0;
+                        margin: 0;
+                        background-color: $white;
+
+                        li {
+                            padding-left: 15px;
+                            height: 35px;
+                            line-height: 35px;
+                            cursor: pointer;
+
+                            &:hover {
+                                background: rgba(0, 0, 0, 0.2);
+                            }
+                        }
+
+                        &.max-options li {
+                            padding-right: 15px;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .search-label, .price-label {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        font-family: $font-text;
+        color: $blue-grey;
+        z-index: 999;
+    }
+
+    .search-input {
+        position: absolute;
+        top: 40px;
+        left: 10px;
+        font-family: $font-text;
+        padding-bottom: 5px;
+        font-size: 1.2rem;
+        background: none;
+        border-bottom: 1px solid transparent;
+        color: $blue-grey-light;
+        width: 90%;
+        height: 30px;
+        border: none;
+        appearance: none;
+        outline: none;
+
+        &::-webkit-search-cancel-button {
+            appearance: none;
+        }
+
+        &:focus {
+            border-bottom-color: $primary;
+        }
+    }
+
+    .checkbox input[type="checkbox"] {
+        margin-left: 0px;
+    }
+
+    .checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 12px;
+        cursor: pointer;
+
+        > span {
+            position: relative;
+            top: 2px;
+            font-size: .95rem;
+            color: $blue-grey-light;
+            margin-left: 4px;
+        }
+
+        .end {
+            margin-left: auto;
+
+            img {
+                display: block;
+                height: 28px;
+                width: 28px;
+                min-width: 28px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .checkbox input[type=checkbox], label input[type=checkbox] {
+        opacity: 0;
+        position: absolute;
+        margin: 0;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .checkbox .checkbox-material .check {
+        position: relative;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 1px solid rgba(0, 0, 0, 0.54);
+        border-radius: 2px;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .checkbox input[type=checkbox]:checked ~ .checkbox-material .check {
+        color: $primary;
+        padding: 1px 0 0px 1px;
+        cursor: pointer;
+    }
+
+    .checkbox .checkbox-material {
+        vertical-align: middle;
+        position: relative;
+        top: 3px;
+        margin-right: 5px;
+    }
+
+    .checkbox input[type=checkbox]:checked ~ .checkbox-material .check:before {
+        position: relative;
+        top: -2px;
+        color: $primary;
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f00c";
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }

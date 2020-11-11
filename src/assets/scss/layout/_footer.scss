@@ -296,6 +296,10 @@ footer {
     padding-top: 4rem !important;
     background: lighten($fade-grey, 5%);
 
+    &.is-white {
+        background: $white;
+    }
+
     .footer-head {
         padding-bottom: 3rem;
         display: flex;

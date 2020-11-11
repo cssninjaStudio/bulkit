@@ -117,6 +117,7 @@ TABLE OF CONTENTS
 
 .tag {
     margin-bottom: 5px;
+    font-family: $font-text;
 
     &.squared {
         border-radius: 2px !important;
@@ -168,6 +169,11 @@ TABLE OF CONTENTS
             border: 1px solid $green;
             color: $green;
         }
+
+        &.is-pastel {
+            background: lighten($success, 48%);
+            color: darken($success, 8%);
+        }
     }
 
     &.is-warning {
@@ -178,6 +184,11 @@ TABLE OF CONTENTS
             background: transparent !important;
             border: 1px solid $orange !important;
             color: $orange !important;
+        }
+
+        &.is-pastel {
+            background: lighten($warning, 40%) !important;
+            color: darken($warning, 8%) !important;
         }
     }
 
@@ -190,6 +201,11 @@ TABLE OF CONTENTS
             border: 1px solid $red;
             color: $red;
         }
+
+        &.is-pastel {
+            background: lighten($danger, 44%) !important;
+            color: darken($danger, 8%) !important;
+        }
     }
 
     &.is-info {
@@ -200,6 +216,75 @@ TABLE OF CONTENTS
             background: transparent;
             border: 1px solid $blue;
             color: $blue;
+        }
+
+        &.is-pastel {
+            background: lighten($info, 44%) !important;
+            color: darken($info, 8%) !important;
+        }
+    }
+
+    &.is-purple {
+        background: $purple;
+        color: $white;
+
+        &.is-outlined {
+            background: transparent;
+            border: 1px solid $purple;
+            color: $purple;
+        }
+
+        &.is-pastel {
+            background: lighten($purple, 38%) !important;
+            color: darken($purple, 8%) !important;
+        }
+    }
+
+    &.is-purple {
+        background: $purple;
+        color: $white;
+
+        &.is-outlined {
+            background: transparent;
+            border: 1px solid $purple;
+            color: $purple;
+        }
+
+        &.is-pastel {
+            background: lighten($purple, 38%) !important;
+            color: darken($purple, 8%) !important;
+        }
+    }
+
+    &.is-yellow {
+        background: $yellow;
+        color: $white;
+
+        &.is-outlined {
+            background: transparent;
+            border: 1px solid $yellow;
+            color: $yellow;
+        }
+
+        &.is-pastel {
+            background: lighten($yellow, 22%) !important;
+            color: darken($yellow, 8%) !important;
+        }
+    }
+    
+    &.is-orange {
+        background: $salmon;
+        color: $white;
+
+        &.is-outlined {
+            background: transparent;
+            border: 1px solid $salmon;
+            color: $salmon;
+        }
+
+        &.is-pastel {
+            background: lighten($salmon, 22%) !important;
+            color: darken($salmon, 8%) !important;
         }
     }
 

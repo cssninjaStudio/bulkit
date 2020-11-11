@@ -56,7 +56,7 @@ form {
     font-size: .95rem;
     height: 36px;
     transition: all .3s;
-    border-color: lighten($default-input, 2%);
+    border-color: $input-border;
 
     &.is-small {
         height: 26px;
@@ -131,12 +131,15 @@ form {
         }
     }
 
+    &:hover {
+        border-color: darken($input-grey, 3%);
+    }
+
     &:focus, &:active {
-        border-color: $light-grey;
+        border-color: darken($input-grey, 2%);
 
         &.has-shadow {
             box-shadow: $light-box-shadow !important;
-            border-color: darken($fade-grey, 2%);
         }
 
         ~ .icon {
@@ -144,6 +147,10 @@ form {
                 color: $primary;
             }
         }
+    }
+
+    &:focus {
+        box-shadow: $light-box-shadow !important;
     }
 
     .icon {
@@ -789,6 +796,12 @@ form {
         border: 1px solid $muted-grey;
         border-right: 0;
         border-top: 0;
+    }
+
+    .icon {
+        i {
+            transition: all .3s;
+        }
     }
 }
 

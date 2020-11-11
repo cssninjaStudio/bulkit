@@ -18,8 +18,9 @@ TABLE OF CONTENTS
     9. Blob Hero
     10. Ecommerce hero
     11. Subpage Hero
+    12. Header Form
+    13. Jobs Hero
 ***/
-
 
 /* ==========================================================================
 0. Animated Icons Hero
@@ -178,7 +179,6 @@ TABLE OF CONTENTS
         z-index: 1 !important;
     }
 }
-
 
 /* ==========================================================================
 5. Wavy hero v1
@@ -612,31 +612,31 @@ body {
         &.is-blob-2 {
             bottom: 20%;
             left: 12%;
-            transform: scale(.7);
+            transform: scale(0.7);
         }
 
         &.is-blob-3 {
             bottom: 10%;
             right: 5%;
-            transform: scale(.4);
+            transform: scale(0.4);
         }
 
         &.is-blob-4 {
             top: 2%;
             left: 30%;
-            transform: scale(.2);
+            transform: scale(0.2);
         }
 
         &.is-blob-5 {
             bottom: 45%;
             left: 10%;
-            transform: scale(.4);
+            transform: scale(0.4);
         }
 
         &.is-blob-6 {
             bottom: 25%;
             left: 2%;
-            transform: scale(.3);
+            transform: scale(0.3);
         }
 
         &.is-blob-7 {
@@ -992,5 +992,79 @@ body {
     }
 }
 
+/* ==========================================================================
+12. Hero Form
+========================================================================== */
 
+.hero-form {
+    .flex-card {
+        padding: 30px;
+        border: 1px solid darken($fade-grey, 3%);
+        box-shadow: $light-box-shadow;
+        border-radius: 10px;
+        max-width: 380px;
+        margin: 0 auto;
 
+        .field {
+            > label {
+                display: inline-block;
+                font-size: .9rem;
+                font-weight: 500;
+                font-family: $font-text;
+                margin-bottom: 6px;
+                padding: 0;
+
+                small {
+                    color: $danger;
+                }
+            }
+
+            .control {
+                .input {
+                    font-size: 1rem;
+                    font-family: $font-text;
+                    padding-left: 42px;
+
+                    &:not(:focus) {
+                        border-color: $input-border;
+                    }
+                }
+
+                .button {
+                    line-height: 0;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+13. Jobs Hero
+========================================================================== */
+
+.jobs-hero {
+    .hero-body {
+        align-items: flex-start !important;
+
+        .is-hero-caption {
+            .title {
+                font-family: $font-sub;
+                margin-bottom: 6px !important;
+            }
+
+            .subtitle {
+                margin-bottom: 10px !important;
+            }
+        }
+    }
+
+    .jobs-hero-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 640px;
+    }
+}

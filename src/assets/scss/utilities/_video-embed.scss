@@ -91,6 +91,22 @@ TABLE OF CONTENTS
         width: 480px;
     }
 
+    &.is-4by3 {
+        position: relative;
+        padding-top: 75%;
+        width: 100%;
+        max-width: 840px;
+
+        .plyr {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+    }
+
     &.is-16by9 {
         position: relative;
         padding-top: 56.25%;

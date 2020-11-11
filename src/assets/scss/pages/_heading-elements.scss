@@ -151,6 +151,18 @@ TABLE OF CONTENTS
         width: 40px;
         margin: 0 auto;
     }
+
+    .title-alt {
+        color: $blue-grey;
+        font-family: $font-sub;
+        font-size: 2.2rem;
+    }
+
+    .subtitle, .subtitle-alt {
+        font-family: $font-text;
+        font-size: 1.2rem;
+        color: $title-grey;
+    }
 }
 
 .section-title-wrapper {
@@ -214,6 +226,19 @@ TABLE OF CONTENTS
         font-weight: 400;
         color: $title-grey;
         line-height: 1.2;
+        margin-bottom: 1rem !important;
+    }
+
+    .section-subtitle-alt {
+        font-family: $font-text;
+        font-size: 1.3rem;
+        line-height: 30px;
+        font-weight: 400;
+        color: $blue-grey-light;
+        line-height: 1.2;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 1rem !important;
     }
 
@@ -366,6 +391,20 @@ TABLE OF CONTENTS
     h3, h2 {
         position: relative;
         z-index: 2;
+    }
+
+    h2 {
+        margin-bottom: 10px !important;
+    }
+
+    h3 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 480px;
+        font-size: 1.3rem;
+        line-height: 1;
+        font-family: $font-sub;
+        color: $blue-grey-light;
     }
 
     .special-divider {

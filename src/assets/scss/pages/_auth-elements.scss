@@ -400,16 +400,22 @@ TABLE OF CONTENTS
 3. Remember me
 ========================================================================== */
 
-.remember-wrap {
+.remember-wrap, .switch-toggle-wrap {
     .control {
         &:last-child {
             display: flex;
             align-items: center;
         }
 
-        span {
+        > span {
             font-family: $font-text;
+            font-size: .9rem;
             color: $blue-grey-light !important;
+            max-width: 70%;
+
+            a {
+                color: $primary;
+            }
         }
     }
 }
