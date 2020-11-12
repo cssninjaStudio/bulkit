@@ -169,11 +169,13 @@ form {
 
 .textarea {
     color: $basaltic-grey;
+    border-color: $input-border;
     box-shadow: none;
     transition: all 0.8s;
 
     &:focus {
         border: 1px solid $fade-grey;
+        box-shadow: $light-box-shadow !important;
     }
 
     &.is-primary-focus {

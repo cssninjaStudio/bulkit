@@ -19,11 +19,12 @@ TABLE OF CONTENTS
 9. Team V4
 10. Team V5
 11. Team V6
-12. Client grids
-13. Centered images carousel
-14. Multiple images carousel
-15. Single image carousel
-16. Custome slick navigation arrows
+12. Team V7
+13. Client grids
+14. Centered images carousel
+15. Multiple images carousel
+16. Single image carousel
+17. Custome slick navigation arrows
 =============================================================================
 ***/
 
@@ -675,14 +676,16 @@ $length: 75;
 
     .counter-number {
         font-weight: bolder;
+        font-family: $font-sub;
         font-size: 3rem;
         color: $blue-grey;
     }
 
     .counter-text {
         color: $primary;
+        font-family: $font-text;
         font-size: 1.1rem;
-        font-weight: 600;
+        font-weight: 500;
         transition: all 0.4s;
     }
 }
@@ -1230,7 +1233,87 @@ $length: 75;
 }
 
 /* ==========================================================================
-12. Client grids
+12. Team V7
+========================================================================== */
+
+.rounded-team-member {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .avatar-wrap {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        min-width: 100px;
+        margin: 0 auto 10px auto;
+
+        .avatar {
+            display: block;
+            border-radius: 50%;
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: block;
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+            border: 2px solid $white;
+        }
+    }
+
+    h3 {
+        font-family: $font-sub;
+        font-size: 1.3rem;
+        color: $blue-grey;
+    }
+
+    p {
+        font-size: .95rem;
+        color: $blue-grey-light;
+        margin-bottom: 5px;
+    }
+
+    .social-profiles {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 38px;
+            width: 38px;
+            min-width: 38px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            transition: all .3s;
+
+            &:hover {
+                background: $white;
+                border-color: darken($widget-grey, 4%);
+                box-shadow: $light-box-shadow;
+
+                i {
+                    color: $primary;
+                }
+            }
+
+            i {
+                font-size: 16px;
+                color: darken($widget-grey, 14%);
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+13. Client grids
 ========================================================================== */
 
 .grid-clients {
@@ -1303,7 +1386,7 @@ $length: 75;
 }
 
 /* ==========================================================================
-13. Centered images carousel
+14. Centered images carousel
 ========================================================================== */
 
 .image-carousel {
@@ -1349,7 +1432,7 @@ $length: 75;
 }
 
 /* ==========================================================================
-14. Multiple images carousel
+15. Multiple images carousel
 ========================================================================== */
 
 .multiple-image-carousel {
@@ -1389,7 +1472,7 @@ $length: 75;
 }
 
 /* ==========================================================================
-15. Single image carousel
+16. Single image carousel
 ========================================================================== */
 
 .single-image-carousel {
@@ -1450,7 +1533,7 @@ $length: 75;
 }
 
 /* ==========================================================================
-16. Custom slick carousel navigation arrows
+17. Custom slick carousel navigation arrows
 ========================================================================== */
 
 .slick-custom {

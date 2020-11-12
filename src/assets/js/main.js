@@ -26,9 +26,6 @@ $(document).ready(function ($) {
 		changeDemoImages();
 	}
 
-	else if (env === 'customization') {
-		changeDemoImages();
-	}
 
 	initThemeSwitcher();
 	initSlider()
@@ -163,4 +160,5 @@ $(document).ready(function ($) {
 	initChatWidget();
 	initContactToggler();
 	
+	initMapBox();
 })

@@ -384,12 +384,20 @@ TABLE OF CONTENTS
                 margin-right: 0;
             }
         }
+
+        .is-hero-caption {
+            &.is-pushed {
+                margin-top: 0 !important;
+            }
+        }
     }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    .is-hero-caption {
-        margin-top: 110px !important;
+    .hero-body {
+        .is-hero-caption {
+            margin-top: 110px !important;
+        }
     }
 }
 

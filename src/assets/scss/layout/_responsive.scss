@@ -455,6 +455,16 @@ TABLE OF CONTENTS
     .is-flex-portrait {
         display: flex;
     }
+
+    #component-page {
+        .hero {
+            .hero-body {
+                .column.is-4 {
+                    text-align: center !important;
+                }
+            }
+        }
+    }
 }
 
 /* ==========================================================================

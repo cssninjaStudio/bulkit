@@ -34,6 +34,7 @@ TABLE OF CONTENTS
 
 ul, ol {
     list-style-type: none;
+    font-family: $font-text;
 }
 
 /* ==========================================================================
@@ -43,6 +44,7 @@ ul, ol {
 .icon-bullet-list {
     list-style: none;
     padding: 0;
+    font-family: $font-text;
 
     li {
         padding-left: 1.3em;
@@ -65,6 +67,7 @@ ul, ol {
 
 .solid-list {
     display: inline-block;
+    font-family: $font-text;
 
     .solid-list-item {
         display: flex;
@@ -90,6 +93,7 @@ ul, ol {
 .inline-list {
     display: flex !important;
     flex-wrap: wrap;
+    font-family: $font-text;
 
     i.inline-bullet {
         font-size: 0.4rem;
@@ -110,6 +114,7 @@ ul, ol {
 
     li {
         padding: 10px 20px;
+        font-family: $font-text;
 
         a {
             color: $coal;

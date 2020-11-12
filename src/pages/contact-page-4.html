@@ -1,0 +1,73 @@
+---
+layout: contact
+title: Blog
+---
+
+<!-- Hero (Parallax) and nav -->
+<div class="hero is-fullheight is-app-grey mapbox-hero">
+
+    {{> navbar-double-light-demo}}
+
+    <div id="mapbox-2" class="hero-map"></div>
+
+    <!-- Hero image -->
+    <div id="main-hero" class="hero-body">
+        <div class="container has-text-centered">
+            <div class="columns is-vcentered">
+                <div class="column is-6 is-offset-6 has-text-centered is-subheader-caption">
+                    <div class="contact-page-form flex-card">
+
+                        <h3>Contact Us</h3>
+                        <p>Use the form below to send us a message.</p>
+
+                        <div class="columns is-multiline">
+                            <div class="column is-12">
+                                <div class="field">
+                                    <label>Full Name</label>
+                                    <div class="control has-icons-left">
+                                        <input type="text" class="input is-medium" placeholder="Your name">
+                                        <span class="icon is-left is-small">
+                                            <i class="sl sl-icon-user"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+
+                                <div class="field">
+                                    <label>Email Address</label>
+                                    <div class="control has-icons-left">
+                                        <input type="text" class="input is-medium" placeholder="Your email">
+                                        <span class="icon is-left is-small">
+                                            <i class="sl sl-icon-envelope-open"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+                                <div class="field">
+                                    <label>Message</label>
+                                    <div class="control">
+                                        <textarea class="textarea" rows="4" placeholder="Write your message"></textarea>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-12">
+                                <div class="field">
+                                    <div class="control">
+                                        <button type="button"
+                                            class="button button-cta primary-btn no-lh is-bold raised is-fullwidth">Send
+                                            Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer-spaced-light}}

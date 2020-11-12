@@ -355,6 +355,18 @@ button {
         .column {
             padding-left: 0;
             padding-right: 0;
+
+            &.is-scrollable {
+                height: 275px;
+            }
+        }
+
+        .scrollable-container {
+            height: 275px;
+
+            .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
         }
 
         .navbar-item {
@@ -378,7 +390,7 @@ button {
                     background-color: #f5f5f5;
 
                     i {
-                        color: $secondary;
+                        color: $primary;
                     }
                 }
             }
