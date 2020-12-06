@@ -176,7 +176,7 @@ TABLE OF CONTENTS
         position: absolute;
         text-align: center;
         font-weight: bolder;
-        top: -80px;
+        top: -70px;
         margin-left: auto;
         margin-right: auto;
         left: 0;
@@ -292,6 +292,14 @@ TABLE OF CONTENTS
     .section-title-wrapper {
         .bg-number, .bg-symbol {
             font-size: 110px !important;
+
+            .material-icons {
+                font-size: 6rem;
+            }
+        }
+
+        .section-title-landing {
+            line-height: 1.1;
         }
 
         .subtitle {
@@ -417,4 +425,3 @@ TABLE OF CONTENTS
         margin: 0 auto;
     }
 }
-

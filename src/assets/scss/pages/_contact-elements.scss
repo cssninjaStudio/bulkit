@@ -162,6 +162,12 @@ TABLE OF CONTENTS
     .submit-wrapper {
         text-align: center !important;
     }
+
+    .contact-form {
+        &.is-bigger {
+            padding: 30px;
+        }
+    }
 }
 
 /* ==========================================================================

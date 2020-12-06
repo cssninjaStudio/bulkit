@@ -3609,3 +3609,27 @@ $.fn.tilt = function () {
 function initTiltCards() {
     $('.tilt-card').tilt();
 }
+
+function initCodeTabs() {
+    $('.backend-code-container .tab-codesnippets li').on('click', function(){
+        var language = $(this).attr('data-language');
+        $(this).closest('.column').find('.tab-codesnippets li').removeClass('is-active');
+        $(this).addClass('is-active');
+        $(this).closest('.column').find('[data-backend-sample]').removeClass('active');
+
+        console.log(language);
+
+        $('[data-backend-sample='+ language +']').addClass('active');
+    });
+
+    $('.frontend-code-container .tab-codesnippets li').on('click', function(){
+        var language = $(this).attr('data-language');
+        $(this).closest('.column').find('.tab-codesnippets li').removeClass('is-active');
+        $(this).addClass('is-active');
+        $(this).closest('.column').find('[data-frontend-sample]').removeClass('active');
+
+        console.log(language);
+
+        $('[data-frontend-sample='+ language +']').addClass('active');
+    });
+}

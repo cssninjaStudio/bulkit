@@ -578,6 +578,13 @@ form {
     }
 
     &.is-light {
+        input.material-input, textarea {
+            color: $white;
+            border-color: $white;
+        }
+        label {
+            color: $white;
+        }
         input.material-input:focus ~ label,
         input:valid ~ label,
         textarea:focus ~ label {

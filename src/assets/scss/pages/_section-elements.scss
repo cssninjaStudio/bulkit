@@ -1361,8 +1361,8 @@ body {
 
 @media (max-width: 768px) {
     .process-block {
-        .has-line:after {
-            display: none;
+        &.has-line:after {
+            display: none !important;
         }
     }
 }

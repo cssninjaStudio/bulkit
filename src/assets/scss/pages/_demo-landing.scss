@@ -512,6 +512,20 @@ TABLE OF CONTENTS
         }
     }
 
+    .new-tag {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: red;
+        color: $white;
+        font-family: $font-text;
+        padding: 6px 16px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        font-size: .8rem;
+        z-index: 8;
+    }
+
     img {
         border-radius: 10px;
         display: block;
@@ -528,42 +542,6 @@ TABLE OF CONTENTS
         transform: scale(1);
         transition: all 0.5s;
         z-index: 1;
-
-        /*&.is-landing {
-            background: $secondary;
-        }
-
-        &.is-landing-v1 {
-            background: $green;
-        }
-
-        &.is-landing-v2 {
-            background: #0082c8;
-        }
-
-        &.is-landing-v3, &.is-landing-v5 {
-            background: $blue;
-        }
-
-        &.is-landing-v6 {
-            background: #0f7cff;
-        }
-
-        &.is-landing-v7 {
-            background: #4A00E0;
-        }
-
-        &.is-agency, &.is-dashboard {
-            background: #00D1B2;
-        }
-
-        &.is-error-kit {
-            background: $orange;
-        }
-
-        &.is-op1, &.is-landing-v8 {
-            background: darken($red, 15%);
-        }*/
     }
 
     .demo-info {

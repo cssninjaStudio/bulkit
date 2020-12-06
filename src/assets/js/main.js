@@ -161,4 +161,6 @@ $(document).ready(function ($) {
 	initContactToggler();
 	
 	initMapBox();
+
+	initCodeTabs();
 })

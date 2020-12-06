@@ -1156,3 +1156,15 @@ TABLE OF CONTENTS
         }
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .carousel-wrapper {
+        .carousel {
+            .carousel-item {
+                padding: 30px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -268,14 +268,14 @@ TABLE OF CONTENTS
     .media {
         &.icon-box {
             border-top: none !important;
-    
+
             .media-content .content p {
                 span.icon-box-title {
                     color: $blue-grey;
                     font-size: 1.2rem;
                     font-weight: 600;
                 }
-    
+
                 span.icon-box-text {
                     color: $title-grey;
                     font-size: 1.1rem;
@@ -315,6 +315,25 @@ TABLE OF CONTENTS
     .section-title.is-demo, .section-feature-description {
         max-width: 460px !important;
         margin: 0 auto !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .title {
+        &.quick-feature {
+            .bg-number, .bg-symbol {
+                font-size: 10rem !important;
+                top: -60px !important;
+            }
+        }
+    }
+
+    .section {
+        &.has-circles {
+            .primary-circle, .primary-bold-circle, .accent-circle  {
+                display: none;
+            }
+        }
     }
 }
 
@@ -381,7 +400,7 @@ TABLE OF CONTENTS
         padding: 20px 0 60px 0;
 
         .bg-number {
-            top: -40px;
+            top: -55px;
         }
     }
 }

@@ -233,6 +233,18 @@ footer {
     }
 }
 
+@media (max-width: 767px) {
+    footer {
+        &.footer-light-left {
+            text-align: center;
+
+            .level {
+                justify-content: center;
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .footer-nav-right {
         margin-top: 0 !important;

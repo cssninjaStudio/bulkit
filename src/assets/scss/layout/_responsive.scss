@@ -22,6 +22,7 @@ TABLE OF CONTENTS
 @media (max-width: 767px) {
     .content-wrapper {
         //padding-top: 40px !important;
+   
     }
 
     .navbar {
@@ -53,7 +54,6 @@ TABLE OF CONTENTS
                     border-bottom: 1px solid $fade-grey;
 
                     .mega-inner {
-
                         .column:last-child {
                             display: none;
                         }
@@ -62,8 +62,6 @@ TABLE OF CONTENTS
                             width: 49%;
                             max-width: 49%;
                             display: inline-block !important;
-
-                            
                         }
 
                         .level {
@@ -95,6 +93,12 @@ TABLE OF CONTENTS
             justify-content: center;
         }
     }
+
+    form {
+        button[type=submit] {
+            width: 100% !important;
+        }
+    }
 }
 
 /* ==========================================================================
@@ -102,7 +106,6 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @media (max-width: 768px) {
-
     .nav-item.is-tab {
         padding-top: 8px;
         padding-bottom: 8px;
@@ -351,7 +354,6 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-
     .navbar {
         &.is-dark-mobile {
             .navbar-item {
@@ -381,7 +383,6 @@ TABLE OF CONTENTS
                     border-bottom: 1px solid $fade-grey;
 
                     .mega-inner {
-
                         .column:last-child {
                             display: none;
                         }
@@ -390,13 +391,11 @@ TABLE OF CONTENTS
                             width: 49%;
                             max-width: 49%;
                             display: inline-block !important;
-
-                            
                         }
 
                         .level {
                             justify-content: center;
-                            
+
                             .level-left {
                                 display: none;
                             }
@@ -427,6 +426,7 @@ TABLE OF CONTENTS
 
     .content-wrapper {
         //padding-top: 0 !important;
+   
     }
 
     p {
@@ -471,9 +471,16 @@ TABLE OF CONTENTS
 2. max-width 1007px
 ========================================================================== */
 @media (max-width: 1007px) {
-
     .column.slide-description {
-        padding: 20px 0 !important;
+        > * {
+            &:first-child {
+                padding-top: 60px;
+            }
+
+            &:last-child {
+                padding-bottom: 60px;
+            }
+        }
     }
 
     .account {
