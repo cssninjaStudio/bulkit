@@ -4,6 +4,8 @@
   "description": "Sass landing pages",
   "main": "index.js",
   "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
     "preinstall": "npx npm-force-resolutions"
   },
   "author": "Css Ninja",
