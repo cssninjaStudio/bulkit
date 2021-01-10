@@ -20,10 +20,6 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @media (max-width: 767px) {
-    .content-wrapper {
-        //padding-top: 40px !important;
-   
-    }
 
     .navbar {
         &.is-dark-mobile {
@@ -47,6 +43,11 @@ TABLE OF CONTENTS
         }
 
         .navbar-item {
+
+            &.mobile-account {
+                display: flex !important;
+            }
+
             &.is-mega {
                 .is-megamenu {
                     max-height: 275px;
@@ -376,6 +377,11 @@ TABLE OF CONTENTS
         }
 
         .navbar-item {
+            
+            &.mobile-account {
+                display: flex !important;
+            }
+
             &.is-mega {
                 .is-megamenu {
                     max-height: 275px;

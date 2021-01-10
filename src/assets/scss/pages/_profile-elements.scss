@@ -1,0 +1,413 @@
+/*! _profile-elements.scss | Bulkit | CSS Ninja */
+
+/* ==========================================================================
+Profile elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Profile header
+***/
+
+/* ==========================================================================
+0. Profile header
+========================================================================== */
+
+.profile-header {
+  background: $white;
+
+  .profile-header-inner {
+    position: relative;
+    text-align: center;
+    padding: 2rem 0 6rem 0;
+
+    .profile-avatar {
+      position: relative;
+
+      .avatar {
+        display: block;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin: 0 auto 1rem auto;
+      }
+
+      h2 {
+      }
+
+      p {
+        color: $blue-grey-light;
+      }
+    }
+
+    .tabs {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+
+      ul {
+        border: none;
+
+        li {
+          &.is-active {
+            a {
+              color: $primary;
+              border-color: $primary;
+            }
+          }
+
+          a {
+            border-color: transparent;
+            border-width: 3px;
+            margin-bottom: 0;
+            color: $blue-grey-light;
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-wrapper {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+
+  &.is-larger {
+    max-width: 890px;
+  }
+}
+
+.profile-card {
+  @extend .flex-card;
+  border-color: darken($fade-grey, 3%);
+  padding: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font-family: $font-main;
+      font-size: 1.2rem;
+      color: $blue-grey;
+    }
+
+    > a {
+      font-family: $font-text;
+      font-weight: 500;
+      color: $primary;
+    }
+  }
+
+  .profile-card-body {
+    > p {
+      color: $blue-grey-light;
+    }
+
+    .projects {
+      .project {
+        h3 {
+          font-family: $font-main;
+          font-size: 1.2rem;
+          color: $blue-grey;
+        }
+
+        > p {
+          font-family: $font-text;
+          color: $blue-grey-light;
+        }
+
+        .project-members {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding-top: 1rem;
+
+          img {
+            display: block;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            margin: 0 0.35rem;
+          }
+        }
+      }
+    }
+
+    .skills {
+      .skill-box {
+        padding: 1.5rem;
+        border: 1px solid darken($fade-grey, 3%);
+
+        h3 {
+          font-family: $font-main;
+          font-size: 1.1rem;
+          color: $blue-grey;
+          margin-bottom: 0.75rem;
+        }
+
+        > p {
+          font-family: $font-text;
+          color: $blue-grey-light;
+          margin-bottom: 0.75rem;
+        }
+
+        .skill-list {
+          display: flex;
+          align-items: center;
+          padding-top: 1rem;
+          padding: 0.75rem 0 0 0;
+
+          img {
+            display: block;
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            margin: 0 0.35rem;
+          }
+        }
+      }
+    }
+
+    .experiences,
+    .educations {
+      .experience,
+      .education {
+        display: flex;
+
+        + .experience,
+        + .education {
+          margin-top: 1.5rem;
+          padding-top: 1.5rem;
+          border-top: 1px solid darken($fade-grey, 3%);
+        }
+
+        > img {
+          display: block;
+          height: 44px;
+          width: 44px;
+          border-radius: 50%;
+        }
+
+        .meta {
+          margin-left: 1rem;
+
+          h3 {
+            font-family: $font-main;
+            font-size: 1.1rem;
+            color: $blue-grey;
+          }
+
+          span {
+            display: block;
+            font-family: $font-text;
+            color: $blue-grey-light;
+          }
+
+          p {
+            margin-top: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.project-card {
+  @extend .flex-card;
+  border-color: darken($fade-grey, 3%);
+  margin-bottom: 0;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: $light-box-shadow;
+  }
+
+  .project-card-content {
+    padding: 1.25rem;
+
+    h3 {
+      font-family: $font-main;
+      font-size: 1.1rem;
+      color: $blue-grey;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-family: $font-text;
+      color: $blue-grey-light;
+    }
+
+    .project-members {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: 1rem;
+
+      img {
+        display: block;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        margin: 0 0.35rem;
+      }
+    }
+  }
+}
+
+.network-stats {
+  display: flex;
+
+  .network-stat {
+    text-align: center;
+    flex: 1 1 0px;
+
+    &.is-centered {
+      border-left: 1px solid darken($fade-grey, 3%);
+      border-right: 1px solid darken($fade-grey, 3%);
+    }
+
+    span {
+      display: block;
+
+      &:first-child {
+        font-family: $font-main;
+        font-size: 1.8rem;
+        color: $blue-grey;
+      }
+
+      &:nth-child(2) {
+        font-family: $font-text;
+        font-size: 1.2rem;
+        color: $blue-grey-light;
+      }
+    }
+  }
+}
+
+.network-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+
+  h3 {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    color: $blue-grey;
+  }
+
+  > a {
+    font-family: $font-text;
+    font-weight: 500;
+    color: $primary;
+  }
+}
+
+.network-grid {
+  .network-card {
+    @extend .flex-card;
+    border-color: darken($fade-grey, 3%);
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 0;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: $light-box-shadow;
+    }
+
+    .network-avatar {
+      position: relative;
+
+      .avatar {
+        display: block;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 0 auto 1rem auto;
+      }
+    }
+
+    p {
+      color: $blue-grey-light;
+    }
+
+    .network-stats {
+      margin-bottom: 1.5rem;
+
+      .network-stat {
+        &:first-child {
+          border-right: 1px solid darken($fade-grey, 3%);
+        }
+
+        span {
+          &:first-child {
+            font-size: 1rem !important;
+          }
+          &:nth-child(2) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    > a {
+      font-family: $font-text;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $primary;
+    }
+  }
+
+  .load-more {
+    text-align: center;
+
+    .button {
+      height: 42px;
+      min-width: 140px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .profile-wrapper {
+    > .columns {
+      display: flex;
+      padding: 0;
+      
+      .column {
+        &.is-4 {
+          min-width: 33.3%;
+        }
+      }
+    }
+    .projects,
+    .skills,
+    .network-grid {
+      > .columns {
+        display: flex;
+        padding: 0;
+
+        .column {
+          &.is-4 {
+            min-width: 33.3%;
+          }
+        }
+      }
+    }
+  }
+}

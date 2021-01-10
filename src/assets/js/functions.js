@@ -275,6 +275,21 @@ function initNavbarDropdown() {
     })
 }
 
+//Init dropdowns
+function initDropdowns() {
+    $('.dropdown-trigger').on('click', function () {
+        $('.dropdown').removeClass('is-active');
+        $(this).closest('.dropdown').addClass('is-active');
+    });
+
+    $(document).on('click', function (e) {
+        var target = e.target;
+        if (!$(target).is('.dropdown-trigger img') && !$(target).parents().is('.dropdown')) {
+            $('.dropdown').removeClass('is-active');
+        }
+    });
+};
+
 //Init sidebar
 function initSidebar() {
     //Website sidebar

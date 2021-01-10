@@ -127,6 +127,10 @@ TABLE OF CONTENTS
     .navbar-item {
         font-family: $font-text;
 
+        &.mobile-account {
+            display: none;
+        }
+
         &.is-menu {
             &:hover {
                 background: #e8e8e8 !important;
@@ -353,6 +357,71 @@ TABLE OF CONTENTS
 
                 &.dark-logo {
                     display: block;
+                }
+            }
+        }
+    }
+
+    .account-dropdown {
+        .dropdown-trigger {
+            .button {
+                padding: 0;
+                border: none;
+                background: none;
+
+                img {
+                    display: block;
+                    width: 40px;
+                    min-width: 40px;
+                    height: 40px;
+                    min-height: 40px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            width: 250px;
+            margin-top: 10px;
+
+            .dropdown-content {
+                border: 1px solid darken($fade-grey, 3%);
+                box-shadow: $light-box-shadow;
+
+                .dropdown-item {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 1rem;
+                    width: calc(100% - 2rem);
+                    border-radius: .5rem;
+                    transition: all .3s;
+
+                    &:hover {
+                        background: $widget-grey;
+                    }
+
+                    i {
+                        font-size: 1.2rem;
+                        color: $blue-grey-light;
+                    }
+
+                    .meta {
+                        margin-left: 1rem;
+
+                        span {
+                            display: block;
+                            font-family: $font-text;
+
+                            &:first-child {
+                                color: $blue-grey;
+                                font-weight: 500;
+                            }
+
+                            &:nth-child(2) {
+                                color: $blue-grey-light;
+                            }
+                        }
+                    }
                 }
             }
         }

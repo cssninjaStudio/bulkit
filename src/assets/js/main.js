@@ -38,6 +38,7 @@ $(document).ready(function ($) {
 	initMobileMenu();
 	initLandingMobileMenu()
 	initNavbarDropdown();
+	initDropdowns();
 	initSidebar();
 	feather.replace();
 
