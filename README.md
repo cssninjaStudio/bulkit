@@ -1,7 +1,7 @@
 # 👋 Bulkit
 > Bulkit is a premium Bulma landing pages UI Kit built by [cssninjaStudio](https://cssninja.io).
 
-![Screenshot](https://media.cssninja.io/products/bulma/product.png "Dashkit")
+![Screenshot](https://media.cssninja.io/products/bulkit/product.png "Dashkit")
 
 ## ✌️ preview
 
