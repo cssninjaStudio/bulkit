@@ -430,11 +430,6 @@ TABLE OF CONTENTS
         }
     }
 
-    .content-wrapper {
-        //padding-top: 0 !important;
-   
-    }
-
     p {
         &.is-tablet-padded {
             padding: 0 10%;
@@ -460,6 +455,11 @@ TABLE OF CONTENTS
 
     .is-flex-portrait {
         display: flex;
+        flex-wrap: wrap;
+
+        .flex-portrait-4 {
+            min-width: 33.3%;
+        }
     }
 
     #component-page {

@@ -1846,6 +1846,11 @@ code.hljs span {
     font-size: 6rem !important;
     font-family: 'Nexa Bold', cursive  !important;
 
+    &.is-smaller {
+        font-size: 4rem !important;
+        line-height: 1;
+    }
+
     + h2 {
         padding: 0 20%;
         margin-bottom: 0 !important;
@@ -2016,6 +2021,10 @@ pre {
 
     .parallax-hero-title {
         font-size: 4rem !important;
+
+        &.is-smaller {
+            font-size: 3rem !important;
+        }
 
         + h2 {
             padding: 0 8%;

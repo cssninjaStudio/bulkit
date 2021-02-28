@@ -1236,6 +1236,15 @@ $length: 75;
 12. Team V7
 ========================================================================== */
 
+.team-members-wrap {
+    max-width: 880px;
+    margin: 0 auto;
+
+    &.is-narrow {
+        max-width: 680px;
+    }
+}
+
 .rounded-team-member {
     text-align: center;
     margin-bottom: 20px;

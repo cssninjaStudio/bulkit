@@ -215,6 +215,10 @@ TABLE OF CONTENTS
             color: $blue-grey;
             position: relative;
 
+            &.is-smaller {
+                font-size: 2.2rem;
+            }
+
             .bg-number, .bg-symbol {
                 position: absolute;
                 font-weight: bolder;

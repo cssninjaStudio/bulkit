@@ -11,6 +11,8 @@ TABLE OF CONTENTS
     2. Featured Job Box
     3. Job Categories
     4. Job Topics
+    5. Job Users
+    6. Benefits Card
 ***/
 
 /* ==========================================================================
@@ -376,5 +378,40 @@ TABLE OF CONTENTS
     .tags {
         display: flex;
         justify-content: center;
+    }
+}
+
+
+/* ==========================================================================
+6. Benefits Card
+========================================================================== */
+
+.benefits-card {
+    padding: 40px;
+    border: 1px solid darken($fade-grey, 3%);
+
+    .benefits-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        i {
+            font-size: 2.8rem;
+            margin-right: 1rem;
+            color: $blue-grey-light;
+        }
+    }
+
+    .benefits-body {
+        .solid-list {
+            .solid-list-item {
+                margin-bottom: 1rem;
+
+                .list-bullet i {
+                    font-size: 2.5rem;
+                    color: $success;
+                }
+            }
+        }
     }
 }

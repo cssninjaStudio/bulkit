@@ -586,7 +586,7 @@ function initMaterialSelect() {
         })
         $(document).click(function (e) {
             var target = e.target;
-            if (!$(target).is('.material-select') && !$(target).parents().is('.field')) {
+            if (!$(target).is('.material-select') && !$(target).parents().is('.field, .control-material')) {
                 $('.material-select').removeClass('is-active');
             }
         });

@@ -50,6 +50,10 @@ TABLE OF CONTENTS
     color: $blue-grey !important;
 }
 
+.white-text {
+    color: $white !important;
+}
+
 .light-text {
     color: $white !important;
 }
@@ -489,6 +493,11 @@ TABLE OF CONTENTS
 
 .giant-pb {
     padding-bottom: 150px;
+}
+
+.hr {
+    height: 1px;
+    background: darken($fade-grey, 4%);
 }
 
 /* ==========================================================================

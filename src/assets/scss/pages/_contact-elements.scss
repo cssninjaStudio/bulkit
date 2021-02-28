@@ -194,6 +194,15 @@ TABLE OF CONTENTS
         margin-bottom: 40px;
     }
 
+    .b-checkbox {
+        display: flex;
+
+        label {
+            padding-left: 1rem;
+            color: $blue-grey-light;
+        }
+    }
+
     .button-wrap {
         margin-top: 50px;
         text-transform: uppercase;

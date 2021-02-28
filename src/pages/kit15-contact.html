@@ -1,0 +1,187 @@
+---
+layout: landing
+title: Contact
+---
+
+<!-- Hero (Parallax) and nav -->
+<div class="hero is-app-grey">
+
+    {{> navbar-fade-dark-kit15}}
+
+    <!-- Hero image -->
+    <div id="main-hero" class="hero-body">
+        <div class="container has-text-centered">
+            <div class="columns is-vcentered">
+                <div class="column is-6 is-offset-3 has-text-centered is-subheader-caption">
+                    <h1 class="title is-2">
+                        Sign Up for a Demo
+                    </h1>
+                    <h2 class="subtitle">Discover our services and our company.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Contact-->
+<div id="contact" class="section is-relative">
+    <div class="container">
+
+        <!--Colored Shapes-->
+        {{> type-blobs}}
+
+        <!--Form subsection-->
+        <div class="columns is-vcentered form-wrapper">
+            <div class="column is-8 is-offset-2">
+                <!--Form-->
+                <div class="contact-form-2">
+                    <form>
+                        <div class="control-material is-primary">
+                            <input class="material-input " type="text" required>
+                            <span class="material-highlight"></span>
+                            <span class="bar"></span>
+                            <label>Full Name</label>
+                        </div>
+                        <div class="control-material is-primary">
+                            <input class="material-input " type="text" required>
+                            <span class="material-highlight"></span>
+                            <span class="bar"></span>
+                            <label>Email</label>
+                        </div>
+                        <div class="control-material is-primary">
+                            <input class="material-input " type="text" required>
+                            <span class="material-highlight"></span>
+                            <span class="bar"></span>
+                            <label>Company</label>
+                        </div>
+                        <div class="control-material is-primary">
+                            <input class="material-input " type="text" required>
+                            <span class="material-highlight"></span>
+                            <span class="bar"></span>
+                            <label>Job Title</label>
+                        </div>
+                        <div class="columns no-padding">
+                            <div class="column is-6">
+                                <div class="control-material is-primary">
+                                    <div class="material-select">
+                                        <div class="inner-wrap">
+                                            <input class="material-input" type="text" required readonly>
+                                            <span class="material-highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>How large is your company?</label>
+                                            <span class="caret-icon">
+                                                <i class="material-icons">keyboard_arrow_down</i>
+                                            </span>
+                                        </div>
+                                        <ul class="dropdown-list">
+                                            <li class="option">1-100</li>
+                                            <li class="option">100-500</li>
+                                            <li class="option">500-1000</li>
+                                            <li class="option">1000+</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="control-material is-primary">
+                                    <div class="material-select">
+                                        <div class="inner-wrap">
+                                            <input class="material-input" type="text" required readonly>
+                                            <span class="material-highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>What's your focus?</label>
+                                            <span class="caret-icon">
+                                                <i class="material-icons">keyboard_arrow_down</i>
+                                            </span>
+                                        </div>
+                                        <ul class="dropdown-list">
+                                            <li class="option">Procurement</li>
+                                            <li class="option">Supplier Diversity</li>
+                                            <li class="option">Department Specific</li>
+                                            <li class="option">C-Suite</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <h4 class="title is-5">Iam interested in</h4>
+                        </div>
+                        <div class="columns mt-4 no-padding">
+                            <div class="column is-6">
+                                <!-- Checkbox -->
+                                <div class="field">
+                                    <div class="b-checkbox">
+                                        <input id="checkbox1" class="styled" type="checkbox">
+                                        <label for="checkbox1">
+                                            More info on the solution
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Checkbox -->
+                                <div class="field">
+                                    <div class="b-checkbox">
+                                        <input id="checkbox2" class="styled" type="checkbox">
+                                        <label for="checkbox2">
+                                            Getting out of spreadsheets
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Checkbox -->
+                                <div class="field">
+                                    <div class="b-checkbox">
+                                        <input id="checkbox3" class="styled" type="checkbox">
+                                        <label for="checkbox3">
+                                            Tackling supplier diversity
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <!-- Checkbox -->
+                                <div class="field">
+                                    <div class="b-checkbox">
+                                        <input id="checkbox4" class="styled" type="checkbox">
+                                        <label for="checkbox4">
+                                            Seeing a demo
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Checkbox -->
+                                <div class="field">
+                                    <div class="b-checkbox">
+                                        <input id="checkbox5" class="styled" type="checkbox">
+                                        <label for="checkbox5">
+                                            Looking for a similar solution
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Checkbox -->
+                                <div class="field">
+                                    <div class="b-checkbox">
+                                        <input id="checkbox6" class="styled" type="checkbox">
+                                        <label for="checkbox6">
+                                            Other
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-material is-primary is-hidden">
+                            <textarea rows="3"></textarea>
+                            <span class="material-highlight"></span>
+                            <span class="bar"></span>
+                            <label>Message</label>
+                        </div>
+                        <div class="button-wrap">
+                            <div class="button cta-button primary-btn is-fullwidth">Submit Application</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+{{> footer-side-dark}}

@@ -25,6 +25,7 @@ TABLE OF CONTENTS
     16. Partner Logos
     17. Svg Blobs
     18. Morphing Blob
+    19. Masked image
 ***/
 
 /* ==========================================================================
@@ -1034,5 +1035,94 @@ $total: 40;
         cy: 150;
         r: 100;
         transform-origin: 150px 155px;
+    }
+}
+
+/* ==========================================================================
+19. Masked image
+========================================================================== */
+
+.masked-image {
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto;
+
+    .main-image {
+        display: block;
+    }
+
+    .image-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .dot {
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+
+        &.dot-primary {
+            background: $primary;
+            box-shadow: $primary-box-shadow;
+        }
+
+        &.dot-success {
+            background: $success;
+            box-shadow: $success-box-shadow;
+        }
+
+        &.dot-info {
+            background: $info;
+            box-shadow: $blue-box-shadow;
+        }
+
+        &.dot-1 {
+            bottom: 20%;
+            left: 5%;
+        }
+
+        &.dot-2 {
+            bottom: 20%;
+            right: 2%;
+            height: 54px;
+            width: 54px;
+        }
+
+        &.dot-3 {
+            bottom: 10%;
+            height: 32px;
+            width: 32px;
+            left: 15%;
+        }
+
+        &.dot-4 {
+            top: 20%;
+            left: 5%;
+        }
+
+        &.dot-5 {
+            bottom: 22%;
+            right: 5%;
+            height: 54px;
+            width: 54px;
+        }
+
+        &.dot-6 {
+            top: 15%;
+            left: 2%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .masked-image {
+        .main-image {
+            transform: scale(.99);
+        }
     }
 }
