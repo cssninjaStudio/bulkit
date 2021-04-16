@@ -1,0 +1,1241 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+UI Elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Pricing Pickers
+    1. Giant input
+    2. Slide toggle
+    3. Floating Circles
+    4. Feature Matrix
+    5. Compare Table
+    6. Chat widget button
+    7. Chat widget
+    8. Links
+    9. Subscription combo
+    10. Update Pill
+    11. Search Box
+    12. Marquee
+    13. Success checkmark
+***/
+
+/* ==========================================================================
+0. Pricing Pickers
+========================================================================== */
+
+.pricing-picker {
+    span {
+        color: $white;
+        font-family: $font-sub;
+        margin: 0 5px 0 5px;
+        padding: 10px 20px 13px 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &.is-active {
+            border: 1px solid $white;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Giant input
+========================================================================== */
+
+.giant-input-wrapper {
+    &.is-wavy {
+        padding: 30px 40px;
+        background: $section-grey-accent;
+        border-radius: 100px;
+        margin: 20px 0;
+
+        .giant-input {
+            position: relative;
+            min-width: 300px;
+            max-width: 100%;
+
+            input {
+                padding: 20px 165px 20px 20px;
+                width: 100%;
+                background: $white;
+                color: $muted-grey;
+                border: none;
+                height: 60px;
+                line-height: 60px;
+                transition: all 0.5s;
+                border: 1px solid rgba(213, 220, 247, 0.59);
+                border-radius: 100px;
+
+                &:focus {
+                    outline: none !important;
+                    box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.18) !important;
+                }
+            }
+
+            button.inner {
+                position: absolute;
+                right: 7px;
+                top: 7px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+2. Slide toggle
+========================================================================== */
+
+.slide-toggle {
+    width: 65px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: scale(0.9);
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked ~ .toggler {
+            border-color: $primary;
+
+            .active, .inactive {
+                transform: translateX(100%) rotate(360deg);
+            }
+
+            .active {
+                opacity: 1;
+            }
+
+            .inactive {
+                opacity: 0;
+            }
+        }
+    }
+
+    .toggler {
+        position: relative;
+        display: block;
+        height: 34px;
+        width: 61px;
+        border: 2px solid $placeholder;
+        border-radius: 100px;
+        transition: all .3s;
+
+        .active, .inactive {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(0) rotate(0);
+            transition: all .3s ease;
+
+            svg {
+                stroke: $white;
+                height: 14px;
+                width: 14px;
+                stroke-width: 3px;
+            }
+
+            i {
+                font-size: 14px;
+            }
+        }
+
+        .inactive {
+            background: $placeholder;
+            border-color: $placeholder;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .active {
+            background: $primary;
+            border-color: $primary;
+            opacity: 0;
+            z-index: 0;
+        }
+    }
+}
+
+/* ==========================================================================
+3. Floating Circles
+========================================================================== */
+
+.floating-circles {
+    .floating-text {
+        margin-top: 20px;
+    }
+
+    .button-wrap {
+        padding: 40px 0;
+    }
+}
+
+/* ==========================================================================
+4. Feature Matrix
+========================================================================== */
+
+.feature-matrix {
+    .button-wrap {
+        padding: 40px 0;
+    }
+}
+
+/* ==========================================================================
+5. Compare Table
+========================================================================== */
+
+.device-table {
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+6. Chat widget button
+========================================================================== */
+#bulchat {
+    position: fixed;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 85px;
+    margin: 0 25px 0 0;
+    z-index: 9999;
+    transition: 0.35s;
+    transform: scale(0.7);
+    transition: all 0.5s;
+    animation: gelatine;
+}
+
+#bulchat.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+#bulchat.visible div {
+    outline: none;
+    opacity: 1;
+    background: $primary;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+#bulchat div {
+    outline: none;
+    text-decoration: none;
+    border: 0 none;
+    display: block;
+    width: 46px;
+    height: 46px;
+    background-color: $medium-grey;
+    opacity: 1;
+    transition: all 0.3s;
+    border-radius: 50% 50% 50% 0;
+    text-align: center;
+    font-size: 26px;
+}
+
+body #bulchat div {
+    outline: none;
+    color: $white;
+}
+
+#bulchat div:after {
+    outline: none;
+    content: url(../img/graphics/legacy/smile.svg);
+    font-family: "FontAwesome";
+    position: relative;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-55%);
+    transform: translateY(-55%);
+}
+
+#bulchat.visible.close {
+    transform: rotate(90deg);
+}
+
+#bulchat div.close:after {
+    outline: none;
+    content: url(../img/graphics/legacy/close.svg);
+    font-family: "FontAwesome";
+    position: relative;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-55%);
+    transform: translateY(-55%);
+    transition: all 0.5s ease;
+}
+
+/* ==========================================================================
+7. Chat widget
+========================================================================== */
+
+#chat-widget {
+    display: none;
+
+    .chat-widget-body {
+        background-color: $white;
+        position: fixed;
+        bottom: 85px;
+        right: 85px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 370px;
+        height: 550px;
+        border-radius: 10px 10px 0;
+        box-shadow: 0 24px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+        box-sizing: border-box;
+        z-index: 999;
+
+        &.is-closed {
+            -webkit-animation-name: fadeOutUp;
+            -webkit-animation-duration: .5s;
+            animation-name: fadeOutUp;
+            animation-duration: .5s;
+        }
+
+        &.is-opened {
+            -webkit-animation-name: fadeInDown;
+            -webkit-animation-duration: .5s;
+            animation-name: fadeInDown;
+            animation-duration: .5s;
+        }
+
+        .chat-header {
+            padding: 20px 20px 10px 20px;
+            background-color: $primary;
+
+            .close-chat img {
+                height: 10px;
+            }
+
+            .chat-title {
+                text-align: center;
+                color: $white;
+                font-size: 17px;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+
+            .chat-team {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .team-member {
+                    margin: 0 5px 0 5px;
+
+                    img {
+                        height: 50px;
+                        border-radius: 100px;
+                    }
+
+                    div {
+                        color: $white;
+                    }
+                }
+            }
+
+            .response-delay {
+                color: $white;
+                margin-top: 20px;
+                font-size: 12px;
+            }
+        }
+
+        .message-container {
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: 100%;
+            padding-bottom: 100px;
+
+            .chat-message {
+                padding: 20px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                img {
+                    height: 35px;
+                    border-radius: 100px;
+                }
+
+                .bubble-wrapper {
+                    width: 100%;
+
+                    .chat-bubble {
+                        padding: 10px 20px 10px 20px;
+                        font-size: 12px;
+                        border: 1px solid $fade-grey;
+                        position: relative;
+                        top: 30px;
+                    }
+
+                    .timestamp {
+                        position: relative;
+                        top: 8px;
+                        font-size: 11px;
+                        font-weight: 500;
+                        color: $muted-grey;
+                    }
+                }
+
+                &.from {
+                    .chat-bubble {
+                        margin-left: 20px;
+                        color: $white;
+                        background: $primary;
+                        border-radius: 0 15px 15px 15px;
+                    }
+
+                    .timestamp {
+                        right: 10px;
+                        float: right;
+                    }
+                }
+
+                &.to {
+                    .chat-bubble {
+                        margin-right: 20px;
+                        color: $white;
+                        background: $primary;
+                        border: 1px solid $fade-grey;
+                        border-radius: 15px 0 15px 15px;
+                        text-align: left !important;
+                    }
+
+                    .timestamp {
+                        left: 0;
+                        top: 23px;
+                    }
+                }
+            }
+        }
+
+        .message-container::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .message-container::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .message-input {
+            position: absolute;
+            bottom: -5px !important;
+            width: 100%;
+
+            textarea {
+                box-sizing: border-box;
+                padding: 18px;
+                padding-right: 100px;
+                padding-left: 30px;
+                width: 100%;
+                height: 100%;
+                font-family: "intercom-font", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 1.33;
+                white-space: pre;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                border: none !important;
+                resize: none;
+                background-color: $smoke-white;
+
+                &:focus {
+                    outline: none !important;
+                }
+            }
+
+            .message-options {
+                position: absolute;
+                right: 30px;
+                top: 0;
+
+                .emoji-button {
+                    position: relative;
+                    float: left;
+                    display: inline-block;
+                    cursor: pointer;
+                    opacity: .7;
+                    height: 55px;
+                    width: 30px;
+
+                    &:before {
+                        background-image: url(https://image.ibb.co/gH13KQ/emoji_icon.png);
+                        background-size: 18px 18px;
+                        background-repeat: no-repeat;
+                        content: " ";
+                        width: 18px;
+                        height: 18px;
+                        left: 5px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 20px;
+                        background-position: 50%;
+                    }
+                }
+
+                .attach-button {
+                    position: relative;
+                    float: left;
+                    display: inline-block;
+                    cursor: pointer;
+                    opacity: .7;
+                    height: 55px;
+                    width: 30px;
+
+                    &:before {
+                        background-image: url(https://image.ibb.co/hSE165/attach_icon.png);
+                        background-size: 16px 18px;
+                        background-repeat: no-repeat;
+                        content: " ";
+                        width: 16px;
+                        height: 18px;
+                        left: 5px;
+                        position: absolute;
+                        top: 20px;
+                        background-position: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .chat-widget-body {
+        height: 100% !important;
+        width: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        border-radius: 0 !important;
+        z-index: 99999 !important;
+    }
+
+    #bulchat.visible.close {
+        transform: rotate(90deg);
+        visibility: hidden;
+    }
+}
+
+/* ==========================================================================
+8. Links
+========================================================================== */
+
+a:not(.button) {
+    &.is-link {
+        color: $primary !important;
+    }
+}
+
+/* ==========================================================================
+9. Subscription combo
+========================================================================== */
+
+.subscription-combo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+    .control {
+        input {
+            box-shadow: none !important;
+            border-radius: 0;
+            font-size: 1rem;
+            height: 45px;
+            padding-left: 45px !important;
+            transition: all .3s;
+
+            &:focus {
+                border-color: $primary;
+
+                + .form-icon svg {
+                    stroke: $primary;
+                }
+            }
+        }
+
+        .form-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 45px;
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                height: 20px;
+                width: 20px;
+                stroke: darken($fade-grey, 10%);
+                transition: all .3s;
+            }
+        }
+    }
+
+    .combo-button {
+        height: 48px;
+        max-height: 48px;
+        margin-left: 4px;
+        padding-bottom: 8px;
+    }
+}
+
+/* ==========================================================================
+10. Update Pill
+========================================================================== */
+
+.update-pill {
+    display: inline-flex;
+    align-items: center;
+    background: $white;
+    border: 1px solid darken($fade-grey, 3%);
+    box-shadow: $light-box-shadow;
+    margin-bottom: 1rem;
+    padding: 8px 12px 8px 8px;
+    border-radius: 10px;
+    font-family: $font-text;
+
+    .inner-tag {
+        height: 26px;
+        background: $primary;
+        color: $white;
+        font-size: .85rem;
+        font-weight: 500;
+        padding: 0 8px;
+        line-height: 2.2;
+        border-radius: 8px;
+    }
+
+    .inner-text {
+        color: $blue-grey-light;
+        font-size: .9rem;
+        margin-left: 8px;
+    }
+}
+
+/* ==========================================================================
+11. Search Box
+========================================================================== */
+
+.search-box-wrapper {
+    margin: 10px auto 40px auto;
+    width: 100%;
+    max-width: 940px;
+    padding: 24px;
+    background: $white;
+    border: 1px solid $input-border;
+    border-radius: 18px;
+    box-shadow: $light-box-shadow;
+
+    .search-box {
+        height: 82px;
+        padding: 10px 0 10px 10px;
+        border-radius: 12px;
+        text-align: left;
+        box-shadow: none;
+        border: 1px solid $input-border;
+
+        .search-button {
+            width: 100%;
+            height: 80px;
+            font-family: $font-text;
+            font-size: 1.3rem;
+            margin-top: -10px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            background: $primary;
+
+            &:hover {
+                box-shadow: $primary-box-shadow;
+            }
+        }
+    }
+
+    .search-block, .price-block, .extras-block {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        margin-top: -10px;
+        border-right: 1px solid $input-border;
+        background: $white;
+        transition: all 0.3s ease;
+
+        &.focus {
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .price-block {
+        .button {
+            display: flex;
+            align-items: center;
+            outline: none;
+            border: 1px solid #b1b1b1;
+            text-align: left;
+            width: 100%;
+            height: 100%;
+            font-size: 1em;
+            margin-right: 4px;
+            color: #4c4c4c;
+            padding: 0 .825em;
+            z-index: 0;
+            border-radius: 0px;
+            border: 0px;
+
+            span {
+                position: absolute;
+                top: 40px;
+                left: 10px;
+                font-family: $font-text;
+                padding-bottom: 5px;
+                font-size: 1.1rem;
+                background: none;
+                color: $blue-grey-light;
+                width: 90%;
+                height: 30px;
+                border: none;
+                appearance: none;
+                outline: none;
+            }
+        }
+
+        .dropdown-container {
+            padding-bottom: 0;
+            width: 100%;
+            border-radius: 0;
+            border-top: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 10;
+            font-size: 14px;
+            padding: 0;
+            background-color: $white;
+            box-shadow: rgba(0, 0, 0, 0.172549) 0 6px 12px 0;
+            visibility: hidden;
+
+            &.is-open {
+                visibility: visible;
+            }
+
+            .dropdown {
+                display: inline-block;
+                margin: 0;
+                border-top: 1px solid $default-input;
+                width: 100%;
+
+                .range-container {
+                    height: 60px;
+                    margin: 20px 0 10px;
+                    border-bottom: 1px solid $default-input;
+
+                    .left-input {
+                        position: relative;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        float: left;
+                        width: 50%;
+                        z-index: 11;
+
+                        input {
+                            width: 100%;
+                            max-width: 100% !important;
+                            line-height: 26px;
+                            height: 40px;
+                            padding-left: 6px;
+                            background-color: $white;
+                            text-align: center;
+                            border: solid 1px $default-input;
+                            outline-width: 1px;
+                            outline-color: #009688;
+                        }
+                    }
+
+                    .right-input {
+                        position: relative;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        float: left;
+                        width: 50%;
+                        z-index: 11;
+
+                        input {
+                            width: 100%;
+                            max-width: 100% !important;
+                            line-height: 26px;
+                            height: 40px;
+                            padding-left: 6px;
+                            background-color: $white;
+                            text-align: center;
+                            border: solid 1px $default-input;
+                            outline: none;
+                        }
+                    }
+
+                    &:before {
+                        content: "-";
+                        color: $default-input;
+                        position: absolute;
+                        text-align: center;
+                        width: 100%;
+                        font-size: 2em;
+                        left: 0;
+                        z-index: 10;
+                    }
+                }
+
+                .salary-options-container {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 0 10px 20px 10px;
+
+                    ul {
+                        height: 245px;
+                        overflow-y: auto;
+                        text-align: center;
+                        padding: 0;
+
+                        li {
+                            font-family: $font-text;
+                            font-size: .95rem;
+                            width: 100%;
+                            height: 35px;
+                            min-width: 80px;
+                            line-height: 35px;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            color: $blue-grey-light;
+                            padding: 0;
+                            transition: all .3s;
+
+                            &:not(.dark-text):hover {
+                                background: $primary;
+                                box-shadow: $primary-box-shadow;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+
+                .options-container {
+                    width: 100%;
+                    height: 178px;
+                    margin: 0px;
+                    padding: 10px 15px;
+                    border-bottom: 1px solid $default-input;
+                    overflow-y: auto;
+
+                    p {
+                        font-weight: 500;
+                    }
+
+                    ul {
+                        min-height: 245px;
+                        list-style: none;
+                        padding-left: 0;
+                        margin: 0;
+                        background-color: $white;
+
+                        li {
+                            padding-left: 15px;
+                            height: 35px;
+                            line-height: 35px;
+                            cursor: pointer;
+
+                            &:hover {
+                                background: rgba(0, 0, 0, 0.2);
+                            }
+                        }
+
+                        &.max-options li {
+                            padding-right: 15px;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .search-label, .price-label {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        font-family: $font-text;
+        color: $blue-grey;
+        z-index: 999;
+    }
+
+    .search-input {
+        position: absolute;
+        top: 40px;
+        left: 10px;
+        font-family: $font-text;
+        padding-bottom: 5px;
+        font-size: 1.1rem;
+        background: none;
+        border-bottom: 1px solid transparent;
+        color: $blue-grey-light;
+        width: 90%;
+        height: 30px;
+        border: none;
+        appearance: none;
+        outline: none;
+
+        &::-webkit-search-cancel-button {
+            appearance: none;
+        }
+
+        &:focus {
+            border-bottom-color: $primary;
+        }
+    }
+
+    .checkbox input[type="checkbox"] {
+        margin-left: 0px;
+    }
+
+    .checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 12px;
+        cursor: pointer;
+
+        > span {
+            position: relative;
+            top: 2px;
+            font-size: .95rem;
+            color: $blue-grey-light;
+            margin-left: 4px;
+        }
+
+        .end {
+            margin-left: auto;
+
+            img {
+                display: block;
+                height: 22px;
+                width: 22px;
+                min-width: 22px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .checkbox input[type=checkbox], label input[type=checkbox] {
+        opacity: 0;
+        position: absolute;
+        margin: 0;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .checkbox .checkbox-material .check {
+        position: relative;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 1px solid rgba(0, 0, 0, 0.54);
+        border-radius: 2px;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .checkbox input[type=checkbox]:checked ~ .checkbox-material .check {
+        color: $primary;
+        padding: 1px 0 0px 1px;
+        cursor: pointer;
+    }
+
+    .checkbox .checkbox-material {
+        vertical-align: middle;
+        position: relative;
+        top: 3px;
+        margin-right: 5px;
+    }
+
+    .checkbox input[type=checkbox]:checked ~ .checkbox-material .check:before {
+        position: relative;
+        top: -2px;
+        color: $primary;
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f00c";
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@media (max-width: 767px) {
+    .search-box-wrapper {
+        .search-box {
+            height: auto;
+            padding: 10px 8px;
+
+            .search-block, .price-block, .extras-block {
+                border-right: none;
+            }
+
+            .search-button {
+                border-radius: 12px;
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .search-box-wrapper {
+        .search-box {
+            display: flex;
+        }
+    }
+}
+
+
+/* ==========================================================================
+12. Marquee
+========================================================================== */
+
+.marquee-container {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto 1.5rem auto;
+    padding: 4px 6px;
+    border-radius: 1rem;
+    background: $white;
+    border: 1px solid lighten($border, 3%);
+    box-shadow: $light-box-shadow;
+    z-index: 3;
+
+    &.is-night {
+        background: darken(#000030, 3%);
+        border-color: lighten(#000030, 6%);
+
+        .marquee-item {
+            span {
+                color: $white;
+            }
+        }
+    }
+}
+
+.marquee {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .marquee-inner {
+        display: flex;
+        align-items: center;
+        height: 54px;
+    }
+
+    .marquee-item {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        img {
+            height: 26px;
+            width: 26px;
+            min-width: 26px;
+            margin-right: .5rem;
+        }
+
+        span {
+            font-family: $font-text;
+            font-weight: 500;
+            color: $blue-grey;
+
+            &.positive {
+                color: $success;
+            }
+
+            &.negative {
+                color: $danger;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+13. Success checkmark
+========================================================================== */
+
+$circle-length: 151px;
+$check-length: 36px;
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: $circle-length;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: $check-length;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.SuccessAnimation-box {
+    min-height: 70px;
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SuccessAnimation {
+  &.is-primary {
+    .SuccessAnimationCircle,
+    .SuccessAnimationCheck {
+      stroke: $primary;
+    }
+
+    .SuccessAnimationResult {
+      fill: $primary;
+    }
+  }
+
+  &.is-success {
+    .SuccessAnimationCircle,
+    .SuccessAnimationCheck {
+      stroke: $secondary;
+    }
+
+    .SuccessAnimationResult {
+      fill: $secondary;
+    }
+  }
+
+  .SuccessAnimationCircle {
+    stroke-dasharray: $circle-length $circle-length;
+    stroke: $accent;
+  }
+
+  .SuccessAnimationCheck {
+    stroke-dasharray: $check-length $check-length;
+    stroke: $accent;
+  }
+
+  .SuccessAnimationResult {
+    fill: $accent;
+    opacity: 0;
+  }
+}
+
+.SuccessAnimation.animated {
+  animation: 1s ease-out 0s 1 both scaleAnimation;
+
+  .SuccessAnimationCircle {
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+      0.3s linear 0.9s 1 both fadeOut;
+  }
+
+  .SuccessAnimationCheck {
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+      0.3s linear 0.9s 1 both fadeOut;
+  }
+
+  .SuccessAnimationResult {
+    animation: 0.3s linear 0.9s both fadeIn;
+  }
+}

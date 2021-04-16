@@ -1,0 +1,278 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Website sidebar
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+=============================================================================
+0. Website sidebar
+=============================================================================
+***/
+
+/* ==========================================================================
+0. Website sidebar
+========================================================================== */
+
+.side-navigation-menu {
+    display: flex;
+    justify-content: flex-start;
+    background: $sidebar;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    overflow: hidden;
+    transform: translateX(-301px);
+    -webkit-transition: width .05s linear;
+    transition: width .05s linear;
+    transition: transform 0.3s;
+    z-index: 1000;
+
+    &.is-active {
+        transform: translateX(0);
+    }
+
+    .category-menu-wrapper {
+        height: 100%;
+        position: relative;
+        width: 80px;
+        background: $secondary;
+
+        ul {
+            &.categories {
+                li {
+                    height: 60px;
+    
+                    &.square-logo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        img {
+                            max-height: 28px;
+                        }
+                    }
+    
+                    &.category-link {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+    
+                        i {
+                            font-size: 20px;
+                            color: $white;
+                        }
+    
+                        &:hover {
+                            background: lighten($secondary, 5%);
+                        }
+                    }
+    
+                    &.is-active {
+                        background: lighten($secondary, 10%);
+                    }
+                }
+            }
+        }
+
+        .author {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            a {
+                position: relative;
+                z-index: 4;
+            }
+
+            .main-menu-author {
+                width: 48px;
+                height: 48px;
+                border-radius: 100px;
+                margin: 0 auto;
+                margin-bottom: 10px;
+                transform: scale(1);
+                transition: transform .4s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .navigation-menu-wrapper {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        ul.navigation-menu {
+            height: calc(100% - 60px);
+            margin: 0;
+            padding: 0;
+            max-width: 400px;
+            list-style: none;
+            list-style-type: none;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        .navigation-menu-header {
+            height: 60px;
+            color: $white;
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+            text-transform: uppercase;
+            font-weight: 300;
+            color: $smoke-white;
+            letter-spacing: 3px;
+            font-size: 92%;
+
+            .menu-toggle .icon-box-toggle span i {
+                background: $white;
+            }
+
+            .navigation-close {
+                opacity: 0;
+                margin-right: 1rem;
+            }
+        }
+
+        li {
+            &.has-children {
+                &.active {
+                    background: lighten($sidebar, 5%);
+
+                    span {
+                        &:after {
+                            -moz-transform: rotate(90deg);
+                            -o-transform: rotate(90deg);
+                            -webkit-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                &.active-section {
+                    a {
+                        &.parent-link {
+                            color: lighten($primary, 15%) !important;
+
+                            span, span:after {
+                                color: lighten($primary, 15%) !important;
+                            }
+                        }
+                    }
+                }
+
+                > ul {
+                    display: none;
+                }
+
+                ul {
+                    padding: 0px;
+
+                    li {
+                        a {
+                            &:hover {
+                                color: $white;
+                                padding-left: 42px;
+                            }
+
+                            &.is-submenu {
+                                background-color: darken($sidebar, 5%);
+                                padding-left: 62px !important;
+                                font-size: 95%;
+
+                                &:hover, &.is-active {
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                span {
+                    &:after {
+                        position: absolute;
+                        right: 30px;
+                        content: "\E315";
+                        color: $white;
+                        transition: all .5s;
+                        font-size: 90%;
+                        padding-top: 2px;
+                    }
+                }
+            }
+
+            a {
+                padding: 18px 25px;
+                display: block;
+                text-decoration: none;
+                color: $white;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    background: lighten($sidebar, 5%);
+                }
+
+                &.is-submenu {
+                    padding: 12px 25px;
+                }
+
+                &.parent-link {
+                    height: 60px !important;
+                    position: relative;
+
+                    &.has-new {
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 18px;
+                            left: 22px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: $blue;
+                            animation: pulsate 1s ease-out;
+                            animation-iteration-count: infinite;
+                            opacity: 0.0;
+                        }
+                    }
+                }
+
+                span {
+                    margin-right: 20px;
+                    color: $white;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .has-children, li {
+            position: relative;
+        }
+    }
+}

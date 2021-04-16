@@ -1,4 +1,4 @@
-/*! _cards.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Card styles
@@ -209,7 +209,7 @@ TABLE OF CONTENTS
     }
 
     h3 {
-        .card-title {
+        &.card-title {
             margin-bottom: 10px;
             margin-top: 10px;
             font-size: 22px;

@@ -1,0 +1,213 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Portfolio elements Kit SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Agency Portfolio grid
+    1. Portfolio page
+***/
+
+/* ==========================================================================
+0. Agency Portfolio grid
+========================================================================== */
+
+.portfolio {
+    .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        max-height: 800px;
+        height: auto;
+        margin: 20px 10px;
+
+        &:hover {
+            .circle-overlay {
+                transform: scale(35);
+            }
+
+            .project-title {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0 !important;
+            }
+
+            .project-link {
+                color: $white;
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 0 !important;
+            }
+        }
+
+        img {
+            border-radius: 10px;
+            max-height: 800px;
+            display: block;
+        }
+
+        .circle-overlay {
+            position: absolute;
+            top: -60px;
+            left: -60px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: $primary;
+            transform: scale(1);
+            transition: all 0.5s;
+            z-index: 1;
+        }
+
+        .project-info {
+            position: absolute;
+            margin: 0 auto;
+            top: 40%;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-title {
+            font-family: $font-main;
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding-bottom: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            transition-delay: 0.1s;
+        }
+
+        .project-link {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            transition-delay: 0.2s;
+
+            a {
+                color: $white;
+                font-family: $font-sub;
+                font-size: 1.2rem;
+
+                i {
+                    position: relative;
+                    top: 8px;
+                    opacity: 0;
+                    transform: translateX(0);
+                    transition: all 0.3s ease-out;
+                }
+
+                &:hover i {
+                    opacity: 1;
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. Portfolio page
+========================================================================== */
+.portfolio-item {
+    .item-title {
+        font-family: $font-main;
+        font-size: 2.3rem;
+    }
+
+    .project-description {
+        p {
+            padding-bottom: 10px;
+        }
+    }
+
+    .made-for {
+        font-family: $font-main;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            max-height: 80px;
+        }
+    }
+
+    label {
+        font-family: $font-sub;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 90%;
+        color: $muted-grey;
+    }
+
+    .project-category {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-family: $font-main;
+        }
+
+        i {
+            font-size: 1.8rem;
+            color: $primary;
+        }
+    }
+
+    .inline-list {
+        padding: 10px 0;
+    }
+
+    .project-date {
+        padding: 10px 0;
+        font-family: $font-main;
+    }
+
+    .fa-social {
+        font-size: 1.4rem;
+        color: $title-grey;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .navigation {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            width: 146px;
+            margin: 0 5px;
+
+            i {
+                font-size: 18px;
+
+                &.is-right {
+                    position: relative;
+                    right: -14px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .portfolio-item {
+        img {
+            width: 100%;
+        }
+    }
+}

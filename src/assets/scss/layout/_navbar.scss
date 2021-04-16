@@ -1,4 +1,4 @@
-/*! _navbar.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Navbar related styles
@@ -127,7 +127,12 @@ TABLE OF CONTENTS
     .navbar-item {
         font-family: $font-text;
 
-        &.mobile-account {
+        &.mobile-wishlist {
+            display: none;
+            margin-left: auto;
+        }
+
+        &.mobile-cart, &.mobile-account {
             display: none;
         }
 
@@ -177,6 +182,281 @@ TABLE OF CONTENTS
                 }
             }
         }
+
+        &.is-cart, &.is-wishlist {
+
+            .cart-button, .wishlist-button {
+                position: relative;
+                height: 36px;
+                width: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+    
+                svg {
+                    height: 20px;
+                    width: 20px;
+                    stroke: $blue-grey;
+                    stroke-width: 1.4px;
+                }
+    
+                .cart-count, .wishlist-count {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 12px;
+                    min-width: 12px;
+                    background: $primary;
+                    border: 2px solid $white;
+                    border-radius: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    span {
+                        display: block;
+                        font-size: .55rem;
+                        color: $white;
+                        padding: 0 5px;
+                        font-weight: 500;
+                    }
+                }
+            }
+    
+            .shopping-cart, .shopping-wishlist {
+                position: absolute;
+                top: 60px;
+                right: -10px;
+                background: $white;
+                text-align: left !important;
+                width: 320px;
+                border-radius: 3px;
+                box-shadow: $light-box-shadow;
+                border: 1px solid darken($fade-grey, 3%);
+                opacity: 0;
+                transform: translateY(10px);
+                pointer-events: none;
+                transition: transform .3s, opacity .3s;
+    
+                &.is-active {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: all;
+                }
+    
+                &:after {
+                    bottom: 100%;
+                    left: 89%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-bottom-color: $white;
+                    border-width: 8px;
+                    margin-left: -8px;
+                    z-index: 1;
+                }
+    
+                &:before {
+                    bottom: 100%;
+                    left: 89%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-bottom-color: $fade-grey;
+                    border-width: 10px;
+                    margin-left: -10px;
+                    z-index: 0;
+                }
+    
+                .cart-inner, .wishlist-inner {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px;
+    
+                    .navbar-cart-loader {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: $white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0;
+                        pointer-events: none;
+                        z-index: 1;
+                        transition: all .3s;
+    
+                        &.is-active {
+                            opacity: 1;
+                        }
+    
+                        .loader {
+                            height: 3.5rem;
+                            width: 3.5rem;
+                        }
+                    }
+                }
+    
+                .button {
+                    min-height: 42px;
+                    background: $primary;
+                    border-color: $primary;
+                    color: $white;
+                    font-family: $font-text;
+                    font-weight: 500;
+                    text-align: center;
+                    text-decoration: none;
+                    display: block;
+                    border-radius: .5rem;
+                    font-size: .9rem;
+                    margin: 20px 0 0 0;
+                    line-height: 2.5;
+    
+                    &:hover {
+                        background: lighten($primary, 3%);
+                        box-shadow: $primary-box-shadow;
+                    }
+                }
+    
+                .shopping-cart-header, .wishlist-header {
+                    border-bottom: 1px solid #E8E8E8;
+                    padding-bottom: 15px;
+                    text-align: left;
+    
+                    .cart-link {
+                        font-size: .75rem;
+                        color: $muted-grey;
+                        padding: 7px 10px;
+                        border: 1px solid $fade-grey;
+                        border-radius: .5rem;
+                        box-shadow: $light-box-shadow;
+                        transition: all .3s;
+    
+                        &:hover {
+                            border-color: $primary;
+                            color: $primary;
+                        }
+                    }
+
+                    .header-title {
+                        display: inline;
+                        font-family: $font-main;
+                        font-size: 1.1rem;
+                        color: $blue-grey;
+                    }
+    
+                    .shopping-cart-total, .wishlist-total {
+                        float: right;
+    
+                        span {
+                            &:first-child {
+                                color: $light-blue-grey;
+                                font-size: .9rem;
+                            }
+    
+                            &:nth-child(2) {
+                                color: $blue-grey;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+    
+                .shopping-cart-items, .wishlist-items {
+                    padding-top: 20px;
+    
+                    .cart-row, .wishlist-row {
+                        display: flex;
+                        align-items: center;
+                    }
+    
+                    li {
+                        margin-bottom: 6px;
+                        padding-bottom: 12px;
+                        border-bottom: 1px solid $border-light;
+                    }
+    
+                    img {
+                        display: block;
+                        height: 54px;
+                        width: 54px;
+                        min-width: 54px;
+                        min-height: 54px;
+                        margin-right: 12px;
+                    }
+    
+                    .meta-info {
+                        position: relative;
+                        top: -4px;
+                    }
+    
+                    .item-name {
+                        display: block;
+                        padding-top: 10px;
+                        font-size: .9rem;
+                        font-weight: 600;
+                        color: $blue-grey;
+                        font-family: $font-text;
+                    }
+    
+                    .item-price {
+                        color: $blue-grey;
+                        font-family: $font-text;
+                        margin-right: 8px;
+                        font-size: .8rem;
+                        line-height: 1;
+                    }
+    
+                    .item-quantity {
+                        color: $light-blue-grey;
+                        font-family: $font-text;
+                        font-size: .8rem;
+                        line-height: 1;
+                    }
+
+                    .wishlist-quantity {
+                        color: $light-blue-grey;
+                        font-family: $font-text;
+                        font-size: .8rem;
+                        line-height: 1;
+                    }
+
+                    .wishlist-block {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 38px;
+                        width: 38px;
+                        min-width: 38px;
+                        min-height: 38px;
+                        margin-right: 12px;
+                        border-radius: .5rem;
+                        background: darken($widget-grey, 3%);
+
+                        svg {
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
+                }
+            }
+    
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        }
     }
 
     .navbar-link {
@@ -210,6 +490,10 @@ TABLE OF CONTENTS
         align-items: center;
         height: 4.6rem;
         width: 4.6rem;
+
+        &.is-in-flow {
+            margin-left: 0;
+        }
     }
 
     &.navbar-light {
@@ -387,6 +671,8 @@ TABLE OF CONTENTS
             .dropdown-content {
                 border: 1px solid darken($fade-grey, 3%);
                 box-shadow: $light-box-shadow;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
 
                 .dropdown-item {
                     display: flex;
@@ -525,7 +811,7 @@ TABLE OF CONTENTS
     height: 26px;
     cursor: pointer;
     padding: 0;
-    margin: 0 14px;
+    //margin: 0 14px;
     transition: opacity 0.4s;
     opacity: 1;
     position: relative;

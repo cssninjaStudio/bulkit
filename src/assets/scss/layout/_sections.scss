@@ -1,4 +1,4 @@
-/*! _sections.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Sections related styles
@@ -177,6 +177,50 @@ TABLE OF CONTENTS
         background-position-y: 50%;
     }
 
+    &.gradient-circle {
+        background: url(../img/graphics/legacy/gradient-circle-alt.png) repeat top right, #fff;
+    }
+
+    &.has-pseudo-lines {
+        &:before {
+            content: '';
+            width: 2px;
+            height: 60px;
+            background: $primary;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: rotate(180deg);
+        }
+
+        &:after {
+            content: '';
+            width: 2px;
+            height: 60px;
+            background: $primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: rotate(180deg);
+        }
+    }
+
+    &.no-line-top {
+        &:before {
+            display: none !important;
+        }
+    }
+
+    &.no-line-bottom {
+        &:after {
+            display: none !important;
+        }
+    }
+
     .container {
         z-index: 1;
 
@@ -217,6 +261,10 @@ TABLE OF CONTENTS
 
             &.is-smaller {
                 font-size: 2.2rem;
+            }
+
+            &.is-bigger {
+                font-size: 3.25rem;
             }
 
             .bg-number, .bg-symbol {

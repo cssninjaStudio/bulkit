@@ -1,0 +1,1170 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Carousel elements Kit SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Client logos carousel
+    1. People carousel
+    2. Testimonials Basic Carousel
+    3. Colorful Testimonials
+    4. CSS Carousel
+    5. Corporate testimonials   
+    6. Focus Testimonials Carousel
+    7. Customer Testimonials
+    8. Characters Testimonials
+***/
+
+/* ==========================================================================
+0. Client logos carousel
+========================================================================== */
+
+.clients-logo-carousel {
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto;
+
+    &:hover {
+        .slick-custom {
+            opacity: 1;
+        }
+    }
+
+    .carousel-item {
+        margin: 0 20px;
+    }
+
+    .image-wrapper {
+        position: relative;
+
+        .stack-logo {
+            max-height: 130px;
+            margin: 0 auto;
+        }
+    }
+
+    .slick-custom {
+        opacity: 0;
+        top: 23px;
+    }
+
+    .slick-dots {
+        bottom: -60px !important;
+    }
+
+    .slick-prev:before, .slick-next:before {
+        color: $muted-grey;
+    }
+
+    .slick-custom {
+        &.is-next {
+            right: -15px;
+        }
+
+        &.is-prev {
+            left: -15px;
+        }
+    }
+
+    .client-logo {
+        max-height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .clients-logo-carousel {
+        .slick-dots {
+            display: none !important;
+        }
+    }
+}
+
+/* ==========================================================================
+1. People carousel
+========================================================================== */
+
+.people-carousel {
+    .people-carousel-item {
+        &.slick-dotted {
+            .slick-slider {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        .item-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+        }
+
+        .image-column {
+            width: 60%;
+            display: block;
+            position: relative;
+        }
+
+        .content-column {
+            width: 40%;
+            display: block;
+            position: relative;
+        }
+
+        .carousel-img {
+            text-align: center;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .testimonial-title {
+        font-size: 1.7rem;
+        color: $blue-grey;
+        font-family: $font-main;
+        font-weight: 600;
+        position: relative;
+
+        i {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            color: $primary;
+        }
+    }
+
+    .testimonial-content {
+        p {
+            padding-bottom: 10px;
+        }
+    }
+
+    .customer-info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .customer-avatar img {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            border: 1px solid $fade-grey;
+        }
+
+        .customer-block {
+            margin: 0 10px;
+            position: relative;
+
+            .name {
+                font-family: $font-sub;
+                font-weight: 600;
+                color: $blue-grey;
+            }
+
+            .position {
+                font-size: 90%;
+                color: $title-grey;
+            }
+        }
+
+        .company-logo {
+            max-width: 100px !important;
+            margin-left: auto;
+        }
+    }
+
+    .mobile-spacer {
+        padding-bottom: 80px;
+    }
+
+    .slick-dots {
+        bottom: 40px;
+        right: 18%;
+        width: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .people-carousel {
+        .content-column {
+            width: 100% !important;
+        }
+
+        .testimonial-title {
+            font-size: 1.4rem;
+        }
+
+        .slick-dots {
+            left: 0 !important;
+            right: 0 !important;
+        }
+    }
+}
+
+/* ==========================================================================
+2. Testimonials Basic Carousel
+========================================================================== */
+
+.testimonials {
+    &.is-wavy {
+        .testimonial-name h3 {
+            font-family: $font-main;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        &.is-wavy {
+            .testimonial-item {
+                margin: 40px 15px !important;
+
+                .testimonial-content {
+                    p {
+                        padding: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+3. Colorful Testimonials
+========================================================================== */
+
+.testimonials-wrapper {
+    .testimonial {
+        .fa-quote-left {
+            font-size: 1.3rem;
+            color: $white;
+            padding: 15px;
+            border-radius: 50%;
+            background: $primary;
+            position: relative;
+            left: 19px;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-title {
+            margin: 0 0 20px 22px;
+            font-weight: normal;
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .testimonial-quote {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            border: none;
+
+            footer::before {
+                content: "";
+            }
+        }
+
+        .testimonial-text {
+            display: flex;
+            align-items: center;
+            min-height: 200px;
+            max-width: 500px;
+            padding: 30px 70px 30px 30px;
+            font-size: 16px;
+            line-height: 1.55;
+            color: #888;
+            background: $white;
+            border-radius: 0 30px;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-meta {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-img {
+            position: relative;
+            left: -40px;
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
+            font-size: 16px;
+            border-radius: 50%;
+            background: $white;
+            border: solid 2px $white;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-author {
+            font-family: $font-main;
+            font-style: normal;
+            font-size: 22px;
+            line-height: 1.1;
+            color: $white;
+        }
+
+        .testimonial-position {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    .slick-dots {
+        .slick-active {
+            button::before {
+                color: $white !important;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .testimonial-img {
+            min-width: 116px;
+            width: 116px;
+            height: 116px;
+            border-width: 3px;
+        }
+
+        .testimonial-text {
+            max-width: 70%;
+            padding: 50px 22px;
+            padding-right: 90px;
+            border-radius: 0 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .testimonial-text {
+            margin-bottom: 20px;
+            padding: 20px !important;
+        }
+
+        .testimonial-img {
+            min-width: 60px !important;
+            width: 60px !important;
+            height: 60px !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .testimonials-wrapper {
+            .slick-slide {
+                height: 340px;
+                min-height: 340px;
+            }
+        }
+
+        .testimonial-quote {
+            flex-wrap: wrap;
+        }
+
+        .fa-quote-left {
+            top: 20px;
+            left: 0 !important;
+        }
+
+        .testimonial-img {
+            top: -40px;
+            left: 0 !important;
+        }
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+        .fa-quote-left {
+            top: -10px !important;
+            left: 12px !important;
+        }
+
+        .testimonial-img {
+            top: -10px !important;
+            left: -26px !important;
+        }
+    }
+
+    .slick-slide {
+        height: 260px;
+        min-height: 260px;
+    }
+}
+
+/* ==========================================================================
+4. CSS Carousel
+========================================================================== */
+
+.testimonials-cover {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    z-index: 0;
+    opacity: 0;
+    transition: all .3s;
+
+    &.is-active {
+        opacity: 1;
+    }
+}
+
+.css-carousel {
+    background: $white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4rem;
+    height: 300px;
+    max-width: 750px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+
+    h2 {
+        margin: 0;
+        margin-top: -1.7em;
+        padding: 0;
+        font-size: 1em;
+        text-align: center;
+        color: #bbbbbb;
+    }
+
+    .slides {
+        width: 400%;
+        left: 0;
+        padding-left: 0;
+        padding-top: 1em;
+        overflow: hidden;
+        list-style: none;
+        position: relative;
+        -webkit-transition: transform .5s;
+        -moz-transition: transform .5s;
+        -o-transition: transform .5s;
+        transition: transform .5s;
+
+        li {
+            width: 25%;
+            position: relative;
+            float: left;
+
+            p {
+                margin-top: 0;
+            }
+
+            q {
+                max-width: 90%;
+                margin: auto;
+                color: #666666;
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+
+            img {
+                width: 3em;
+                border-radius: 50%;
+                margin-left: -1.5em;
+                margin-right: 0.5em;
+                vertical-align: middle;
+            }
+
+            .author {
+                margin-top: 20px;
+                font-size: 1rem;
+                color: #777777;
+                display: block;
+                font-weight: 500;
+            }
+
+            .text {
+                display: block;
+                color: $muted-grey;
+            }
+        }
+    }
+
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        text-align: center;
+        bottom: 1em;
+        position: absolute;
+        width: 104px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+
+        label {
+            float: left;
+            margin: 6px;
+            display: block;
+            height: 10px;
+            width: 10px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            border: solid 2px $primary;
+            font-size: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    input {
+        display: none;
+    }
+
+    #radio-1:checked ~ .slides {
+        transform: translateX(0%);
+    }
+
+    #radio-2:checked ~ .slides {
+        transform: translateX(-25%);
+    }
+
+    #radio-3:checked ~ .slides {
+        transform: translateX(-50%);
+    }
+
+    #radio-4:checked ~ .slides {
+        transform: translateX(-75%);
+    }
+
+    #radio-1:checked ~ .carousel-dots label#dotForRadio-1,
+    #radio-2:checked ~ .carousel-dots label#dotForRadio-2,
+    #radio-3:checked ~ .carousel-dots label#dotForRadio-3,
+    #radio-4:checked ~ .carousel-dots label#dotForRadio-4 {
+        background: $primary;
+    }
+}
+
+@media (max-width: 796px) {
+    .css-carousel {
+        height: 8.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .css-carousel {
+        li {
+            p {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+
+            q {
+                font-size: 1em;
+            }
+
+            img {
+                width: 2em;
+                margin-left: -1em;
+                margin-right: 0.25em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .css-carousel {
+        padding: 4rem 2rem !important;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .css-carousel {
+        padding: 10px;
+        min-height: 260px;
+        opacity: .9;
+    }
+}
+
+@media (max-width: 767px) {
+    .css-carousel {
+        padding: 10px;
+        min-height: 200px;
+        opacity: .9;
+    }
+}
+
+/* ==========================================================================
+5. Corporate testimonials
+========================================================================== */
+
+.carousel-wrap {
+    padding: 40px 0;
+    max-width: 840px;
+    margin: 0 auto;
+
+    .testimonials-solo-carousel {
+        .testimonial-item {
+            @extend .flex-card;
+
+            padding: 40px;
+            border: 1px solid darken($fade-grey, 4%);
+            border-radius: 6px;
+            box-shadow: $light-box-shadow;
+            display: flex;
+
+            .left-side {
+                .avatar-container {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 220px;
+                    height: 175px;
+                    margin: 0 auto;
+
+                    img {
+                        display: block;
+
+                        &.avatar {
+                            position: relative;
+                            height: 140px;
+                            width: 140px;
+                            border-radius: 50%;
+                            z-index: 1;
+                        }
+
+                        &.dots {
+                            position: absolute;
+                            width: 100%;
+                            max-width: 90px;
+                            z-index: 0;
+
+                            &.is-top {
+                                top: 0;
+                                left: 0;
+                            }
+
+                            &.is-bottom {
+                                bottom: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+
+                .avatar-info {
+                    text-align: center;
+                    padding: 16px 0;
+
+                    h3 {
+                        font-family: 'Nexa Bold';
+                        font-size: 1.2rem;
+                        color: $blue-grey;
+                    }
+
+                    p {
+                        color: $muted-grey;
+                    }
+                }
+            }
+
+            .right-side {
+                padding: 0 40px;
+
+                .company-logo {
+                    display: block;
+                    width: 100%;
+                    max-width: 100px;
+                }
+
+                .testimonial-content {
+                    .text-content {
+                        color: lighten($blue-grey, 15%);
+                        margin-bottom: 10px;
+                    }
+
+                    .learn-more {
+                        display: flex;
+                        align-items: center;
+                        font-weight: 500;
+
+                        span {
+                            display: block;
+                            margin-right: 4px;
+                        }
+
+                        i {
+                            position: relative;
+                            top: 1px;
+                        }
+                    }
+
+                    .metrics {
+                        display: flex;
+                        padding-top: 16px;
+
+                        .metric {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 30px;
+
+                            .circle-chart__circle {
+                                animation: circle-chart-fill 2s reverse;
+                                transform: rotate(-90deg);
+                                transform-origin: center;
+                            }
+
+                            .circle-chart__circle--negative {
+                                transform: rotate(-90deg) scale(1, -1); /* 1, 2, 3 */
+                            }
+
+                            .circle-chart__info {
+                                animation: circle-chart-appear 2s forwards;
+                                opacity: 0;
+                                transform: translateY(0.3em);
+                            }
+
+                            @keyframes circle-chart-fill {
+                                to {
+                                    stroke-dasharray: 0 100;
+                                }
+                            }
+
+                            @keyframes circle-chart-appear {
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            .meta {
+                                span {
+                                    display: block;
+                                    line-height: 1.2;
+
+                                    &:first-child {
+                                        font-weight: 600;
+                                        color: $blue-grey;
+                                    }
+
+                                    &:nth-child(2) {
+                                        color: lighten($blue-grey, 15%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-custom {
+        position: absolute;
+        top: 41%;
+        border: 1px solid transparent;
+        width: 50px;
+        height: 50px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: $white;
+        border-radius: 100px;
+        cursor: pointer;
+        color: $blue-grey;
+        transition: all 0.3s;
+        z-index: 999;
+
+        i {
+            position: relative;
+            font-size: 12px;
+        }
+
+        &:hover {
+            border-color: darken($fade-grey, 3%);
+            box-shadow: $light-box-shadow;
+        }
+
+        &.is-prev {
+            left: -60px;
+
+            i {
+                right: 2px;
+            }
+        }
+
+        &.is-next {
+            right: -60px;
+
+            i {
+                left: 2px;
+            }
+        }
+    }
+
+    .carousel-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 30px 0;
+
+        > div {
+            width: 50%;
+            padding: 0 20px;
+
+            &.rating-block {
+                text-align: center;
+                border-right: 1px solid darken($fade-grey, 4%);
+
+                .stars {
+                    i {
+                        font-size: 18px;
+                        color: $placeholder;
+                    }
+                }
+
+                p {
+                    color: $muted-grey;
+                }
+            }
+
+            &.support-block {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    font-size: 22px;
+                    color: $placeholder;
+                }
+
+                .meta {
+                    margin-left: 12px;
+
+                    span {
+                        display: block;
+                        line-height: 1.2;
+                        color: $muted-grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-wrap {
+        .testimonials-solo-carousel {
+            .testimonial-item {
+                flex-direction: column;
+
+                .left-side, .right-side {
+                    width: 100%;
+                }
+
+                .right-side {
+                    padding: 0;
+
+                    .testimonial-content {
+                        .learn-more {
+                            margin-bottom: 20px;
+                        }
+
+                        .metrics {
+                            .metric {
+                                flex-direction: column;
+                                width: 50%;
+                                margin: 0 auto;
+
+                                .meta {
+                                    margin: 0;
+                                    padding-top: 12px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+6. Focus Testimonials Carousel
+========================================================================== */
+
+.carousel-wrapper {
+    max-width: 760px;
+    margin: 90px auto;
+
+    .carousel {
+        .slick-slide {
+            outline: none !important;
+        }
+
+        .carousel-item {
+            width: 100%;
+            border: 1px solid $fade-grey;
+            box-shadow: $light-box-shadow;
+            border-radius: 8px;
+            background: $white;
+            padding: 60px;
+            margin: 20px;
+
+            &.slick-current {
+                .item-footer {
+                    span {
+                        color: $white !important;
+                    }
+                }
+            }
+
+            p {
+                color: $muted-grey;
+            }
+
+            .item-footer {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+
+                img {
+                    display: block;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    display: block;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    font-family: $font-main;
+                    color: $blue-grey;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+7. Customer Testimonials
+========================================================================== */
+
+.customer-testimonials-wrapper {
+    position: relative;
+
+    .customer-testimonials {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        .testimonial-item {
+            outline: none;
+
+            .item-inner {
+                display: flex;
+                align-items: center;
+
+                .left {
+                    width: calc(50% - 120px);
+                    margin-left: 120px;
+
+                    .rating {
+                        margin-bottom: 8px;
+
+                        i {
+                            font-size: 1.3rem;
+                            color: #ffc02e;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 12px;
+
+                        i {
+                            color: $primary;
+                        }
+
+                        .fa-quote-left {
+                            margin-right: 5px;
+                        }
+
+                        .fa-quote-right {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .meta {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            display: block;
+                            height: 48px;
+                            width: 48px;
+                            min-width: 48px;
+                            border-radius: 50%;
+                        }
+
+                        .inner-meta {
+                            margin-left: 12px;
+                            line-height: 1.2;
+
+                            span {
+                                display: block;
+
+                                &:first-child {
+                                    color: $blue-grey;
+                                    font-size: 1.1rem;
+                                    font-weight: 500;
+                                }
+
+                                &:nth-child(2) {
+                                    color: $muted-grey;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    width: 50%;
+
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        width: auto;
+                        max-height: 478px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .customer-testimonials-wrapper {
+        .customer-testimonials {
+            .testimonial-item {
+                .item-inner {
+                    flex-direction: column;
+
+                    .left {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-bottom: 30px;
+                        text-align: center;
+
+                        .meta {
+                            text-align: left;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+8. Characters Testimonials
+========================================================================== */
+
+.carousel-wrapper {
+    max-width: 620px;
+    margin: 90px auto;
+
+    .carousel {
+        .slick-slide {
+            outline: none !important;
+        }
+
+        .carousel-item {
+            width: 100%;
+            border: 1px solid $fade-grey;
+            box-shadow: $light-box-shadow;
+            border-radius: 8px;
+            background: $white;
+            padding: 60px;
+            margin: 20px;
+            transition: all .3s;
+
+            &.slick-current {
+                background: $primary;
+
+                i, p {
+                    color: $smoke-white;
+                }
+
+                .item-footer {
+                    .meta {
+                        span {
+                            color: $smoke-white !important;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: $muted-grey;
+                transition: color .3s;
+            }
+
+            i {
+                transition: color .3s;
+            }
+
+            .item-footer {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+
+                img {
+                    display: block;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                }
+
+                .meta {
+                    margin-left: 10px;
+
+                    span {
+                        display: block;
+                        transition: all .3s;
+
+                        &:first-child {
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                            font-family: $font-main;
+                            color: $blue-grey;
+                        }
+
+                        &:nth-child(2) {
+                            font-size: 1rem;
+                            color: $primary;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel-wrapper {
+        .carousel {
+            .carousel-item {
+                padding: 30px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

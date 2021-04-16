@@ -4,87 +4,40 @@
 Night Theme
 ========================================================================== */
 
-/***
-TABLE OF CONTENTS
-=============================================================================
-0. CSS Imports
-=============================================================================
-***/
-
 /* ==========================================================================
 0. CSS Imports
 ========================================================================== */
 
+//1. Bulkit main variables
 @import "abstracts/variables";
 @import "abstracts/themes-night";
 @import "abstracts/shadows";
 
-@import "layout/utils";
-@import "layout/navbar";
-@import "layout/navbar-landing";
-@import "layout/sections";
-@import "layout/hero";
-@import "layout/footer";
-@import "layout/animations";
-@import "layout/navigation";
-@import "layout/pageloader";
+//2. Bulma source sass
+@import "../sass/bulma.sass";
 
-@import "components/accordion";
-@import "components/buttons";
-@import "components/cards";
-@import "components/boxes";
-@import "components/tabs";
-@import "components/testimonials";
-@import "components/dialogs";
-@import "components/forms";
-@import "components/tables";
-@import "components/lists";
-@import "components/labels";
-@import "components/messages";
-@import "components/pricing";
-@import "components/dropdowns";
-@import "components/checkboxes";
-@import "components/badge";
-@import "components/range";
-@import "components/ribbon";
-@import "components/slider";
-@import "components/switch";
-@import "components/timeline";
-@import "components/uploader";
-@import "components/iconpicker";
-@import "components/calendar";
-@import "components/wallop";
+//3. Layout styles
+@import "layout/all";
 
-@import "pages/demo-landing";
+//4. Components styles
+@import "components/all";
 
-@import "pages/heading-elements";
-@import "pages/text-elements";
-@import "pages/hero-elements";
-@import "pages/section-elements";
-@import "pages/button-elements";
-@import "pages/card-elements";
-@import "pages/feature-elements";
-@import "pages/team-elements";
-@import "pages/faq-elements";
-@import "pages/slider-elements";
-@import "pages/portfolio-elements";
-@import "pages/carousel-elements";
-@import "pages/blog-elements";
-@import "pages/profile-elements";
-@import "pages/contact-elements";
-@import "pages/auth-elements";
-@import "pages/media-elements";
-@import "pages/ui-elements";
-@import "pages/error-elements";
+//5. Features styles
+@import "features/all";
 
-@import "utilities/hover-effects";
-@import "utilities/material-shadows";
-@import "utilities/video-embed";
-@import "utilities/video-background";
+//6. Sections styles
+@import "sections/all";
 
-@import "layout/helpers";
+//7. Commerce styles
+@import "commerce/all";
+
+//8. CSS Utilities
+@import "utilities/all";
+
+//9. Global Media Queries
 @import "layout/responsive";
 
+//10. Slick carousel optimization
 $slick-font-path: "/assets/fonts/";
 $slick-loader-path: "/assets/fonts/";
 

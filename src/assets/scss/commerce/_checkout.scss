@@ -1,0 +1,464 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+  0. Payment Process
+========================================================================== */
+
+.payment-process {
+  text-align: left;
+
+  .payment-process-block {
+    display: flex;
+    align-items: center;
+
+    &.has-padding-bottom {
+      padding-bottom: 5rem;
+    }
+
+    + .payment-process-block {
+      margin-top: 10rem;
+    }
+
+    .payment-process-left,
+    .payment-process-right {
+      width: 50%;
+    }
+
+    .payment-process-left {
+      padding-right: 3rem;
+    }
+
+    .payment-process-right {
+      padding-left: 3rem;
+    }
+  }
+
+  .action-box {
+    &.is-pushed {
+      padding-left: 5rem;
+    }
+  }
+
+  .intructions-block {
+    max-width: 450px;
+
+    h2 {
+      font-family: $font-main;
+      font-size: 1.75rem;
+      color: $blue-grey;
+    }
+
+    p {
+      font-family: $font-text;
+      margin-bottom: 0.75rem;
+    }
+
+    .checkbox-wrap {
+      padding: 0;
+
+      a {
+        color: $primary;
+      }
+    }
+  }
+
+  .shipping-methods-grid,
+  .payment-methods-grid,
+  .order-summary-grid {
+    margin: 20px 0;
+
+    .summary-label {
+      display: block;
+      font-family: $font-main;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: $muted-grey;
+      text-transform: uppercase;
+      padding-bottom: 8px;
+    }
+
+    .method-card {
+      position: relative;
+      width: 100%;
+
+      &:hover {
+        .method-card-inner {
+          border-color: $blue-grey;
+        }
+      }
+
+      &.is-readonly {
+        .method-card-inner {
+          min-height: 100px;
+        }
+      }
+
+      .change-link {
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        font-size: 0.65rem;
+        color: $placeholder;
+        font-family: $font-main;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+
+      > input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked {
+          ~ .method-card-inner {
+            border-color: $primary;
+            box-shadow: $light-box-shadow;
+
+            .icon-container {
+              img {
+                filter: grayscale(0);
+                opacity: 1;
+              }
+
+              .indicator {
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+
+      .method-card-inner {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid darken($fade-grey, 12%);
+        background: $white;
+        transition: all 0.3s;
+      }
+
+      .icon-container {
+        position: relative;
+        height: 48px;
+        width: 48px;
+        min-width: 48px;
+        margin: 0 auto;
+
+        img {
+          display: block;
+          filter: grayscale(1);
+          opacity: 0.6;
+        }
+
+        .indicator {
+          position: absolute;
+          bottom: -18px;
+          left: -12px;
+          height: 26px;
+          width: 26px;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          background: $primary;
+          border-radius: 50%;
+          border: 2px solid $white;
+
+          svg {
+            height: 10px;
+            width: 10px;
+            stroke-width: 5px;
+            stroke: $white;
+          }
+        }
+      }
+
+      .meta {
+        margin-left: 16px;
+
+        h3 {
+          font-weight: 600;
+          font-size: 1rem;
+          color: $blue-grey;
+        }
+
+        p {
+          line-height: 1.2;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .payment-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    .input {
+      background: lighten($widget-grey, 3%);
+    }
+
+    .select {
+      width: 100%;
+
+      select {
+        width: 100%;
+      }
+    }
+
+    .payment-button {
+      font-size: 1.25rem;
+      font-family: $font-text;
+      min-height: 54px;
+      min-width: 180px;
+      border-radius: 0.65rem;
+    }
+  }
+
+  .payment-process-navigation {
+    padding: 4rem 0;
+
+    .button {
+      font-size: 1.25rem;
+      font-family: $font-text;
+      min-height: 54px;
+      min-width: 180px;
+      border-radius: 0.65rem;
+    }
+  }
+
+  .checkout-success {
+    min-height: calc(80vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .success-card {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      background: $white;
+      border-radius: 8px;
+      border: 1px solid darken($fade-grey, 12%);
+      padding: 40px;
+      animation: fadeInUp 0.5s;
+
+      .success-content {
+        max-width: 400px;
+        margin: 0 auto;
+
+        h3 {
+          font-family: $font-main;
+          font-size: 1.5rem;
+          color: $blue-grey;
+          font-weight: 600;
+        }
+
+        p {
+          font-family: $font-text;
+          margin-bottom: 20px;
+          color: $muted-grey;
+        }
+
+        .button-wrap {
+          .button {
+            font-size: 1.25rem;
+            font-family: $font-text;
+            min-height: 54px;
+            min-width: 180px;
+            border-radius: 0.65rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+2. Media Queries
+========================================================================== */
+
+@media only screen and (max-width: 767px) {
+  .payment-process {
+    .payment-process-block {
+      + .payment-process-block {
+        margin-top: 5rem;
+      }
+
+      &:nth-child(odd) {
+        flex-direction: column-reverse;
+      }
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+
+      .payment-process-left,
+      .payment-process-right {
+        width: 100%;
+        padding: 0;
+      }
+
+      .action-box {
+        &.is-pushed {
+          padding-left: 0;
+        }
+      }
+
+      .payment-form {
+        margin-top: 2rem;
+      }
+    }
+
+    .shipping-methods-grid,
+    .payment-methods-grid {
+      .columns {
+        display: flex;
+        flex-wrap: wrap;
+
+        .column {
+          min-width: 50%;
+          max-width: 50%;
+
+          .method-card {
+            .method-card-inner {
+              flex-direction: column;
+              padding: 1.25rem;
+              text-align: center;
+
+              .icon-container {
+                height: 32px;
+                width: 32px;
+                max-width: 32px;
+                margin-bottom: 1.75rem;
+
+                img {
+                  width: 100%;
+                  max-width: 100%;
+                }
+              }
+
+              .meta {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .payment-process {
+    .payment-process-block {
+      + .payment-process-block {
+        margin-top: 5rem;
+      }
+
+      &:nth-child(odd) {
+        flex-direction: column-reverse;
+      }
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+
+      .payment-process-left,
+      .payment-process-right {
+        width: 100%;
+        padding: 0;
+      }
+
+      .action-box {
+        &.is-pushed {
+          padding-left: 0;
+        }
+      }
+
+      .payment-form {
+        margin-top: 2rem;
+      }
+
+      .intructions-block {
+        &.is-tablet-p-centered {
+          margin: 0 auto !important;
+          text-align: center;
+        }
+      }
+    }
+
+    .shipping-methods-grid,
+    .payment-methods-grid {
+      .columns {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        .column {
+          min-width: 33.3%;
+          max-width: 33.3%;
+
+          .method-card {
+            .method-card-inner {
+              flex-direction: column;
+              text-align: center;
+
+              .icon-container {
+                margin-bottom: 1rem;
+
+                img {
+                  width: 100%;
+                  max-width: 100%;
+                }
+              }
+
+              .meta {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .payment-process {
+    .payment-process-block {
+      &:nth-child(odd) {
+        .payment-process-left {
+          width: 60%;
+        }
+
+        .payment-process-right {
+          width: 40%;
+        }
+      }
+
+      &:nth-child(even) {
+        .payment-process-left {
+          width: 40%;
+        }
+
+        .payment-process-right {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

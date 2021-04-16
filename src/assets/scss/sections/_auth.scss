@@ -1,0 +1,1329 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Auth Elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Signup Block
+    1. Contact card
+    2. Wavy auth cards
+    3. Remember me
+    4. Signup info
+    5. Signup context
+***/
+
+/* ==========================================================================
+0. Logo section
+========================================================================== */
+.hero-heading {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+
+    .auth-logo {
+        .top-logo {
+            height: 32px;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Layout
+========================================================================== */
+
+//login control spacing
+.login {
+    padding: 10px 0;
+}
+
+//Wrapper
+.login-wrapper {
+    overflow: hidden !important;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    &.is-gapless:not(:last-child) {
+        margin-bottom: 0 !important;
+    }
+
+    //Suppressing padding
+    .column {
+        .login-column {
+            padding: 0 !important;
+        }
+    }
+
+    //Login hero
+    .hero.login-hero, .hero.signup-hero {
+        background-position: center;
+        background-size: auto;
+    }
+
+    //Signup hero
+    #signup-banner .hero {
+        background: url("https://source.unsplash.com/DWui9DmfCXA/");
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: screen;
+    }
+}
+
+/* ==========================================================================
+2. Hero sections
+========================================================================== */
+
+.hero-body {
+
+    .auth-content {
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -40px;
+        margin-bottom: 40px;
+
+        h2 {
+            font-size: 2rem;
+            font-family: $font-main;
+            line-height: 1;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: $muted-grey;
+        }
+
+        a {
+            font-size: .9rem;
+            font-family: $font-text;
+            font-weight: 500;
+            color: $primary;
+        }
+    }
+
+    .auth-form-wrapper {
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.hero-banner {
+    .title {
+        padding: 25px;
+        padding-top: 25%;
+    }
+
+    .subtitle {
+        padding: 0 30px;
+    }
+
+    img.login-city {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    .button {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.signup-hero {
+    overflow: hidden;
+
+    .title {
+        padding: 25px;
+        padding-top: 15%;
+    }
+
+    .subtitle {
+        padding: 0 22%;
+    }
+
+    img {
+        &.mockup {
+            position: absolute;
+            bottom: -15%;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .already {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+
+        span {
+            margin-right: 15px;
+            color: $white;
+        }
+
+        a {
+            min-width: 80px;
+        }
+    }
+}
+
+/* ==========================================================================
+3. Links
+========================================================================== */
+
+.forgot, .no-account, .return {
+    color: $title-grey !important;
+    transition: opacity 0.5s;
+
+    &:hover {
+        opacity: 0.8;
+        color: $primary !important;
+    }
+
+    &.is-secondary {
+        color: $secondary !important;
+    }
+
+    &.is-accent {
+        color: $accent !important;
+    }
+}
+
+//Forgot password
+.forgot-password a {
+    color: #95A5A6;
+    font-weight: normal;
+    padding-right: 20px;
+    transition: all 0.6s;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.no-account-link {
+    a {
+        color: $title-grey;
+        font-weight: 500;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+/* ==========================================================================
+4. Miscellaneous
+========================================================================== */
+
+.icon.user,
+.icon.password {
+    margin: 5px 10px 0 0;
+}
+
+.checkbox-wrap {
+    color: $title-grey;
+    margin-bottom: 10px;
+
+    span {
+        position: relative;
+        top: -2px;
+    }
+}
+
+/* ==========================================================================
+0. Signup Block
+========================================================================== */
+
+.signup-block {
+
+    &.is-rounded {
+        .input, button {
+            border-radius: 100px;
+        }
+
+        .input {
+            padding-left: 20px !important;
+        }
+    }
+
+    .control {
+        position: relative;
+        width: 80%;
+
+        .input {
+            height: 50px;
+            padding-left: 10px;
+            padding-right: 140px;
+            font-size: 1rem;
+
+            &:focus {
+                box-shadow: $light-box-shadow !important;
+            }
+
+            &::placeholder {
+                color: $placeholder;
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 4px;
+            right: 5px;
+            height: 42px;
+            width: 120px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-column {
+        margin-top: 0 !important;
+        text-align: center !important;
+    }
+
+    .signup-block {
+        .control {
+            width: 100%;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Contact card
+========================================================================== */
+
+.contact-card {
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .icon i {
+        font-size: 26px;
+        color: $primary;
+        position: relative;
+    }
+
+    .contact-info {
+        margin: 0 30px;
+        font-family: $font-text;
+
+        .contact-name {
+            color: $placeholder;
+        }
+
+        .contact-details {
+            .details-text {
+                font-size: 16px;
+                font-weight: 400;
+                color: $blue-grey !important;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+2. Wavy auth cards
+========================================================================== */
+
+.wavy-login-card, .wavy-signup-card, .clean-login-card, .clean-signup-card, .quick-signup {
+    padding: 40px;
+    border-radius: 6px;
+    max-width: 400px;
+    margin: auto;
+    background-color: $white;
+    border: 1px solid #ecf0f1;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 40px;
+        font-weight: 700 !important;
+        font-family: $font-sub;
+    }
+}
+
+.quick-signup {
+    &.is-landing {
+        width: 100%;
+        background: $white;
+        border-radius: 6px;
+        padding: 40px;
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.trial-features {
+    padding: 40px;
+    background: $white;
+    border-radius: 6px;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+    img {
+        margin-top: 20px;
+    }
+}
+
+/* ==========================================================================
+3. Remember me
+========================================================================== */
+
+.remember-wrap, .switch-toggle-wrap {
+    .control {
+        &:last-child {
+            display: flex;
+            align-items: center;
+        }
+
+        > span {
+            font-family: $font-text;
+            font-size: .9rem;
+            color: $blue-grey-light !important;
+            max-width: 70%;
+
+            a {
+                color: $primary;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+4. Signup info
+========================================================================== */
+
+.clean-signup-info {
+    padding: 40px;
+
+    h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+
+    .feature {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+
+        img {
+            height: 48px !important;
+            width: 48px !important;
+        }
+
+        .feature-text {
+            margin-left: 20px;
+            color: $muted-grey;
+        }
+    }
+}
+
+/* ==========================================================================
+5. Signup context
+========================================================================== */
+
+.signup-context {
+    border: none !important;
+    border-radius: 6px;
+
+    .subtitle {
+        color: $white !important;
+    }
+
+    .argument {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        padding-top: 30px;
+
+        .icon i {
+            font-size: 2.4rem;
+            color: $white;
+        }
+
+        .argument-text {
+            margin-left: 22px;
+            color: $white;
+        }
+    }
+}
+
+
+/* ==========================================================================
+10. Login / Register Combo
+========================================================================== */
+
+.login-register-wrapper {
+    height: 100vh;
+    position: relative;
+
+    .backRight {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: $secondary;
+    }
+
+    .backLeft {
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: $primary;
+    }
+
+    #back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -999;
+    }
+
+    .canvas-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    #slideBox {
+        width: 50%;
+        max-height: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-left: 50%;
+        position: absolute;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    .topLayer {
+        width: 200%;
+        height: 100%;
+        position: relative;
+        left: 0;
+        left: -100%;
+    }
+
+    label {
+        font-size: 0.8em;
+        text-transform: uppercase;
+    }
+
+    .left {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        background: $sidebar;
+        left: 0;
+        position: absolute;
+
+        label {
+            color: $smoke-white;
+        }
+
+        input {
+            background: transparent;
+            color: $smoke-white;
+            border: 1px solid lighten($sidebar, 10%);
+            transition: border .3s;
+
+            &:focus {
+                border-color: lighten($sidebar, 20%);
+            }
+        }
+    }
+
+    .right {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        background: #f9f9f9;
+        right: 0;
+        position: absolute;
+
+        label {
+            color: #f9f9f9;
+        }
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100%;
+        width: 55%;
+        margin: 0 auto;
+        position: relative;
+
+        .brand {
+            position: absolute;
+            top: 65px;
+            left: 0;
+
+            a:hover {
+                box-shadow: none !important;
+            }
+
+            img {
+                height: 30px;
+            }
+        }
+    }
+
+    .content h2 {
+        font-weight: 300;
+        font-size: 2.2em;
+        margin: 0.2em 0 0.1em;
+    }
+
+    .left .content h2 {
+        color: $smoke-white;
+        font-family: $font-sub;
+    }
+
+    .right .content h2 {
+        color: $blue-grey;
+        font-family: $font-sub;
+    }
+
+    .form-element {
+        margin: 1.6em 0;
+
+        &.form-submit {
+            margin: 1.6em 0 0;
+        }
+    }
+
+    .form-stack {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button, .is-trigger {
+        padding: 0.9em 1.4em;
+        margin: 0 10px 0 0;
+        width: auto;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1em;
+        color: #fff;
+        line-height: 1em;
+        letter-spacing: 0.6px;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+        border: 0;
+        outline: 0;
+        transition: all 0.25s;
+        cursor: pointer;
+
+        &.signup {
+            background: $secondary;
+        }
+
+        &.login {
+            background: $primary;
+        }
+
+        &.off {
+            background: none;
+            box-shadow: none;
+            margin: 0;
+
+            &.signup {
+                color: $secondary;
+            }
+
+            &.login {
+                color: $primary;
+            }
+        }
+    }
+
+    button:focus, button:active, button:hover, a:focus, a:active, a:hover {
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+
+        &.signup {
+            background: darken($secondary, 5%);
+        }
+
+        &.login {
+            background: darken($primary, 5%);
+        }
+
+        &.off {
+            box-shadow: none;
+
+            &.signup {
+                color: $secondary;
+                background: darken($sidebar, 5%);
+            }
+
+            &.login {
+                color: darken($primary, 5%);
+                background: #e3e3e3;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        #slideBox {
+            width: 80%;
+            margin-left: 20%;
+        }
+
+        .signup-info, .login-info {
+            display: none;
+        }
+
+        .content {
+            width: 80%;
+        }
+    }
+}
+
+/* ==========================================================================
+10. Login / Register
+========================================================================== */
+
+.auth-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background: $white;
+    border-bottom: 1px solid $fade-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    a {
+        &:hover {
+            img {
+                filter: grayscale(0);
+                opacity: 1;
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 90px;
+            filter: grayscale(1);
+            opacity: .4;
+            transition: all .3s;
+        }
+    }
+}
+
+.auth-outer {
+    position: relative;
+    margin-top: 60px;
+    background: $grey-white;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .mobile-auth-toggle {
+        display: none;
+    }
+
+    .shadow {
+        -webkit-box-shadow: 0 0.125rem 0.8rem rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 0.125rem 0.8rem rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .auth-box {
+        width: 760px;
+        min-height: 480px;
+        background: $white;
+        display: flex;
+
+        .form-wrapper {
+            position: relative;
+            width: 380px;
+            height: 480px;
+            overflow: hidden;
+
+            &.is-active {
+                .register {
+                    transform: translateY(0);
+                }
+
+                .login {
+                    transform: translateY(-100%);
+                }
+            }
+
+            .register {
+                transform: translateY(-100%);
+                transition: all .5s ease-in-out;
+            }
+
+            .login {
+                transform: translateY(0);
+                transition: all .5s ease-in-out;
+            }
+
+            .login, .register {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .header {
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .item-list {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+
+                    .item {
+                        width: 140px;
+                        height: 50px;
+                        display: flex;
+                        font-size: 21px;
+                        justify-content: space-evenly;
+                        align-items: center;
+
+                        a {
+                            color: $blue-grey;
+
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+
+                .body {
+                    display: flex;
+                    width: 100%;
+                    margin-top: 50px;
+
+                    form {
+                        display: flex;
+                        width: 100%;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .control {
+                        position: relative;
+
+                        input {
+                            width: 290px;
+                            height: 40px;
+                            padding-left: 40px;
+                            padding-bottom: 6px;
+                            border: 1px solid darken($fade-grey, 3%);
+                            background: $grey-white;
+                            border-radius: 4px;
+
+                            &:focus {
+                                background: $white;
+                                box-shadow: $light-box-shadow !important;
+
+                                + .form-icon {
+                                    i {
+                                        color: $primary;
+                                    }
+                                }
+                            }
+                        }
+
+                        .form-icon {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 40px;
+                            width: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            i {
+                                color: $placeholder;
+                                transition: color .3s;
+                            }
+                        }
+                    }
+
+                    button[type="submit"] {
+                        width: 290px;
+                        height: 44px;
+                        border: none;
+                        margin-top: 35px;
+                        color: $white;
+                    }
+
+                    button {
+                        width: 290px;
+                        height: 44px;
+                        border: none;
+                        margin-top: 35px;
+                        color: $white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .side-box {
+            width: 380px;
+            height: 480px;
+            z-index: 1;
+            transition: 2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            background: linear-gradient(-45deg, $accent, $primary, $primary, $accent);
+            background-size: 200% 200%;
+            animation: gradientBG 15s ease infinite;
+
+            .login-btn, .title2 {
+                display: none;
+            }
+
+            .action-btn {
+                height: 40px;
+                min-width: 160px;
+                color: $primary;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .forgot-password {
+        margin-top: 12px;
+        font-size: .9rem;
+        font-weight: 500;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .auth-outer {
+        .mobile-auth-toggle {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+
+            h3 {
+                margin-bottom: 0;
+            }
+
+            .button {
+                font-size: 1.2rem;
+                border: none;
+                background: transparent;
+                color: $primary;
+                font-weight: 500;
+            }
+        }
+
+        .auth-box {
+            max-width: 340px;
+
+            .side-box {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .auth-outer {
+        .auth-box {
+            max-width: 720px;
+        }
+    }
+}
+
+/* ==========================================================================
+10. Boxed Login / Register
+========================================================================== */
+
+.auth-nav-alt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    background: #f2f2fa;
+    border-bottom: 1px solid $fade-grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+
+    .start a, .end {
+        display: flex;
+        align-items: center;
+    }
+
+    .start a {
+        color: $muted-grey;
+    }
+
+    .end {
+        justify-content: flex-end;
+        flex-grow: 2;
+
+        .button {
+            font-weight: 500;
+            color: $secondary;
+            border-color: $secondary;
+            box-shadow: $light-box-shadow;
+        }
+    }
+}
+
+.auth-outer-alt {
+    position: relative;
+    margin-top: 60px;
+    background: #f2f2fa;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form-wrapper {
+        max-width: 400px;
+        //margin: -40px auto 0 auto;
+        margin: 0 auto 0 auto;
+        padding: 20px;
+        background: $white;
+        border-radius: 10px;
+        border: 1px solid darken($fade-grey, 2%);
+        box-shadow: $light-box-shadow;
+
+        .form-title {
+            text-align: center;
+
+            h3 {
+                font-size: 1.6rem;
+                color: $blue-grey;
+            }
+
+            h4 {
+                color: $muted-grey;
+                max-width: 240px;
+                margin: 0 auto;
+            }
+        }
+
+        .form-inner {
+            padding: 20px;
+
+            .field {
+                .control {
+                    .button {
+                        height: 42px;
+                        font-weight: 600;
+                    }
+
+                    .input {
+                        &:focus {
+                            box-shadow: $light-box-shadow !important;
+                        }
+                    }
+                }
+            }
+
+            .form-divider {
+                position: relative;
+                margin: 40px 0;
+                border-top: 1px solid $fade-grey;
+
+                .divider-circle {
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    border: 1px solid darken($fade-grey, 2%);
+                    background: $white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: $light-box-shadow;
+
+                    i {
+                        color: $blue-grey;
+                    }
+                }
+            }
+
+            .social-login {
+                h4 {
+                    text-align: center;
+                    color: $muted-grey;
+                    max-width: 240px;
+                    margin: 0 auto;
+                }
+
+                .login-buttons {
+                    display: flex;
+                    padding-top: 20px;
+
+                    .button-wrap {
+                        width: 33.3%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .button-inner {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            border: 1px solid darken($fade-grey, 2%);
+                            background: $white;
+                            box-shadow: $light-box-shadow;
+                            transition: all .3s;
+
+                            &:hover {
+                                border-color: $secondary;
+                                background: $secondary;
+                                box-shadow: $secondary-box-shadow;
+
+                                i {
+                                    color: $white;
+                                }
+                            }
+
+                            i {
+                                color: $blue-grey;
+                                font-size: 1.3rem;
+                                transition: color .3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > div {
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+9. Squares Login / Signup
+========================================================================== */
+
+.login-hero {
+    justify-content: center;
+
+    .circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 99;
+    }
+
+    .circles li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        animation: animateCircles 25s linear infinite;
+        bottom: -150px;
+    }
+
+    .circles li:nth-child(1) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+    }
+
+    .circles li:nth-child(2) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+
+    .circles li:nth-child(3) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+    }
+
+    .circles li:nth-child(4) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+
+    .circles li:nth-child(5) {
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+    }
+
+    .circles li:nth-child(6) {
+        left: 75%;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3s;
+    }
+
+    .circles li:nth-child(7) {
+        left: 35%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 7s;
+    }
+
+    .circles li:nth-child(8) {
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        animation-delay: 15s;
+        animation-duration: 45s;
+    }
+
+    .circles li:nth-child(9) {
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+    }
+
+    .circles li:nth-child(10) {
+        left: 85%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 0s;
+        animation-duration: 11s;
+    }
+
+    @keyframes animateCircles {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+            border-radius: 0;
+        }
+
+        100% {
+            transform: translateY(-1000px) rotate(720deg);
+            opacity: 0;
+            border-radius: 50%;
+        }
+    }
+}
+
+.login-image {
+    max-width: 380px;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-subtitle {
+    color: $muted-grey !important;
+    padding: 20px 15% !important;
+}
+
+/* ==========================================================================
+4. Quick Landing Signup
+========================================================================== */
+
+.quick-landing-signup {
+    padding: 30px 0;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+
+    .control {
+        position: relative;
+
+        .input {
+            height: 46px;
+            padding-left: 20px;
+            padding-bottom: 8px;
+            font-size: 1.2rem;
+            border: 1px solid darken($fade-grey, 3%);
+            box-shadow: $light-box-shadow !important;
+        }
+
+        .button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            height: 46px;
+            min-width: 160px;
+            background: $primary;
+            border-color: $primary;
+            color: $white;
+            font-weight: 500;
+        }
+    }
+}

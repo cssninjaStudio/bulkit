@@ -1,4 +1,4 @@
-/*! _testimonials.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Testimonial styles
@@ -230,6 +230,11 @@ TABLE OF CONTENTS
             .fa-quote-left {
                 color: $accent;
             }
+        }
+
+        .company {
+            max-width: 100px;
+            margin-right: 0 !important;
         }
     }
 }

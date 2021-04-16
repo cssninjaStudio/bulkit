@@ -1,0 +1,708 @@
+---
+layout: default
+title: Product
+---
+
+{{> navbar-fade-commerce}}
+
+<div class="section product-page-section">
+  <div class="container">
+    <!--Toolbar-->
+    <div class="commerce-toolbar">
+      <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon is-small is-solo">
+                <i data-feather="home"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Accessories</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Headphones</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Beats EP</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a><i data-feather="phone"></i> Assistance</a>
+        <a><i data-feather="mail"></i> Share</a>
+      </div>
+    </div>
+
+    <!--Product Page v1-->
+    <div class="product-page-v1">
+      <!--Head-->
+      <div class="product-head">
+        <div class="left">
+          <img
+            class="product-image"
+            data-image="black"
+            src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/headphones-black.png"
+            alt=""
+          />
+          <img
+            class="product-image"
+            data-image="blue"
+            src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/headphones-blue.png"
+            alt=""
+          />
+          <img
+            class="product-image is-active"
+            data-image="red"
+            class="active"
+            src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/headphones-red.png"
+            alt=""
+          />
+
+          <!--Product Thumbnails-->
+          <div class="product-thumbs">
+            <a class="product-thumb is-active">
+              <img
+                data-image="red"
+                class="active"
+                src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/headphones-red.png"
+                alt=""
+              />
+            </a>
+            <a class="product-thumb">
+              <img
+                data-image="blue"
+                src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/headphones-blue.png"
+                alt=""
+              />
+            </a>
+            <a class="product-thumb">
+              <img
+                data-image="black"
+                src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/headphones-black.png"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right">
+          <!-- Product Description -->
+          <div class="product-description">
+            <span>Headphones</span>
+            <h1>
+              <span class="product-name">Beats EP</span>
+              <span class="product-price">148.49</span>
+            </h1>
+            <p>
+              The preferred choice of a vast range of acclaimed DJs. Punchy,
+              bass-focused sound and high isolation. Sturdy headband and on-ear
+              cushions suitable for live performance
+            </p>
+          </div>
+
+          <!-- Product Configuration -->
+          <div class="product-configuration">
+            <!-- Product Color -->
+            <div class="product-colors">
+              <span>Colors</span>
+
+              <div class="color-selector">
+                <div>
+                  <input
+                    data-image="red"
+                    type="radio"
+                    id="red"
+                    name="color"
+                    value="red"
+                    checked
+                  />
+                  <label for="red">
+                    <span class="indicator">
+                      <i data-feather="check"></i>
+                    </span>
+                    <span></span>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    data-image="blue"
+                    type="radio"
+                    id="blue"
+                    name="color"
+                    value="blue"
+                  />
+                  <label for="blue">
+                    <span class="indicator">
+                      <i data-feather="check"></i>
+                    </span>
+                    <span></span>
+                  </label>
+                </div>
+                <div>
+                  <input
+                    data-image="black"
+                    type="radio"
+                    id="black"
+                    name="color"
+                    value="black"
+                  />
+                  <label for="black">
+                    <span class="indicator">
+                      <i data-feather="check"></i>
+                    </span>
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Options -->
+            <div class="product-options">
+              <span>Options</span>
+
+              <div class="option-selector">
+                <button>Titanium</button>
+                <button>Carbone</button>
+                <button>Chrome</button>
+              </div>
+
+              <a href="#">
+                <i data-feather="help-circle"></i>
+                <span>How to configurate your headphones</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Product Actions -->
+          <div class="product-actions">
+            <a href="#" class="cart-btn">Add to cart</a>
+            <a href="#" class="wishlist-btn">
+              <span>
+                <i data-feather="heart"></i>
+                <small>24</small>
+              </span>
+              <span>Add to Wishlist</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--Body-->
+      <div class="product-body">
+        <!--Product info-->
+        <div class="product-info">
+          <div class="navigation-tabs full-pills primary animated-tabs">
+            <div class="tabs">
+              <ul>
+                <li class="tab-link is-active" data-tab="tab-g1">
+                  <a>Description</a>
+                </li>
+                <li class="tab-link" data-tab="tab-g2">
+                  <a>Specifications</a>
+                </li>
+                <li class="tab-link" data-tab="tab-g3">
+                  <a>Reviews</a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-g1" class="navtab-content is-active">
+              <div class="content">
+                <h4>The Standard</h4>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Duarum enim vitarum nobis erunt instituta capienda. Quam tu
+                  ponis in verbis, ego positam in re putabam.
+                  <i>Sed in rebus apertissimis nimium longi sumus.</i> Quis est
+                  tam dissimile homini. Inde igitur, inquit, ordiendum est. Est,
+                  ut dicis, inquit;
+                  Duo Reges: constructio interrete. Inquit, dasne
+                  adolescenti veniam?
+                </p>
+
+                <h4>Boosted Basses</h4>
+
+                <p>
+                  Ita multa dicunt, quae vix intellegam. Duarum enim vitarum
+                  nobis erunt instituta capienda. Quid dubitas igitur mutare
+                  principia naturae? Quis non odit sordidos, vanos, leves,
+                  futtiles?
+                </p>
+
+                <h4>Optimal Compression</h4>
+
+                <p>
+                  Ita multa dicunt, quae vix intellegam. Duarum enim vitarum
+                  nobis erunt instituta capienda. Quid dubitas igitur mutare
+                  principia naturae? Quis non odit sordidos, vanos, leves,
+                  futtiles?
+                </p>
+              </div>
+            </div>
+            <div id="tab-g2" class="navtab-content">
+              <div class="content">
+                <h4>Specifications</h4>
+
+                <div class="product-specs">
+                  <table class="table">
+                    <tr>
+                       <td>Brand:</td>
+                       <td>Beats Inc.</td>
+                    </tr>
+                    <tr>
+                       <td>Magnet:</td>
+                       <td>Neodymium.</td>
+                    </tr>
+                    <tr>
+                       <td>Frequency response (Headphones):</td>
+                       <td>8 – 25000 Hz.</td>
+                    </tr>
+                    <tr>
+                       <td>Sound pressure level (SPL):</td>
+                       <td>113 dB.</td>
+                    </tr>
+                    <tr>
+                       <td>Jack plug:</td>
+                       <td>3.5 / 6.3 mm stereo.</td>
+                    </tr>
+                    <tr>
+                       <td>Nominal impedance:</td>
+                       <td>64 Ω.</td>
+                    </tr>
+                    <tr>
+                       <td>Load rating:</td>
+                       <td>500 mW.</td>
+                    </tr>
+                    <tr>
+                       <td>Warranty:</td>
+                       <td>1-Year Limited Warranty</td>
+                    </tr>
+                    <tr>
+                       <td>Dimensions(inches):</td>
+                       <td> 71" X 31" X 38" (L x W x H)  </td>
+                    </tr>
+                    <tr>
+                       <td>Shipping Box Dimensions:</td>
+                       <td>76" X 36" X 31" (L x W x H)</td>
+                    </tr>
+                    <tr>
+                       <td>Product Weight:</td>
+                       <td> 0.75 pound</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div id="tab-g3" class="navtab-content">
+              <div class="content">
+                <h4>Reviews</h4>
+
+                <div class="product-reviews">
+                  <!--Review-->
+                  <div class="product-review">
+                    <article class="media">
+                      <figure class="media-left">
+                        <p class="image is-32x32">
+                          <img class="is-rounded" src="https://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/henry.jpg">
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <span>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                        </span>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem.
+                        </p>
+                    </article>
+                  </div>
+                  <!--Review-->
+                  <div class="product-review">
+                    <article class="media">
+                      <figure class="media-left">
+                        <p class="image is-32x32">
+                          <img class="is-rounded" src="https://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/elie.jpg">
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <span>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                        </span>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor.
+                        </p>
+                    </article>
+                  </div>
+                  <!--Review-->
+                  <div class="product-review">
+                    <article class="media">
+                      <figure class="media-left">
+                        <p class="image is-32x32">
+                          <img class="is-rounded" src="https://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/anthony.jpg">
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <span>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.
+                        </p>
+                    </article>
+                  </div>
+                  <!--Review-->
+                  <div class="product-review">
+                    <article class="media">
+                      <figure class="media-left">
+                        <p class="image is-32x32">
+                          <img class="is-rounded" src="https://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/christina.jpg">
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <span>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                        </span>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </article>
+                  </div>
+                  <!--Review-->
+                  <div class="product-review">
+                    <article class="media">
+                      <figure class="media-left">
+                        <p class="image is-32x32">
+                          <img class="is-rounded" src="https://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/nick.jpg">
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <span>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                        </span>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem.
+                        </p>
+                    </article>
+                  </div>
+                  <!--Review-->
+                  <div class="product-review">
+                    <article class="media">
+                      <figure class="media-left">
+                        <p class="image is-32x32">
+                          <img class="is-rounded" src="https://via.placeholder.com/250x250" data-demo-src="assets/img/avatars/lakisha.jpg">
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <span>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star highlighted"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut.
+                        </p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Product meta-->
+        <div class="product-meta">
+          <!--Meta Card-->
+          <div class="flex-card simple-shadow">
+            <div class="card-body">
+              <div class="content">
+                <h4 class="no-margin">Shipping</h2>
+                <p class="pt-10">The following shipping operators are supported.</p>
+                <div class="providers">
+                  <img src="assets/img/logos/brands/ups.svg" alt="">
+                  <img src="assets/img/logos/brands/usps.svg" alt="">
+                  <img src="assets/img/logos/brands/fedex.svg" alt="">
+                  <img src="assets/img/logos/brands/aramex.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Meta Card-->
+          <div class="flex-card simple-shadow">
+            <div class="card-body">
+              <div class="content">
+                <h4 class="no-margin">Payment</h2>
+                  <p class="pt-10">The following payment providers are supported.</p>
+                  <div class="providers">
+                    <img src="assets/img/logos/brands/paypal.svg" alt="">
+                    <img src="assets/img/logos/brands/stripe.svg" alt="">
+                    <img src="assets/img/logos/brands/visa.svg" alt="">
+                    <img src="assets/img/logos/brands/mastercard.svg" alt="">
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!--Meta Card-->
+          <div class="flex-card simple-shadow">
+            <div class="card-body">
+              <div class="content">
+                <h4 class="no-margin">Benefits</h2>
+                  <p class="pt-10">The following additional benefits are available on purchase of this product.</p>
+                  <div class="is-flex is-align-items-center py-1">
+                    <div class="is-flex is-justify-content-center is-align-items-center is-circle bg-grey">
+                        <i class="sl sl-icon-check success-text"></i>
+                    </div>
+                    <div class="ml-2">
+                        <p>30-Day money back</p>
+                    </div>
+                  </div>
+                  <div class="is-flex is-align-items-center py-1">
+                    <div class="is-flex is-justify-content-center is-align-items-center is-circle bg-grey">
+                        <i class="sl sl-icon-check success-text"></i>
+                    </div>
+                    <div class="ml-2">
+                        <p>1 Year warranty</p>
+                    </div>
+                  </div>
+                  <div class="is-flex is-align-items-center py-1">
+                    <div class="is-flex is-justify-content-center is-align-items-center is-circle bg-grey">
+                        <i class="sl sl-icon-check success-text"></i>
+                    </div>
+                    <div class="ml-2">
+                        <p>24/24 Customer service</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Footer-->
+      <div class="product-footer">
+        <div class="footer-title">
+          <h2>Related Products</h2>
+        </div>
+
+        <div class="related-products">
+          <div class="related-products-inner">
+            <!--Product-->
+            <div class="related-product">
+              <div class="related-product-price">
+                <span>49.00</span>
+              </div>
+              <div class="related-product-rating">
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+              </div>
+              <div class="related-product-image">
+                <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/usb-charger.png" alt="">
+              </div>
+              <div class="related-product-info">
+                  <h4>Batteries</h4>
+                  <h3>USB 3.1 Charger</h3>
+              </div>
+              <div class="buttons">
+                <a class="button is-fullwidth">View</a>
+              </div>
+            </div>
+            <!--Product-->
+            <div class="related-product">
+              <div class="related-product-price">
+                <span>34.99</span>
+              </div>
+              <div class="related-product-rating">
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="related-product-image">
+                <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/mouse.png" alt="">
+              </div>
+              <div class="related-product-info">
+                  <h4>Mouses</h4>
+                  <h3>RCX Gaming mouse</h3>
+              </div>
+              <div class="buttons">
+                <a class="button is-fullwidth">View</a>
+              </div>
+            </div>
+            <!--Product-->
+            <div class="related-product">
+              <div class="related-product-price">
+                <span>1299.99</span>
+              </div>
+              <div class="related-product-rating">
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+              </div>
+              <div class="related-product-image">
+                <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/monitor.png" alt="">
+              </div>
+              <div class="related-product-info">
+                  <h4>Monitors</h4>
+                  <h3>4K Gaming monitor</h3>
+              </div>
+              <div class="buttons">
+                <a class="button is-fullwidth">View</a>
+              </div>
+            </div>
+            <!--Product-->
+            <div class="related-product">
+              <div class="related-product-price">
+                <span>749.99</span>
+              </div>
+              <div class="related-product-rating">
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+              </div>
+              <div class="related-product-image">
+                <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/vr.png" alt="">
+              </div>
+              <div class="related-product-info">
+                  <h4>VR Headsets</h4>
+                  <h3>Oculus X-24</h3>
+              </div>
+              <div class="buttons">
+                <a class="button is-fullwidth">View</a>
+              </div>
+            </div>
+            <!--Product-->
+            <div class="related-product">
+              <div class="related-product-price">
+                <span>249.99</span>
+              </div>
+              <div class="related-product-rating">
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+              </div>
+              <div class="related-product-image">
+                <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/soundbar.png" alt="">
+              </div>
+              <div class="related-product-info">
+                  <h4>Soundbars</h4>
+                  <h3>Kriska 48F</h3>
+              </div>
+              <div class="buttons">
+                <a class="button is-fullwidth">View</a>
+              </div>
+            </div>
+            <!--Product-->
+            <div class="related-product">
+              <div class="related-product-price">
+                <span>89.99</span>
+              </div>
+              <div class="related-product-rating">
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+              </div>
+              <div class="related-product-image">
+                <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/keyboard.png" alt="">
+              </div>
+              <div class="related-product-info">
+                  <h4>Keyboards</h4>
+                  <h3>AF-23 Premium</h3>
+              </div>
+              <div class="buttons">
+                <a class="button is-fullwidth">View</a>
+              </div>
+            </div>
+            <!--Product-->
+            <div class="related-product">
+              <div class="related-product-price">
+                <span>125.00</span>
+              </div>
+              <div class="related-product-rating">
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+              </div>
+              <div class="related-product-image">
+                <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/bluetooth-headset.png" alt="">
+              </div>
+              <div class="related-product-info">
+                  <h4>Headphones</h4>
+                  <h3>Bluetooth headset</h3>
+              </div>
+              <div class="buttons">
+                <a class="button is-fullwidth">View</a>
+              </div>
+            </div>
+            <!--Product-->
+            <div class="related-product">
+              <div class="related-product-price">
+                <span>148.49</span>
+              </div>
+              <div class="related-product-rating">
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+                <i class="fas fa-star highlighted"></i>
+              </div>
+              <div class="related-product-image">
+                <img src="http://via.placeholder.com/500x500/ffffff/999999" data-demo-src="assets/img/demo/products/headphones-red.png" alt="">
+              </div>
+              <div class="related-product-info">
+                  <h4>Headphones</h4>
+                  <h3>Beats EP</h3>
+              </div>
+              <div class="buttons">
+                <a class="button is-fullwidth">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Footer-->
+{{> footer-spaced-light}}

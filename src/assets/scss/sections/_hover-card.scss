@@ -1,0 +1,761 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Hover card section SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Hover Cards
+***/
+
+/* ==========================================================================
+1. Hover Cards
+========================================================================== */
+
+.hover-cards {
+  .icon-card-hover {
+    height: 170px;
+    padding: 20px 20px 10px 130px;
+    border-radius: 8px;
+    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.04);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    text-align: left;
+    background-color: $white;
+
+    &:hover {
+      box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.1);
+      -webkit-transform: translate(0, -10px);
+      -ms-transform: translate(0, -10px);
+      transform: translate(0, -10px);
+    }
+
+    &.first-card {
+      background-image: linear-gradient(
+          180deg,
+          hsla(0, 0%, 100%, 0.65),
+          hsla(0, 0%, 100%, 0.65)
+        ),
+        url(../img/graphics/icons/motion-icon-1-core.svg);
+      background-position: 0 0, -80px 20px;
+      background-size: auto, 200px;
+      background-repeat: repeat, no-repeat;
+      -webkit-transition: all 350ms ease;
+      transition: all 350ms ease;
+
+      &:hover {
+        background-image: linear-gradient(180deg, transparent, transparent),
+          url(../img/graphics/icons/motion-icon-1-core.svg);
+        background-position: 0 0, -80px -25px;
+        background-size: auto, 200px;
+        background-repeat: repeat, no-repeat;
+      }
+    }
+
+    &.second-card {
+      background-image: linear-gradient(
+          180deg,
+          hsla(0, 0%, 100%, 0.65),
+          hsla(0, 0%, 100%, 0.65)
+        ),
+        url(../img/graphics/icons/motion-icon-2-core.svg);
+      background-position: 0 0, -80px 20px;
+      background-size: auto, 200px;
+      background-repeat: repeat, no-repeat;
+      -webkit-transition: all 350ms ease;
+      transition: all 350ms ease;
+
+      &:hover {
+        background-image: linear-gradient(180deg, transparent, transparent),
+          url(../img/graphics/icons/motion-icon-2-core.svg);
+        background-position: 0 0, -80px -25px;
+        background-size: auto, 200px;
+        background-repeat: repeat, no-repeat;
+      }
+    }
+
+    &.third-card {
+      background-image: linear-gradient(
+          180deg,
+          hsla(0, 0%, 100%, 0.65),
+          hsla(0, 0%, 100%, 0.65)
+        ),
+        url(../img/graphics/icons/motion-icon-3-core.svg);
+      background-position: 0 0, -80px 20px;
+      background-size: auto, 200px;
+      background-repeat: repeat, no-repeat;
+      -webkit-transition: all 350ms ease;
+      transition: all 350ms ease;
+
+      &:hover {
+        background-image: linear-gradient(180deg, transparent, transparent),
+          url(../img/graphics/icons/motion-icon-3-core.svg);
+        background-position: 0 0, -80px -25px;
+        background-size: auto, 200px;
+        background-repeat: repeat, no-repeat;
+      }
+    }
+
+    &.fourth-card {
+      background-image: linear-gradient(
+          180deg,
+          hsla(0, 0%, 100%, 0.65),
+          hsla(0, 0%, 100%, 0.65)
+        ),
+        url(../img/graphics/icons/motion-icon-4-core.svg);
+      background-position: 0 0, -80px 20px;
+      background-size: auto, 200px;
+      background-repeat: repeat, no-repeat;
+      -webkit-transition: all 350ms ease;
+      transition: all 350ms ease;
+
+      &:hover {
+        background-image: linear-gradient(180deg, transparent, transparent),
+          url(../img/graphics/icons/motion-icon-4-core.svg);
+        background-position: 0 0, -80px -25px;
+        background-size: auto, 200px;
+        background-repeat: repeat, no-repeat;
+      }
+    }
+  }
+
+  .button-wrap {
+    padding: 40px 0;
+  }
+}
+
+body {
+  &.is-theme-core {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-core.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-core.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-core.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-core.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-core.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-core.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-core.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-core.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-purple {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-purple.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-purple.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-purple.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-purple.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-purple.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-purple.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-purple.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-purple.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-teal {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-teal.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-teal.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-teal.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-teal.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-teal.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-teal.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-teal.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-teal.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-green {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-green.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-green.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-green.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-green.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-green.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-green.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-green.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-green.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-azur {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-azur.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-azur.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-azur.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-azur.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-azur.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-azur.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-azur.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-azur.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-blue {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-blue.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-blue.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-blue.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-blue.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-blue.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-blue.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-blue.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-blue.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-night {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-night.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-night.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-night.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-night.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-night.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-night.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-night.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-night.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-yellow {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-yellow.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-yellow.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-yellow.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-yellow.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-yellow.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-yellow.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-yellow.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-yellow.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-orange {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-orange.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-orange.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-orange.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-orange.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-orange.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-orange.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-orange.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-orange.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &.is-theme-red {
+    .hover-cards {
+      .icon-card-hover {
+        &.first-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-1-red.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-1-red.svg);
+          }
+        }
+
+        &.second-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-2-red.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-2-red.svg);
+          }
+        }
+
+        &.third-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-3-red.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-3-red.svg);
+          }
+        }
+
+        &.fourth-card {
+          background-image: linear-gradient(
+              180deg,
+              hsla(0, 0%, 100%, 0.65),
+              hsla(0, 0%, 100%, 0.65)
+            ),
+            url(../img/graphics/icons/motion-icon-4-red.svg);
+
+          &:hover {
+            background-image: linear-gradient(180deg, transparent, transparent),
+              url(../img/graphics/icons/motion-icon-4-red.svg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hover-cards {
+    .icon-card-hover {
+      padding: 20px 20px 10px 100px !important;
+
+      .card-description {
+        font-size: 14px;
+      }
+    }
+  }
+}

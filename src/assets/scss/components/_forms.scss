@@ -1,4 +1,4 @@
-/*! _forms.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Form inputs styles
@@ -1082,6 +1082,7 @@ form {
 %controller {
     position: relative;
     cursor: pointer;
+    font-family: $font-text;
     padding: 1em;
 
     &::selection {

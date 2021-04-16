@@ -1,0 +1,68 @@
+<nav
+  class="navbar navbar-wrapper navbar-default navbar-fade is-fixed-top is-transparent"
+>
+  <div class="container">
+    <!-- Brand -->
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img
+          class="switcher-logo"
+          src="assets/img/logos/logo/bulkit-core.svg"
+          alt=""
+        />
+      </a>
+
+      <!-- Sidebar Trigger -->
+      <a
+        id="navigation-trigger"
+        class="navbar-item hamburger-btn"
+        href="javascript:void(0);"
+      >
+        <span class="menu-toggle">
+          <span class="icon-box-toggle">
+            <span class="rotate">
+              <i class="icon-line-top"></i>
+              <i class="icon-line-center"></i>
+              <i class="icon-line-bottom"></i>
+            </span>
+          </span>
+        </span>
+      </a>
+
+      <!--Wishlist-->
+      {{> wishlist-dropdown-mobile}}
+
+      <!--Cart-->
+      {{> cart-dropdown-mobile}}
+
+      <!-- Account button -->
+      {{> commerce-dropdown-mobile}}
+    </div>
+
+    <!-- Navbar menu -->
+    <div class="navbar-menu">
+      <!-- Navbar Start -->
+      <div class="navbar-start">
+        <!-- Navbar item -->
+        <a class="navbar-item is-slide" href="#"> Home </a>
+        <!-- Navbar item -->
+        <a class="navbar-item is-slide" href="#"> Shop </a>
+        <!-- Navbar item -->
+        <a class="navbar-item is-slide" href="#"> Categories </a>
+      </div>
+
+      <!-- Navbar end -->
+      <div class="navbar-end">
+
+        <!--Wishlist-->
+        {{> wishlist-dropdown}}
+
+        <!--Cart-->
+        {{> cart-dropdown}}
+
+        <!-- Account button -->
+        {{> commerce-dropdown}}
+      </div>
+    </div>
+  </div>
+</nav>

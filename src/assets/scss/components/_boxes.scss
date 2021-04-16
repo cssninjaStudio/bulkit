@@ -1,4 +1,4 @@
-/*! _boxes.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Box styles
@@ -158,20 +158,20 @@ TABLE OF CONTENTS
     }
 
     .diamond {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         background-color: $muted-grey;
         position: relative;
-        border-radius: 4px;
+        border-radius: .65rem;
         transform: rotate(45deg);
         margin-bottom: 1.5rem;
 
         i {
-            font-size: 36px;
             position: absolute;
+            left: 12px;
+            top: 6px;
+            font-size: 28px;
             color: $white;
-            left: 11px;
-            top: 10px;
             transform: rotate(-45deg);
         }
     }
@@ -292,6 +292,9 @@ TABLE OF CONTENTS
         padding: 5px;
 
         .icon-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 60px;
             height: 60px;
             background-color: $muted-grey;
@@ -300,11 +303,8 @@ TABLE OF CONTENTS
             cursor: pointer;
 
             i {
-                font-size: 28px;
-                position: absolute;
+                font-size: 24px;
                 color: $white;
-                left: 16px;
-                top: 16px;
             }
 
             &:after {
@@ -1551,6 +1551,9 @@ $length: 75;
     border: 1px solid $fade-grey;
     width: 50px;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $white;
     border-radius: 100px;
     cursor: pointer;
@@ -1560,7 +1563,6 @@ $length: 75;
 
     i {
         position: relative;
-        top: 14px;
     }
 
     &:hover {

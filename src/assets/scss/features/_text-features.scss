@@ -1,0 +1,301 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Text elements Kit SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. CTA Text
+    1. CTA Block
+    2. Section CTA
+    3. Feature text
+    4. Side Feature
+    5. Minimal Feature
+    6. Dividers
+***/
+
+/* ==========================================================================
+0. CTA Text
+========================================================================== */
+
+.cta-text {
+    font-family: $font-main;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cta-block {
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid darken($fade-grey, 4%);
+
+    &.no-border {
+        padding-bottom: 2rem;
+        border-bottom: none;
+    }
+
+    &.is-box {
+        padding: 3rem 2rem;
+        background: $white;
+        border-radius: 8px;
+        box-shadow: $light-box-shadow;
+        border: 1px solid $fade-grey;
+        justify-content: space-between;
+    }
+
+    .head-text {
+        h3 {
+            font-family: $font-main;
+            font-size: 1.8rem;
+            color: $blue-grey;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: $muted-grey;
+        }
+    }
+
+    .head-action {
+        .buttons {
+            .button {
+                &.action-button {
+                    height: 36px;
+                    min-width: 140px;
+                }
+
+                &.chat-button {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                    color: $primary;
+                    font-weight: 500;
+
+                    &.is-secondary {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+1. CTA Block
+========================================================================== */
+
+@media (max-width: 767px) {
+    .cta-block {
+        flex-direction: column;
+        text-align: center;
+
+        .head-text {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+
+/* ==========================================================================
+2. Section CTA
+========================================================================== */
+
+.section-cta {
+    padding: 40px 0 0 0;
+
+    .button {
+        min-width: 220px;
+    }
+
+    p {
+        margin-top: 12px;
+        color: $muted-grey;
+    }
+}
+
+
+/* ==========================================================================
+3. Feature text
+========================================================================== */
+
+.body-subtitle {
+    font-family: $font-main;
+    font-weight: 600;
+    color: $blue-grey;
+    font-size: 1.8rem;
+    line-height: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: .5rem !important;
+
+    &.is-inverted {
+        color: $white;
+    }
+}
+
+.body-text {
+    color: $blue-grey-light;
+    font-family: $font-text;
+    font-size: 1.2rem;
+}
+
+.detailed-feature-subtitle {
+    text-transform: uppercase;
+    font-family: $font-sub;
+    font-size: .9rem;
+    letter-spacing: 3px;
+    color: $title-grey;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+5. Quick Feature
+========================================================================== */
+
+.quick-feature-wrap {
+    .button-wrap {
+        padding: 10px 0;
+    }
+}
+
+.quick-feature {
+    &.has-numbers {
+        font-size: 2.1rem !important;
+        font-family: $font-main;
+        font-weight: 400 !important;
+        margin-bottom: 0.8rem !important;
+
+        .bg-number {
+            padding-right: 10px !important;
+            font-family: $font-text !important;
+        }
+    }
+
+    > span {
+        font-size: 2rem;
+        font-family: $font-main;
+    }
+}
+
+.small-feature {
+    padding: 5px 0;
+    font-family: $font-main;
+    font-size: 1.3rem;
+}
+
+/* ==========================================================================
+4. Side Feature
+========================================================================== */
+
+.is-clean, .clean-text {
+    font-family: $font-main !important;
+}
+
+.side-feature-text {
+    padding: 20px;
+
+    h2 {
+        font-size: 1.75rem;
+        margin-bottom: 12px !important;
+    }
+
+    p {
+        color: $blue-grey;
+        margin-bottom: 12px;
+    }
+}
+
+.feature-content {
+    font-family: $font-text;
+    color: $blue-grey-light;
+}
+
+/* ==========================================================================
+5. Minimal Feature
+========================================================================== */
+
+.minimal-feature {
+    .minimal-title {
+        font-family: $font-main;
+        font-size: 2rem;
+        font-weight: 500;
+        color: $blue-grey;
+        padding: 10px 0;
+        margin-bottom: 0 !important;
+    }
+}
+
+.minimal-feature-image {
+    position: relative;
+
+    .main-image {
+        position: relative;
+        z-index: 2;
+    }
+
+    .image-bg {
+        position: absolute;
+        top: 10%;
+        left: -20%;
+        right: 0;
+        margin: 0 auto;
+        max-width: 1096px;
+        width: 120%;
+        z-index: 0;
+    }
+}
+
+/* ==========================================================================
+6. Dividers
+========================================================================== */
+
+.special-divider {
+    margin: 30px auto;
+
+    span {
+        display: block;
+        height: 2px;
+        width: 60px;
+        background: $primary;
+        border-radius: 50px;
+        margin: 15px auto;
+        transform: rotate(-45deg);
+    }
+
+    &.is-inverted {
+        span {
+            background: $white;
+        }
+    }
+}
+
+.title-divider {
+    background: $primary !important;
+    height: 3px;
+    border-radius: 50px;
+}
+
+.divider-container {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    .divider-bar {
+        height: 160px;
+        width: 1.4px;
+        background: lighten($muted-grey, 25%);
+    }
+
+    .divider-text {
+        font-weight: 600;
+        color: $blue-grey;
+        margin: 16px;
+    }
+}

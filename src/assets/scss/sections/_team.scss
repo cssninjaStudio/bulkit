@@ -1,0 +1,161 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Team elements Kit SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Modern Team
+    1. Startup Team
+    2. Superhero Team
+***/
+
+/* ==========================================================================
+0. Modern Team
+========================================================================== */
+
+.modern-team {
+    .modern-team-item {
+        padding: 0 5px;
+        width: 33%;
+
+        .item-img {
+            &:before {
+                content: "";
+                background-color: rgba($primary, 0.9);
+            }
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        &:hover .item-img {
+            border-radius: 10px;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .modern-team {
+        .modern-team-item {
+            width: auto !important;
+        }
+    }
+}
+
+
+/* ==========================================================================
+1. Startup Team
+========================================================================== */
+
+.modern-team {
+    &.startup-team {
+        .modern-team-item {
+            padding: 0 5px;
+            width: 33%;
+    
+            .item-wrapper {
+                border: 1px solid $fade-grey;
+                box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.04);
+            }
+    
+            img {
+                border-radius: 10px;
+            }
+    
+            &:hover .item-img {
+                border-radius: 10px;
+            }
+    
+            a {
+                i {
+                    color: $primary;
+                }
+    
+                &:hover i {
+                    color: $blue-grey;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .modern-team {
+        &.startup-team {
+            .modern-team-item {
+                width: auto !important;
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+2. Superhero Team
+========================================================================== */
+
+.hero-box {
+    padding: 20px;
+    border-radius: 6px;
+    width: 100%;
+    background: $white;
+    border: 1px solid $fade-grey;
+
+    img {
+        height: 50px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+    }
+
+    .position {
+        font-size: .9rem;
+        font-weight: 600;
+        color: $secondary;
+    }
+
+    .social {
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 2px;
+            color: $primary;
+            transition: all .3s;
+
+            i {
+                font-size: 18px;
+                transition: all .3s;
+            }
+
+            &:hover {
+                background: $primary;
+
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    p {
+        padding: 10px 0;
+        color: $muted-grey;
+    }
+}

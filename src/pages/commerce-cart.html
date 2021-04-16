@@ -1,0 +1,180 @@
+---
+layout: commerce
+title: Cart
+---
+
+{{> navbar-fade-commerce}}
+
+<div class="section">
+  <div class="container">
+    <div class="cart-view">
+      <!--Toolbar-->
+      <div class="commerce-toolbar is-docked">
+        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="icon is-small is-solo">
+                  <i data-feather="home"></i>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Cart</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <a><i data-feather="phone"></i> Assistance</a>
+          <a><i data-feather="help-circle"></i> Help</a>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-8">
+          <div class="flex-table">
+            <!--Table header-->
+            <div class="flex-table-header">
+              <span class="product"><span>Product</span></span>
+              <span class="quantity">Quantity</span>
+              <span class="price">Price</span>
+              <span class="discount">Discount</span>
+              <span class="total">Total</span>
+            </div>
+            <!--Table item-->
+            <div class="flex-table-item" data-product-id="107">
+              <div class="product">
+                <img
+                  src="http://via.placeholder.com/250x250"
+                  data-demo-src="assets/img/demo/products/vr.png"
+                  alt=""
+                />
+                <span class="product-name">Rabbit Lamp</span>
+              </div>
+              <div class="quantity">
+                <span>1</span>
+              </div>
+              <div class="price">
+                <span class="has-price">14.49</span>
+              </div>
+              <div class="discount">
+                <span class="has-price">0</span>
+              </div>
+              <div class="total">
+                <span class="has-price">14.49</span>
+              </div>
+            </div>
+            <!--Table item-->
+            <div class="flex-table-item" data-product-id="107">
+              <div class="product">
+                <img
+                  src="http://via.placeholder.com/250x250"
+                  data-demo-src="assets/img/demo/products/monitor.png"
+                  alt=""
+                />
+                <span class="product-name">Red Seat</span>
+              </div>
+              <div class="quantity">
+                <span>1</span>
+              </div>
+              <div class="price">
+                <span class="has-price">45.00</span>
+              </div>
+              <div class="discount">
+                <span class="has-price">0</span>
+              </div>
+              <div class="total">
+                <span class="has-price">45.00</span>
+              </div>
+            </div>
+            <!--Table item-->
+            <div class="flex-table-item" data-product-id="107">
+              <div class="product">
+                <img
+                  src="http://via.placeholder.com/250x250"
+                  data-demo-src="assets/img/demo/products/mouse.png"
+                  alt=""
+                />
+                <span class="product-name">Blue Seat</span>
+              </div>
+              <div class="quantity">
+                <span>2</span>
+              </div>
+              <div class="price">
+                <span class="has-price">35.00</span>
+              </div>
+              <div class="discount">
+                <span class="has-price">0</span>
+              </div>
+              <div class="total">
+                <span class="has-price">70.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="coupon-area">
+            <h3>Apply Coupon Code</h3>
+            <p>
+              Enter any promotional code you have here. Promotional codes can
+              only be used once.
+            </p>
+            <div class="field">
+              <div class="control">
+                <input
+                  type="text"
+                  class="input is-default"
+                  placeholder="Paste Coupon Code"
+                />
+                <div class="form-icon">
+                  <i class="sl sl-icon-trophy"></i>
+                </div>
+                <button class="button">
+                  Apply Coupon
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="cart-summary">
+            <div class="summary-header">
+                <h3>Order Summary</h3>
+            </div>
+
+            <!--card-->
+            <div class="summary-card">
+                <div class="order-line">
+                    <span>Subtotal</span>
+                    <span>193.00</span>
+                </div>
+                <div class="order-line">
+                    <span>Shipping</span>
+                    <span class="is-text">Not calculated</span>
+                </div>
+                <div class="order-line">
+                    <span>Taxes</span>
+                    <span>8.92</span>
+                </div>
+                <div class="order-line">
+                    <span class="is-total">Total</span>
+                    <span class="is-total">201.92</span class="is-total">
+                </div>
+            </div>
+            
+            <!--card-->
+            <div class="summary-card">
+                <h4>Need any help?</h4>
+                <p>Having trouble? Please search our <a class="standard-link">Help Center</a> for a quick
+                    answer to your problem.</p>
+            </div>
+            <div class="checkout-action">
+              <a href="commerce-payment-flow.html" class="button primary-btn button-cta btn-align no-lh is-bold raised is-fullwidth">Checkout</a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

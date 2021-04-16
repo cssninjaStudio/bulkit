@@ -1,4 +1,4 @@
-/*! _variables.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Bulkit variables 
@@ -7,16 +7,38 @@ Bulkit variables
 /***
 TABLE OF CONTENTS
 =============================================================================
-0. Bulkit colors
-1. State colors
-2. Social colors
-3. Predefined gradients
-4. Predefined box shadows
+0. Base typography
+1. Bulkit colors
+2. State colors
+3. Social colors
+4. Predefined gradients
+5. Predefined box shadows
 =============================================================================
 ***/
 
 /* ==========================================================================
-0. Bulkit colors
+0. Base typography
+========================================================================== */
+
+$font-main: "Nexa Bold", sans-serif;
+$font-sub: "Nexa Light", sans-serif;
+$font-text: "Roboto", sans-serif;
+
+var {
+  font-style: normal;
+}
+
+p,
+ul li {
+  font-family: $font-text;
+}
+
+i {
+  font-style: normal;
+}
+
+/* ==========================================================================
+1. Bulkit colors
 ========================================================================== */
 
 $white: #fff;
@@ -24,13 +46,13 @@ $smoke-white: #fcfcfc;
 $grey-white: #f2f2f2;
 $grey-white-accent: #e2e2e2;
 $command-grey: #fafbfc;
-$light-grey: #EFF4F7;
+$light-grey: #eff4f7;
 $ultra-light-grey: #f7fcff;
 $light-white: #fafafa;
-$title-grey: #A9ABAC;
+$title-grey: #a9abac;
 $input-grey: #dbdbdb;
 $input-border: #dee2e6;
-$blue-grey: #444F60;
+$blue-grey: #444f60;
 $blue-grey-light: lighten($blue-grey, 30%);
 $light-blue-grey: #98a9c3;
 $medium-grey: #66676b;
@@ -39,7 +61,7 @@ $muted-grey: #999;
 $section-grey: #fbfbfb;
 $section-grey-accent: #efefef;
 $background-grey: #f3f5f7;
-$header-grey: #F5F9FC;
+$header-grey: #f5f9fc;
 $default-input: #ccc;
 $placeholder: #cecece;
 $fade-grey: #ededed;
@@ -52,17 +74,18 @@ $med-grey: #6f7592;
 $cream-grey: #f6f4ff;
 $icon-grey: #818a97;
 $border-grey: #d4dadf;
+$border-light: #e1e8ee;
 $dashboard-grey: #f4f6fb;
 $widget-grey: #f5f6fa;
 $link-grey: #f5f5f5;
 
 /* ==========================================================================
-1. State colors
+2. State colors
 ========================================================================== */
 
 $red: #e62965;
-$blue: #039BE5;
-$green: #06d6a0 ;
+$blue: #039be5;
+$green: #06d6a0;
 $orange: #eda514;
 
 $info: $blue;
@@ -70,20 +93,20 @@ $success: $green;
 $warning: $orange;
 $danger: $red;
 
-$purple: #8269B2;
-$azur: #37C3FF;
-$red: #F92B60;
-$salmon: #FFA981;
-$yellow: #FFD66E;
-$grass: #93E088;
-$pink: #FF9EB8;
-$light-blue: #77D2F3;
+$purple: #8269b2;
+$azur: #37c3ff;
+$red: #f92b60;
+$salmon: #ffa981;
+$yellow: #ffd66e;
+$grass: #93e088;
+$pink: #ff9eb8;
+$light-blue: #77d2f3;
 
 /* ==========================================================================
-2. Social colors
+3. Social colors
 ========================================================================== */
 
-$facebook: #3B5998;
+$facebook: #3b5998;
 $twitter: #1dcaff;
 $linkedin: #007bb6;
 $tumblr: #35465c;
@@ -94,31 +117,21 @@ $youtube: #cc181e;
 $reddit: #ff4500;
 
 /* ==========================================================================
-3. Predefined gradients
+4. Predefined gradients
 ========================================================================== */
 
-// Modal gradient
 $modal-ga: #6a85b6;
 $modal-gb: #bac8e0;
 
-$webkit-modal-gradient: -webkit-linear-gradient(45deg, $modal-ga 0%, $modal-gb 100%);
+$webkit-modal-gradient: -webkit-linear-gradient(
+  45deg,
+  $modal-ga 0%,
+  $modal-gb 100%
+);
 $modal-gradient: linear-gradient(45deg, $modal-ga 0%, $modal-gb 100%);
 
-// Coal
 $coal-a: $blue-grey;
 $coal-b: #444;
 
-$webkit-coal-gradient: -webkit-linear-gradient(45deg, $coal-a, $coal-b); /* Chrome 10-25, Safari 5.1-6 */
-$coal-gradient: linear-gradient(45deg, $coal-a, $coal-b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-$font-main: "Nexa Bold", sans-serif;
-$font-sub: "Nexa Light", sans-serif;
-$font-text: "Roboto", sans-serif;
-
-p, ul li {
-    font-family: $font-text;
-}
-
-.body-color {
-    color: $blue-grey-light !important;
-}
+$webkit-coal-gradient: -webkit-linear-gradient(45deg, $coal-a, $coal-b);
+$coal-gradient: linear-gradient(45deg, $coal-a, $coal-b);

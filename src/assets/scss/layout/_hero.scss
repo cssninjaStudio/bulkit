@@ -1,4 +1,4 @@
-/*! _hero.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Hero related styles
@@ -164,6 +164,31 @@ TABLE OF CONTENTS
 
         .subtitle {
             color: $white;
+        }
+    }
+
+    &.is-night {
+        background-color: #000030;
+
+        .title {
+            color: $white;
+        }
+
+        .signup-block {
+            .input {
+                background: darken(#000030, 3%);
+                border-color: lighten(#000030, 6%);
+                color: $white;
+
+                &::placeholder {
+                    color: $white;
+                    opacity: .3;
+                }
+
+                &:focus {
+                    border-color: lighten(#000030, 12%);
+                }
+            }
         }
     }
 
@@ -409,10 +434,8 @@ TABLE OF CONTENTS
 2. Hero footer
 ========================================================================== */
 
-.hero-foot {
-    img.partner-logo {
-        height: 70px !important;
-    }
+.hero-foot .partner-logo, .partner-logo {
+    height: 70px !important;
 }
 
 /* ==========================================================================

@@ -1,0 +1,231 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Code and Editor sections SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Code tabs
+***/
+
+/* ==========================================================================
+0. Code tabs
+========================================================================== */
+
+.code-container-wrapper {
+  padding-top: 40px;
+
+  .code-container {
+    border-radius: 6px;
+    min-height: 300px;
+    border-radius: 6px;
+    position: relative;
+    will-change: height;
+    margin-bottom: 2.5rem;
+    background-color: #050f2c !important;
+
+    &:after {
+      top: 22%;
+      width: 90%;
+      height: 80%;
+      left: 5%;
+      content: "";
+      position: absolute;
+      background-color: rgba(62, 57, 107, 0.5);
+      z-index: -1;
+      filter: blur(20px);
+    }
+
+    header {
+      border-radius: 6px 6px 0 0;
+      padding: 0 16px;
+      height: 40px;
+      color: #8994c6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #3e396b !important;
+
+      .dots {
+        display: flex;
+        align-items: center;
+
+        .dot {
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          margin: 0 2px;
+          background: $primary;
+
+          &:hover {
+            stroke: #3e396b;
+            stroke-width: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .tabs-title {
+    padding-bottom: 16px;
+    border-bottom: 1px solid darken($fade-grey, 4%);
+  }
+
+  [data-backend-sample],
+  [data-frontend-sample] {
+    display: none;
+
+    &.active {
+      display: block;
+
+      pre {
+        opacity: 1 !important;
+      }
+    }
+
+    pre {
+      border-radius: 0;
+      background-color: transparent;
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      height: calc(100% - 40px);
+      max-height: calc(100% - 40px);
+      padding: 15px 15px 40px 15px;
+      width: 100%;
+
+      &::-webkit-scrollbar {
+        width: 6px !important;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px !important;
+        background: rgba(0, 0, 0, 0.2) !important;
+      }
+
+      code {
+        height: 100%;
+        display: block;
+        overflow: auto;
+      }
+    }
+  }
+
+  .backend-languages,
+  .frontend-languages {
+    margin: 40px 0 0 0;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -8px;
+      margin-right: -8px;
+
+      li {
+        margin: 0 8px 12px 8px;
+        width: calc(16.6% - 16px);
+        text-align: center;
+        color: #8994c6;
+        cursor: pointer;
+
+        &.is-active {
+          &.ruby {
+            opacity: 1;
+            color: #a62c46 !important;
+          }
+
+          &.rails {
+            opacity: 1;
+            color: #d1405f !important;
+          }
+
+          &.django {
+            opacity: 1;
+            color: #326543 !important;
+          }
+
+          &.python {
+            opacity: 1;
+            color: #3770a0 !important;
+          }
+
+          &.php {
+            opacity: 1;
+            color: #6c7eb7 !important;
+          }
+
+          &.symfony {
+            opacity: 1;
+            color: #000 !important;
+          }
+
+          &.java {
+            opacity: 1;
+            color: #3694d6 !important;
+          }
+
+          &.go {
+            opacity: 1;
+            color: #3770a0 !important;
+          }
+
+          &.javascript {
+            opacity: 1;
+            color: #ffd141 !important;
+          }
+
+          &.scala {
+            opacity: 1;
+            color: #dc332d !important;
+          }
+
+          &.csharp {
+            opacity: 1;
+            color: #00adef !important;
+          }
+
+          &.apple {
+            opacity: 1;
+            color: #fe6c34 !important;
+          }
+
+          &.android {
+            opacity: 1;
+            color: #a4c145 !important;
+          }
+
+          &.vue {
+            opacity: 1;
+            color: #4dba87 !important;
+          }
+
+          &.react {
+            opacity: 1;
+            color: #00aeff !important;
+          }
+
+          &.angular {
+            opacity: 1;
+            color: #c5002f !important;
+          }
+        }
+
+        span,
+        small {
+          display: block;
+        }
+
+        svg {
+          height: 48px;
+          width: 48px;
+        }
+      }
+    }
+  }
+
+  .hljs {
+    background: transparent !important;
+    overflow-x: initial !important;
+  }
+}

@@ -1,0 +1,71 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+  0. Commerce Toolbar
+========================================================================== */
+
+.commerce-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0 2rem 0;
+  border-bottom: 1px solid $border-light;
+  margin-bottom: 2rem;
+
+  &.is-docked {
+    padding-top: 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 0;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+      color: $blue-grey;
+
+      &:hover {
+        text-decoration: underline;
+        color: $primary;
+      }
+
+      svg {
+        height: 18px;
+        width: 18px;
+        stroke-width: 1.2px;
+        stroke: $muted-grey;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .commerce-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .breadcrumb {
+      margin-bottom: 1rem;
+
+      ul li a .icon {
+        &.is-solo {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .actions {
+      a:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

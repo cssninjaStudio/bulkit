@@ -29,73 +29,9 @@
         </span>
       </a>
 
-      <!-- Responsive toggle -->
-      <div class="custom-burger" data-target="">
-        <a id="" class="responsive-btn" href="javascript:void(0);">
-          <span class="menu-toggle">
-            <span class="icon-box-toggle">
-              <span class="rotate">
-                <i class="icon-line-top"></i>
-                <i class="icon-line-center"></i>
-                <i class="icon-line-bottom"></i>
-              </span>
-            </span>
-          </span>
-        </a>
-      </div>
-      <!-- /Responsive toggle -->
       <!-- Account button -->
-      <div class="navbar-item mobile-account">
-        <div class="dropdown account-dropdown is-right">
-          <div class="dropdown-trigger">
-            <button
-              class="button"
-              aria-haspopup="true"
-              aria-controls="dropdown-menu6"
-            >
-              <img
-                class="avatar"
-                src="https://via.placeholder.com/250x250"
-                alt=""
-                data-demo-src="assets/img/avatars/helen.jpg"
-              />
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu6" role="menu">
-            <div class="dropdown-content">
-              <a href="#" class="dropdown-item">
-                <i class="sl sl-icon-user"></i>
-                <div class="meta">
-                  <span>My Account</span>
-                  <span>View my account</span>
-                </div>
-              </a>
-              <a href="#" class="dropdown-item">
-                <i class="sl sl-icon-layers"></i>
-                <div class="meta">
-                  <span>My Projects</span>
-                  <span>View my projects</span>
-                </div>
-              </a>
-              <a href="#" class="dropdown-item">
-                <i class="sl sl-icon-settings"></i>
-                <div class="meta">
-                  <span>Settings</span>
-                  <span>Edit account settings</span>
-                </div>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">
-                <i class="sl sl-icon-lock"></i>
-                <div class="meta">
-                  <span>Log out</span>
-                  <span>Logout from account</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      {{> account-dropdown-mobile}}
+  
     </div>
 
     <!-- Navbar menu -->
@@ -113,57 +49,7 @@
       <!-- Navbar end -->
       <div class="navbar-end">
         <!-- Account button -->
-        <div class="navbar-item">
-          <div class="dropdown account-dropdown is-right">
-            <div class="dropdown-trigger">
-              <button
-                class="button"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu6"
-              >
-                <img
-                  class="avatar"
-                  src="https://via.placeholder.com/250x250"
-                  alt=""
-                  data-demo-src="assets/img/avatars/helen.jpg"
-                />
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu6" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">
-                  <i class="sl sl-icon-user"></i>
-                  <div class="meta">
-                    <span>My Account</span>
-                    <span>View my account</span>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <i class="sl sl-icon-layers"></i>
-                  <div class="meta">
-                    <span>My Projects</span>
-                    <span>View my projects</span>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <i class="sl sl-icon-settings"></i>
-                  <div class="meta">
-                    <span>Settings</span>
-                    <span>Edit account settings</span>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                  <i class="sl sl-icon-lock"></i>
-                  <div class="meta">
-                    <span>Log out</span>
-                    <span>Logout from account</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        {{> account-dropdown}}
       </div>
     </div>
   </div>

@@ -1,0 +1,294 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Phone section SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Phone Slider
+***/
+
+/* ==========================================================================
+0. Phone Slider
+========================================================================== */
+
+body {
+  &.is-theme-core {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-core.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-core.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-core.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-core.png);
+      }
+    }
+  }
+
+  &.is-theme-purple {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-purple.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-purple.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-purple.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-purple.png);
+      }
+    }
+  }
+
+  &.is-theme-teal {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-teal.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-teal.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-teal.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-teal.png);
+      }
+    }
+  }
+
+  &.is-theme-green {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-green.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-green.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-green.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-green.png);
+      }
+    }
+  }
+
+  &.is-theme-azur {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-azur.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-azur.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-azur.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-azur.png);
+      }
+    }
+  }
+
+  &.is-theme-blue {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-blue.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-blue.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-blue.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-blue.png);
+      }
+    }
+  }
+
+  &.is-theme-night {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-night.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-night.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-night.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-night.png);
+      }
+    }
+  }
+
+  &.is-theme-yellow {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-yellow.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-yellow.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-yellow.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-yellow.png);
+      }
+    }
+  }
+
+  &.is-theme-orange {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-orange.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-orange.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-orange.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-orange.png);
+      }
+    }
+  }
+
+  &.is-theme-red {
+    .phone-slide {
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: 50% 50%;
+      vertical-align: top;
+      padding: 800px 30px 30px 30px;
+
+      &.is-first {
+        background-image: url(../img/graphics/compositions/phone-slide-1-red.png);
+      }
+
+      &.is-second {
+        background-image: url(../img/graphics/compositions/phone-slide-2-red.png);
+      }
+
+      &.is-third {
+        background-image: url(../img/graphics/compositions/phone-slide-3-red.png);
+      }
+
+      &.is-fourth {
+        background-image: url(../img/graphics/compositions/phone-slide-4-red.png);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .column {
+    &.slide-description {
+      padding: 40px 0 !important;
+    }
+  }
+}

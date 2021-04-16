@@ -11,3 +11,8 @@
 {{#ifpage 'index'}}
 <script src="{{ root }}assets/js/index.js"></script>
 {{/ifpage}}
+
+<!-- Commerce pages js -->
+{{#ifpage 'commerce-product-1' 'commerce-home-v1' 'commerce-product-landing' 'commerce-product-landing-2'}}
+<script src="{{ root }}assets/js/commerce.js"></script>
+{{/ifpage}}
