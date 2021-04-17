@@ -401,6 +401,20 @@ TABLE OF CONTENTS
             margin: 0 auto !important;
         }
     }
+
+    .columns {
+        &.is-flex-tablet-portrait {
+            display: flex;
+            padding: 0;
+
+            &.is-flex-tablet-portrait-3 {
+                .column {
+                    min-width: 33.3%;
+                    width: 33.3%;
+                }
+            }
+        }
+    }
 }
 
 /* ==========================================================================

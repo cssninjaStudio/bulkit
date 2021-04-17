@@ -21,7 +21,6 @@ TABLE OF CONTENTS
   overflow: hidden;
 }
 
-
 /* ==========================================================================
 1. Shop hero
 ========================================================================== */
@@ -124,7 +123,6 @@ TABLE OF CONTENTS
   }
 }
 
-
 /* ==========================================================================
 2. Shop toolbar
 ========================================================================== */
@@ -165,13 +163,12 @@ TABLE OF CONTENTS
       svg {
         height: 20px;
         width: 20px;
-        margin-left: .5rem;
-        transition: transform .3s, stroke .3s;
+        margin-left: 0.5rem;
+        transition: transform 0.3s, stroke 0.3s;
       }
     }
   }
 }
-
 
 /* ==========================================================================
 3. Popular categories
@@ -375,7 +372,6 @@ TABLE OF CONTENTS
   }
 }
 
-
 /* ==========================================================================
 5. Brands
 ========================================================================== */
@@ -423,7 +419,7 @@ TABLE OF CONTENTS
   text-align: center;
   max-width: 580px;
   padding: 3rem;
-  margin: 0 auto 2rem auto;
+  margin: 2rem auto 0 auto;
 
   h4 {
     font-family: $font-main;
@@ -449,7 +445,6 @@ TABLE OF CONTENTS
   }
 }
 
-
 /* ==========================================================================
 7. Special section image
 ========================================================================== */
@@ -468,4 +463,138 @@ TABLE OF CONTENTS
     width: 100%;
     max-width: 1040px;
   }
+}
+
+@media (max-width: 767px) {
+  .shop-hero {
+    overflow: hidden;
+
+    .shop-hero-box {
+      min-width: 100vw;
+
+      &:not(:first-child) {
+        display: none;
+      }
+
+      .overlay-layer {
+        .inner-content {
+          padding: 25px !important;
+
+          .episode-title {
+            font-size: 2.8rem !important;
+            line-height: 40px !important;
+          }
+
+          .episode-meta {
+            .meta-item {
+              font-size: 0.75rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .shop-toolbar {
+    h4 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .brands {
+    flex-wrap: wrap;
+
+    .brand {
+      width: 50% !important;
+      margin-bottom: 16px;
+    }
+  }
+
+  .has-section-image {
+    min-height: 580px;
+  }
+
+  .rounded-section {
+    text-align: center;
+
+    .buttons {
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .shop-hero {
+    overflow: hidden;
+
+    .shop-hero-box {
+      min-width: 50vw;
+
+      &:nth-child(3) {
+        display: none;
+      }
+
+      .overlay-layer {
+        .inner-content {
+          padding: 25px !important;
+
+          .episode-title {
+            font-size: 1.8rem !important;
+            line-height: 28px !important;
+          }
+
+          .episode-meta {
+            .meta-item {
+              font-size: 0.75rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .popular-categories, .grid-products {
+    .columns {
+      padding: 0;
+      display: flex;
+
+      .column {
+        min-width: 50%;
+      }
+    }
+  }
+
+  .shop-icon-features {
+    display: flex;
+  }
+
+  .has-section-image {
+    min-height: 620px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .shop-hero {
+    overflow: hidden;
+
+    .shop-hero-box {
+
+        .overlay-layer {
+            .inner-content {
+                padding: 25px !important;
+
+                .episode-title {
+                    font-size: 2rem !important;
+                    line-height: 26px !important;
+                }
+
+                .episode-meta {
+                    .meta-item {
+                        font-size: .68rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
 }

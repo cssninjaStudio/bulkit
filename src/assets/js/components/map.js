@@ -122,5 +122,17 @@ function initMapBox() {
     var marker = new mapboxgl.Marker(markerOptions)
       .setLngLat([12.550343, 55.665957])
       .addTo(map3);
+  } else if ($("#mapbox-5").length) {
+    mapboxgl.accessToken = token;
+    var map = new mapboxgl.Map({
+      container: "mapbox-5",
+      style: "mapbox://styles/mapbox/light-v10",
+      center: [12.550343, 55.665957],
+      zoom: 16,
+    });
+
+    var marker = new mapboxgl.Marker(markerOptions)
+      .setLngLat([12.550343, 55.665957])
+      .addTo(map);
   }
 }

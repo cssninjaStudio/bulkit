@@ -1184,13 +1184,21 @@ $total: 40;
 ========================================================================== */
 
 .featured-image-medium {
+    display: block;
     max-width: 480px;
     margin: 0 auto;
 }
 
 .featured-image-large {
+    display: block;
     max-width: 580px;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .featured-image-medium, .featured-image-large {
+        max-width: 100%;
+    }
 }
 
 /* ==========================================================================

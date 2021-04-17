@@ -131,3 +131,200 @@ TABLE OF CONTENTS
     }
   }
 }
+
+.car-hero {
+  position: relative;
+
+  .main-image {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .left-image,
+  .right-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .right-image {
+    z-index: 0;
+
+    &.is-active {
+      transform: translate(-44px, -40px);
+    }
+    transition: all .55s ease-out;
+  }
+
+  .left-image {
+    top: -4rem;
+    z-index: 1;
+
+    &.is-active {
+      transform: translate(44px, 44px);
+    }
+    transition: all .55s ease-out;
+  }
+}
+
+
+.is-car-layer {
+  bottom: -150px !important;
+  transition: all .6s;
+
+  &.is-active {
+    bottom: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .car-hero-wrap {
+
+    .title, .subtitle {
+      text-align: center;
+    }
+
+    .hero-form {
+      margin-top: 2rem;
+
+      .flex-card {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    .car-hero {
+
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .car-hero-wrap {
+
+    .title, .subtitle {
+      text-align: center;
+    }
+
+    .hero-form {
+      margin-top: 2rem;
+
+      .flex-card {
+        display: block;
+        padding-top: 0;
+        padding-bottom: 0;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        margin: 0 auto;
+      }
+    }
+
+    .car-hero {
+
+    }
+  }
+}
+
+.map-block {
+  border-radius: 2rem;
+  margin: 3rem auto 5rem auto;
+  max-width: 1040px;
+
+  .map-block-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem;
+    min-height: 400px;
+    z-index: 1;
+
+    .card {
+      min-width: 340px;
+      border-radius: 1rem;
+      background: $white;
+      border: 1px solid $border;
+
+      .card-content {
+        padding: 2.5rem;
+
+        h4 {
+          font-family: $font-main;
+          font-size: 1.2rem;
+          color: $blue-grey;
+        }
+
+        p {
+          font-family: $font-text;
+          color: $blue-grey-light;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .control {
+          position: relative;
+
+          .form-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 42px;
+            width: 42px;
+
+            svg {
+              height: 18px;
+              width: 18px;
+              stroke: $primary;
+            }
+          }
+        }
+
+        .input,
+        .textarea {
+          font-family: $font-text;
+          font-size: 0.9rem;
+          border-radius: 0.5rem;
+          transition: border-color 0.3s;
+
+          &:focus {
+            border-color: $primary;
+          }
+
+          &::placeholder {
+          }
+        }
+
+        .input {
+          height: 42px;
+          padding-left: 42px;
+          border-radius: .55rem;
+        }
+
+        .button {
+          height: 42px;
+          border-radius: .55rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .map-block {
+    .map-block-inner {
+      padding: 1.5rem !important;
+
+      .card {
+        min-width: 100% !important;
+      }
+    }
+  }
+}

@@ -15,6 +15,17 @@
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 767px) {
+  .product-mockup {
+    max-height: 290px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .product-mockup {
+    max-height: 440px;
+  }
+}
 
 /* ==========================================================================
 1. Gallery Wrapper

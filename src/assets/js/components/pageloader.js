@@ -12,7 +12,7 @@ function initPageLoader() {
       $(".infraloader").toggleClass("is-active");
       clearTimeout(pageloaderTimeout);
       setTimeout(function () {
-        $(".rounded-hero").addClass("is-active");
+        $(".rounded-hero, .car-hero .left-image, .car-hero .right-image").addClass("is-active");
       }, 350);
     }, 700);
   });
