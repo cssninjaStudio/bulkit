@@ -9,6 +9,8 @@ TABLE OF CONTENTS
     0. Contact form
     1. Maps
     2. Startup contact button
+    3. Contact page v1
+    4. Map Block
 ***/
 
 /* ==========================================================================
@@ -296,3 +298,104 @@ TABLE OF CONTENTS
         }
     }
 }
+
+
+/* ==========================================================================
+4. Map Block
+========================================================================== */
+
+.map-block {
+    border-radius: 2rem;
+    margin: 3rem auto 5rem auto;
+    max-width: 1040px;
+  
+    .map-block-inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 3rem;
+      min-height: 400px;
+      z-index: 1;
+  
+      .card {
+        min-width: 340px;
+        border-radius: 1rem;
+        background: $white;
+        border: 1px solid $border;
+  
+        .card-content {
+          padding: 2.5rem;
+  
+          h4 {
+            font-family: $font-main;
+            font-size: 1.2rem;
+            color: $blue-grey;
+          }
+  
+          p {
+            font-family: $font-text;
+            color: $blue-grey-light;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+  
+          .control {
+            position: relative;
+  
+            .form-icon {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 42px;
+              width: 42px;
+  
+              svg {
+                height: 18px;
+                width: 18px;
+                stroke: $primary;
+              }
+            }
+          }
+  
+          .input,
+          .textarea {
+            font-family: $font-text;
+            font-size: 0.9rem;
+            border-radius: 0.5rem;
+            transition: border-color 0.3s;
+  
+            &:focus {
+              border-color: $primary;
+            }
+          }
+  
+          .input {
+            height: 42px;
+            padding-left: 42px;
+            border-radius: 0.55rem;
+          }
+  
+          .button {
+            height: 42px;
+            border-radius: 0.55rem;
+          }
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .map-block {
+      .map-block-inner {
+        padding: 1.5rem !important;
+  
+        .card {
+          min-width: 100% !important;
+        }
+      }
+    }
+  }

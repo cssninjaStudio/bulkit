@@ -141,6 +141,7 @@ function concatJS() {
     "src/assets/js/components/cards.js",
     "src/assets/js/components/carousel.js",
     "src/assets/js/components/counters.js",
+    "src/assets/js/components/countdown.js",
     "src/assets/js/components/dropdowns.js",
     "src/assets/js/components/faq.js",
     "src/assets/js/components/map.js",

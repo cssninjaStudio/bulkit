@@ -778,7 +778,16 @@ TABLE OF CONTENTS
 
 .max-w-center {
     width: 100%;
-    margin: 0 auto;
+    margin-left:  auto !important;
+    margin-right: auto !important;
+
+    &.max-w-440 {
+        max-width: 440px !important;
+    }
+
+    &.max-w-540 {
+        max-width: 540px !important;
+    }
 
     &.max-w-640 {
         max-width: 640px;

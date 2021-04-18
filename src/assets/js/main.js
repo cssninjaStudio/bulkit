@@ -56,6 +56,7 @@ $(document).ready(function ($) {
 	initSimpleAccordion();
 	initAccordions();
 	initToasts();
+	initCountdown();
 
 	//7. Carousels
 	initBasicCarousel();
