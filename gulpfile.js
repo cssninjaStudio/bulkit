@@ -33,7 +33,7 @@ ADDITIONAL VARIABLES
 
 const nodepath = "node_modules/";
 const assetspath = "assets/";
-const environment = "dev";
+const environment = "";
 
 /* ==========================================================================
 FILE PATHS
