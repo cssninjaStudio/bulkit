@@ -133,6 +133,7 @@ function concatJS() {
     "src/assets/js/components/navbar.js",
     "src/assets/js/components/sidebar.js",
     "src/assets/js/utilities/homepage.js",
+    "src/assets/js/utilities/demo.js",
     "src/assets/js/components/themeswitcher.js",
     "src/assets/js/components/animations.js",
     "src/assets/js/components/accordion.js",
@@ -169,7 +170,6 @@ function concatJS() {
     "src/assets/js/extensions/bulma-iconpicker.js",
     "src/assets/js/extensions/bulma-steps.min.js",
     "src/assets/js/extensions/bulma-tagsinput.min.js",
-    "src/assets/js/utilities/demo.js",
     "src/assets/js/main.js",
   ])
     .pipe(sourcemaps.init())
