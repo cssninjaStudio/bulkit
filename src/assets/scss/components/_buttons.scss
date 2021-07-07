@@ -716,14 +716,12 @@ TABLE OF CONTENTS
 15. Pricing Button
 ========================================================================== */
 
-#pricing {
-    .button-wrap {
-        .combo-button {
-            .button {
-                &.is-active {
-                    background: $primary;
-                    color: $white;
-                }
+.button-wrap {
+    .combo-button {
+        .button {
+            &.is-active {
+                background: $primary;
+                color: $white;
             }
         }
     }

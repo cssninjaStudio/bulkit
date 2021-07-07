@@ -780,18 +780,18 @@ TABLE OF CONTENTS
         }
 
         ul li:hover a {
-            color: $accent;
-            border-bottom-color: $accent;
+            color: $primary;
+            border-bottom-color: $primary;
         }
 
         ul li.is-active a {
-            color: $accent;
-            border-bottom: 2px solid $accent;
+            color: $primary;
+            border-bottom: 3px solid $primary;
         }
 
         ul li a.there {
-            color: $accent;
-            border-bottom: 2px solid $accent;
+            color: $primary;
+            border-bottom: 3px solid $primary;
         }
     }
 }

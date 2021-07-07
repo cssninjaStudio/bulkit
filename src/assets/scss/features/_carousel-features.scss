@@ -86,6 +86,8 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .people-carousel {
+    margin-bottom: 0 !important;
+
     .people-carousel-item {
         &.slick-dotted {
             .slick-slider {
@@ -686,6 +688,7 @@ TABLE OF CONTENTS
                         display: flex;
                         align-items: center;
                         font-weight: 500;
+                        color: $primary;
 
                         span {
                             display: block;

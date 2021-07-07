@@ -121,25 +121,35 @@ TABLE OF CONTENTS
 }
 
 .chosen-container-single .chosen-single div:after {
-    content: "\f078";
-    font-family: 'FontAwesome';
+    //content: "\f107";
+    /*font-family: 'Font Awesome 5 Free';
     font-size: 10px;
+    font-weight: 900;
     margin: 0;
     right: 20px;
     position: relative;
     width: auto;
     height: auto;
-
-    /*display: inline-block;*/
     color: #c0c0c0;
     float: right;
-    font-weight: normal;
+    font-weight: normal;*/
     transition: transform 0.3s;
-    transform: translate3d(0, 0, 0) rotate(0deg);
+    transform: translate3d(0, 0, 0) rotate(135deg);
+    content: '';
+    border-style: solid;
+    border-width: 0.15em 0.15em 0 0;
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    left: -5px;
+    color: #c0c0c0;
+    height: 0.45em;
+    width: 0.45em;
 }
 
 .chosen-container-active.chosen-with-drop .chosen-single div:after {
-    transform: translate3d(0, 0, 0) rotate(180deg);
+    transform: translate3d(0, 0, 0) rotate(-45deg);
 }
 
 .chosen-container-single .chosen-search {
@@ -166,11 +176,12 @@ TABLE OF CONTENTS
 }
 
 .chosen-container-single .chosen-search:before {
-    content: "\f002";
-    font-family: "FontAwesome";
+    content: "\e090";
+    font-family: "simple-line-icons";
     font-size: 15px;
+    font-weight: 900;
     margin: 0 15px 0 0;
-    top: 12px;
+    top: 15px;
     position: relative;
     width: 11px;
     height: 5px;
@@ -340,10 +351,11 @@ TABLE OF CONTENTS
     display: block;
 }
 
-.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:before {
-    content: "\f00d";
-    font-family: "FontAwesome";
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:after {
+    /*content: "\f00d";
+    font-family: "Font Awesome 5 Free";
     font-size: 10px;
+    font-weight: 900;
     top: 1px;
     position: relative;
     width: 11px;
@@ -351,7 +363,26 @@ TABLE OF CONTENTS
     display: inline-block;
     color: #fff;
     float: right;
-    font-weight: normal;
+    font-weight: normal;*/
+
+    
+}
+
+.search-choice-close:before, .search-choice-close:after {
+    position: absolute;
+    left: -6px;
+    top: 12px;
+    content: ' ';
+    height: 10px;
+    width: 1.5px;
+    background-color: $white;
+}
+
+.search-choice-close:before {
+    transform: rotate(45deg);
+}
+.search-choice-close:after {
+    transform: rotate(-45deg);
 }
 
 .chosen-container-multi .chosen-choices li.search-choice-disabled {

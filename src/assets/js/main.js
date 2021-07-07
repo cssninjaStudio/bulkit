@@ -131,6 +131,7 @@ $(document).ready(function ($) {
 	initAnimatedSvg();
 	initChatWidget();
 	initContactToggler();
+	initGoogleMap();
 	initMapBox();
 	initCodeTabs();
 })

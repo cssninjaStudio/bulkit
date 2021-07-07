@@ -1101,6 +1101,7 @@ $total: 40;
 
     .main-image {
         display: block;
+        transform: scale(.99);
     }
 
     .image-mask {
@@ -1224,7 +1225,17 @@ $total: 40;
     align-items: stretch;
     min-height: 650px;
 
+    &.is-skewed-sm {
+        transform: skew(0deg, -3deg) translate(0, -45px);
+
+        .container {
+            transform: skew(0deg, 3deg) translate(0, 45px);
+            margin-top: -60px;
+        }
+    }
+
     .section {
+
         &.image-section {
             width: 50%;
             padding-left: 10%;
@@ -1233,6 +1244,10 @@ $total: 40;
 
             .title, .subtitle, p {
                 color: $white;
+            }
+
+            .title-wrap h3 {
+                margin-left: 0 !important;
             }
 
             .support-features {

@@ -11,6 +11,7 @@ const del = require("del");
 const panini = require("panini");
 const uglify = require("gulp-uglify-es").default;
 const sourcemaps = require("gulp-sourcemaps");
+const purgecss = require("gulp-purgecss");
 const imagemin = require("gulp-imagemin");
 const removeCode = require("gulp-remove-code");
 const removeLog = require("gulp-remove-logging");
@@ -100,6 +101,67 @@ function compileSCSS() {
       .pipe(browserSync.stream());
   }
 }
+
+function purgeCSS() {
+  console.log("\n\t" + logSymbols.info, "Purging CSS..\n");
+  return src([
+    "dist/assets/css/core.css"
+  ])
+    .pipe(purgecss({
+        content: ['dist/**/*.html'],
+        safelist: {
+          standard: [
+            'navbar-faded', 
+            'navbar-light', 
+            'navbar-placeholder', 
+            'is-transparent', 
+            'parallax-overlay', 
+            'is-active', 
+            'is-faded', 
+            'is-dark-mobile',
+            'is-mobile', 
+            'is-hidden', 
+            'is-vhidden',
+            'Wallop--scale',
+            'Wallop--fade',
+            'Wallop-item--hidePrevious',
+            'Wallop-item--hideNext',
+            'Wallop-item--showPrevious',
+            'Wallop-item--showNext',
+            'slick-custom',
+            'is-prev',
+            'is-next',
+            'is-opened',
+            'is-closed',
+            'is-switched',
+            'is-open',
+            'ruby',
+            'rails',
+            'django',
+            'php',
+            'symfony',
+            'java',
+            'go',
+            'javascript',
+            'scala',
+            'csharp',
+            'apple',
+            'android',
+            'vue',
+            'react',
+            'angular',
+            'stuck',
+            'there',
+            'scaleInCircle',
+            'scaleIn',
+            'is-fixed'
+          ],
+          deep: [/^plyr/,/^hljs/,/^slick/,/^modal/,/^datetimepicker/,/^datepicker/,/^timepicker/,/^calendar/,/^iconpicker/,/^step/,/^input/,/^easy-/,/^fileuploader/],
+        }
+    }))
+    .pipe(dest('dist/assets/css'))
+}
+
 
 function compileHTML() {
   console.log("\n\t" + logSymbols.info, "Compiling HTML..\n");
@@ -224,8 +286,6 @@ function concatPlugins() {
 function concatCssPlugins() {
   console.log("\n\t" + logSymbols.info, "Concatenating CSS from plugins..\n");
   return src([
-    nodepath + "slick-carousel/slick/slick.css",
-    nodepath + "slick-carousel/slick/slick-theme.css",
     nodepath + "datedropper/datedropper.min.css",
     nodepath + "timedropper/timedropper.min.css",
     nodepath + "simplebar/dist/simplebar.min.css",
@@ -422,5 +482,6 @@ exports.build = series(
   concatJS,
   resetPages,
   prettyHTML,
-  compileSCSS
+  compileSCSS,
+  purgeCSS
 );

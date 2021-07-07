@@ -420,7 +420,7 @@ form {
 
             &:focus, &:valid {
                 ~ i {
-                    margin-top: 10px;
+                    margin-left: 10px;
                 }
             }
         }
@@ -444,7 +444,7 @@ form {
         i {
             position: absolute;
             right: 15px;
-            top: 12px;
+            top: 6px;
             color: $placeholder;
             display: none;
         }

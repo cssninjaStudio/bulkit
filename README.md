@@ -1,4 +1,4 @@
-# Bulkit 5.0.0 | Landing pages SaaS Kit
+# Bulkit 5.1.0 | Landing pages SaaS Kit
 
 ### Note
 
