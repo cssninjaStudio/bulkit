@@ -1,4 +1,4 @@
-/*! _accordion.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Accordion styles
@@ -231,9 +231,9 @@ TABLE OF CONTENTS
         }
 
         .mt-item-input[type=checkbox] + .mt-item-label::after {
-            font-family: "FontAwesome";
+            font-family: "Font Awesome 5 Free";
             content: "\f077";
-            font-weight: 300;
+            font-weight: 900;
         }
 
         .mt-item-input[type=checkbox]:checked + .mt-item-label::after {

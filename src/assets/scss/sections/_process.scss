@@ -1,0 +1,277 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Process sections SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Process Wrap
+    1. Vertical Process Wrap
+    2. Process blocks
+***/
+
+/* ==========================================================================
+0. Process Wrap
+========================================================================== */
+
+.process-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .process-block {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      right: 0;
+      height: 2px;
+      width: 50%;
+      background: #e0ecff;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 0;
+      height: 2px;
+      width: 50%;
+      background: #e0ecff;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    .process-icon {
+      position: relative;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background: #e0ecff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      z-index: 2;
+
+      img {
+        height: 40px;
+        width: 40px;
+        display: block;
+      }
+    }
+
+    .text-block {
+      padding: 16px;
+
+      p {
+        margin-top: 2px;
+        padding: 0 16px;
+        color: $muted-grey;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .process-wrap {
+    display: block;
+
+    .process-block {
+      margin-bottom: 20px;
+
+      &:before,
+      &:after {
+        display: block !important;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+1. Vertical Process Wrap
+========================================================================== */
+
+.vertical-process {
+  .vertical-block {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+
+    &:before {
+      position: absolute;
+      left: -24px;
+      bottom: 3px;
+      content: "";
+      height: 1px;
+      width: 88px;
+      background: $placeholder;
+      transform: rotate(90deg) !important;
+    }
+
+    &:last-child {
+      &:before {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .process-icon {
+        background: $secondary;
+        border-color: $secondary;
+
+        i {
+          color: $smoke-white;
+        }
+      }
+
+      .vertical-text {
+        h4 {
+          color: $secondary;
+        }
+      }
+    }
+
+    .process-icon {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      min-width: 40px;
+      border-radius: 50%;
+      border: 1px solid $placeholder;
+      transition: all 0.3s;
+
+      i {
+        color: $secondary;
+        font-size: 22px;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+    }
+
+    .vertical-text {
+      margin: 0 20px;
+
+      h4 {
+        font-family: $font-main;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 6px;
+        transition: all 0.3s;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: $muted-grey;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+2. Process blocks
+========================================================================== */
+.process-block {
+  position: relative;
+  text-align: center;
+
+  .process-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+
+    .icon-wrapper {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &.has-line:after {
+    content: "";
+    height: 4px;
+    width: 80px;
+    background: $fade-grey;
+    position: absolute;
+    top: 88px;
+    right: -14%;
+    border-radius: 50px;
+  }
+
+  .process-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    top: 13px;
+    right: 0;
+    background: $primary;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .process-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .step-number {
+      font-size: 8rem;
+      font-weight: bolder;
+      color: $fade-grey;
+      margin-right: 15px;
+    }
+
+    .details {
+      text-align: left;
+    }
+
+    .motto {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $blue-grey;
+    }
+
+    .description {
+      font-size: 95%;
+      color: $muted-grey;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .process-block {
+    &.has-line:after {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,427 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Heading Elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Pages title
+    1. Section title
+    2. Parallax title
+    3. Clean Section title
+    4. Title wrapper
+***/
+
+/* ==========================================================================
+0. Pages titlea
+========================================================================== */
+
+.title {
+    &.is-bigger {
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    &.is-medium {
+        font-size: 4rem;
+        line-height: 1;
+    }
+}
+
+.main-title {
+    font-family: $font-main;
+}
+
+.subpage-title {
+    font-family: $font-main;
+    font-weight: 600 !important;
+}
+
+.centered-title {
+    text-align: center;
+
+    &.is-inverted {
+        h2, .subheading {
+            color: $white;
+        }
+    }
+
+    h2 {
+        font-family: $font-main;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $blue-grey;
+    }
+
+    .subheading {
+        font-family: $font-sub;
+        font-weight: 600;
+        max-width: 70vh;
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: $title-grey;
+    }
+
+    .title-divider {
+        margin: 10px auto;
+    }
+}
+
+.big-title {
+    font-family: $font-main;
+    margin-bottom: 0 !important;
+    padding: 10px 0;
+}
+
+.light-subtitle {
+    font-size: 1.5rem;
+    padding: 2% 10% 2% 10%;
+    margin-bottom: 0 !important;
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .is-hero-title {
+        .is-bigger {
+            font-size: 3.6rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .is-hero-title {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .is-hero-title {
+        .is-bigger {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .is-hero-title {
+        text-align: center;
+
+        .is-bigger {
+            font-size: 3rem;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Section title
+========================================================================== */
+
+.section-title {
+    &.is-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .actions {
+            .link-wrap {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    border-bottom: 1.6px dashed $primary;
+                }
+
+                a {
+                    display: inline-block;
+                    color: $primary;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    > img {
+        display: block;
+        width: 40px;
+        margin: 0 auto;
+    }
+
+    .title-alt {
+        color: $blue-grey;
+        font-family: $font-sub;
+        font-size: 2.2rem;
+    }
+
+    .subtitle, .subtitle-alt {
+        font-family: $font-text;
+        font-size: 1.2rem;
+        color: $title-grey;
+    }
+}
+
+.section-title-wrapper {
+    position: relative;
+
+    .slanted-container {
+        padding: 40px 0;
+    }
+
+    .bg-number, .bg-symbol {
+        position: absolute;
+        text-align: center;
+        font-weight: bolder;
+        top: -70px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        font-size: 160px;
+        z-index: 0;
+        opacity: 0.1;
+        color: $muted-grey;
+        width: 160px;
+        height: 160px;
+        line-height: 160px;
+
+        .material-icons {
+            font-size: 12rem;
+        }
+    }
+
+    .clean-bg-symbol {
+        position: absolute;
+        font-weight: bolder;
+        top: -25px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        font-size: 10rem;
+        z-index: 0;
+        opacity: 0.1;
+        color: $muted-grey;
+        width: 150px;
+        line-height: 1;
+
+        i {
+            font-weight: 900;
+        }
+    }
+
+    .section-title {
+        font-family: $font-main;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-family: $font-sub;
+        font-size: 1.5rem;
+        line-height: 30px;
+        font-weight: 400;
+        color: $title-grey;
+        line-height: 1.2;
+        margin-bottom: 1rem !important;
+    }
+
+    .section-subtitle-alt {
+        font-family: $font-text;
+        font-size: 1.3rem;
+        line-height: 30px;
+        font-weight: 400;
+        color: $blue-grey-light;
+        line-height: 1.2;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem !important;
+    }
+
+    .section-title-landing {
+        font-family: $font-main;
+        font-size: 2.7rem;
+        color: $blue-grey;
+    }
+
+    .top-subtitle {
+        text-transform: uppercase;
+        color: $primary;
+        font-family: $font-sub;
+        font-weight: 700;
+        font-size: 1.05rem;
+    }
+
+    .icon-subtitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        &.is-one i {
+            margin: 10px 5px 0 5px;
+            font-size: 2.2rem;
+            color: $primary;
+        }
+
+        &.is-many i {
+            margin: 10px 5px 0 5px;
+            font-size: 1.4rem;
+            color: $primary;
+        }
+    }
+
+    h4 {
+        font-family: $font-sub;
+        font-weight: 300;
+        font-size: 1.2rem;
+        color: $muted-grey;
+    }
+}
+
+.title + .subtitle {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+@media (max-width: 767px) {
+    .section-title-wrapper {
+        .bg-number, .bg-symbol {
+            font-size: 110px !important;
+
+            .material-icons {
+                font-size: 6rem;
+            }
+        }
+
+        .section-title-landing {
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            line-height: 22px;
+        }
+    }
+
+    .section-title {
+        &.is-flex {
+            flex-direction: column;
+            text-align: center;
+
+            .actions {
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+2. Parallax title
+========================================================================== */
+
+.parallax-title {
+    font-family: $font-main;
+    font-weight: 600 !important;
+    font-size: 2.4rem !important;
+    margin-bottom: 0 !important;
+    padding: 10px 0;
+}
+
+/* ==========================================================================
+3. Clean Section title
+========================================================================== */
+
+.clean-section-title {
+    font-family: $font-main;
+    font-size: 2.6rem;
+    color: $blue-grey;
+
+    &:before {
+        content: "";
+        border-top: 3px solid $fade-grey;
+        position: absolute;
+        width: 100px;
+        top: 40%;
+        left: 15%;
+        z-index: -999;
+    }
+
+    &:after {
+        content: "";
+        border-top: 3px solid $fade-grey;
+        position: absolute;
+        width: 100px;
+        top: 40%;
+        right: 15%;
+        z-index: -999;
+    }
+}
+
+@media (max-width: 768px) {
+    .clean-section-title {
+        &:after, &:before {
+            display: none !important;
+        }
+    }
+}
+
+/* ==========================================================================
+4. Title wrapper
+========================================================================== */
+
+.title-wrapper {
+    .top-subtitle {
+        text-transform: uppercase;
+        color: $muted-grey;
+        font-family: $font-sub;
+        font-weight: 700;
+        font-size: 1.05rem;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    .is-landing {
+        font-family: $font-sub !important;
+        font-weight: 700;
+    }
+}
+
+.title-wrap {
+    position: relative;
+
+    h3, h2 {
+        position: relative;
+        z-index: 2;
+    }
+
+    h2 {
+        margin-bottom: 10px !important;
+    }
+
+    h3 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 480px;
+        font-size: 1.3rem;
+        line-height: 1;
+        font-family: $font-sub;
+        color: $blue-grey-light;
+    }
+
+    .special-divider {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: -10px;
+        z-index: 0;
+        max-width: 90px;
+        margin: 0 auto;
+    }
+}

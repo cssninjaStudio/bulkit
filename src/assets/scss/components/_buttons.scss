@@ -1,4 +1,4 @@
-/*! _buttons.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Button styles
@@ -20,6 +20,9 @@ TABLE OF CONTENTS
 10. Social buttons
 11. Ripple effect
 12. Combo Button
+13. Read More Button
+14. Fab Button
+15. Pricing Button
 =============================================================================
 ***/
 
@@ -617,5 +620,109 @@ TABLE OF CONTENTS
         font-size: 1.4rem;
         font-weight: 600;
         margin: 0 6px;
+    }
+}
+
+/* ==========================================================================
+14. Fab Button
+========================================================================== */
+
+.fab-btn {
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    border: none;
+    border-radius: 50%;
+    color: $white;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    z-index: 1;
+
+    &:active, &:focus {
+        outline: none !important;
+    }
+
+    &.mini {
+        width: 48px;
+        height: 48px;
+        padding: 12px;
+        transform: rotate(-600deg);
+        background: $primary;
+    }
+
+    &.like {
+        background: $title-grey !important;
+        transform: rotate(0deg);
+        position: absolute;
+        right: 28%;
+        bottom: -22px;
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+        i.unliked {
+            display: block;
+            color: $white;
+            position: relative;
+            z-index: 1;
+        }
+
+        i.liked {
+            display: none;
+            color: $white;
+            position: relative;
+            z-index: 1;
+        }
+
+        &.is-active {
+            .like-overlay {
+                transform: scale(1);
+            }
+
+            i.unliked {
+                display: none;
+            }
+
+            i.liked {
+                display: block;
+            }
+        }
+
+        &.is-single {
+            bottom: -34px;
+        }
+    }
+
+    .like-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .like-overlay {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            top: -36px;
+            left: -24px;
+            background: $red;
+            transform: scale(0);
+            transition: transform 0.4s;
+            z-index: 0;
+        }
+    }
+}
+
+/* ==========================================================================
+15. Pricing Button
+========================================================================== */
+
+.button-wrap {
+    .combo-button {
+        .button {
+            &.is-active {
+                background: $primary;
+                color: $white;
+            }
+        }
     }
 }

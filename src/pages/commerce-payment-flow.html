@@ -1,0 +1,714 @@
+---
+layout: commerce
+title: Checkout
+---
+
+{{> navbar-fade-commerce}}
+
+<div id="checkout-flow" class="section">
+  <div class="container">
+    <div class="cart-view">
+      <!--Toolbar-->
+      <div class="commerce-toolbar is-docked">
+        <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="icon is-small is-solo">
+                  <i data-feather="home"></i>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="commerce-cart.html">
+                <span>Cart</span>
+              </a>
+            </li>
+            <li>
+              <a href="commerce-payment-flow.html">
+                <span>Payment</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="actions">
+          <a><i data-feather="phone"></i> Assistance</a>
+          <a><i data-feather="help-circle"></i> Help</a>
+        </div>
+      </div>
+
+      <div class="payment-process">
+        <!--Step 1-->
+        <div id="checkout-flow-step-0" class="payment-process-block">
+          <div class="payment-process-left">
+            <div class="order-summary">
+              <div class="flex-table">
+                <!--Table header-->
+                <div class="flex-table-header">
+                  <span class="product"><span>Product</span></span>
+                  <span class="quantity">Quantity</span>
+                  <span class="price">Price</span>
+                  <span class="discount">Discount</span>
+                  <span class="total">Total</span>
+                </div>
+                <!--Table item-->
+                <div class="flex-table-item" data-product-id="107">
+                  <div class="product">
+                    <img
+                      src="http://via.placeholder.com/250x250"
+                      data-demo-src="assets/img/demo/products/vr.png"
+                      alt=""
+                    />
+                    <span class="product-name">Rabbit Lamp</span>
+                  </div>
+                  <div class="quantity">
+                    <span>1</span>
+                  </div>
+                  <div class="price">
+                    <span class="has-price">14.49</span>
+                  </div>
+                  <div class="discount">
+                    <span class="has-price">0</span>
+                  </div>
+                  <div class="total">
+                    <span class="has-price">14.49</span>
+                  </div>
+                </div>
+                <!--Table item-->
+                <div class="flex-table-item" data-product-id="107">
+                  <div class="product">
+                    <img
+                      src="http://via.placeholder.com/250x250"
+                      data-demo-src="assets/img/demo/products/monitor.png"
+                      alt=""
+                    />
+                    <span class="product-name">Red Seat</span>
+                  </div>
+                  <div class="quantity">
+                    <span>1</span>
+                  </div>
+                  <div class="price">
+                    <span class="has-price">45.00</span>
+                  </div>
+                  <div class="discount">
+                    <span class="has-price">0</span>
+                  </div>
+                  <div class="total">
+                    <span class="has-price">45.00</span>
+                  </div>
+                </div>
+                <!--Table item-->
+                <div class="flex-table-item" data-product-id="107">
+                  <div class="product">
+                    <img
+                      src="http://via.placeholder.com/250x250"
+                      data-demo-src="assets/img/demo/products/mouse.png"
+                      alt=""
+                    />
+                    <span class="product-name">Blue Seat</span>
+                  </div>
+                  <div class="quantity">
+                    <span>2</span>
+                  </div>
+                  <div class="price">
+                    <span class="has-price">35.00</span>
+                  </div>
+                  <div class="discount">
+                    <span class="has-price">0</span>
+                  </div>
+                  <div class="total">
+                    <span class="has-price">70.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-process-right">
+            <div class="action-box">
+              <div class="intructions-block">
+                <h2>Verify your order</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe
+                  non potest. Sed plane dicit quod intellegit.
+                </p>
+                <div class="field">
+                  <div class="control">
+                    <label class="checkbox-wrap is-medium">
+                      <input type="checkbox" class="d-checkbox" checked />
+                      <span></span>
+                      I agree to the <a>Store Terms</a>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Step 2-->
+        <div id="checkout-flow-step-1" class="payment-process-block is-hidden">
+          <div class="payment-process-left">
+            <div class="action-box is-pushed">
+              <div class="intructions-block">
+                <h2>Choose a shipping method</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe
+                  non potest. Sed plane dicit quod intellegit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="payment-process-right">
+            <div class="shipping-methods-grid">
+              <div class="columns is-multiline">
+                <!--Shipping Method-->
+                <div class="column is-6">
+                  <div class="method-card" data-shipping-rate="5.00">
+                    <input type="radio" name="shipping_methods" />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/ground.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Ground Shipping</h3>
+                        <p>
+                          If you want the traditional good old school method
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Shipping Method-->
+                <div class="column is-6">
+                  <div class="method-card" data-shipping-rate="15.00">
+                    <input type="radio" name="shipping_methods" />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/world.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Air Express</h3>
+                        <p>If you want to ship your items worldwide</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Shipping Method-->
+                <div class="column is-6">
+                  <div class="method-card" data-shipping-rate="65.00">
+                    <input type="radio" name="shipping_methods" />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/container.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>International</h3>
+                        <p>If you want to ship your items worldwide</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Shipping Method-->
+                <div class="column is-6">
+                  <div class="method-card" data-shipping-rate="6.50">
+                    <input type="radio" name="shipping_methods" />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/ups.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>UPS</h3>
+                        <p>If you want to use our dedicated UPS services</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Shipping Method-->
+                <div class="column is-6">
+                  <div class="method-card" data-shipping-rate="5.85">
+                    <input type="radio" name="shipping_methods" />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/usps.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>USPS</h3>
+                        <p>If you want to use our dedicated USPS services</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Shipping Method-->
+                <div class="column is-6">
+                  <div class="method-card" data-shipping-rate="9.95">
+                    <input type="radio" name="shipping_methods" />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/fedex.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Fedex Express</h3>
+                        <p>If you want to use our Fedex Express services</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Step 3-->
+        <div id="checkout-flow-step-2" class="payment-process-block is-hidden">
+          <div class="payment-process-left">
+            <div class="payment-methods-grid">
+              <div class="columns is-multiline">
+                <!--Payment Method-->
+                <div class="column is-6">
+                  <div class="method-card">
+                    <input
+                      id="paypal"
+                      type="radio"
+                      name="payment_methods"
+                      data-value-id="paypal"
+                    />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/paypal.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Paypal</h3>
+                        <p>
+                          If you want the traditional good old school method
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Payment Method-->
+                <div class="column is-6">
+                  <div class="method-card">
+                    <input
+                      id="stripe"
+                      type="radio"
+                      name="payment_methods"
+                      data-value-id="stripe"
+                    />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/stripe.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Stripe</h3>
+                        <p>
+                          If you want the traditional good old school method
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Payment Method-->
+                <div class="column is-6">
+                  <div class="method-card">
+                    <input
+                      id="visa"
+                      type="radio"
+                      name="payment_methods"
+                      data-value-id="credit-card"
+                    />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/visa.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Visa</h3>
+                        <p>If you want to ship your items worldwide</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Payment Method-->
+                <div class="column is-6">
+                  <div class="method-card">
+                    <input
+                      id="mastercard"
+                      type="radio"
+                      name="payment_methods"
+                      data-value-id="credit-card"
+                    />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/mastercard.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Mastercard</h3>
+                        <p>If you want to ship your items worldwide</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Payment Method-->
+                <div class="column is-6">
+                  <div class="method-card">
+                    <input
+                      id="cod"
+                      type="radio"
+                      name="payment_methods"
+                      data-value-id="cod"
+                    />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/cash.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Cash On Delivery</h3>
+                        <p>If you want to use our dedicated UPS services</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Payment Method-->
+                <div class="column is-6">
+                  <div class="method-card">
+                    <input
+                      id="bank-transfer"
+                      type="radio"
+                      name="payment_methods"
+                      data-value-id="bank-transfer"
+                    />
+                    <div class="method-card-inner">
+                      <div class="icon-container">
+                        <img
+                          src="assets/img/graphics/icons/checkout/bank.svg"
+                          alt=""
+                        />
+                        <div class="indicator gelatine">
+                          <i data-feather="check"></i>
+                        </div>
+                      </div>
+                      <div class="meta">
+                        <h3>Bank Transfer</h3>
+                        <p>If you want to use our dedicated USPS services</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-process-right">
+            <div class="action-box">
+              <div class="intructions-block">
+                <h2>Choose a payment method</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe
+                  non potest. Sed plane dicit quod intellegit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Step 4-->
+        <div id="checkout-flow-step-3" class="payment-process-block has-padding-bottom is-hidden">
+          <div class="payment-process-left">
+            <div class="action-box is-pushed">
+              <div class="intructions-block is-tablet-p-centered">
+                <h2>Proceed to payment</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe
+                  non potest. Sed plane dicit quod intellegit.
+                </p>
+                <div class="field">
+                  <div class="control">
+                    <label class="checkbox-wrap is-medium">
+                      <input type="checkbox" class="d-checkbox" checked />
+                      <span></span>
+                      Use my billing address for shipping
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-process-right">
+            <div class="payment-form">
+              <form>
+                <div class="form-inner">
+                  <div class="columns is-multiline">
+                    <div class="column is-12">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input is-medium"
+                            type="text"
+                            placeholder="Full Name"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="im im-icon-Mail"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-12">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input is-medium"
+                            type="text"
+                            placeholder="Card Number"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="im im-icon-Mail"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-6">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input is-medium"
+                            type="text"
+                            placeholder="CVC"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="im im-icon-Mail"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-6">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input is-medium"
+                            type="text"
+                            placeholder="EXP"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="im im-icon-Mail"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-12 optional-address-field is-hidden">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input is-medium"
+                            type="text"
+                            placeholder="Address line 1"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="im im-icon-Mail"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-12 optional-address-field is-hidden">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input is-medium"
+                            type="text"
+                            placeholder="Address line 2"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="im im-icon-Mail"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-6 optional-address-field is-hidden">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input is-medium"
+                            type="text"
+                            placeholder="City"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="im im-icon-Mail"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-6 optional-address-field is-hidden">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input
+                            class="input is-medium"
+                            type="text"
+                            placeholder="Zip/Postal Code"
+                          />
+                          <span class="icon is-small is-left">
+                            <i class="im im-icon-Mail"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-12 optional-address-field is-hidden">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <div class="select is-medium">
+                            <select>
+                              <option selected>Country</option>
+                              <option>Select dropdown</option>
+                              <option>With options</option>
+                            </select>
+                          </div>
+                          <div class="icon is-left">
+                            <i class="fa fa-globe"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column is-12">
+                      <div class="field">
+                        <div class="control">
+                          <button
+                            id="submit-payment"
+                            type="button"
+                            class="button payment-button is-fullwidth primary-btn raised is-bold"
+                          >
+                            Pay $237.45
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!--Step 5-->
+        <div id="checkout-flow-step-4" class="checkout-success is-hidden">
+          <div class="success-card">
+            <div class="success-content has-text-centered">
+              <div class="SuccessAnimation-box">
+                <svg
+                  class="SuccessAnimation is-primary animated is-hidden"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="70"
+                  height="70"
+                  viewBox="0 0 70 70"
+                >
+                  <path
+                    class="SuccessAnimationResult"
+                    fill="#D8D8D8"
+                    d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"
+                  />
+                  <circle
+                    class="SuccessAnimationCircle"
+                    cx="35"
+                    cy="35"
+                    r="24"
+                    stroke="#979797"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    fill="transparent"
+                  />
+                  <polyline
+                    class="SuccessAnimationCheck"
+                    stroke="#979797"
+                    stroke-width="2"
+                    points="23 34 34 43 47 27"
+                    fill="transparent"
+                  />
+                </svg>
+              </div>
+
+              <h3>Order Complete!</h3>
+              <p>
+                Thank you for placing your order! Your order is now complete and
+                we already started processing it.
+              </p>
+              <div class="button-wrap">
+                <button id="end-checkout-button" class="button primary-btn raised is-bold">
+                  My Orders
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="checkout-next"
+          class="payment-process-navigation has-text-centered"
+        >
+          <a class="button primary-btn raised is-bold">Continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

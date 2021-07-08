@@ -1,0 +1,1321 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Hero Elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Animated Icons Hero
+    1. Waves Hero
+    2. Waves Hero Dark
+    3. Slanted Hero
+    4. Waves Hero Alt
+    5. Wavy hero v1
+    6. Shape Layers
+    7. Animated Waves
+    8. Animated Gradient Hero
+    9. Blob Hero
+    10. Ecommerce hero
+    11. Subpage Hero
+    12. Header Form
+    13. Jobs Hero
+    13. Map Hero
+    14. Car Hero
+***/
+
+/* ==========================================================================
+0. Animated Icons Hero
+========================================================================== */
+
+#landing-hero {
+  background: $primary url(../img/graphics/legacy/icon-bg.png) repeat 0 0;
+  -webkit-animation: 18s linear 0s normal none infinite animate;
+  -moz-animation: 18s linear 0s normal none infinite animate;
+  -ms-animation: 18s linear 0s normal none infinite animate;
+  -o-animation: 18s linear 0s normal none infinite animate;
+  animation: 18s linear 0s normal none infinite animate;
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 0 -1450px;
+  }
+}
+
+/* ==========================================================================
+1. Waves Hero
+========================================================================== */
+
+.has-waves-bottom {
+  position: relative;
+
+  &:before {
+    background: transparent url(../img/graphics/legacy/wavy.png) no-repeat
+      scroll 0 (bottom / 100%) auto;
+    content: "";
+    height: 321px;
+    width: 100%;
+    z-index: 0 !important;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+}
+
+/* ==========================================================================
+2. Waves Hero Dark
+========================================================================== */
+
+.has-waves-bottom-dark {
+  position: relative;
+
+  &:before {
+    background: transparent url(../img/graphics/legacy/wavy-dark.png) no-repeat
+      scroll 0 (bottom / 100%) auto;
+    content: "";
+    height: 321px;
+    width: 100%;
+    z-index: 0 !important;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+}
+
+/* ==========================================================================
+3. Slanted Hero
+========================================================================== */
+
+.hero {
+  &.is-slant {
+    position: relative;
+
+    &:before {
+      background: transparent url(../img/graphics/legacy/slanted.svg) no-repeat
+        scroll 0 (bottom / 100%) auto;
+      content: "";
+      height: 150px;
+      width: 100%;
+      z-index: 1 !important;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+    }
+
+    .hero-body {
+      &.pricing-hero {
+        padding: 120px 0;
+      }
+
+      .clean-title {
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 3.4rem;
+        color: $blue-grey;
+        padding: 0;
+        line-height: 1.2;
+      }
+
+      .clean-hero-mockup {
+        position: relative;
+        margin-top: 80px;
+        z-index: 2;
+      }
+
+      .cta-wrapper {
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    &.is-slant {
+      .column {
+        &.caption-column {
+          .clean-title,
+          .subtitle,
+          .cta-wrapper {
+            text-align: center !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+4. Waves Hero Alt
+========================================================================== */
+
+.has-waves-bottom-alt {
+  position: relative;
+
+  &:before {
+    background: transparent url(../img/graphics/legacy/wavy-alt.png) no-repeat
+      scroll 0 (bottom / 100%) auto;
+    content: "";
+    height: 321px;
+    width: 100%;
+    z-index: 1 !important;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+
+  .columns {
+    margin-top: -180px;
+  }
+}
+
+.has-wavy-footer {
+  position: relative;
+
+  &:before {
+    background: transparent url(../img/graphics/legacy/wavy-alt.png) no-repeat
+      scroll 0 (bottom / 100%) auto;
+    content: "";
+    height: 321px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1 !important;
+  }
+}
+
+/* ==========================================================================
+5. Wavy hero v1
+========================================================================== */
+
+.is-wavy-bg {
+  &:before {
+    background: transparent url(../img/graphics/legacy/wavy-core.svg) no-repeat
+      scroll 0 (bottom / 100%) auto;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1 !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+body {
+  &.is-theme-core {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-core.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-purple {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-purple.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-teal {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-teal.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-green {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-green.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-azur {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-azur.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-blue {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-blue.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-night {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-night.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-yellow {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-yellow.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-orange {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-orange.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+
+  &.is-theme-red {
+    .hero {
+      &.is-wavy-bg:before {
+        background: transparent url(../img/graphics/legacy/wavy-red.svg)
+          no-repeat scroll 0 (bottom / 100%) auto;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+6. Shape Layers
+========================================================================== */
+
+.has-shape-layer-1 {
+  overflow: hidden;
+
+  .shape-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+  }
+}
+
+.has-shape-layer-2 {
+  overflow: hidden;
+
+  .shape-layer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+  }
+}
+
+/* ==========================================================================
+7. Animated Waves
+========================================================================== */
+
+.has-animated-waves {
+  position: relative;
+  z-index: 10;
+
+  &.waves-top {
+    .animated-waves {
+      top: 0;
+    }
+  }
+
+  &.waves-bottom {
+    .animated-waves {
+      bottom: 0;
+    }
+  }
+
+  .animated-waves {
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    &.is-reversed {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.waves-primary {
+  .animated-waves {
+    .parallax > use {
+      &:first-child {
+        fill: rgba($primary, 0.7) !important;
+      }
+
+      &:nth-child(2) {
+        fill: rgba($primary, 0.5) !important;
+      }
+
+      &:nth-child(3) {
+        fill: rgba($primary, 0.3) !important;
+      }
+
+      &:nth-child(4) {
+        fill: rgba($primary, 1) !important;
+      }
+
+      &:last-child {
+        fill: rgba($primary, 0.7) !important;
+      }
+    }
+  }
+}
+
+.waves-inverted {
+  .animated-waves {
+    .parallax > use {
+      &:first-child {
+        fill: rgba($white, 0.7) !important;
+      }
+
+      &:nth-child(2) {
+        fill: rgba($white, 0.5) !important;
+      }
+
+      &:nth-child(3) {
+        fill: rgba($white, 0.3) !important;
+      }
+
+      &:nth-child(4) {
+        fill: rgba($white, 1) !important;
+      }
+
+      &:last-child {
+        fill: rgba($white, 0.7) !important;
+      }
+    }
+  }
+}
+
+.animated-waves {
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 250px;
+  }
+
+  .parallax > use {
+    animation: move-forever 18s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .waves {
+      height: 40px;
+      min-height: 40px;
+    }
+
+    .content {
+      height: 30vh;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+/* ==========================================================================
+8. Animated Gradient Hero
+========================================================================== */
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  &.gradient-hero {
+    background: $primary;
+    background: linear-gradient(-45deg, $accent, $primary, $primary, $accent);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+
+  &.gradient-hero,
+  &.slant-laptop-hero {
+    position: relative;
+
+    .slant-shape {
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      z-index: 1 !important;
+    }
+
+    .hero-caption {
+      padding-bottom: 150px;
+    }
+
+    .laptop-container {
+      position: relative;
+
+      .laptop {
+        position: relative;
+        z-index: 1 !important;
+      }
+
+      .laptop-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0 !important;
+      }
+    }
+
+    .hero-foot {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &.rounded-hero {
+    position: relative;
+    z-index: 3;
+
+    &.is-active {
+      .absolute-header {
+        transform: translateY(0);
+
+        .header-inner {
+          .states {
+            opacity: 1;
+            transform: translateY(-50%) scale(1);
+          }
+        }
+      }
+
+      .hero-body {
+        .hero-mockup {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+
+    .hero-body {
+      .hero-mockup {
+        display: block;
+        max-width: 740px;
+        margin: 0 auto;
+        transform: translateY(10px);
+        opacity: 0;
+        border-radius: 12px;
+        box-shadow: $light-box-shadow;
+        pointer-events: none;
+        transition: all 0.4s;
+        transition-delay: 0.3s;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .is-hero-title {
+    z-index: 2;
+
+    h1,
+    h2 {
+      color: $white;
+    }
+  }
+}
+
+.absolute-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 580px;
+  background: $primary;
+  background: linear-gradient(-45deg, darken($primary, 8%), $primary, $primary, darken($primary, 8%));
+  transform: translateY(-100%);
+  transition: all 0.3s;
+
+  .header-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .cut-circle {
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .rounded-hero {
+    min-height: 75vh !important;
+
+    .absolute-header {
+      height: 500px;
+    }
+
+    .hero-body {
+      .hero-mockup {
+        max-width: 340px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero {
+    &.gradient-hero {
+      .is-hero-title {
+        text-align: center !important;
+
+        .buttons {
+          justify-content: center;
+        }
+      }
+    }
+
+    &.rounded-hero {
+      min-height: 75vh !important;
+
+      .hero-body {
+        .hero-mockup {
+          max-width: 610px !important;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+9. Blob Hero
+========================================================================== */
+
+.blob-hero {
+  .morphing-blob-wrapper {
+    position: absolute;
+    opacity: 0.6;
+
+    &.is-blob-1 {
+      top: 20%;
+      right: 12%;
+    }
+
+    &.is-blob-2 {
+      bottom: 20%;
+      left: 12%;
+      transform: scale(0.7);
+    }
+
+    &.is-blob-3 {
+      bottom: 10%;
+      right: 5%;
+      transform: scale(0.4);
+    }
+
+    &.is-blob-4 {
+      top: 2%;
+      left: 30%;
+      transform: scale(0.2);
+    }
+
+    &.is-blob-5 {
+      bottom: 45%;
+      left: 10%;
+      transform: scale(0.4);
+    }
+
+    &.is-blob-6 {
+      bottom: 25%;
+      left: 2%;
+      transform: scale(0.3);
+    }
+
+    &.is-blob-7 {
+      top: -12%;
+      left: -8%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .blob-hero {
+    .morphing-blob-wrapper {
+      &.is-blob-1 {
+        top: 17%;
+        right: -27%;
+        transform: scale(0.1);
+      }
+
+      &.is-blob-2 {
+        display: none;
+      }
+
+      &.is-blob-3 {
+        bottom: -1%;
+        right: -26%;
+      }
+
+      &.is-blob-4 {
+        top: -3%;
+        left: 46%;
+      }
+
+      &.is-blob-5 {
+        bottom: 45%;
+        left: -38%;
+      }
+
+      &.is-blob-6 {
+        bottom: -9%;
+        left: -17%;
+      }
+
+      &.is-blob-7 {
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+10. Ecommerce hero
+========================================================================== */
+
+.hero {
+  position: relative;
+
+  &.type-1 {
+    &.is-cover {
+      background-size: cover !important;
+    }
+
+    .hero-shape-commerce {
+      position: absolute;
+      top: unset;
+      bottom: -1px !important;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100%;
+      z-index: 1 !important;
+    }
+
+    .is-hero-caption {
+      position: relative;
+      z-index: 2;
+
+      .field-wrap {
+        .field {
+          margin-bottom: 4px;
+
+          .control:first-child {
+            flex-grow: 2;
+          }
+        }
+
+        .form-text {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &.type-2 {
+    &.type-2-light {
+      background: $widget-grey;
+
+      .is-hero-caption {
+        .field-wrap {
+          .form-text {
+            color: $muted-grey;
+          }
+        }
+      }
+    }
+
+    &.type-2-heavy {
+      background: $primary;
+
+      .is-hero-caption {
+        .field-wrap {
+          .form-text {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .hero-shape-commerce {
+      position: absolute;
+      top: unset;
+      bottom: -1px !important;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100%;
+      z-index: 1 !important;
+    }
+
+    .hero-shape {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100%;
+      z-index: 1 !important;
+    }
+
+    .is-hero-caption {
+      position: relative;
+      z-index: 2;
+
+      .field-wrap {
+        .field {
+          margin-bottom: 4px;
+
+          .control:first-child {
+            flex-grow: 2;
+          }
+        }
+      }
+    }
+  }
+
+  .large-input {
+    height: 46px;
+  }
+}
+
+.parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #333;
+  opacity: 0.4;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    &.type-1 {
+      .is-hero-caption {
+        text-align: center;
+
+        .field-wrap {
+          .field {
+            flex-direction: column;
+
+            .control {
+              &:first-child {
+                margin-bottom: 8px;
+                margin-right: 0;
+              }
+
+              .button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+11. Subpage Hero
+========================================================================== */
+
+.sub-hero {
+  background: #f2f2fa;
+
+  &.has-shapes {
+    .sub-hero-container {
+      .sub-hero-content {
+        overflow: hidden;
+        position: relative;
+        box-shadow: $primary-box-shadow;
+
+        .square {
+          position: absolute;
+
+          &.square-1 {
+            top: -20px;
+            left: -16px;
+            transform: rotate(124deg);
+            height: 68px;
+            width: 68px;
+            border-radius: 12px;
+            background: darken($primary, 6%);
+          }
+
+          &.square-2 {
+            bottom: 20px;
+            right: -16px;
+            transform: rotate(194deg);
+            height: 88px;
+            width: 88px;
+            border-radius: 16px;
+            background: darken($primary, 6%);
+          }
+
+          &.square-3 {
+            top: -90px;
+            right: 35%;
+            transform: rotate(234deg);
+            height: 160px;
+            width: 160px;
+            border-radius: 26px;
+            background: darken($primary, 6%);
+          }
+
+          &.square-4 {
+            top: 50%;
+            left: 15%;
+            transform: rotate(32deg);
+            height: 48px;
+            width: 48px;
+            border-radius: 8px;
+            background: darken($primary, 6%);
+          }
+
+          &.square-5 {
+            top: 30%;
+            left: 25%;
+            transform: rotate(60deg);
+            height: 18px;
+            width: 18px;
+            border-radius: 6px;
+            border: 2px solid lighten($primary, 16%);
+          }
+
+          &.square-6 {
+            top: 28%;
+            left: 32%;
+            transform: rotate(120deg);
+            height: 32px;
+            width: 32px;
+            border-radius: 6px;
+            border: 2px solid lighten($primary, 16%);
+          }
+
+          &.square-7 {
+            top: 24%;
+            left: 27%;
+            transform: rotate(60deg);
+            height: 10px;
+            width: 10px;
+            border-radius: 3px;
+            border: 1.4px solid lighten($primary, 16%);
+          }
+        }
+      }
+    }
+  }
+
+  .hero-body {
+    &.is-narrow {
+      padding-top: 20px;
+    }
+  }
+
+  .sub-hero-container {
+    position: relative;
+    display: flex;
+    border-radius: 12px;
+    background: $primary;
+
+    .sub-hero-content {
+      text-align: center;
+      width: 100%;
+      padding: 4rem;
+      border-radius: 12px;
+
+      h1,
+      h3 {
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+    .sub-hero-search {
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      box-shadow: $light-box-shadow;
+      background: $white;
+      padding: 10px;
+      border-radius: 10px;
+
+      .search-inner {
+        display: flex;
+
+        .control {
+          flex-grow: 2;
+          margin-right: 12px;
+
+          &:first-child {
+            border-right: 1px solid darken($fade-grey, 3%);
+          }
+
+          .input {
+            border: none;
+            min-height: 46px;
+            max-height: 46px;
+            padding-left: 46px;
+          }
+
+          .icon {
+            height: 46px;
+
+            i {
+              font-size: 18px;
+              transition: color 0.3s;
+            }
+          }
+        }
+
+        .button {
+          min-height: 46px;
+          max-height: 46px;
+          min-width: 120px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sub-hero {
+    .sub-hero-container {
+      flex-direction: column;
+
+      .sub-hero-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0;
+
+        .square {
+          &.square-3,
+          &.square-5,
+          &.square-6,
+          &.square-7 {
+            display: none;
+          }
+        }
+      }
+
+      .sub-hero-search {
+        position: relative;
+        top: 0;
+        width: calc(100% - 40px);
+        margin: 0 20px 20px 20px;
+
+        .search-inner {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+12. Hero Form
+========================================================================== */
+
+.hero-form {
+  .flex-card {
+    padding: 30px;
+    border: 1px solid darken($fade-grey, 3%);
+    box-shadow: $light-box-shadow;
+    border-radius: 10px;
+    max-width: 380px;
+    margin: 0 auto;
+
+    .field {
+      > label {
+        display: inline-block;
+        font-size: 0.9rem;
+        font-weight: 500;
+        font-family: $font-text;
+        margin-bottom: 6px;
+        padding: 0;
+
+        small {
+          color: $danger;
+        }
+      }
+
+      .control {
+        .input {
+          font-size: 1rem;
+          font-family: $font-text;
+          padding-left: 42px;
+
+          &:not(:focus) {
+            border-color: $input-border;
+          }
+        }
+
+        .button {
+          line-height: 0;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+13. Jobs Hero
+========================================================================== */
+
+.jobs-hero {
+  .hero-body {
+    align-items: flex-start !important;
+
+    .is-hero-caption {
+      .title {
+        font-family: $font-sub;
+        margin-bottom: 6px !important;
+      }
+
+      .subtitle {
+        margin-bottom: 10px !important;
+      }
+    }
+  }
+
+  .jobs-hero-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .jobs-hero {
+    .hero-body {
+      .container > .columns {
+        padding: 0 0;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+13. Map Hero
+========================================================================== */
+
+.mapbox-hero {
+  position: relative;
+
+  .hero-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.countdown {
+  &.is-light {
+    li {
+      color: $white;
+    }
+  }
+
+  li {
+    display: inline-block;
+    font-family: $font-text;
+    font-weight: 300;
+    font-size: 1.25rem;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    color: $blue-grey;
+  }
+
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+}
+
+/* ==========================================================================
+14. Car Hero
+========================================================================== */
+
+.car-hero {
+    position: relative;
+  
+    .main-image {
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+    .left-image,
+    .right-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+    .right-image {
+      z-index: 0;
+  
+      &.is-active {
+        transform: translate(-44px, -40px);
+      }
+      transition: all 0.55s ease-out;
+    }
+  
+    .left-image {
+      top: -4rem;
+      z-index: 1;
+  
+      &.is-active {
+        transform: translate(44px, 44px);
+      }
+      transition: all 0.55s ease-out;
+    }
+  }
+  
+  .is-car-layer {
+    bottom: -150px !important;
+    transition: all 0.6s;
+  
+    &.is-active {
+      bottom: 0 !important;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .car-hero-wrap {
+      .title,
+      .subtitle {
+        text-align: center;
+      }
+  
+      .hero-form {
+        margin-top: 2rem;
+  
+        .flex-card {
+          padding-top: 0;
+          padding-bottom: 0;
+          background: transparent;
+          box-shadow: none;
+          border: none;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .car-hero-wrap {
+      .title,
+      .subtitle {
+        text-align: center;
+      }
+  
+      .hero-form {
+        margin-top: 2rem;
+  
+        .flex-card {
+          display: block;
+          padding-top: 0;
+          padding-bottom: 0;
+          background: transparent;
+          box-shadow: none;
+          border: none;
+          margin: 0 auto;
+        }
+      }
+    }
+  }

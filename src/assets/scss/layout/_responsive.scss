@@ -1,4 +1,4 @@
-/*! _responsive.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 General responsive styles
@@ -20,10 +20,6 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @media (max-width: 767px) {
-    .content-wrapper {
-        //padding-top: 40px !important;
-   
-    }
 
     .navbar {
         &.is-dark-mobile {
@@ -47,6 +43,46 @@ TABLE OF CONTENTS
         }
 
         .navbar-item {
+
+            &.mobile-account {
+                display: flex !important;
+
+                .account-dropdown {
+                    .dropdown-menu {
+                        width: calc(100vw - 20px);
+                    }
+
+                    .dropdown-item {
+                        padding-top: .5rem;
+                        padding-bottom: .5rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            &.mobile-cart, &.mobile-wishlist {
+                display: flex !important;
+
+                .shopping-cart, .shopping-wishlist {
+                    width: calc(100vw - 20px);
+                    position: fixed;
+                    top: 68px;
+                    left: 10px;
+                }
+
+                .shopping-cart {
+                    &::before, &::after {
+                        left: 79%;
+                    }
+                }
+
+                .shopping-wishlist {
+                    &::before, &::after {
+                        left: 62%;
+                    }
+                }
+            }
+
             &.is-mega {
                 .is-megamenu {
                     max-height: 275px;
@@ -376,6 +412,11 @@ TABLE OF CONTENTS
         }
 
         .navbar-item {
+            
+            &.mobile-account, &.mobile-cart, &.mobile-wishlist {
+                display: flex !important;
+            }
+
             &.is-mega {
                 .is-megamenu {
                     max-height: 275px;
@@ -424,11 +465,6 @@ TABLE OF CONTENTS
         }
     }
 
-    .content-wrapper {
-        //padding-top: 0 !important;
-   
-    }
-
     p {
         &.is-tablet-padded {
             padding: 0 10%;
@@ -454,6 +490,11 @@ TABLE OF CONTENTS
 
     .is-flex-portrait {
         display: flex;
+        flex-wrap: wrap;
+
+        .flex-portrait-4 {
+            min-width: 33.3%;
+        }
     }
 
     #component-page {

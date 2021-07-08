@@ -1,0 +1,1069 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Box features SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Boxed features
+    1. Feature Line
+    2. Agency icon box
+    3. Startup icon box
+    4. Wavy Icon Box
+    5. Square Icon Box
+    6. Icon Box
+
+***/
+
+/* ==========================================================================
+0. Boxed features
+========================================================================== */
+
+.boxed-features {
+  padding: 40px 0;
+
+  .flex-card {
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .flex-cell {
+          width: 25%;
+          border-right: 1px solid darken($fade-grey, 3%);
+          text-align: center;
+          padding: 24px 16px;
+
+          &.is-bordered {
+              border-bottom: 1px solid darken($fade-grey, 3%);
+          }
+
+          &.no-border-edge {
+              border-right: none;
+          }
+
+          i {
+              font-size: 2.2rem;
+              color: $primary;
+          }
+
+          h3 {
+              font-weight: 500;
+              color: $blue-grey;
+          }
+
+          p {
+              font-size: .95rem;
+              color: $muted-grey;
+              max-width: 200px;
+              margin: 0 auto;
+          }
+      }
+  }
+}
+
+@media (max-width: 767px) {
+  .boxed-features {
+      .flex-card {
+          .flex-cell {
+              width: 100%;
+              border-right: none;
+              border-bottom: 1px solid darken($fade-grey, 3%);
+
+              &:last-child {
+                  border-bottom: none;
+              }
+          }
+      }
+  }
+}
+
+/* ==========================================================================
+1. Feature Line
+================ ========================================================== */
+
+.feature-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+      padding: 0 16px;
+      color: $muted-grey;
+
+      i {
+          margin-right: 4px;
+      }
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-line {
+      > span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+  }
+}
+
+/* ==========================================================================
+2. Agency icon box
+========================================================================== */
+
+.agency-icon-box {
+  i {
+      font-size: 3.4rem;
+      font-weight: normal;
+      color: $primary;
+  }
+
+  .box-title {
+      padding: 10px 0;
+      font-size: 16px;
+      line-height: 22px;
+      font-family: $font-sub;
+      font-weight: 600;
+      color: $blue-grey;
+  }
+
+  .box-content {
+      color: $title-grey;
+  }
+}
+
+@media (max-width: 767px) {
+  .agency-icon-box {
+      text-align: center;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .agency-icon-box {
+      text-align: center;
+
+      .title-divider {
+          margin: 0 auto;
+      }
+  }
+}
+
+/* ==========================================================================
+3. Startup icon box
+========================================================================== */
+
+.startup-icon-box {
+  padding: 20px 0;
+
+  i {
+      font-size: 3.8rem;
+      font-weight: normal;
+      color: $primary;
+  }
+
+  .box-title {
+      font-family: $font-sub;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 700;
+      color: $blue-grey;
+      padding: 5px 0;
+  }
+
+  .box-content {
+      color: $muted-grey;
+  }
+}
+
+/* ==========================================================================
+4. Wavy Icon Box
+========================================================================== */
+
+.wavy-icon-box {
+  i {
+      font-size: 3.8rem;
+      font-weight: normal;
+      color: $primary;
+  }
+
+  .box-title {
+      font-family: $font-sub;
+      padding: 5px 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      color: $primary;
+  }
+
+  .box-content {
+      color: $muted-grey;
+  }
+}
+
+/* ==========================================================================
+5. Square Icon Box
+========================================================================== */
+
+.square-icon-box {
+  &.is-landing {
+      .box-title {
+          font-family: $font-sub;
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: $blue-grey;
+      }
+
+      .box-text {
+          font-family: $font-text !important;
+          font-size: .95rem !important;
+          font-weight: 400 !important;
+          color: $blue-grey-light !important;
+      }
+  }
+
+  &.is-chat {
+      .box-title {
+          font-family: 'Nexa Light';
+          font-size: 1.1rem;
+          font-weight: 700;
+      }
+
+      .box-text {
+          font-size: 14px;
+      }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .square-icon-box {
+      .box-text {
+          padding: 0 15%;
+      }
+  }
+}
+
+/* ==========================================================================
+6. Icon Box
+========================================================================== */
+
+.icon-box {
+  &.is-spaced {
+      .box-icon {
+          margin-bottom: 0;
+      }
+
+      .box-title {
+          margin: 0;
+          padding: 5px 0;
+          font-weight: 700;
+      }
+  }
+}
+
+/* ==========================================================================
+7. Icon List
+========================================================================== */
+
+.company-types {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid darken($fade-grey, 3%);
+  box-shadow: $light-box-shadow;
+}
+
+/* ==========================================================================
+8. Chat icon box
+========================================================================== */
+
+.chat-icon-box {
+  i {
+      font-size: 3.8rem;
+      font-weight: normal;
+      color: $primary;
+  }
+
+  .box-title {
+      font-family: $font-sub;
+      padding: 5px 0;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      color: $primary;
+  }
+}
+
+/* ==========================================================================
+9. Feature box
+========================================================================== */
+
+.is-feature {
+  border: 1px solid lighten($fade-grey, 3%);
+  border-radius: 6px;
+  box-shadow: inset rgba(143, 160, 241, 0.09) 0 0 0 1px, rgba(213, 220, 247, 0.22) 0 10px 20px;
+
+  &.is-link {
+      border: 1px solid lighten($border, 3%);
+      transition: transform .3s, box-shadow .3s, border .3s;
+
+      &:hover {
+          border-color: $primary;
+          transform: translateY(-5px);
+          box-shadow: $light-box-shadow;
+      }
+  }
+
+  .icon-container {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      background: $widget-grey;
+
+      img {
+          height: 40px;
+          width: 40px;
+          display: block;
+      }
+  }
+
+  .image-container {
+      img {
+          display: block;
+      }
+  }
+
+  .content-container {
+      h3 {
+          padding: 10px 0;
+          font-family: $font-main;
+      }
+
+      p {
+          font-size: .95rem;
+          font-family: 'Roboto', sans-serif;
+          color: $muted-grey;
+      }
+  }
+}
+
+/* ==========================================================================
+10. Icon Feature
+========================================================================== */
+
+.icon-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &:hover {
+      .icon-block .icon-inner {
+          border-bottom-color: $secondary;
+      }
+
+      .feature-text {
+          h3 {
+              color: $secondary;
+          }
+      }
+  }
+
+  .icon-block {
+      border-radius: 6px;
+      height: 100px;
+      width: 100px;
+
+      .icon-inner {
+          box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.18) !important;
+          height: 100px;
+          width: 100px;
+          display: flex;
+          border-radius: 6px;
+          justify-content: center;
+          align-items: center;
+          border: 3px solid transparent;
+          transition: all .3s;
+
+          img {
+              height: 46px;
+              width: 46px;
+          }
+      }
+  }
+
+  .feature-text {
+      margin: 0 20px;
+
+      h3 {
+          color: $blue-grey;
+          font-family: $font-main;
+          font-weight: 500;
+          font-size: 1.2rem;
+          margin-bottom: 6px;
+          transition: all .3s;
+      }
+
+      p {
+          color: $muted-grey;
+      }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .icon-feature {
+      .icon-block {
+          height: 70px !important;
+          width: 70px !important;
+
+          .icon-inner {
+              height: 70px !important;
+              width: 70px !important;
+
+              img {
+                  height: 38px !important;
+                  width: 38px !important;
+              }
+          }
+      }
+
+      .feature-text {
+          margin-right: 0 !important;
+          font-size: .95rem !important;
+      }
+  }
+}
+
+@media (max-width: 767px) {
+  .icon-feature {
+      .icon-block {
+          height: 70px !important;
+          width: 70px !important;
+
+          .icon-inner {
+              height: 70px !important;
+              width: 70px !important;
+
+              img {
+                  height: 38px !important;
+                  width: 38px !important;
+              }
+          }
+      }
+
+      .feature-text {
+          margin-right: 0 !important;
+          font-size: .95rem !important;
+      }
+  }
+}
+
+/* ==========================================================================
+11. Box Wrap
+========================================================================== */
+
+.box-wrap {
+  &.is-one-page {
+      margin-top: -50px;
+      text-align: left;
+
+      .icon-box {
+          text-align: left;
+          width: 100%;
+          border: 1px solid $fade-grey;
+          border-radius: 8px;
+          background: $white;
+          padding: 30px 20px;
+          box-shadow: $light-box-shadow;
+
+          img {
+              display: block;
+              width: 55px;
+              margin: 0;
+          }
+
+          .box-title {
+              font-family: $font-main;
+              color: $blue-grey;
+              padding: 10px 0;
+          }
+
+          h4 {
+              margin-bottom: 0;
+          }
+
+          p {
+              font-size: .9rem;
+              color: $muted-grey;
+          }
+      }
+  }
+
+  &.is-one-page-2 {
+      margin-top: 60px;
+
+      .icon-box {
+          width: 100%;
+          background: $white;
+          padding: 30px 20px;
+          border: 1px solid darken($fade-grey, 3%);
+          border-radius: 8px;
+          box-shadow: $light-box-shadow;
+          text-align: center;
+
+          img {
+              display: block;
+              width: 65px;
+              margin: 0 auto 6px auto;
+          }
+
+          .box-title {
+              font-family: $font-main;
+              color: $blue-grey;
+              padding: 6px 0;
+          }
+
+          p {
+              font-size: .9rem;
+              color: $muted-grey;
+          }
+      }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .box-wrap {
+      &.is-one-page, &.is-one-page-2 {
+          margin-top: 0;
+      }
+  }
+}
+
+/* ==========================================================================
+12. Side Blocks
+========================================================================== */
+
+.side-title {
+  position: relative;
+
+  .title-number {
+      position: absolute;
+      top: -70px;
+      left: 0;
+      font-size: 7rem;
+      font-family: $font-main;
+      font-weight: 700;
+      color: $blue-grey;
+      opacity: .1;
+  }
+}
+
+.side-paragraph {
+  color: $muted-grey;
+  font-size: 1.3rem;
+  max-width: 450px;
+
+  &.is-small {
+      font-size: 1rem;
+  }
+
+  &.has-margin {
+      margin-top: 20px;
+  }
+}
+
+.side-image {
+  position: relative;
+  z-index: 2;
+  transition: all .5s;
+  transform: translateX(0);
+
+  &.is-pulled {
+      transform: translateX(-80px);
+  }
+}
+
+.shadow-side-image {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: block;
+  height: calc(100% - 20px);
+  z-index: 1;
+  transform: translateX(60px);
+  transition: all .5s;
+
+  &.is-active {
+      transform: translateX(-30px);
+  }
+}
+
+.side-card {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid darken($fade-grey, 1%);
+  background: $white;
+  display: flex;
+  align-items: center;
+  box-shadow: $light-box-shadow;
+  margin-bottom: 20px;
+  transition: all .3s;
+
+  &:last-child {
+      margin-bottom: 0;
+  }
+
+  &:hover {
+      transform: translateY(-5px);
+
+      .round-icon {
+          background: $sidebar !important;
+      }
+  }
+
+  .round-icon {
+      height: 60px;
+      width: 60px;
+      min-width: 60px;
+      border-radius: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .3s;
+
+      &.is-primary {
+          background: $primary;
+      }
+
+      &.is-accent {
+          background: $accent;
+      }
+
+      svg {
+          height: 28px;
+          width: 28px;
+          stroke: $smoke-white;
+          stroke-width: 1px;
+      }
+  }
+
+  .meta {
+      margin-left: 16px;
+
+      span, a {
+          display: block;
+
+          &:first-child {
+              font-weight: 500;
+              color: $blue-grey;
+          }
+
+          &:nth-child(2) {
+              color: $muted-grey;
+              font-size: .9rem;
+          }
+
+          &:nth-child(3) {
+              color: $primary;
+              font-size: .95rem;
+
+              &:hover {
+                  text-decoration: underline;
+              }
+          }
+      }
+  }
+}
+
+/* ==========================================================================
+13. Feature blocks
+========================================================================== */
+
+.feature-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &:last-child {
+      margin-bottom: 0;
+  }
+
+  .round-icon {
+      height: 54px;
+      width: 54px;
+      min-width: 54px;
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: darken($sidebar, 8%);
+      transition: all .3s;
+
+      img {
+          display: block;
+          height: 36px;
+          width: 36px;
+      }
+  }
+
+  .meta {
+      margin-left: 16px;
+
+      span, a {
+          display: block;
+
+          &:first-child {
+              font-weight: 500;
+              font-size: 1rem;
+              color: $smoke-white;
+          }
+
+          &:nth-child(2) {
+              color: $smoke-white;
+              font-size: .9rem;
+              max-width: 350px;
+          }
+      }
+  }
+}
+
+/* ==========================================================================
+14. Partners
+========================================================================== */
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  img {
+      display: block;
+      height: 80px;
+      margin: 0 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .partner-logos {
+      img {
+          height: 54px !important;
+          margin: 0 12px !important;
+      }
+  }
+}
+
+/* ==========================================================================
+15. Themes
+========================================================================== */
+
+.theme-list {
+  padding: 30px 0;
+
+  a {
+      &:hover {
+          .theme-preview {
+              filter: grayscale(0);
+              opacity: 1;
+              transform: translateY(-5px);
+          }
+      }
+
+      .theme-preview {
+          display: block;
+          border-radius: 14px;
+          box-shadow: $morph-shadow;
+          filter: grayscale(1);
+          opacity: .6;
+          transition: all .3s;
+      }
+  }
+}
+
+.theme-feature {
+  display: flex;
+
+  .feature-icon {
+      i {
+          color: $primary;
+      }
+  }
+
+  h5 {
+      font-weight: 500;
+      color: $blue-grey;
+  }
+
+  p {
+      color: $muted-grey;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .theme-list {
+      display: flex;
+
+      .column {
+          width: 50%;
+          min-width: 50%;
+          flex-grow: 2;
+      }
+  }
+
+  .theme-features {
+      display: flex;
+
+      .theme-feature {
+          p {
+              font-size: .9rem;
+          }
+      }
+  }
+}
+
+/* ==========================================================================
+16. Side Features
+========================================================================== */
+
+.is-side-feature {
+  .text-column {
+      position: relative;
+
+      h3 {
+          margin-bottom: .75rem;
+      }
+
+      p {
+          color: $muted-grey;
+          font-size: 1.1rem;
+      }
+  }
+
+  .media-column {
+      position: relative;
+
+      .pattern {
+          position: absolute;
+          top: 20px;
+          display: block;
+          width: 130px;
+          opacity: .5;
+          z-index: 0;
+
+          &.is-left {
+              left: 111px;
+          }
+
+          &.is-right {
+              right: 110px;
+          }
+      }
+
+      .mockup {
+          position: relative;
+          z-index: 1;
+      }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .is-side-feature {
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+17. Icon Box Group
+========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .presentation-tools {
+      display: flex;
+
+      .content-flex {
+          flex-direction: column;
+          text-align: center;
+
+          > div:nth-child(2) {
+              margin-left: 0 !important;
+              text-align: center !important;
+          }
+      }
+  }
+}
+
+/* ==========================================================================
+18. Stat counters
+========================================================================== */
+
+.stat-boxes-wrapper {
+  .stat-box {
+      width: 100%;
+      text-align: center;
+
+      .stat-icon {
+          img {
+              display: block;
+              height: 80px;
+              margin: 0 auto;
+          }
+      }
+
+      .stat-count {
+          display: flex;
+          justify-content: center;
+          align-items: baseline;
+          padding: 8px 0 0 0;
+
+          span {
+              display: block;
+              font-weight: 700;
+              font-size: 2rem;
+              color: $blue-grey;
+          }
+
+          small {
+              font-size: 1.4rem;
+              font-weight: 700;
+              margin-left: 4px;
+              color: $blue-grey;
+          }
+      }
+
+      p {
+          color: $muted-grey;
+          font-weight: 500;
+      }
+  }
+}
+
+/* ==========================================================================
+19. Business Types
+========================================================================== */
+
+.business-types {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0 20px 0;
+  max-width: 780px;
+  margin: 0 auto;
+
+  .business-type {
+      position: relative;
+      text-align: center;
+      width: calc(33.3% - 24px);
+      margin: 12px;
+      z-index: 1;
+
+      .inner {
+          padding: 20px;
+          border-radius: 16px;
+          box-shadow: $morph-shadow;
+          background: $white;
+
+          .inner-icon {
+              margin: 0 auto;
+
+              img {
+                  display: block;
+                  margin: 0 auto;
+                  max-width: 100px;
+              }
+          }
+
+          .inner-text {
+              font-weight: 500;
+              font-size: 1.2rem;
+              color: $blue-grey;
+          }
+      }
+  }
+}
+
+.extra-word {
+  display: flex;
+  max-width: 540px;
+  margin: 20px auto;
+
+  .avatar-wrap {
+      height: 100px;
+      width: 100px;
+      min-width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 2px solid $primary;
+      box-shadow: $morph-shadow;
+
+      img {
+          display: block;
+          height: 80px;
+          width: 80px;
+          min-width: 80px;
+          border-radius: 50%;
+      }
+  }
+
+  .text {
+      margin-left: 16px;
+
+      p {
+          color: $muted-grey;
+          margin-bottom: 6px;
+
+          .fa {
+              color: $primary;
+          }
+
+          .fa-quote-left {
+              padding-right: 5px;
+          }
+
+          .fa-quote-right {
+              padding-left: 5px;
+          }
+      }
+
+      span {
+          display: block;
+
+          &:nth-child(2) {
+              color: $blue-grey;
+              font-weight: 500;
+          }
+
+          &:nth-child(3) {
+              font-size: .9rem;
+              color: $muted-grey;
+          }
+      }
+  }
+}
+
+@media (max-width: 767px) {
+  .business-types {
+      .business-type {
+          width: calc(100% - 24px);
+      }
+  }
+
+  .extra-word {
+      flex-direction: column;
+      text-align: center;
+
+      .avatar-wrap {
+          margin: 0 auto 12px auto;
+      }
+
+      .text {
+          margin-left: 0;
+      }
+  }
+}

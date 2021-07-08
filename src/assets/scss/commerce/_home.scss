@@ -1,0 +1,600 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/***
+TABLE OF CONTENTS
+    0. Rounded Parallax
+    1. Shop hero
+    2. Shop toolbar
+    3. Popular categories
+    4. Grid Products
+    5. Brands
+    6. Supported payment gateways
+    7. Special section image
+***/
+
+/* ==========================================================================
+0. Rounded Parallax
+========================================================================== */
+
+.parallax-rounded-section {
+  border-radius: 1.75rem;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+1. Shop hero
+========================================================================== */
+
+.shop-hero {
+  width: 100%;
+  display: flex;
+
+  .shop-hero-box {
+    position: relative;
+    width: 33.33%;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0;
+    border: none;
+    background: none;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .overlay-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+
+      .overlay-content {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .inner-content {
+          padding: 40px;
+          color: $white;
+
+          .episode-title {
+            font-family: $font-main;
+            font-size: 3.5rem;
+            font-weight: bolder;
+            line-height: 43px;
+            color: $smoke-white;
+            margin-bottom: 6px;
+          }
+
+          .episode-meta {
+            display: flex;
+            align-items: center;
+
+            img {
+              display: block;
+              height: 30px;
+              width: 30px;
+              min-width: 30px;
+              border-radius: 50%;
+              margin-right: 6px;
+            }
+
+            .meta-item {
+              display: block;
+              font-size: 0.82rem;
+              font-weight: 500;
+              color: darken($smoke-white, 8%);
+              transition: color 0.3s;
+
+              &.is-hoverable:hover {
+                color: $primary;
+              }
+            }
+
+            .separator {
+              padding: 0 10px;
+              font-size: 0.8rem;
+              color: darken($smoke-white, 10%);
+              opacity: 0.6;
+              text-align: center;
+              color: $smoke-white;
+            }
+          }
+        }
+      }
+    }
+
+    .box-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to top, #161616, rgba(255, 0, 0, 0));
+      z-index: 0;
+    }
+  }
+}
+
+/* ==========================================================================
+2. Shop toolbar
+========================================================================== */
+
+.shop-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  h4 {
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 2rem;
+    color: $blue-grey;
+  }
+
+  .links {
+    .link {
+      display: flex;
+      align-items: center;
+      color: $light-blue-grey;
+
+      &:hover {
+        color: $primary;
+
+        svg {
+          transform: translateX(5px);
+        }
+      }
+
+      span {
+        font-family: $font-text;
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-left: 0.5rem;
+        transition: transform 0.3s, stroke 0.3s;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+3. Popular categories
+========================================================================== */
+
+.popular-categories {
+  .box {
+    &.is-category {
+      display: flex;
+      align-items: center;
+      border: 1px solid $border-light;
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+      box-shadow: $light-box-shadow;
+      transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      margin-bottom: 1.5rem;
+
+      &:hover {
+        background: $primary;
+        border-color: $primary;
+        box-shadow: $primary-box-shadow;
+
+        .left {
+          h3,
+          p {
+            color: $white;
+          }
+
+          p {
+            color: $white !important;
+            opacity: 0.75;
+          }
+        }
+
+        .right {
+          img {
+            transform: scale(1.25) translateY(-5px);
+          }
+        }
+      }
+
+      .left {
+        width: 60%;
+
+        h3 {
+          font-family: $font-main;
+          font-size: 1.25rem;
+          color: $blue-grey;
+        }
+
+        p {
+          font-family: $font-text;
+          font-size: 0.9rem;
+          color: $blue-grey;
+
+          &:last-child {
+            font-weight: 500;
+            margin-top: 0.55rem;
+            color: $light-blue-grey;
+          }
+        }
+      }
+
+      .right {
+        position: relative;
+        width: 40%;
+        min-height: 120px;
+
+        img {
+          position: absolute;
+          top: -20%;
+          right: 0;
+          width: 100%;
+          transform: scale(1.25);
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+4. Grid Products
+========================================================================== */
+
+.grid-products {
+  .grid-products-inner {
+    &.is-carousel {
+      .grid-product {
+        margin: 0 0.75rem;
+      }
+    }
+
+    .grid-product {
+      position: relative;
+      padding: 1.5rem;
+      border: 1px solid $border-light;
+      background: $white;
+      border-radius: 0.65rem;
+      transition: box-shadow 0.3s;
+
+      &:hover {
+        box-shadow: $light-box-shadow;
+
+        .grid-product-rating {
+          opacity: 1;
+        }
+
+        .buttons {
+          .button {
+            background: $primary;
+            border-color: $primary;
+            color: $white;
+            box-shadow: $primary-box-shadow;
+          }
+        }
+      }
+
+      .grid-product-price {
+        position: absolute;
+        top: 1rem;
+        left: 1.5rem;
+        font-family: $font-main;
+        font-size: 1.1rem;
+        color: $blue-grey;
+
+        &::before {
+          content: "$";
+        }
+      }
+
+      .grid-product-rating {
+        position: absolute;
+        top: 0.8rem;
+        right: 1.5rem;
+        font-family: $font-main;
+        font-size: 1.1rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        i {
+          font-size: 10px;
+          color: darken($widget-grey, 5%);
+
+          &.highlighted {
+            color: #ffd663;
+          }
+        }
+      }
+
+      .grid-product-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+
+        img {
+          display: block;
+          object-fit: contain;
+          max-width: 150px;
+          min-height: 150px;
+          max-height: 150px;
+          margin: 0 auto 1rem auto;
+        }
+      }
+
+      .grid-product-info {
+        display: block;
+        margin-bottom: 1rem;
+
+        h4 {
+          font-family: $font-text;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          color: $primary;
+        }
+
+        h3 {
+          font-size: 1.1rem;
+          font-family: $font-main;
+          color: $blue-grey;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: $muted-grey;
+          font-family: $font-text;
+          font-size: 0.95rem;
+        }
+      }
+
+      .buttons {
+        .button {
+          font-family: $font-text;
+          min-height: 42px;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+5. Brands
+========================================================================== */
+
+.brands {
+  display: flex;
+  margin-top: 40px;
+
+  .brand {
+    display: block;
+    width: 20%;
+    text-align: center;
+
+    img {
+      display: block;
+      height: 100px;
+      width: 100px;
+      margin: 0 auto;
+    }
+
+    h3 {
+      font-family: $font-main;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: $blue-grey;
+      margin-top: 10px;
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: $muted-grey;
+      font-weight: 500;
+    }
+  }
+}
+
+/* ==========================================================================
+6. Supported payment gateways
+========================================================================== */
+
+.supported-providers {
+  display: block;
+  border: 1px solid $border-light;
+  border-radius: 0.5rem;
+  text-align: center;
+  max-width: 580px;
+  padding: 3rem;
+  margin: 2rem auto 0 auto;
+
+  h4 {
+    font-family: $font-main;
+    font-weight: 500;
+    color: $blue-grey;
+  }
+
+  p {
+    color: lighten($blue-grey, 5%);
+  }
+
+  .providers {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    img {
+      display: block;
+      max-height: 30px;
+      max-width: 70px;
+      margin-right: 1rem;
+    }
+  }
+}
+
+/* ==========================================================================
+7. Special section image
+========================================================================== */
+
+.has-section-image {
+  position: relative;
+  min-height: 750px;
+
+  img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1040px;
+  }
+}
+
+@media (max-width: 767px) {
+  .shop-hero {
+    overflow: hidden;
+
+    .shop-hero-box {
+      min-width: 100vw;
+
+      &:not(:first-child) {
+        display: none;
+      }
+
+      .overlay-layer {
+        .inner-content {
+          padding: 25px !important;
+
+          .episode-title {
+            font-size: 2.8rem !important;
+            line-height: 40px !important;
+          }
+
+          .episode-meta {
+            .meta-item {
+              font-size: 0.75rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .shop-toolbar {
+    h4 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .brands {
+    flex-wrap: wrap;
+
+    .brand {
+      width: 50% !important;
+      margin-bottom: 16px;
+    }
+  }
+
+  .has-section-image {
+    min-height: 580px;
+  }
+
+  .rounded-section {
+    text-align: center;
+
+    .buttons {
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .shop-hero {
+    overflow: hidden;
+
+    .shop-hero-box {
+      min-width: 50vw;
+
+      &:nth-child(3) {
+        display: none;
+      }
+
+      .overlay-layer {
+        .inner-content {
+          padding: 25px !important;
+
+          .episode-title {
+            font-size: 1.8rem !important;
+            line-height: 28px !important;
+          }
+
+          .episode-meta {
+            .meta-item {
+              font-size: 0.75rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .popular-categories, .grid-products {
+    .columns {
+      padding: 0;
+      display: flex;
+
+      .column {
+        min-width: 50%;
+      }
+    }
+  }
+
+  .shop-icon-features {
+    display: flex;
+  }
+
+  .has-section-image {
+    min-height: 620px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .shop-hero {
+    overflow: hidden;
+
+    .shop-hero-box {
+
+        .overlay-layer {
+            .inner-content {
+                padding: 25px !important;
+
+                .episode-title {
+                    font-size: 2rem !important;
+                    line-height: 26px !important;
+                }
+
+                .episode-meta {
+                    .meta-item {
+                        font-size: .68rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+}

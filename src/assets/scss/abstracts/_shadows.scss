@@ -1,6 +1,16 @@
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
-4. Predefined box shadows
+Shadow variables
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+1. Predefined box shadows
+***/
+
+/* ==========================================================================
+1. Predefined box shadows
 ========================================================================== */
 
 $base-shadow: rgba(0, 0, 0, 0.12);
@@ -25,12 +35,11 @@ $blue-shadow-from: rgba(3, 155, 229, 0.42);
 $blue-shadow-to: rgba(3, 155, 229, 0.2);
 $blue-box-shadow: 0 14px 26px -12px $blue-shadow-from, 0 4px 23px 0px $base-shadow, 0 8px 10px -5px $blue-shadow-to !important;
 
-/* ==========================================================================
-2. Box shadows
-========================================================================== */
-
 //Light box shadow
 $light-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.06);
+
+//Medium box shadow
+$medium-box-shadow: -1px 3px 15px 0 rgba(0, 0, 0, 0.12);
 
 //Primary box shadow
 $primary-shadow-from: rgba($primary, 0.42);

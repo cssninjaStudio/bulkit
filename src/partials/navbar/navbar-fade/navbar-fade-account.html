@@ -1,0 +1,56 @@
+<nav
+  class="navbar navbar-wrapper navbar-default navbar-fade is-fixed-top is-transparent"
+>
+  <div class="container">
+    <!-- Brand -->
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img
+          class="switcher-logo"
+          src="assets/img/logos/logo/bulkit-core.svg"
+          alt=""
+        />
+      </a>
+
+      <!-- Sidebar Trigger -->
+      <a
+        id="navigation-trigger"
+        class="navbar-item hamburger-btn"
+        href="javascript:void(0);"
+      >
+        <span class="menu-toggle">
+          <span class="icon-box-toggle">
+            <span class="rotate">
+              <i class="icon-line-top"></i>
+              <i class="icon-line-center"></i>
+              <i class="icon-line-bottom"></i>
+            </span>
+          </span>
+        </span>
+      </a>
+
+      <!-- Account button -->
+      {{> account-dropdown-mobile}}
+  
+    </div>
+
+    <!-- Navbar menu -->
+    <div class="navbar-menu">
+      <!-- Navbar Start -->
+      <div class="navbar-start">
+        <!-- Navbar item -->
+        <a class="navbar-item is-slide" href="#"> Product </a>
+        <!-- Navbar item -->
+        <a class="navbar-item is-slide" href="#"> Pricing </a>
+        <!-- Navbar item -->
+        <a class="navbar-item is-slide" href="#"> About </a>
+      </div>
+
+      <!-- Navbar end -->
+      <div class="navbar-end">
+        <!-- Account button -->
+        {{> account-dropdown}}
+      </div>
+    </div>
+  </div>
+</nav>

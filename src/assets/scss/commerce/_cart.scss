@@ -1,0 +1,245 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/***
+TABLE OF CONTENTS
+    0. Cart Coupon
+    1. Cart Summary
+***/
+
+/* ==========================================================================
+0. Cart Coupon
+========================================================================== */
+
+.coupon-area {
+  margin-top: 2rem;
+
+  h3 {
+    font-family: $font-main;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $blue-grey;
+  }
+
+  p {
+    color: $muted-grey;
+    font-size: 0.95rem;
+  }
+
+  .field {
+    margin-top: 10px;
+    max-width: 580px;
+
+    .control {
+      position: relative;
+
+      .form-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 58px;
+        width: 58px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          font-size: 1.55rem;
+          color: $placeholder;
+        }
+      }
+
+      .input {
+        padding-left: 58px;
+        height: 58px;
+        border-radius: .65rem;
+        font-size: 1.1rem;
+      }
+
+      .button {
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        height: 44px;
+        min-width: 164px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: .5rem;
+        transform: translateY(-50%);
+
+        &:hover {
+          background: $success;
+          border-color: $success;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .coupon-area {
+    .field {
+      .control {
+        .button {
+          position: static;
+          margin-top: 42px;
+          height: 54px;
+          width: 100%;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+1. Cart Summary
+========================================================================== */
+
+.cart-summary {
+  padding-left: 20px;
+
+  .summary-header {
+    h3 {
+      font-family: $font-main;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: $muted-grey;
+      text-transform: uppercase;
+      margin-top: 1.25rem;
+      padding-bottom: 14px;
+    }
+  }
+
+  .summary-card {
+    position: relative;
+
+    @extend .card;
+
+    padding: 2rem;
+    border-radius: .65rem;
+    border: 1px solid darken($fade-grey, 3%);
+    box-shadow: $light-box-shadow;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    > h3 {
+      font-family: $font-main;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $muted-grey;
+      text-transform: uppercase;
+      padding-bottom: 14px;
+    }
+
+    > p {
+      color: lighten($blue-grey, 28%) !important;
+    }
+
+    .shipping-logo {
+      display: block;
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      width: 28px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+
+    .order-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      span {
+        display: block;
+        font-family: $font-text;
+
+        &:first-child {
+          font-size: 1rem;
+          font-weight: 400;
+          color: $light-blue-grey;
+
+          &.is-total {
+            color: $blue-grey;
+          }
+        }
+
+        &:nth-child(2) {
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: $blue-grey;
+
+          &:before {
+            content: "$";
+          }
+
+          &.is-total {
+            font-weight: 700;
+            font-size: 1.5rem;
+          }
+
+          &.is-text {
+            font-family: $font-text;
+            font-weight: 400 !important;
+            font-size: 0.9rem;
+            color: $light-blue-grey;
+
+            &:before {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 60px;
+      margin: 0 auto 20px auto;
+    }
+
+    h4 {
+      font-family: $font-main;
+      font-weight: 600;
+      color: $blue-grey;
+      font-size: 1.1rem;
+      margin-bottom: .75rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $muted-grey;
+    }
+
+    .button {
+      &.is-loading {
+        color: transparent !important;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .cart-summary {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .cart-summary {
+    padding-left: 0;
+  }
+}

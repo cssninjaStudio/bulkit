@@ -1,0 +1,1344 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Media Elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Featured Images
+    1. Dotted App
+    2. Mockup Section
+    3. Hero App mockup
+    4. App Showcase
+    5. Landing App mockup
+    6. Geometric Canvas
+    7. Star Fall
+    8. Particles
+    9. Client Logos
+    10. Floating chat bubbles
+    11. Floating avatars
+    12. Flat City
+    13. Tabbed Features
+    14. Square Shapes
+    15. Background Images
+    16. Partner Logos
+    17. Svg Blobs
+    18. Morphing Blob
+    19. Masked image
+    20. Featured Images
+    21. Success Stories
+    22. Image Section
+***/
+
+/* ==========================================================================
+0. Featured Images
+========================================================================== */
+
+.featured-svg {
+    max-width: 450px;
+
+    &.is-large {
+        max-width: 540px;
+    }
+}
+
+.featured-svg-lg {
+    max-width: 550px;
+    max-height: 550px;
+}
+
+.vivus-svg {
+    max-height: 450px;
+    width: 450px;
+}
+
+.featured-drawing {
+    max-width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .featured-svg, .featured-svg-lg, .featured-drawing {
+        max-width: 100% !important;
+    }
+}
+
+
+/* ==========================================================================
+1. Dotted App
+========================================================================== */
+
+.dotted-app {
+    display: block;
+    max-width: 940px;
+    margin: 40px auto 0 auto;
+    box-shadow: $light-box-shadow;
+}
+
+.mockup-dots {
+    .dot {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: block;
+        background-color: $primary;
+        z-index: 5;
+
+        &:before {
+            position: absolute;
+            background: $primary;
+            content: '';
+            top: 0;
+            left: 0;
+            border: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: dotPulse 2s ease-out infinite;
+        }
+
+        &.first {
+            top: 42%;
+            left: 20%;
+
+            &:hover + .dot-tip.tip-first {
+                display: block;
+            }
+        }
+
+        &.second {
+            top: 65%;
+            left: 20%;
+
+            &:hover + .dot-tip.tip-second {
+                display: block;
+            }
+        }
+
+        &.third {
+            top: 55%;
+            right: 20%;
+
+            &:hover + .dot-tip.tip-third {
+                display: block;
+            }
+        }
+    }
+
+    .dot-tip {
+        padding: 15px 20px;
+        background-color: $primary;
+        color: $white;
+        border-radius: 10px 10px 0 10px;
+        font-size: 13px;
+        display: none;
+        z-index: 4;
+
+        &.tip-first {
+            position: absolute;
+            top: 38%;
+            left: 0;
+        }
+
+        &.tip-second {
+            position: absolute;
+            top: 60%;
+            left: 0;
+        }
+
+        &.tip-third {
+            position: absolute;
+            top: 50%;
+            right: 24%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .dotted-app {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) and (orientation: portrait) {
+    .dotted-app {
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* ==========================================================================
+2. Mockup Section
+========================================================================== */
+
+.mockup-wrap {
+    .image-wrap {
+        max-width: 840px;
+        margin: 0 auto;
+
+        img {
+            display: block;
+            width: 100%;
+
+            &.full-image {
+                border: 1px solid $border;
+                border-radius: 1.25rem;
+                box-shadow: $light-box-shadow;
+                max-width: 680px;
+                margin: 0 auto 40px auto;
+            }
+
+            &.full-image-minimal {
+                max-width: 680px;
+                margin: 0 auto 40px auto;
+            }
+        }
+
+        .app-features {
+            max-width: 640px;
+            margin: 0 auto;
+
+            &.is-pulled {
+                margin-top: -30px;
+            }
+
+            .content-flex {
+                h5 {
+                    margin-bottom: .35rem;
+                }
+
+                p {
+                    color: $muted-grey;
+                    font-size: .9rem;
+                }
+
+                i {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+3. Hero App mockup
+========================================================================== */
+
+.blob-figure {
+    position: relative;
+
+    .morphing-blob-wrapper {
+        position: absolute;
+
+        &.sub-blob-1 {
+            top: -130px;
+            left: -120px;
+        }
+
+        &.sub-blob-2 {
+            bottom: -130px;
+            right: -120px;
+            transform: scale(.7);
+         }
+
+         &.sub-blob-3 {
+            top: -180px;
+            right: -200px;
+            transform: scale(.3);
+         }
+    }
+}
+
+.hero-figure {
+    position: relative;
+
+    &.is-pushed {
+        top: 60px;
+    }
+}
+
+.mockup-section {
+    padding: 5rem 1.5rem !important;
+
+    .app-mockup {
+        position: relative;
+        max-width: 940px;
+        margin: 0 auto;
+        margin-top: 5%;
+        z-index: 2;
+    }
+
+    .hr-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 1096px;
+        width: 100%;
+        z-index: 0;
+    }
+}
+
+.featured-ui {
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.rounded-app {
+    position: relative;
+    border: 1px solid $border;
+    border-radius: 1.25rem;
+    box-shadow: $light-box-shadow;
+}
+
+.hero-app {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+    img {
+        border-radius: 4px;
+        border: 1px solid $fade-grey;
+        box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.04);
+    }
+}
+
+.hero-image {
+    max-width: 680px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    .hero-image {
+        max-width: 375px;
+    }
+
+    .mockup-section {
+        .app-mockup {
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .mockup-section {
+        .app-mockup {
+            max-width: 100%;
+        }
+    }
+}
+
+/* ==========================================================================
+4. App Showcase
+========================================================================== */
+
+.showcase-text-wrapper {
+    padding: 0 40px;
+}
+
+.showcase-wrapper {
+    position: relative;
+
+    .showcase-wrap {
+        width: 100%;
+        height: 100%;
+
+        .app-showcase {
+            border-radius: 4px;
+            border: 1px solid $fade-grey;
+            box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.04);
+            transition: all .6s;
+            transform: translateX(-100%);
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &.is-active {
+            .app-showcase {
+                transform: translateX(0);
+                opacity: 1;
+                position: relative;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+.slide-control {
+    max-width: 350px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+
+    .slide-dot {
+        width: 60px;
+        height: 60px;
+        margin: 0 10px;
+        transition: all .3s;
+        cursor: pointer;
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid $fade-grey;
+        }
+
+        &.is-active {
+            transform: scale(1.3);
+
+            img {
+                box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-figure {
+        &.is-pushed {
+            top: -80px !important;
+        }
+    }
+
+    .slide-control {
+        margin: 0 auto;
+    }
+
+    .showcase-text-wrapper {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .hero-figure {
+        &.is-pushed {
+            top: -80px !important;
+        }
+    }
+
+    .showcase-text-wrapper {
+        text-align: center;
+    }
+
+    .slide-control {
+        margin: 30px auto;
+    }
+}
+
+/* ==========================================================================
+5. Landing App mockup
+========================================================================== */
+
+.app-wrapper {
+    padding: 80px 0 0 0;
+
+    .app-features {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 640px;
+        margin: 0 auto;
+
+        .app-feature {
+            text-align: center;
+            width: 25%;
+
+            img {
+                display: block;
+                max-width: 48px;
+                margin: 0 auto 12px auto;
+            }
+
+            h3 {
+                font-weight: 600;
+                color: $blue-grey;
+                margin-left: 12px;
+                padding-bottom: 24px;
+                border-bottom: 2px solid lighten($muted-grey, 16%);
+            }
+        }
+    }
+
+    .mockup-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 60px;
+
+        img {
+            position: relative;
+            display: block;
+            border: 1px solid $fade-grey;
+            border-radius: 6px;
+            box-shadow: $light-box-shadow;
+            z-index: 3;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .app-wrapper {
+        .mockup-wrapper {
+            padding: 10px;
+            margin-top: 30px;
+        }
+
+        .app-features {
+            .app-feature {
+                h3 {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .app-features {
+        display: flex;
+        flex-wrap: wrap;
+
+        .column {
+            width: 50%;
+            min-width: 50%;
+            flex-grow: 2;
+        }
+    }
+}
+
+/* ==========================================================================
+6. Geometric Canvas
+========================================================================== */
+
+#geo-canvas {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: visible;
+    position: absolute;
+    top: 10%;
+}
+
+/* ==========================================================================
+7. Star Fall
+========================================================================== */
+
+$size: 8;
+$total: 40;
+
+.starfall {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    z-index: 0;
+
+    .falling-star {
+        width: $size + px;
+        height: $size + px;
+        background: $primary;
+        position: absolute;
+        border-radius: 50%;
+        opacity: .5;
+    }
+}
+
+@for $i from 1 through $total {
+    $x: random(100);
+
+    .falling-star:nth-child(#{$i}) {
+        transform: translateX($x + vw) translateY(-$size + px);
+        animation: anim#{$i} 4s infinite;
+        animation-delay: $i * 0.3s;
+    }
+
+    @keyframes anim#{$i} {
+        10% {
+            opacity: .5;
+        }
+
+        12% {
+            opacity: 1;
+            box-shadow: 0 0 3px 0 white;
+        }
+
+        15% {
+            opacity: 0.5;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX($x + 20 + vw) translateY(100vh);
+            opacity: 0;
+        }
+    }
+}
+
+/* ==========================================================================
+8. Particles
+========================================================================== */
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    z-index: 200;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% ,90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(45vw);
+        opacity: 0;
+    }
+}
+
+
+/* ==========================================================================
+9. Client Logos
+========================================================================== */
+
+.ref-tabs {
+    ul, li a {
+        border-bottom: none !important;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 110px;
+        max-height: 70px;
+    }
+}
+
+
+/* ==========================================================================
+10. Floating chat bubbles
+========================================================================== */
+
+.floating-bubbles {
+    .bubble {
+        img {
+            height: 100px;
+            position: absolute;
+
+            &.bubble-1st {
+                left: 20%;
+                top: -5%;
+                animation-delay: .5s;
+            }
+
+            &.bubble-2nd {
+                left: 50%;
+                top: 25%;
+                animation-delay: 1.5s;
+            }
+
+            &.bubble-3rd {
+                left: 15%;
+                top: 75%;
+                animation-delay: 2.5s;
+            }
+
+            &.bubble-4th {
+                right: 15%;
+                top: -15%;
+                animation-delay: 4.5s;
+            }
+
+            &.bubble-5th {
+                right: 15%;
+                top: -15%;
+                animation-delay: 3.5s;
+            }
+
+            &.bubble-6th {
+                right: 50%;
+                top: 20%;
+                animation-delay: 2s;
+            }
+
+            &.bubble-7th {
+                right: 10%;
+                top: -80%;
+                animation-delay: 1.7s;
+                transform: rotate(-60deg);
+            }
+
+            &.bubble-8th {
+                left: 10%;
+                top: -7%;
+                animation-delay: 5.3s;
+            }
+
+            &.bubble-9th {
+                left: 30%;
+                top: 80%;
+                animation-delay: 5.3s;
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+11. Floating avatars
+========================================================================== */
+
+.floating-avatars .avatar {
+    height: 60px;
+    border-radius: 100px;
+    position: absolute;
+
+    &.avatar-1st {
+        left: 50%;
+        top: 64%;
+    }
+
+    &.avatar-2nd {
+        height: 40px;
+        left: 80%;
+        top: 45%;
+    }
+
+    &.avatar-3rd {
+        height: 50px;
+        left: 68%;
+        top: 60%;
+    }
+
+    &.avatar-4th {
+        left: 90%;
+        top: 75%;
+    }
+
+    &.avatar-5th {
+        height: 50px;
+        left: 33%;
+        top: 55%;
+    }
+
+    &.avatar-6th {
+        left: 20%;
+        top: 69%;
+        z-index: 2;
+    }
+
+    &.avatar-7th {
+        height: 40px;
+        left: 8%;
+        top: 45%;
+    }
+}
+
+
+/* ==========================================================================
+12. Flat City
+========================================================================== */
+
+.city-container {
+    img {
+        display: block;
+    }
+}
+
+.conditions {
+    position: relative;
+    top: 12px;
+    font-size: 85%;
+    margin-left: 15px;
+    color: $white;
+}
+
+/* ==========================================================================
+13. Tabbed Features
+========================================================================== */
+
+.tabbed-features {
+    .navigation-tabs {
+        margin-bottom: 40px;
+    }
+
+    .navtab-content {
+        .inner-content {
+            padding: 20px;
+
+            .feature-headline {
+                font-size: 1.75rem;
+            }
+
+            p {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+14. Square Shapes
+========================================================================== */
+
+.square {
+    position: absolute;
+
+    &.square-1 {
+        bottom: 60px;
+        right: 5%;
+        height: 80px;
+        width: 80px;
+        border-radius: 12px;
+        opacity: .5;
+        background: lighten($primary, 35%);
+        transform: rotate(36deg);
+        z-index: 2;
+    }
+
+    &.square-2 {
+        bottom: 50px;
+        right: 25%;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        opacity: .7;
+        background: lighten($primary, 22%);
+        transform: rotate(24deg);
+        z-index: 2;
+    }
+
+    &.square-3 {
+        bottom: 160px;
+        right: -22px;
+        height: 180px;
+        width: 180px;
+        border-radius: 36px;
+        background: $primary;
+        opacity: .2;
+        -webkit-transform: rotate(24deg);
+        transform: rotate(38deg);
+        z-index: 2;
+    }
+
+    &.square-4 {
+        top: 20px;
+        left: 30%;
+        height: 80px;
+        width: 80px;
+        border-radius: 16px;
+        opacity: .5;
+        background: $primary;
+        transform: rotate(36deg);
+        z-index: 2;
+    }
+
+    &.square-5 {
+        top: 220px;
+        left: 20%;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        opacity: .7;
+        background: lighten($primary, 22%);
+        transform: rotate(24deg);
+        z-index: 2;
+    }
+
+    &.square-6 {
+        top: 60px;
+        right: 10%;
+        height: 40px;
+        width: 40px;
+        opacity: .5;
+        border: 2px solid $primary;
+        transform: rotate(36deg);
+        z-index: 2;
+    }
+
+    &.square-7 {
+        top: 80px;
+        left: 15%;
+        height: 30px;
+        width: 30px;
+        opacity: .5;
+        border: 2px solid $primary;
+        transform: rotate(146deg);
+        z-index: 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .square {
+        &.square-1 {
+            bottom: -25px;
+            height: 40px;
+            width: 40px;
+        }
+
+        &.square-2 {
+            bottom: 23px;
+            right: 25%;
+            height: 25px;
+            width: 25px;
+            border-radius: 7px;
+        }
+
+        &.square-4 {
+            top: 8px;
+            left: 30%;
+            height: 50px;
+            width: 50px;
+            border-radius: 11px;
+        }
+
+        &.square-5 {
+            top: 207px;
+            height: 24px;
+            width: 24px;
+            border-radius: 7px;
+        }
+
+        &.square-6 {
+            top: 100px;
+            right: 10%;
+            height: 20px;
+            width: 20px;
+        }
+
+        &.square-7 {
+            display: none;
+        }
+    }
+}
+
+
+/* ==========================================================================
+15. Background Images
+========================================================================== */
+
+.has-background-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.is-contain {
+        background-size: contain;
+        background-repeat: repeat;
+    }
+}
+
+/* ==========================================================================
+16. Partner Logos
+========================================================================== */
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        display: block;
+        height: 80px;
+        margin: 0 25px;
+    }
+}
+
+/* ==========================================================================
+17. Svg Blobs
+========================================================================== */
+
+.blob-1 {
+    position: absolute;
+    top: 10%;
+    right: -290px;
+    width: 280px;
+    z-index: 0;
+    opacity: .15;
+}
+
+.blob-2 {
+    position: absolute;
+    top: 10%;
+    left: -190px;
+    width: 380px;
+    z-index: 0;
+    opacity: .15;
+}
+
+.blob-3 {
+    position: absolute;
+    top: -80px;
+    left: -120px;
+    width: 90px;
+    z-index: 0;
+    opacity: .15;
+}
+
+.blob-4 {
+    position: absolute;
+    top: -82px;
+    left: 180px;
+    width: 130px;
+    z-index: 0;
+    opacity: .15;
+}
+
+.blob-5 {
+    position: absolute;
+    bottom: 50px;
+    right: -104px;
+    width: 130px;
+    z-index: 0;
+    opacity: .15;
+}
+
+/* ==========================================================================
+18. Morphing Blob
+========================================================================== */
+
+.morphing-blob-wrapper {
+    svg,
+    svg circle {
+        fill: $primary;
+    }
+
+    @keyframes from0to360 {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .Circle1 {
+        animation: from0to360 3s linear infinite;
+        cx: 150;
+        cy: 145;
+        r: 100;
+        transform-origin: 145px 150px;
+    }
+
+    @keyframes from360to0 {
+        from {
+            transform: rotate(360deg);
+        }
+
+        to {
+            transform: rotate(0deg);
+        }
+    }
+
+    .Circle2 {
+        animation: from360to0 4s linear infinite;
+        cx: 150;
+        cy: 155;
+        r: 100;
+        transform-origin: 155px 150px;
+    }
+
+    .Circle3 {
+        animation: from0to360 5s linear infinite;
+        cx: 145;
+        cy: 150;
+        r: 100;
+        transform-origin: 150px 145px;
+    }
+
+    .Circle4 {
+        animation: from360to0 4.5s linear infinite;
+        cx: 155;
+        cy: 150;
+        r: 100;
+        transform-origin: 150px 155px;
+    }
+}
+
+/* ==========================================================================
+19. Masked image
+========================================================================== */
+
+.masked-image {
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto;
+
+    .main-image {
+        display: block;
+        transform: scale(.99);
+    }
+
+    .image-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .dot {
+        position: absolute;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+
+        &.dot-primary {
+            background: $primary;
+            box-shadow: $primary-box-shadow;
+        }
+
+        &.dot-success {
+            background: $success;
+            box-shadow: $success-box-shadow;
+        }
+
+        &.dot-info {
+            background: $info;
+            box-shadow: $blue-box-shadow;
+        }
+
+        &.dot-1 {
+            bottom: 20%;
+            left: 5%;
+        }
+
+        &.dot-2 {
+            bottom: 20%;
+            right: 2%;
+            height: 54px;
+            width: 54px;
+        }
+
+        &.dot-3 {
+            bottom: 10%;
+            height: 32px;
+            width: 32px;
+            left: 15%;
+        }
+
+        &.dot-4 {
+            top: 20%;
+            left: 5%;
+        }
+
+        &.dot-5 {
+            bottom: 22%;
+            right: 5%;
+            height: 54px;
+            width: 54px;
+        }
+
+        &.dot-6 {
+            top: 15%;
+            left: 2%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .masked-image {
+        .main-image {
+            transform: scale(.99);
+        }
+    }
+}
+
+/* ==========================================================================
+20. Featured Images
+========================================================================== */
+
+.featured-image-medium {
+    display: block;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.featured-image-large {
+    display: block;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .featured-image-medium, .featured-image-large {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================================================
+21. Success Stories
+========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .stories {
+        display: flex;
+
+        .column {
+            min-width: 50%;
+        }
+    }
+}
+
+/* ==========================================================================
+22. Image Section
+========================================================================== */
+
+.section-wrap {
+    display: flex;
+    align-items: stretch;
+    min-height: 650px;
+
+    &.is-skewed-sm {
+        transform: skew(0deg, -3deg) translate(0, -45px);
+
+        .container {
+            transform: skew(0deg, 3deg) translate(0, 45px);
+            margin-top: -60px;
+        }
+    }
+
+    .section {
+
+        &.image-section {
+            width: 50%;
+            padding-left: 10%;
+            padding-right: 5%;
+            background: darken($sidebar, 8%);
+
+            .title, .subtitle, p {
+                color: $white;
+            }
+
+            .title-wrap h3 {
+                margin-left: 0 !important;
+            }
+
+            .support-features {
+                padding: 16px 0;
+
+                > p {
+                    margin-bottom: 16px;
+                }
+
+                .support-card {
+                    display: inline-block;
+                    padding: 20px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: darken($sidebar, 14%);
+                    border: 1px solid darken($sidebar, 10%);
+                    text-align: center;
+                    transition: all .3s;
+
+                    &:hover {
+                        border-color: $primary !important;
+                        box-shadow: $light-box-shadow;
+
+                        h3, i {
+                            color: $primary;
+                        }
+                    }
+
+                    i {
+                        font-size: 2.8rem;
+                        color: $muted-grey;
+                        transition: color .3s;
+                    }
+
+                    h3 {
+                        font-weight: 500;
+                        color: $white;
+                        transition: color .3s;
+                    }
+
+                    p {
+                        font-size: .95rem;
+                        color: $muted-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 2;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-wrap {
+        flex-direction: column;
+
+        .section {
+            &.image-section {
+                width: 100%;
+                padding-left: 10%;
+                padding-right: 10%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .section-wrap {
+        .section {
+            &.image-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .section-wrap {
+        .section {
+            &.image-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+    }
+}

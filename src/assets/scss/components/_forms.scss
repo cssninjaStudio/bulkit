@@ -1,4 +1,4 @@
-/*! _forms.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Form inputs styles
@@ -406,6 +406,7 @@ form {
 .control-material {
     position: relative;
     margin-bottom: 2em;
+    font-family: $font-text;
 
     input, textarea {
         border-radius: 0 !important;
@@ -419,7 +420,7 @@ form {
 
             &:focus, &:valid {
                 ~ i {
-                    margin-top: 10px;
+                    margin-left: 10px;
                 }
             }
         }
@@ -443,7 +444,7 @@ form {
         i {
             position: absolute;
             right: 15px;
-            top: 12px;
+            top: 6px;
             color: $placeholder;
             display: none;
         }
@@ -602,7 +603,7 @@ form {
 
     .material-input, textarea {
         width: 100% !important;
-        font-size: 18px;
+        font-size: 1.15rem;
         padding: 0.625em  0.625em 0.625em 0.3125em;
         display: block;
         width: 18.75em;
@@ -680,7 +681,7 @@ form {
         &.has-value {
             .inner-wrap {
                 label {
-                    top: -20px;
+                    top: -8px;
                     left: -2px;
                     font-size: 12px;
                 }
@@ -1081,6 +1082,7 @@ form {
 %controller {
     position: relative;
     cursor: pointer;
+    font-family: $font-text;
     padding: 1em;
 
     &::selection {

@@ -1,0 +1,565 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Card Elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Services cards
+    1. Service box
+    2. Featured Job Box
+    3. Job Categories
+    4. Job Topics
+    5. Job Users
+    6. Benefits Card
+    7. Startup feature cards
+    8. Integration cards
+    9. Values cards
+    10. Event cards
+    11. Icon Card
+***/
+
+/* ==========================================================================
+0. Services cards
+========================================================================== */
+
+.services-cards {
+    &.is-minimal {
+        padding: 0 8%;
+
+        i {
+            color: $blue-grey;
+            font-size: 4.5rem;
+        }
+
+        .feature-card {
+            &:hover {
+                i {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .feature-card {
+        height: 310px;
+        padding: 50px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card-feature-description {
+        font-size: 95%;
+    }
+
+    .card-icon {
+        padding-top: 30px;
+
+        i {
+            font-size: 5rem;
+            color: $primary;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .services-cards {
+        .is-minimal {
+            padding: 0 !important;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Service box
+========================================================================== */
+
+.service-box {
+    .service-title {
+        font-family: $font-main;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $blue-grey;
+    }
+
+    p {
+        padding: 5px 0;
+    }
+
+    .action {
+        padding: 10px 0;
+
+        a {
+            border-width: 2px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .service-box {
+        padding-bottom: 20px;
+        text-align: center;
+
+        .title-divider {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .service-box {
+        text-align: center;
+
+        .title-divider {
+            margin: 0 auto;
+        }
+    }
+}
+
+/* ==========================================================================
+2. Featured Job Box
+========================================================================== */
+
+.featured-job-box {
+    padding: 30px;
+    border: 1px solid darken($fade-grey, 3%);
+    margin-bottom: 0;
+    border-radius: 10px;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: $light-box-shadow;
+    }
+
+    .icon-container {
+        background: $widget-grey;
+        height: 50px !important;
+        width: 50px !important;
+        min-width: 50px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    h3 {
+        font-family: $font-main;
+        color: $blue-grey;
+    }
+
+    .job-summary {
+        display: flex;
+        align-items: center;
+        padding-bottom: 16px;
+
+        .company, .salary {
+            margin-right: 20px;
+            font-family: $font-text;
+            font-size: .95rem;
+            color: $blue-grey-light;
+        }
+    }
+}
+
+/* ==========================================================================
+3. Job Categories
+========================================================================== */
+
+.job-categories {
+    .job-categories-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .job-category {
+            position: relative;
+            width: 250px;
+            height: 300px;
+            margin: 10px;
+            transform: rotateX(0) rotateY(0);
+            transform-style: preserve-3d;
+            transition-duration: 0.1s;
+            transition-timing-function: ease !important;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #424242;
+            will-change: tranform;
+
+            &.is-out {
+                transform: rotateX(0) rotateY(0) !important;
+                transition-duration: 1s;
+            }
+
+            &:hover {
+                .job-category-overlay {
+                    opacity: .8;
+                }
+            }
+
+            .job-category-overlay {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: url(../img/graphics/legacy/blur-overlay.jpg) no-repeat center center;
+                background-size: cover;
+                mix-blend-mode: lighten;
+                opacity: 0.1;
+                transition: all .3s;
+            }
+
+            .job-category-image {
+                img {
+                    max-width: 100%;
+                    width: 250px;
+                    height: 300px;
+                    mix-blend-mode: lighten;
+                    object-fit: cover;
+                }
+            }
+
+            .job-category-heading {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                width: 100%;
+                color: $white;
+
+                h2 {
+                    font-family: $font-main;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    margin: 0;
+                    transform: translateZ(30px);
+                }
+
+                .small {
+                    display: inline-block;
+                    font-family: $font-text;
+                    margin-bottom: 2px;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    transform: translateZ(15px);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .job-categories {
+        .job-categories-inner {
+            .job-category {
+                width: 100%;
+
+                .job-category-image {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .job-categories {
+        .job-categories-inner {
+            .job-category {
+                width: 280px;
+
+                .job-category-image {
+                    img {
+                        width: 280px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+4. Job Topics
+========================================================================== */
+
+.job-topic {
+    display: flex;
+    align-items: center;
+    border: 1px solid darken($fade-grey, 3%);
+    margin-bottom: 0;
+    padding: 20px;
+    border-radius: 10px;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: $light-box-shadow;
+    }
+
+    .icon-container {
+        background: $widget-grey;
+        height: 38px !important;
+        width: 38px !important;
+        min-width: 38px;
+        border-radius: 50%;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .meta {
+        margin-left: 12px;
+
+        h3 {
+            font-family: $font-main;
+            color: $blue-grey;
+        }
+
+        .job-summary {
+            display: flex;
+            align-items: center;
+
+            .company, .salary {
+                margin-right: 20px;
+                font-family: $font-text;
+                font-size: .95rem;
+                color: $blue-grey-light;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+5. Job Users
+========================================================================== */
+
+.job-user {
+    text-align: center;
+
+    .avatar-wrap {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        min-width: 100px;
+        margin: 0 auto 10px auto;
+
+        .avatar {
+            display: block;
+            border-radius: 50%;
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: block;
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+            border: 2px solid $white;
+        }
+    }
+
+    h3 {
+        font-family: $font-main;
+        font-size: 1.3rem;
+        color: $blue-grey;
+    }
+
+    p {
+        font-size: 1rem;
+        color: $blue-grey-light;
+        margin-bottom: 8px;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* ==========================================================================
+6. Benefits Card
+========================================================================== */
+
+.benefits-card {
+    padding: 40px;
+    border: 1px solid darken($fade-grey, 3%);
+
+    .benefits-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        i {
+            font-size: 2.8rem;
+            margin-right: 1rem;
+            color: $blue-grey-light;
+        }
+    }
+
+    .benefits-body {
+        .solid-list {
+            .solid-list-item {
+                margin-bottom: 1rem;
+
+                .list-bullet i {
+                    font-size: 2.5rem;
+                    color: $success;
+                }
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+7. Startup feature cards
+========================================================================== */
+
+.feature-card.is-startup {
+    padding: 20px;
+
+    img {
+        margin: 0;
+    }
+}
+
+/* ==========================================================================
+8. Integration cards
+========================================================================== */
+
+.integration-cards {
+    .feature-card {
+        padding: 50px 20px !important;
+        margin-bottom: 20px;
+    }
+
+    .brand-logo {
+        padding: 10px 0;
+
+        img {
+            max-height: 60px;
+            max-width: 120px;
+        }
+    }
+
+    .card-title {
+        padding: 10px 0;
+    }
+
+    .card-feature-description {
+        padding: 0 !important;
+    }
+
+    a {
+        margin: 20px 0;
+    }
+}
+
+/* ==========================================================================
+9. Values cards
+========================================================================== */
+
+.values-cards {
+    .feature-card {
+        height: 310px;
+    }
+
+    .card-feature-description {
+        font-size: 95%;
+    }
+
+    .card-icon {
+        padding-top: 50px;
+
+        i {
+            font-size: 5rem;
+            color: $primary;
+        }
+    }
+
+    &.is-minimal {
+        padding: 0 8%;
+
+        i {
+            color: $blue-grey;
+            font-size: 4.5rem;
+        }
+
+        .feature-card {
+            &:hover {
+                i {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .values-cards {
+        &.is-minimal {
+            padding: 0 !important;
+        }
+    }
+}
+
+/* ==========================================================================
+10. Event cards
+========================================================================== */
+
+.event-card {
+    &.is-wavy {
+        .text-title {
+            font-family: $font-main;
+            text-transform: none;
+            font-size: 1.35em;
+        }
+
+        .text-subtitle {
+            font-family: $font-sub;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .event-card {
+        &.is-wavy {
+            .text-title {
+                font-size: 1.5rem !important;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+11. Icon Card
+========================================================================== */
+
+.icon-card {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid darken($fade-grey, 3%);
+    transition: all .3s;
+
+    img {
+        display: block;
+        max-width: 60px;
+        margin: 0 auto;
+    }
+
+    .icon-card-text {
+        margin-top: 10px;
+    }
+}

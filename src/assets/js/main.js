@@ -1,15 +1,17 @@
 /*! main.js | Bulkit | CSS Ninja */
 
 /* ==========================================================================
-Website core JS file (see function.js for complete function reference)
+Core JS file
 ========================================================================== */
 
 "use strict";
 
+//1. Preload page
 initPageLoader()
 
 $(document).ready(function ($) {
 
+	//2. Lazy loading
 	const el = document.querySelectorAll('[data-lazy-load]');
     const observer = lozad(el, {
         loaded: function(el) {
@@ -18,42 +20,53 @@ $(document).ready(function ($) {
         }
 	});
 	
-    observer.observe();
+  observer.observe();
 
-	//Global functions
-
+	//3. Change to demo content (if env)
 	if (env === 'development') {
 		changeDemoImages();
 	}
 
-
-	initThemeSwitcher();
-	initSlider()
-	initBackgroundImages();
-
-	//Layout functions
-
-	initNavbar();
-	initLandingNavbar()
-	initMobileMenu();
-	initLandingMobileMenu()
-	initNavbarDropdown();
-	initSidebar();
+	//4. Init Feather icons
 	feather.replace();
 
-	//Tabs
+	//5. Init Layout
+	initNavbar();
+	initLandingNavbar();
+	initMobileMenu();
+	initLandingMobileMenu();
+	initEcommerceNavbar();
+	initNavbarDropdown();
+	initSidebar();
+	initThemeSwitcher();
+	initBackgroundImages();
 
+	//6. Components
+	initSlider();
+	initDropdowns();
 	initTabsNav();
 	initNavigationTabs();
 	initVerticalTabs();
-
-	//Cards
-
 	initMediaCards();
 	initTiltCards();
+	initPopovers();
+	initTooltips();
+	initModals();
+	initCounters();
+	initSimpleAccordion();
+	initAccordions();
+	initToasts();
+	initCountdown();
 
-	//Form controls
-
+	//7. Carousels
+	initBasicCarousel();
+	initVerticalCarousel();
+	initFlatCarousel();
+	initImageCarousel();
+	initSingleImageCarousel();
+	initMultipleImagesCarousel();
+	
+	//8. Forms
 	initDatepicker();
 	initTimepicker();
 	initDatepickerAlt();
@@ -71,63 +84,28 @@ $(document).ready(function ($) {
 	initComboBox();
 	initImageComboBox();
 	initStackedComboBox();
-
-	//4. Popups
-
-	initPopovers();
-	initTooltips();
-	initModals();
-
-	//5. Carousels
-
-	initBasicCarousel();
-	initVerticalCarousel();
-	initFlatCarousel();
-	initImageCarousel();
-	initSingleImageCarousel();
-	initMultipleImagesCarousel();
-
-	//6. Video
-
+	initFileUploader();
+	
+	//9. Video
 	initVideoEmbed();
 	initBackgroundVideo();
 	initPlayers();
-
-	//7. Counters
-
-	initCounters();
-
-	//8. Accordions
-
-	initSimpleAccordion();
-	initAccordions();
-
-	//9. File uploader
-
-	initFileUploader();
-
-	//10. Toasts
-
-	initToasts();
-
-	//11. Demo
-
+	
+	//10. Demo
 	initDemo();
 	initScrollspyNav();
 	initParallax();
 	initBackToTop();
-
-	//12. Utility functions
-
+	
+	//11. Utility functions
 	initGitem();
 	initAnchorScroll();
 	initQuickview();
 	initScrollReveal();
-
-	//13. Landing pages functions
-
+	initMarquee();
+	
+	//12. Page specific methods
 	initMockup();
-
 	initClientsCarousel();
 	initPeopleCarousel();
 	initCustomCarousel();
@@ -135,7 +113,6 @@ $(document).ready(function ($) {
 	initLandingCarousel();
 	initTestimonials();
 	initCharacterTestimonials();
-
 	initPricing();
 	initPricingCarousel();
 	initTabbedPricing();
@@ -143,24 +120,18 @@ $(document).ready(function ($) {
 	initSwitchPricing();
 	initBoxedPricing();
 	initOnePagePricing();
-
-	initBlog();
+	//initBlog();
 	initSearchBox();
-
 	initNavigationDots();
-
 	initFaq();
-
 	initAuth();
-	
 	initAnimations();
 	initCanvas();
 	initParticles();
 	initAnimatedSvg();
 	initChatWidget();
 	initContactToggler();
-	
+	initGoogleMap();
 	initMapBox();
-
 	initCodeTabs();
 })

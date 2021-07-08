@@ -1,4 +1,4 @@
-/*! _video-embed.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Miscellaneous styles
@@ -16,66 +16,66 @@ TABLE OF CONTENTS
 0. Video embed
 ========================================================================== */
 .side-block {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  overflow: visible;
+  z-index: 2;
+
+  .background-wrapper {
+    background-color: $sidebar;
+    border-radius: 10px;
     overflow: visible;
-    z-index: 2;
 
-    .background-wrapper {
-        background-color: $sidebar;
+    .video-wrapper {
+      position: relative;
+      height: 0;
+      max-width: 100%;
+      padding-bottom: 56.25%;
+      margin-bottom: 0;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
         border-radius: 10px;
-        overflow: visible;
+        overflow: hidden;
+      }
 
-        .video-wrapper {
-            position: relative;
-            height: 0;
-            max-width: 100%;
-            padding-bottom: 56.25%;
-            margin-bottom: 0;
-            overflow: hidden;
-            cursor: pointer;
-            display: block;
+      .video-overlay {
+        position: absolute;
+        width: 100%;
+        background-size: cover;
+        filter: alpha(opacity = 35);
+        opacity: 0.2;
+      }
 
-            iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                border-radius: 10px;
-                overflow: hidden;
-            }
+      .playbutton {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -40px;
+        margin-top: -63px;
+        cursor: pointer;
 
-            .video-overlay {
-                position: absolute;
-                width: 100%;
-                background-size: cover;
-                filter: alpha(opacity = 35);
-                opacity: 0.2;
-            }
+        .icon-play i {
+          font-size: 6rem;
+          color: $primary;
+          transition: all 0.5s;
 
-            .playbutton {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -40px;
-                margin-top: -63px;
-                cursor: pointer;
-
-                .icon-play i {
-                    font-size: 6rem;
-                    color: $primary;
-                    transition: all 0.5s;
-
-                    &:hover {
-                        color: $secondary;
-                    }
-                }
-            }
+          &:hover {
+            color: $secondary;
+          }
         }
+      }
     }
+  }
 }
 
 /* ==========================================================================
@@ -83,106 +83,119 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .bulkit-player-container {
-    margin: 0 auto;
-    overflow: hidden;
+  margin: 0 auto;
+  overflow: hidden;
 
-    &.is-square {
-        height: 440px;
-        width: 480px;
+  &.is-square {
+    height: 440px;
+    width: 480px;
+  }
+
+  &.is-4by3 {
+    position: relative;
+    padding-top: 75%;
+    width: 100%;
+    max-width: 840px;
+
+    .plyr {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
     }
+  }
 
-    &.is-4by3 {
-        position: relative;
-        padding-top: 75%;
-        width: 100%;
-        max-width: 840px;
+  &.is-16by9 {
+    position: relative;
+    padding-top: 56.25%;
+    width: 100%;
+    max-width: 840px;
 
-        .plyr {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            display: block;
+    .plyr {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &.reversed-play {
+    .plyr--full-ui.plyr--video .plyr__control--overlaid {
+      background: $white !important;
+      border: 1px solid $primary;
+      color: $primary !important;
+
+      &:hover {
+        background: $primary !important;
+        border-color: $primary !important;
+        color: $white !important;
+
+        svg {
+          fill: $white !important;
+          stroke: $white !important;
         }
+      }
+
+      svg {
+        fill: none;
+        stroke: $primary;
+        stroke-width: 1.6px;
+      }
     }
+  }
 
-    &.is-16by9 {
-        position: relative;
-        padding-top: 56.25%;
-        width: 100%;
-        max-width: 840px;
+  video,
+  > div {
+    background-color: transparent !important;
+  }
 
-        .plyr {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            display: block;
-        }
-    }
-
-    &.reversed-play {
-        .plyr--full-ui.plyr--video .plyr__control--overlaid {
-            background: $white !important;
-            border: 1px solid $primary;
-            color: $primary !important;
-
-            &:hover {
-                background: $primary !important;
-                border-color: $primary !important;
-                color: $white !important;
-
-                svg {
-                    fill: $white !important;
-                    stroke: $white !important;
-                }
-            }
-
-            svg {
-                fill: none;
-                stroke: $primary;
-                stroke-width: 1.6px;
-            }
-        }
-    }
-
-    video {
-        background-color: transparent !important;
-    }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .plyr--full-ui.plyr--video .plyr__control--overlaid {
-    background: $primary !important;
-    box-shadow: $primary-box-shadow;
+  background: $primary !important;
+  box-shadow: $primary-box-shadow;
 }
 
-.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true],
-.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
-    background: $primary;
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded="true"],
+.plyr__menu__container
+  .plyr__control[role="menuitemradio"][aria-checked="true"]::before {
+  background: $primary;
 }
 
-.plyr--full-ui input[type=range] {
-    color: $primary;
+.plyr--full-ui input[type="range"] {
+  color: $primary;
 }
 
 .plyr__controls {
-    transition: all .3s;
+  transition: all 0.3s;
 }
 
-.plyr--paused, .plyr--stopped {
-    .plyr__controls {
-        opacity: 0;
-        pointer-events: none;
-    }
+.plyr--paused,
+.plyr--stopped {
+  .plyr__controls {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .bulkit-player-container {
-        &.is-square {
-            height: 303px;
-            width: 330px;
-        }
+  .bulkit-player-container {
+    &.is-square {
+      height: 303px;
+      width: 330px;
     }
+  }
 }

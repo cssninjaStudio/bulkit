@@ -1,4 +1,4 @@
-/*! _layout-utils.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Resets and Utils
@@ -108,8 +108,10 @@ body #backtotop a {
 
 #backtotop a:after {
     outline: none;
-    content: "\f106";
-    font-family: "FontAwesome";
+    content: "\e607";
+    font-family: "simple-line-icons";
+    font-weight: 900;
+    font-size: .9rem;
     position: relative;
     display: block;
     top: 50%;

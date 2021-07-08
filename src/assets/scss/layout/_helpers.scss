@@ -1,4 +1,4 @@
-/*! _helpers.scss | Bulkit | CSS Ninja */
+/*! Bulkit | 5.0 | CSS Ninja */
 
 /* ==========================================================================
 Helper classes (must always be at the end of the core imports)
@@ -26,6 +26,10 @@ TABLE OF CONTENTS
 0. Color helpers
 ========================================================================== */
 
+.body-color {
+    color: $blue-grey-light !important;
+}
+
 .color-primary {
     color: $primary !important;
 }
@@ -48,6 +52,10 @@ TABLE OF CONTENTS
 
 .dark-text {
     color: $blue-grey !important;
+}
+
+.white-text {
+    color: $white !important;
 }
 
 .light-text {
@@ -96,6 +104,10 @@ TABLE OF CONTENTS
 
 .has-light-shadow {
     box-shadow: $light-box-shadow;
+}
+
+.has-light-border {
+    border: 1px solid lighten($border, 2%);
 }
 
 /* ==========================================================================
@@ -491,6 +503,11 @@ TABLE OF CONTENTS
     padding-bottom: 150px;
 }
 
+.hr {
+    height: 1px;
+    background: darken($fade-grey, 4%);
+}
+
 /* ==========================================================================
 4. Margin helpers
 ========================================================================== */
@@ -759,6 +776,88 @@ TABLE OF CONTENTS
     height: 60px !important;
 }
 
+.max-w-center {
+    width: 100%;
+    margin-left:  auto !important;
+    margin-right: auto !important;
+
+    &.max-w-440 {
+        max-width: 440px !important;
+    }
+
+    &.max-w-540 {
+        max-width: 540px !important;
+    }
+
+    &.max-w-640 {
+        max-width: 640px;
+    }
+
+    &.max-w-680 {
+        max-width: 680px;
+    }
+
+    &.max-w-740 {
+        max-width: 740px;
+    }
+
+    &.max-w-780 {
+        max-width: 780px;
+    }
+
+    &.max-w-840 {
+        max-width: 840px;
+    }
+
+    &.max-w-880 {
+        max-width: 880px;
+    }
+
+    &.max-w-940 {
+        max-width: 940px;
+    }
+
+    &.max-w-1040 {
+        max-width: 1040px;
+    }
+}
+
+.max-w {
+    width: 100%;
+
+    &.max-w-640 {
+        max-width: 640px;
+    }
+
+    &.max-w-680 {
+        max-width: 680px;
+    }
+
+    &.max-w-740 {
+        max-width: 740px;
+    }
+
+    &.max-w-780 {
+        max-width: 780px;
+    }
+
+    &.max-w-840 {
+        max-width: 840px;
+    }
+
+    &.max-w-880 {
+        max-width: 880px;
+    }
+
+    &.max-w-940 {
+        max-width: 940px;
+    }
+
+    &.max-w-1040 {
+        max-width: 1040px;
+    }
+}
+
 /* ==========================================================================
 6. Position helpers
 ========================================================================== */
@@ -793,6 +892,10 @@ TABLE OF CONTENTS
     pointer-events: none;
     opacity: 0.4;
     cursor: default !important;
+}
+
+.no-click {
+    pointer-events: none !important;
 }
 
 .stuck {

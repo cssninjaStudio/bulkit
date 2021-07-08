@@ -1,0 +1,401 @@
+/*! Bulkit | 5.0 | CSS Ninja */
+
+/* ==========================================================================
+Contact elements SCSS file
+========================================================================== */
+
+/***
+TABLE OF CONTENTS
+    0. Contact form
+    1. Maps
+    2. Startup contact button
+    3. Contact page v1
+    4. Map Block
+***/
+
+/* ==========================================================================
+0. Contact form
+========================================================================== */
+
+.contact-form-wrapper {
+    min-height: 500px;
+    padding: 50px 0;
+    background: $fade-grey;
+
+    .container {
+        padding: 50px 0;
+    }
+
+    .columns {
+        padding: 30px 0;
+    }
+
+    .form-title {
+        font-family: $font-main;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $blue-grey;
+    }
+}
+
+.shadow-title {
+    font-family: $font-sub;
+    font-size: 1.3rem;
+    padding-top: 10px;
+}
+
+.shadow-description {
+    font-family: $font-text;
+    color: $blue-grey-light;
+}
+
+/* ==========================================================================
+1. Landing Contact Form
+========================================================================== */
+
+.contact-title {
+    margin-top: 200px;
+}
+
+.contact-form {
+    width: 100%;
+    padding: 40px 20px;
+
+    &.is-bigger {
+        width: 100%;
+        border: 1px solid $fade-grey;
+        box-shadow: $light-box-shadow;
+        border-radius: 8px;
+        background: $white;
+        padding: 50px;
+
+        p {
+            color: $med-grey;
+            font-size: .9rem;
+            margin-bottom: 40px;
+        }
+
+        .button-wrap {
+            margin-top: 50px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: $font-main;
+
+            .button {
+                height: 54px;
+                line-height: 1 !important;
+            }
+        }
+    }
+
+    label {
+        font-weight: 500;
+        color: $blue-grey;
+    }
+
+    .submit-wrapper {
+        text-align: right;
+    }
+}
+
+.contact-toggler {
+    padding: 40px 0;
+
+    .tabbed-links {
+        li {
+            display: inline-block;
+            padding: 10px;
+            color: $placeholder;
+            border-top: 2px solid transparent;
+            cursor: pointer;
+
+            &.is-active {
+                color: $blue-grey;
+                font-weight: 500;
+                border-top: 2px solid $primary;
+            }
+        }
+    }
+
+    .contact-blocks {
+        .contact-block {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 0;
+
+            .contact-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $primary;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+
+                i {
+                    font-size: 1.3rem;
+                    color: $white;
+                }
+            }
+
+            .contact-info {
+                padding: 0 10px;
+
+                span {
+                    display: block;
+
+                    &:first-child {
+                        font-weight: 500;
+                        color: $blue-grey;
+                    }
+
+                    &:nth-child(2) {
+                        font-weight: 500;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .submit-wrapper {
+        text-align: center !important;
+    }
+
+    .contact-form {
+        &.is-bigger {
+            padding: 30px;
+        }
+    }
+}
+
+/* ==========================================================================
+5. Contact Form 2
+========================================================================== */
+
+.contact-title-2 {
+    margin-top: 200px;
+}
+
+.contact-form-2 {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto 60px auto;
+    border: 1px solid $fade-grey;
+    box-shadow: $light-box-shadow;
+    border-radius: 8px;
+    background: $white;
+    padding: 50px;
+
+    p {
+        color: $med-grey;
+        font-size: .9rem;
+        margin-bottom: 40px;
+    }
+
+    .b-checkbox {
+        display: flex;
+
+        label {
+            padding-left: 1rem;
+            color: $blue-grey-light;
+        }
+    }
+
+    .button-wrap {
+        margin-top: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: $font-main;
+
+        .button {
+            height: 54px;
+            line-height: 3 !important;
+        }
+    }
+}
+
+/* ==========================================================================
+1. Maps
+========================================================================== */
+.half-map {
+    min-height: 550px;
+}
+
+@media (max-width: 767px) {
+    #google-map {
+        min-height: 50vh;
+    }
+}
+
+.mapbox-map {
+    &.map-1 {
+        width: 100%;
+        height: 100%;
+
+        canvas {
+            height: 100% !important;
+        }
+    }
+}
+
+/* ==========================================================================
+2. Startup contact button
+========================================================================== */
+
+.startup-contact-button {
+    max-width: 320px;
+    margin: 0 auto;
+    height: 44px;
+}
+
+/* ==========================================================================
+3. Contact page v1
+========================================================================== */
+
+.contact-page-form {
+    display: block;
+    padding: 40px;
+    border: 1px solid lighten($input-border, 4%);
+    box-shadow: $light-box-shadow;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    text-align: left;
+
+    &.is-pushed-right {
+        margin-right: 0;
+    }
+
+    > h3 {
+        font-family: $font-main;
+        font-size: 1.4rem;
+        color: $blue-grey;
+    }
+
+    > p {
+        color: $blue-grey-light;
+        margin-bottom: 2rem;
+    }
+
+    .column {
+        padding: .5rem;
+    }
+
+    .field {
+        > label {
+            font-size: .95rem;
+        }
+
+        .control {
+            .input, .textarea {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+4. Map Block
+========================================================================== */
+
+.map-block {
+    border-radius: 2rem;
+    margin: 3rem auto 5rem auto;
+    max-width: 1040px;
+  
+    .map-block-inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 3rem;
+      min-height: 400px;
+      z-index: 1;
+  
+      .card {
+        min-width: 340px;
+        border-radius: 1rem;
+        background: $white;
+        border: 1px solid $border;
+  
+        .card-content {
+          padding: 2.5rem;
+  
+          h4 {
+            font-family: $font-main;
+            font-size: 1.2rem;
+            color: $blue-grey;
+          }
+  
+          p {
+            font-family: $font-text;
+            color: $blue-grey-light;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+  
+          .control {
+            position: relative;
+  
+            .form-icon {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 42px;
+              width: 42px;
+  
+              svg {
+                height: 18px;
+                width: 18px;
+                stroke: $primary;
+              }
+            }
+          }
+  
+          .input,
+          .textarea {
+            font-family: $font-text;
+            font-size: 0.9rem;
+            border-radius: 0.5rem;
+            transition: border-color 0.3s;
+  
+            &:focus {
+              border-color: $primary;
+            }
+          }
+  
+          .input {
+            height: 42px;
+            padding-left: 42px;
+            border-radius: 0.55rem;
+          }
+  
+          .button {
+            height: 42px;
+            border-radius: 0.55rem;
+          }
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .map-block {
+      .map-block-inner {
+        padding: 1.5rem !important;
+  
+        .card {
+          min-width: 100% !important;
+        }
+      }
+    }
+  }
