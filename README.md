@@ -27,7 +27,7 @@ To use this template, your computer needs:
 
 ### Installing:
 
-- Install all node packages: `npm install`
+- Install all node packages: `npm install` (or `yarn install --ignore-engines`)
 - Run `gulp dev`
 - Your site is now viewable at this URL: http://localhost:3000
 

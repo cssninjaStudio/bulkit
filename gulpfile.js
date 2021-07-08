@@ -1,5 +1,5 @@
 "use strict";
-const { src, dest, watch, series, parallel } = require("gulp");
+const { src, dest, watch, series } = require("gulp");
 const log = require("fancy-log");
 const colors = require("ansi-colors");
 const browserSync = require("browser-sync").create();
@@ -13,17 +13,13 @@ const uglify = require("gulp-uglify-es").default;
 const sourcemaps = require("gulp-sourcemaps");
 const purgecss = require("gulp-purgecss");
 const imagemin = require("gulp-imagemin");
-const removeCode = require("gulp-remove-code");
-const removeLog = require("gulp-remove-logging");
 const prettyHtml = require("gulp-pretty-html");
 const sassLint = require("gulp-sass-lint");
 const htmllint = require("gulp-htmllint");
 const jshint = require("gulp-jshint");
-const htmlreplace = require("gulp-html-replace");
 const newer = require("gulp-newer");
 const autoprefixer = require("gulp-autoprefixer");
 const accessibility = require("gulp-accessibility");
-const babel = require("gulp-babel");
 const logSymbols = require('log-symbols'); //For Symbolic Console logs :) :P
 
 sass.compiler = require("sass");
@@ -334,6 +330,22 @@ function copyImages() {
   );
 }
 
+function minifyImages() {
+  console.log('---------------OPTIMIZING IMAGES---------------');
+  return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm|ogv|ogg)')
+    .pipe(newer('dist/assets/img/'))
+    .pipe(imagemin([
+      imagemin.gifsicle({ optimizationLevel: 3, interlaced: true }),
+      imagemin.mozjpeg({ quality: 85 }),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.svgo()
+    ], {
+      verbose: true
+    }))
+    .pipe(dest('dist/assets/img/'))
+    .pipe(browserSync.stream());
+}
+
 function copyFont() {
   console.log("\n\t" + logSymbols.info, "Copying Font files..\n");
   return src(["src/assets/font/**/*"])
@@ -475,11 +487,11 @@ exports.build = series(
   copyData,
   jsVendor,
   cssVendor,
-  copyImages,
   compileHTML,
   concatPlugins,
   concatCssPlugins,
   concatJS,
+  minifyImages,
   resetPages,
   prettyHTML,
   compileSCSS,

@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build",
-    "preinstall": "npx npm-force-resolutions"
+    "build": "gulp build"
   },
   "author": "Css Ninja",
   "license": "MIT",
@@ -18,6 +17,7 @@
     "@babel/core": "^7.4.4",
     "acorn": "^7.1.1",
     "ansi-colors": "^4.1.1",
+    "axios": "0.21.1",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -29,37 +29,32 @@
     "gulp": "^4.0.2",
     "gulp-accessibility": "^3.1.1",
     "gulp-autoprefixer": "^6.1.0",
-    "gulp-babel": "^8.0.0",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.1",
-    "gulp-html-replace": "^1.6.2",
     "gulp-htmllint": "0.0.16",
-    "gulp-imagemin": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-jshint": "^2.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-pretty-html": "^2.0.9",
-    "gulp-remove-code": "^3.0.4",
-    "gulp-remove-logging": "^1.2.0",
+    "gulp-purgecss": "^4.0.3",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-lint": "^1.4.0",
-    "gulp-purgecss": "^4.0.3",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp-uglify-es": "^1.0.4",
-    "sass": "^1.30.0",
-    "log-symbols": "^4.0.0",
+    "ini": "1.3.6",
     "jshint": "^2.10.1",
+    "log-symbols": "^4.0.0",
     "marked": "^0.7.0",
     "minimist": "^1.2.5",
     "node-bourbon": "^4.2.8",
-    "npm-force-resolutions": "0.0.3",
     "panini": "^1.7.1",
     "run-sequence": "^2.2.1",
-    "yargs-parser": "18.1.2",
-    "zoom-vanilla.js": "^2.0.6",
+    "sass": "^1.30.0",
     "y18n": "^5.0.5",
-    "ini": "1.3.6"
+    "yargs-parser": "18.1.2",
+    "zoom-vanilla.js": "^2.0.6"
   },
   "dependencies": {
     "@claviska/jquery-dropdown": "^2.0.3",
@@ -86,15 +81,5 @@
     "timedropper": "^1.0.0",
     "vivus": "^0.4.3",
     "wallop": "^2.4.1"
-  },
-  "resolutions": {
-    "minimist": "^1.2.5",
-    "braces": "^2.3.1",
-    "marked": "^0.7.0",
-    "acorn": "^7.1.1",
-    "yargs-parser": "18.1.2",
-    "axios": "0.21.1",
-    "y18n": "^5.0.5",
-    "ini": "1.3.6"
   }
 }

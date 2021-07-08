@@ -32,6 +32,7 @@ yarn build
 # zip sources template-${PROJECT}-${TAG}.zip
 zip -r .release/template-${PROJECT}-${TAG}.zip . \
   -x "*.zip" \
+  -x "*.log" \
   -x "node_modules/*" \
   -x ".release/*" \
   -x ".git/*" \
@@ -42,15 +43,17 @@ zip -r .release/template-${PROJECT}-${TAG}.zip . \
 zip -j .release/${PROJECT}-preview.zip \
   .release/${PROJECT}-preview.png
 
+cp ./release/documentation ./
+
 # top level zip release-${PROJECT}-${TAG}.zip 
 zip -j .release/release-${PROJECT}-${TAG}.zip \
   .release/template-${PROJECT}-${TAG}.zip \
   .release/${PROJECT}-preview.zip \
   .release/${PROJECT}-thumb.png \
-  .release/documentation.html
+  ./documentation
 
 # remove zip sources template-${PROJECT}-${TAG}.zip
-rm -rf .release/${PROJECT}-preview.zip .release/template-${PROJECT}-${TAG}.zip
+rm -rf ./documentation .release/${PROJECT}-preview.zip .release/template-${PROJECT}-${TAG}.zip
 
 # revert ./src changes
 git checkout ./src

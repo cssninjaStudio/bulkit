@@ -2,8 +2,7 @@ version: "3.7"
 
 services:
   bulkit-demo:
-    build:
-      context: .
+    image: digisquad/cssninja.bulkit-demo:latest
     networks:
       - cssninja-services
     restart: "${MOEBIUS_DEMO_RESTART:-no}"
