@@ -49,3 +49,4 @@ node_modules/
 ### Custom Files ###
 dist/
 accessibility-reports/
+.release/*.zip
