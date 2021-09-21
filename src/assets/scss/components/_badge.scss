@@ -82,6 +82,7 @@ $size-large: 2rem !default;
         z-index: 99;
         margin: 0;
         background: $blue-grey;
+        -webkit-background-clip: padding-box;
         background-clip: padding-box;
         border-radius: $badge-border-radius;
         box-shadow: 0 0 0 $badge-border-size $white;

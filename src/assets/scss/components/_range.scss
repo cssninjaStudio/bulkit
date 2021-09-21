@@ -13,6 +13,8 @@ TABLE OF CONTENTS
 =============================================================================
 ***/
 
+@use 'sass:math';
+
 /* ==========================================================================
 0. Variables
 ========================================================================== */
@@ -41,7 +43,7 @@ $output-minus: 1.2rem;
 ========================================================================== */
 
 @mixin slider-size($size) {
-    $track-height: $size / 2;
+    $track-height: math.div($size, 2);
     $thumb-size: $size;
 
     &:not([orient="vertical"]) {
@@ -75,7 +77,7 @@ $output-minus: 1.2rem;
     &::-webkit-slider-thumb {
         height: $thumb-size;
         width: $thumb-size;
-        margin-top: -($thumb-size / 4);
+        margin-top: -(math.div($thumb-size, 4));
     }
 
     &::-moz-range-thumb {
@@ -91,7 +93,7 @@ $output-minus: 1.2rem;
     &[orient="vertical"] {
         &::-webkit-slider-thumb {
             margin-top: auto;
-            margin-left: -($thumb-size / 4);
+            margin-left: -(math.div($thumb-size, 4));
         }
     }
 }

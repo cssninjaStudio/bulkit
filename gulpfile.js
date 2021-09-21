@@ -3,7 +3,7 @@ const { src, dest, watch, series } = require("gulp");
 const log = require("fancy-log");
 const colors = require("ansi-colors");
 const browserSync = require("browser-sync").create();
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const bourbon = require("node-bourbon").includePaths;
 const rename = require("gulp-rename");
 const concat = require("gulp-concat");
@@ -247,7 +247,6 @@ function concatPlugins() {
     nodepath + "chosen-js/chosen.jquery.min.js",
     nodepath + "slick-carousel/slick/slick.min.js",
     nodepath + "vivus/dist/vivus.min.js",
-    nodepath + "covervid/covervid.min.js",
     nodepath + "plyr/dist/plyr.min.js",
     nodepath + "scrollreveal/dist/scrollreveal.min.js",
     nodepath + "waypoints/lib/jquery.waypoints.min.js",
@@ -260,7 +259,6 @@ function concatPlugins() {
     nodepath + "@fengyuanchen/datepicker/dist/datepicker.min.js",
     nodepath + "datedropper/datedropper.min.js",
     nodepath + "timedropper/timedropper.min.js",
-    nodepath + "paper/dist/paper-full.min.js",
     nodepath + "easy-autocomplete/dist/jquery.easy-autocomplete.min.js",
     nodepath + "jquery-tags-input/dist/jquery.tagsinput.min.js",
     nodepath + "wallop/js/Wallop.min.js",

@@ -22,6 +22,7 @@ TABLE OF CONTENTS
     13. Jobs Hero
     13. Map Hero
     14. Car Hero
+    15. Hero composition 1
 ***/
 
 /* ==========================================================================
@@ -599,7 +600,13 @@ body {
   width: 100%;
   height: 580px;
   background: $primary;
-  background: linear-gradient(-45deg, darken($primary, 8%), $primary, $primary, darken($primary, 8%));
+  background: linear-gradient(
+    -45deg,
+    darken($primary, 8%),
+    $primary,
+    $primary,
+    darken($primary, 8%)
+  );
   transform: translateY(-100%);
   transition: all 0.3s;
 
@@ -1232,90 +1239,811 @@ body {
 ========================================================================== */
 
 .car-hero {
-    position: relative;
-  
-    .main-image {
-      opacity: 0;
-      pointer-events: none;
-    }
-  
-    .left-image,
-    .right-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-  
-    .right-image {
-      z-index: 0;
-  
-      &.is-active {
-        transform: translate(-44px, -40px);
-      }
-      transition: all 0.55s ease-out;
-    }
-  
-    .left-image {
-      top: -4rem;
-      z-index: 1;
-  
-      &.is-active {
-        transform: translate(44px, 44px);
-      }
-      transition: all 0.55s ease-out;
-    }
+  position: relative;
+
+  .main-image {
+    opacity: 0;
+    pointer-events: none;
   }
-  
-  .is-car-layer {
-    bottom: -150px !important;
-    transition: all 0.6s;
-  
+
+  .left-image,
+  .right-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .right-image {
+    z-index: 0;
+
     &.is-active {
-      bottom: 0 !important;
+      transform: translate(-44px, -40px);
+    }
+    transition: all 0.55s ease-out;
+  }
+
+  .left-image {
+    top: -4rem;
+    z-index: 1;
+
+    &.is-active {
+      transform: translate(44px, 44px);
+    }
+    transition: all 0.55s ease-out;
+  }
+}
+
+.is-car-layer {
+  bottom: -150px !important;
+  transition: all 0.6s;
+
+  &.is-active {
+    bottom: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .car-hero-wrap {
+    .title,
+    .subtitle {
+      text-align: center;
+    }
+
+    .hero-form {
+      margin-top: 2rem;
+
+      .flex-card {
+        padding-top: 0;
+        padding-bottom: 0;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+      }
     }
   }
-  
-  @media (max-width: 767px) {
-    .car-hero-wrap {
-      .title,
-      .subtitle {
-        text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .car-hero-wrap {
+    .title,
+    .subtitle {
+      text-align: center;
+    }
+
+    .hero-form {
+      margin-top: 2rem;
+
+      .flex-card {
+        display: block;
+        padding-top: 0;
+        padding-bottom: 0;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        margin: 0 auto;
       }
-  
-      .hero-form {
-        margin-top: 2rem;
-  
-        .flex-card {
-          padding-top: 0;
-          padding-bottom: 0;
-          background: transparent;
-          box-shadow: none;
-          border: none;
+    }
+  }
+}
+
+/* ==========================================================================
+15. Hero composition 1
+========================================================================== */
+
+.hero-image-composition-1 {
+  position: relative;
+
+  .image-wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 420px;
+
+    .curly-image {
+      max-height: 540px;
+      border-radius: 0 5rem 0 5rem;
+    }
+  }
+
+  .floating-box {
+    position: absolute;
+    background: $white;
+    padding: 0.85rem;
+    border: 1px solid $border;
+    border-radius: 0.75rem;
+    box-shadow: $light-box-shadow;
+
+    &.floating-box-1 {
+      bottom: 4rem;
+      right: -4rem;
+      max-width: 240px;
+      min-width: 240px;
+    }
+
+    &.floating-box-2 {
+      top: 4rem;
+      left: -6rem;
+      max-width: 180px;
+      min-width: 180px;
+    }
+
+    .floating-box-content {
+      width: 100%;
+
+      .pastel-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        min-width: 40px;
+        border-radius: 50%;
+
+        &.is-success {
+          background: lighten($success, 45%);
+          color: $success;
+        }
+
+        &.is-info {
+          background: lighten($info, 45%);
+          color: $info;
         }
       }
-    }
-  }
-  
-  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .car-hero-wrap {
-      .title,
-      .subtitle {
-        text-align: center;
+
+      .icon-block {
+        .pastel-icon {
+          margin: 1rem auto 0.75rem auto;
+          height: 50px;
+          width: 50px;
+          min-width: 50px;
+        }
+
+        .block-text {
+          text-align: center;
+
+          .block-title {
+            display: block;
+            font-family: $font-main;
+            font-size: 1.25rem;
+            line-height: 1;
+            color: $blue-grey;
+          }
+
+          .block-subtitle {
+            display: block;
+            font-family: $font-text;
+            font-size: 0.85rem;
+            color: $blue-grey-light;
+            margin-bottom: 0.75rem;
+          }
+        }
       }
-  
-      .hero-form {
-        margin-top: 2rem;
-  
-        .flex-card {
+
+      .icon-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        width: 100%;
+
+        .header-text {
           display: block;
-          padding-top: 0;
-          padding-bottom: 0;
-          background: transparent;
-          box-shadow: none;
-          border: none;
-          margin: 0 auto;
+          font-family: $font-main;
+          color: $blue-grey;
+          margin-left: 0.75rem;
+        }
+
+        .header-stat {
+          margin-left: auto;
+          margin-right: 0.5rem;
+          font-family: $font-text;
+          font-weight: 600;
+          font-size: 0.8rem;
+
+          &.is-positive {
+            color: $success;
+          }
+
+          &.is-negative {
+            color: $danger;
+          }
+        }
+      }
+
+      .inner-text-content {
+        font-family: $font-text;
+        font-size: 0.85rem;
+        color: $blue-grey-light;
+        text-align: left;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+16. Hero composition 2
+========================================================================== */
+
+.hero-image-composition-2 {
+  position: relative;
+
+  .image-wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 420px;
+
+    .inner-image {
+      height: 420px;
+      width: 420px;
+      max-width: 420px;
+      border-radius: 50%;
+    }
+
+    .floating-disc {
+      position: absolute;
+
+      &.disc-1 {
+        bottom: 4rem;
+        right: -4rem;
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        border: 3px solid $info;
+      }
+
+      &.disc-2 {
+        top: 5rem;
+        left: 1rem;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 3px solid $success;
+      }
+
+      &.disc-3 {
+        bottom: 2rem;
+        right: 0;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        border: 2px solid $danger;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-image-composition-2 {
+    .image-wrap {
+      .inner-image {
+        height: 280px;
+        width: 280px;
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+17. Hero composition 3
+========================================================================== */
+
+.hero-image-composition-3 {
+  position: relative;
+
+  .image-wrap {
+    position: relative;
+    margin: 0 auto;
+    max-width: 380px;
+
+    .inner-image {
+      height: 380px;
+      width: 380px;
+      max-width: 380px;
+      border-radius: 50%;
+    }
+
+    .inner-image-second {
+      position: absolute;
+      top: -55px;
+      right: -55px;
+      height: 170px;
+      width: 170px;
+      max-width: 170px;
+      border-radius: 50%;
+    }
+
+    .inner-image-third {
+      position: absolute;
+      top: -90px;
+      right: 140px;
+      height: 70px;
+      width: 70px;
+      max-width: 70px;
+      border-radius: 50%;
+    }
+
+    .floating-dot {
+      position: absolute;
+
+      &.dot-1 {
+        top: -8%;
+        right: 61%;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background: $info;
+      }
+
+      &.dot-2 {
+        top: -30%;
+        right: 58%;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: $success;
+      }
+
+      &.dot-3 {
+        bottom: 33%;
+        right: 0;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background: $danger;
+      }
+
+      &.dot-4 {
+        bottom: 76%;
+        right: -22%;
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        background: $primary;
+      }
+
+      &.dot-5 {
+        bottom: 18%;
+        left: -10%;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background: $warning;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-image-composition-3 {
+    .image-wrap {
+      .inner-image {
+        height: 280px;
+        width: 280px;
+        max-width: 280px;
+      }
+
+      .inner-image-second {
+        top: 8px;
+        right: 10px;
+        height: 90px;
+        width: 90px;
+      }
+
+      .inner-image-third {
+        display: none;
+      }
+
+      .floating-dot {
+        &.dot-1 {
+          top: 2%;
+          right: 80%;
+        }
+
+        &.dot-2 {
+          top: 12%;
+          right: 90%;
         }
       }
     }
   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-image-composition-3 {
+    margin-top: 8rem;
+  }
+}
+
+/* ==========================================================================
+18. Hero composition 4
+========================================================================== */
+
+$half-circle-size: 26px;
+
+.has-people {
+  .hero-body {
+    padding-bottom: 0;
+  }
+}
+
+.hero-image-composition-4 {
+  .image-wrap {
+    min-height: 580px;
+    margin: 0 auto;
+    width: 100%;
+
+    .inner-image {
+      position: absolute;
+      bottom: 0.75rem;
+      right: -10%;
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 740px;
+      z-index: 2;
+    }
+
+    .perspective {
+      position: absolute;
+      top: 10%;
+      right: -2%;
+      width: 100%;
+      max-width: 720px;
+      min-height: 410px;
+      background: $primary;
+      border-radius: 2rem;
+      box-shadow: $primary-box-shadow;
+      transform-origin: center center;
+      transform: perspective(600px) rotatey(-18deg);
+      z-index: 1;
+    }
+
+    .person-bubble {
+      position: absolute;
+      background: $white;
+      padding: 0.85rem 1.25rem 0.85rem 0.85rem;
+      border: 1px solid $border;
+      border-radius: 50rem;
+      box-shadow: $light-box-shadow;
+      display: flex;
+      align-items: center;
+      min-width: 230px;
+      z-index: 4;
+
+      &.person-bubble-1 {
+        bottom: 30%;
+        right: -16%;
+      }
+
+      &.person-bubble-2 {
+        top: 44%;
+        right: 38%;
+      }
+
+      img {
+        height: 40px;
+        width: 40px;
+        min-width: 40px;
+        border-radius: 50%;
+      }
+
+      .bubble-content {
+        flex-grow: 2;
+        margin-left: 0.75rem;
+
+        span {
+          display: block;
+          border-radius: 5rem;
+          height: 0.75rem;
+          background: $fade-grey;
+
+          &:first-child {
+            margin-bottom: 0.25rem;
+            max-width: 80%;
+          }
+
+          &:nth-child(2) {
+            max-width: 50%;
+          }
+        }
+      }
+    }
+
+    .half-circle {
+      position: absolute;
+      height: $half-circle-size;
+      width: $half-circle-size * 2;
+      border-top-left-radius: $half-circle-size * 2;
+      border-top-right-radius: $half-circle-size * 2;
+      z-index: 3;
+
+      &.half-circle-1 {
+        top: 27%;
+        right: 52%;
+        transform: rotate(-35deg);
+        background: $success;
+      }
+
+      &.half-circle-2 {
+        top: 2%;
+        right: 5%;
+        transform: rotate(65deg) scale(0.8);
+        background: $danger;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-image-composition-4 {
+    .image-wrap {
+      min-height: 280px;
+
+      .inner-image {
+        right: 0;
+      }
+
+      .perspective {
+        min-height: 225px;
+        top: initial;
+        right: 1%;
+        bottom: 5%;
+      }
+
+      .half-circle {
+        z-index: 0;
+
+        &.half-circle-1 {
+          top: 27%;
+          left: -15%;
+          right: initial;
+        }
+
+        &.half-circle-2 {
+          top: 12%;
+          right: 5%;
+        }
+      }
+
+      .person-bubble {
+        transform: scale(0.6);
+
+        &.person-bubble-1 {
+          bottom: 17%;
+          right: -35%;
+        }
+
+        &.person-bubble-2 {
+          top: initial;
+          bottom: 5%;
+          right: 45%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-image-composition-4 {
+    .image-wrap {
+      .inner-image {
+        right: -2%;
+      }
+
+      .perspective {
+        top: 42%;
+        right: 8%;
+      }
+
+      .person-bubble {
+        &.person-bubble-2 {
+          top: 75%;
+          left: -3%;
+          right: initial;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .hero-image-composition-4 {
+    .image-wrap {
+      .inner-image {
+        max-width: 660px;
+      }
+
+      .perspective {
+        top: 20%;
+        right: 2%;
+        max-width: 545px;
+        min-height: 400px;
+      }
+
+      .person-bubble {
+        &.person-bubble-2 {
+          top: 50%;
+          right: 34%;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+19. Hero composition 5
+========================================================================== */
+
+.hero-image-composition-5 {
+  .image-wrap {
+    display: flex;
+    align-items: center;
+
+    .thin-image-first,
+    .thin-image-second,
+    .thin-image-third {
+      display: block;
+      margin: 0 0.5rem;
+      width: calc(33.3% - 1rem);
+
+      border-radius: 50rem;
+      object-fit: cover;
+    }
+
+    .thin-image-first,
+    .thin-image-third {
+      min-height: 420px;
+    }
+
+    .thin-image-second {
+      min-height: 560px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-image-composition-5 {
+    .image-wrap {
+      .thin-image-first,
+      .thin-image-third {
+        min-height: 360px;
+      }
+
+      .thin-image-second {
+        min-height: 460px;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+19. Hero composition 6
+========================================================================== */
+
+.hero-image-composition-6 {
+  min-height: 580px;
+
+  .image-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 580px;
+    margin: 0 auto;
+    width: 100%;
+
+    .inner-image {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+      max-height: 580px;
+      width: auto;
+      z-index: 2;
+    }
+  }
+
+  .polka-dots {
+    position: absolute;
+    z-index: 0;
+
+    img {
+      display: block;
+      width: 140px;
+    }
+
+    &.polka-dots-1 {
+      bottom: 48%;
+      right: 7%;
+    }
+
+    &.polka-dots-2 {
+      bottom: 30%;
+      left: 6%;
+    }
+  }
+
+  .element-container {
+    position: absolute;
+    z-index: 1;
+
+    &.element-1 {
+      bottom: 35%;
+      right: 10%;
+      background: $white;
+      padding: 0.85rem;
+      height: 230px;
+      max-width: 300px;
+      border: 1px solid $border;
+      border-radius: 1.75rem;
+      box-shadow: $light-box-shadow;
+
+      .call-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        img {
+          display: block;
+          object-fit: cover;
+          height: 100%;
+          border-radius: 1.25rem;
+        }
+      }
+    }
+
+    &.element-2 {
+      bottom: 35%;
+      left: 10%;
+      background: $white;
+      padding: 0.85rem;
+      height: 300px;
+      max-width: 260px;
+      border: 1px solid $border;
+      border-radius: 1.75rem;
+      box-shadow: $light-box-shadow;
+
+      .call-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        img {
+          display: block;
+          object-fit: cover;
+          height: 100%;
+          border-radius: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-image-composition-6 {
+    .element-container {
+      display: none;
+    }
+
+    .polka-dots {
+      &.polka-dots-1 {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-image-composition-6 {
+    .element-container {
+      &.element-1 {
+        right: -18%;
+      }
+
+      &.element-2 {
+        bottom: 24%;
+        left: -17%;
+      }
+    }
+  }
+}

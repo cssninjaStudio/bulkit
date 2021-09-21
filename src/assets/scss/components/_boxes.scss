@@ -28,6 +28,8 @@ TABLE OF CONTENTS
 =============================================================================
 ***/
 
+@use 'sass:math';
+
 @mixin prefix($prop, $val) {
   @each $prefix in "-webkit-", "-moz-", "-ms-", "" {
     #{$prefix}#{$prop}: $val;
@@ -497,7 +499,7 @@ $length: 75;
   margin: 0 auto;
   width: $length + px;
   height: $length + px;
-  font-size: $length / 3 + px;
+  font-size: math.div($length, 3) + px;
   line-height: $length + px;
   background-color: $primary-box-background;
 
@@ -1186,6 +1188,7 @@ $length: 75;
     .front {
       z-index: 2;
       background-color: $white;
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 
@@ -1201,6 +1204,7 @@ $length: 75;
       background: $white;
       opacity: 1;
       transform: rotateY(180deg);
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 

@@ -21,6 +21,8 @@ TABLE OF CONTENTS
 =============================================================================
 ***/
 
+@use 'sass:math';
+
 /* ==========================================================================
 0. Variables
 ========================================================================== */
@@ -101,9 +103,11 @@ $contrast: 0% !default;
 2. Bubble
 ========================================================================== */
 
+$trackCalc: -$track-border-width * 2 + $track-height;
+
 .bubble-range {
     -webkit-appearance: none;
-    margin: ($thumb-height / 2) 0;
+    margin: (math.div($thumb-height, 2)) 0;
     width: $track-width;
 
     &:focus {
@@ -114,7 +118,7 @@ $contrast: 0% !default;
         @include thumb;
 
         -webkit-appearance: none;
-        margin-top: (-$track-border-width * 2 + $track-height) / 2 - $thumb-height / 2;
+        margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
     }
 
     &:focus::-webkit-slider-runnable-track {
@@ -187,7 +191,7 @@ $contrast: 0% !default;
 
     @for $i from 0 through 100 {
         &[data-value='#{$i}'] .bubble-label {
-            left: percentage($i / 100);
+            left: percentage(math.div($i, 100));
         }
     }
 
@@ -201,7 +205,7 @@ $contrast: 0% !default;
                 @include thumb-primary;
 
                 -webkit-appearance: none;
-                margin-top: (-$track-border-width * 2 + $track-height) / 2 - $thumb-height / 2;
+                margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
             }
 
             &::-moz-range-thumb {
@@ -224,7 +228,7 @@ $contrast: 0% !default;
                 @include thumb-secondary;
 
                 -webkit-appearance: none;
-                margin-top: (-$track-border-width * 2 + $track-height) / 2 - $thumb-height / 2;
+                margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
             }
 
             &::-moz-range-thumb {
@@ -247,7 +251,7 @@ $contrast: 0% !default;
                 @include thumb-accent;
 
                 -webkit-appearance: none;
-                margin-top: (-$track-border-width * 2 + $track-height) / 2 - $thumb-height / 2;
+                margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
             }
 
             &::-moz-range-thumb {
@@ -329,7 +333,7 @@ $contrast: 0% !default;
     @for $i from 0 through 100 {
         &[data-value='#{$i}'] .bar {
             margin-right: 25px;
-            width: calc(#{$i}% - #{$thumb-width} / (100/#{$i}));
+            width: calc(#{$i}% - math.div(#{$thumb-width}, math.div(100, #{$i})));
         }
     }
 }

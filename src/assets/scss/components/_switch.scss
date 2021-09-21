@@ -13,6 +13,8 @@ TABLE OF CONTENTS
 =============================================================================
 ***/
 
+@use 'sass:math';
+
 /* ==========================================================================
 0. Variables
 ========================================================================== */
@@ -68,7 +70,7 @@ $radius-large: 100px;
         &::after {
             display: block;
             position: absolute;
-            top: $switch-height / 2 - $paddle-height / 2;
+            top: math.div($switch-height, 2) - math.div($paddle-height, 2);
             left: $switch-paddle-offset;
             width: $paddle-width;
             height: $paddle-height;
@@ -247,8 +249,8 @@ $radius-large: 100px;
     &.is-thin {
         + label {
             &::before {
-                top: $switch-height / 2.75;
-                height: $switch-height / 4;
+                top: math.div($switch-height, 2.75);
+                height: math.div($switch-height, 4);
             }
 
             &::after {
@@ -264,6 +266,8 @@ $radius-large: 100px;
 
 .switch[type="checkbox"] {
     outline: 0;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     display: none;
     opacity: 0;

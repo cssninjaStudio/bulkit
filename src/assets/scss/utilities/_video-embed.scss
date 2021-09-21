@@ -87,8 +87,23 @@ TABLE OF CONTENTS
   overflow: hidden;
 
   &.is-square {
+    position: relative;
     height: 440px;
     width: 480px;
+
+    .plyr {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+
+    .plyr__video-wrapper {
+      height: 440px;
+      width: 480px;
+    }
   }
 
   &.is-4by3 {

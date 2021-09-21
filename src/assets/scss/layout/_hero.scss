@@ -234,6 +234,12 @@ TABLE OF CONTENTS
         }
     }
 
+    .container {
+        &.is-static {
+            position: static !important;
+        }
+    }
+
     .header-caption-wrapper {
         &.is-pulled {
             margin-top: -100px;
