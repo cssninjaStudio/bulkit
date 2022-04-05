@@ -1,5 +1,7 @@
 # Bulkit 5.3 | Landing pages SaaS Kit
 
+[![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://discord.cssninja.io/)
+
 ### Note
 
 Changes should be commited to `src/` files only.
