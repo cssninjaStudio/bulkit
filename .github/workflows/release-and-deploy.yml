@@ -84,6 +84,15 @@ jobs:
           push: true
           tags: ${{ steps.get_meta.outputs.dockertags }}
 
+      - name: Publish
+        uses: appleboy/scp-action@master
+        with:
+          host: cssninja.io
+          username: ci
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: 'docker-compose.yml'
+          target: ${{ secrets.HOST_DIRECTORY }}
+
       - name: Deploy to cssninja.io
         uses: appleboy/ssh-action@master
         with:
@@ -93,6 +102,6 @@ jobs:
           script_stop: true
           script: |
             cd ${{ secrets.HOST_DIRECTORY }}
-            git pull
             docker-compose pull
             docker-compose up -d --force-recreate --remove-orphans
+            docker image prune -f -a --filter "until=24h"
