@@ -1,4 +1,4 @@
-FROM bitnami/node:14 AS build
+FROM bitnami/node:16 AS build
 WORKDIR /app
 
 COPY package.json ./
@@ -9,7 +9,7 @@ COPY . .
 RUN npm run build
 
 
-FROM bitnami/nginx:1.19 AS prod
+FROM bitnami/nginx:1.21 AS prod
 WORKDIR /app
 
 COPY --from=build /app/dist .
