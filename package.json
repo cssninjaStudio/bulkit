@@ -59,7 +59,7 @@
   "dependencies": {
     "@claviska/jquery-dropdown": "^2.0.3",
     "@fengyuanchen/datepicker": "^0.6.5",
-    "bulma": "^0.9.3",
+    "bulma": "^0.9.4",
     "bulma-extensions": "^6.2.7",
     "chosen-js": "^1.8.3",
     "datedropper": "^2.0.0",
