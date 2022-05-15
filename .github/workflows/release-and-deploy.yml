@@ -90,8 +90,8 @@ jobs:
           host: cssninja.io
           username: ci
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: 'docker-compose.yml'
-          target: ${{ secrets.HOST_DIRECTORY }}
+          source: "docker-compose.yml"
+          target: "${{ secrets.HOST_DIRECTORY }}/docker-compose.yml"
 
       - name: Deploy to cssninja.io
         uses: appleboy/ssh-action@master
