@@ -11,7 +11,7 @@ function initCountdown() {
       hour = minute * 60,
       day = hour * 24;
 
-    let event = "Sep 30, 2021 00:00:00",
+    let event = "Sep 30, 2023 00:00:00",
       countDown = new Date(event).getTime(),
       x = setInterval(function () {
         let now = new Date().getTime(),
