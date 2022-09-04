@@ -51,3 +51,4 @@ dist/
 accessibility-reports/
 .release/*.zip
 *.log
+*.zip

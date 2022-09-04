@@ -13,7 +13,7 @@ import panini from 'panini'
 import uglify from 'gulp-uglify-es'
 import sourcemaps from 'gulp-sourcemaps'
 import purgecss from 'gulp-purgecss'
-import imagemin from 'gulp-imagemin'
+import * as imagemin from 'gulp-imagemin'
 import prettyHtml from 'gulp-pretty-html'
 import sassLint from 'gulp-sass-lint'
 import htmllint from 'gulp-htmllint'
@@ -43,7 +43,7 @@ SETUP TASKS
 ========================================================================== */
 
 function setupBulma() {
-  console.info(logSymbols.info, "Setting up Bulma..");
+  console.info(logSymbols.info, "Setting up Bulma...");
   return src([nodepath + "bulma/*.sass", nodepath + "bulma/**/*.sass"]).pipe(
     dest("src/assets/sass/")
   );
@@ -54,7 +54,7 @@ DEVELOPMENT TASKS
 ========================================================================== */
 
 function compileSCSS() {
-  console.info(logSymbols.info, "Compiling SCSS..");
+  console.info(logSymbols.info, "Compiling SCSS...");
   if (environment === "dev") {
     return src(["src/assets/scss/core.scss"])
       .pipe(
@@ -96,7 +96,7 @@ function compileSCSS() {
 }
 
 function purgeCSS() {
-  console.info(logSymbols.info, "Purging CSS..");
+  console.info(logSymbols.info, "Purging CSS...");
   return src([
     "dist/assets/css/core.css"
   ])
@@ -157,7 +157,7 @@ function purgeCSS() {
 
 
 function compileHTML() {
-  console.info(logSymbols.info, "Compiling HTML..");
+  console.info(logSymbols.info, "Compiling HTML...");
   panini.refresh();
   return src("src/pages/**/*.html")
     .pipe(replace('{{PACKAGE_VERSION}}', packageJson.version))
@@ -175,13 +175,13 @@ function compileHTML() {
 }
 
 function resetPages(done) {
-  console.info(logSymbols.info, "Clearing Panini Cache..");
+  console.info(logSymbols.info, "Clearing Panini Cache...");
   panini.refresh();
   done();
 }
 
 function concatJS() {
-  console.info(logSymbols.info, "Concatenating Bulkit Javascript..");
+  console.info(logSymbols.info, "Concatenating Bulkit Javascript...");
   return src([
     "src/assets/js/utilities/constants.js",
     "src/assets/js/utilities/utilities.js",
@@ -237,7 +237,7 @@ function concatJS() {
 }
 
 function concatPlugins() {
-  console.info(logSymbols.info, "Concatenating Javascript from plugins..");
+  console.info(logSymbols.info, "Concatenating Javascript from plugins...");
   return src([
     nodepath + "jquery/dist/jquery.min.js",
     nodepath + "lozad/dist/lozad.min.js",
@@ -276,7 +276,7 @@ function concatPlugins() {
 }
 
 function concatCssPlugins() {
-  console.info(logSymbols.info, "Concatenating CSS from plugins..");
+  console.info(logSymbols.info, "Concatenating CSS from plugins...");
   return src([
     nodepath + "datedropper/datedropper.min.css",
     nodepath + "timedropper/timedropper.min.css",
@@ -303,13 +303,13 @@ function watchFiles() {
 }
 
 function cleanDist(done) {
-  console.info(logSymbols.info, "Cleaning .dist folder..");
+  console.info(logSymbols.info, "Cleaning .dist folder...");
   deleteSync("dist");
   return done();
 }
 
 function browserSyncInit(done) {
-  console.info(logSymbols.info, "Starting development server..");
+  console.info(logSymbols.info, "Starting development server...");
   browserSync.init({
     server: "./dist",
     ui: false,
@@ -319,7 +319,7 @@ function browserSyncInit(done) {
 }
 
 function copyImages() {
-  console.info(logSymbols.info, "Optimizing Images..");
+  console.info(logSymbols.info, "Optimizing Images...");
   return (
     src("src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|ogv|webm)")
       .pipe(newer("dist/assets/img/"))
@@ -332,7 +332,7 @@ function minifyImages() {
   console.info('---------------OPTIMIZING IMAGES---------------');
   return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm|ogv|ogg)')
     .pipe(newer('dist/assets/img/'))
-    .pipe(imagemin([
+    .pipe(imagemin.default([
       imagemin.gifsicle({ optimizationLevel: 3, interlaced: true }),
       imagemin.mozjpeg({ quality: 85 }),
       imagemin.optipng({ optimizationLevel: 3 }),
@@ -345,28 +345,28 @@ function minifyImages() {
 }
 
 function copyFont() {
-  console.info(logSymbols.info, "Copying Font files..");
+  console.info(logSymbols.info, "Copying Font files...");
   return src(["src/assets/font/**/*"])
     .pipe(dest("dist/assets/fonts"))
     .pipe(browserSync.stream());
 }
 
 function copyData() {
-  console.info(logSymbols.info, "Copying data files..");
+  console.info(logSymbols.info, "Copying data files...");
   return src(["src/data/**/*"])
     .pipe(dest("dist/assets/data"))
     .pipe(browserSync.stream());
 }
 
 function jsVendor() {
-  console.info(logSymbols.info, "Copying JS vendor files..");
+  console.info(logSymbols.info, "Copying JS vendor files...");
   return src(["src/assets/vendor/js/*"])
     .pipe(dest("dist/assets/vendor/js"))
     .pipe(browserSync.stream());
 }
 
 function cssVendor() {
-  console.info(logSymbols.info, "Copying CSS vendor files..");
+  console.info(logSymbols.info, "Copying CSS vendor files...");
   return src(["src/assets/vendor/css/*"])
     .pipe(dest("dist/assets/vendor/css"))
     .pipe(browserSync.stream());
@@ -377,7 +377,7 @@ OPTIMIZATION TASKS
 ========================================================================== */
 
 function scssLint() {
-  console.info(logSymbols.info, "Linting Sass..");
+  console.info(logSymbols.info, "Linting Sass...");
   return src("src/assets/scss/**/*.scss")
     .pipe(
       sassLint({
@@ -389,7 +389,7 @@ function scssLint() {
 }
 
 function htmlLint() {
-  console.info(logSymbols.info, "Linting HTML..");
+  console.info(logSymbols.info, "Linting HTML...");
   return src("dist/*.html").pipe(htmllint({}, htmllintReporter));
 }
 
@@ -404,7 +404,7 @@ function htmllintReporter(filepath, issues) {
     });
     process.exitCode = 1;
   } else {
-    console.info(logSymbols.info, "No Linting Errors..");
+    console.info(logSymbols.info, "No Linting Errors...");
   }
 }
 
@@ -417,7 +417,7 @@ function jsLint() {
 
 
 function prettyHTML() {
-  console.info(logSymbols.info, "Running Pretty on HTML..");
+  console.info(logSymbols.info, "Running Pretty on HTML...");
   return src("dist/*.html")
     .pipe(
       prettyHtml({
@@ -489,7 +489,7 @@ const build = series(
   concatPlugins,
   concatCssPlugins,
   concatJS,
-  minifyImages,
+  process.env.MINIFY_IMAGES === 'true' ? minifyImages : copyImages,
   resetPages,
   prettyHTML,
   compileSCSS,
