@@ -1,8 +1,8 @@
 "use strict";
+
 const { src, dest, watch, series } = require("gulp");
 const log = require("fancy-log");
 const colors = require("ansi-colors");
-const browserSync = require("browser-sync").create();
 const sass = require('gulp-sass')(require('sass'));
 const bourbon = require("node-bourbon").includePaths;
 const rename = require("gulp-rename");
@@ -20,7 +20,8 @@ const jshint = require("gulp-jshint");
 const newer = require("gulp-newer");
 const autoprefixer = require("gulp-autoprefixer");
 const accessibility = require("gulp-accessibility");
-const logSymbols = require('log-symbols'); //For Symbolic Console logs :) :P
+const logSymbols = require('log-symbols');
+const browserSync = require("browser-sync").create();
 
 sass.compiler = require("sass");
 
@@ -29,24 +30,14 @@ ADDITIONAL VARIABLES
 ========================================================================== */
 
 const nodepath = "node_modules/";
-const assetspath = "assets/";
 const environment = "";
-
-/* ==========================================================================
-FILE PATHS
-========================================================================== */
-
-const files = {
-  scssPath: "app/scss/**/*.scss",
-  jsPath: "app/js/**/*.js",
-};
 
 /* ==========================================================================
 SETUP TASKS 
 ========================================================================== */
 
 function setupBulma() {
-  console.log("\n\t" + logSymbols.info, "Setting up Bulma..\n");
+  console.info(logSymbols.info, "Setting up Bulma..");
   return src([nodepath + "bulma/*.sass", nodepath + "bulma/**/*.sass"]).pipe(
     dest("src/assets/sass/")
   );
@@ -57,7 +48,7 @@ DEVELOPMENT TASKS
 ========================================================================== */
 
 function compileSCSS() {
-  console.log("\n\t" + logSymbols.info, "Compiling SCSS..\n");
+  console.info(logSymbols.info, "Compiling SCSS..");
   if (environment === "dev") {
     return src(["src/assets/scss/core.scss"])
       .pipe(
@@ -99,7 +90,7 @@ function compileSCSS() {
 }
 
 function purgeCSS() {
-  console.log("\n\t" + logSymbols.info, "Purging CSS..\n");
+  console.info(logSymbols.info, "Purging CSS..");
   return src([
     "dist/assets/css/core.css"
   ])
@@ -160,7 +151,7 @@ function purgeCSS() {
 
 
 function compileHTML() {
-  console.log("\n\t" + logSymbols.info, "Compiling HTML..\n");
+  console.info(logSymbols.info, "Compiling HTML..");
   panini.refresh();
   return src("src/pages/**/*.html")
     .pipe(
@@ -177,13 +168,13 @@ function compileHTML() {
 }
 
 function resetPages(done) {
-  console.log("\n\t" + logSymbols.info, "Clearing Panini Cache..\n");
+  console.info(logSymbols.info, "Clearing Panini Cache..");
   panini.refresh();
   done();
 }
 
 function concatJS() {
-  console.log("\n\t" + logSymbols.info, "Concatenating Bulkit Javascript..\n");
+  console.info(logSymbols.info, "Concatenating Bulkit Javascript..");
   return src([
     "src/assets/js/utilities/constants.js",
     "src/assets/js/utilities/utilities.js",
@@ -239,7 +230,7 @@ function concatJS() {
 }
 
 function concatPlugins() {
-  console.log("\n\t" + logSymbols.info, "Concatenating Javascript from plugins..\n");
+  console.info(logSymbols.info, "Concatenating Javascript from plugins..");
   return src([
     nodepath + "jquery/dist/jquery.min.js",
     nodepath + "lozad/dist/lozad.min.js",
@@ -278,7 +269,7 @@ function concatPlugins() {
 }
 
 function concatCssPlugins() {
-  console.log("\n\t" + logSymbols.info, "Concatenating CSS from plugins..\n");
+  console.info(logSymbols.info, "Concatenating CSS from plugins..");
   return src([
     nodepath + "datedropper/datedropper.min.css",
     nodepath + "timedropper/timedropper.min.css",
@@ -305,21 +296,23 @@ function watchFiles() {
 }
 
 function cleanDist(done) {
-  console.log("\n\t" + logSymbols.info, "Cleaning .dist folder..\n");
+  console.info(logSymbols.info, "Cleaning .dist folder..");
   del.sync("dist");
   return done();
 }
 
 function browserSyncInit(done) {
-  console.log("\n\t" + logSymbols.info, "Starting development server..\n");
+  console.info(logSymbols.info, "Starting development server..");
   browserSync.init({
     server: "./dist",
+    ui: false,
+    open: false,
   });
   return done();
 }
 
 function copyImages() {
-  console.log("\n\t" + logSymbols.info, "Optimizing Images..\n");
+  console.info(logSymbols.info, "Optimizing Images..");
   return (
     src("src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|ogv|webm)")
       .pipe(newer("dist/assets/img/"))
@@ -329,7 +322,7 @@ function copyImages() {
 }
 
 function minifyImages() {
-  console.log('---------------OPTIMIZING IMAGES---------------');
+  console.info('---------------OPTIMIZING IMAGES---------------');
   return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm|ogv|ogg)')
     .pipe(newer('dist/assets/img/'))
     .pipe(imagemin([
@@ -345,28 +338,28 @@ function minifyImages() {
 }
 
 function copyFont() {
-  console.log("\n\t" + logSymbols.info, "Copying Font files..\n");
+  console.info(logSymbols.info, "Copying Font files..");
   return src(["src/assets/font/**/*"])
     .pipe(dest("dist/assets/fonts"))
     .pipe(browserSync.stream());
 }
 
 function copyData() {
-  console.log("\n\t" + logSymbols.info, "Copying data files..\n");
+  console.info(logSymbols.info, "Copying data files..");
   return src(["src/data/**/*"])
     .pipe(dest("dist/assets/data"))
     .pipe(browserSync.stream());
 }
 
 function jsVendor() {
-  console.log("\n\t" + logSymbols.info, "Copying JS vendor files..\n");
+  console.info(logSymbols.info, "Copying JS vendor files..");
   return src(["src/assets/vendor/js/*"])
     .pipe(dest("dist/assets/vendor/js"))
     .pipe(browserSync.stream());
 }
 
 function cssVendor() {
-  console.log("\n\t" + logSymbols.info, "Copying CSS vendor files..\n");
+  console.info(logSymbols.info, "Copying CSS vendor files..");
   return src(["src/assets/vendor/css/*"])
     .pipe(dest("dist/assets/vendor/css"))
     .pipe(browserSync.stream());
@@ -377,7 +370,7 @@ OPTIMIZATION TASKS
 ========================================================================== */
 
 function scssLint() {
-  console.log("\n\t" + logSymbols.info, "Linting Sass..\n");
+  console.info(logSymbols.info, "Linting Sass..");
   return src("src/assets/scss/**/*.scss")
     .pipe(
       sassLint({
@@ -389,7 +382,7 @@ function scssLint() {
 }
 
 function htmlLint() {
-  console.log("\n\t" + logSymbols.info, "Linting HTML..\n");
+  console.info(logSymbols.info, "Linting HTML..");
   return src("dist/*.html").pipe(htmllint({}, htmllintReporter));
 }
 
@@ -404,7 +397,7 @@ function htmllintReporter(filepath, issues) {
     });
     process.exitCode = 1;
   } else {
-    console.log("\n\t" + logSymbols.info, "No Linting Errors..\n");
+    console.info(logSymbols.info, "No Linting Errors..");
   }
 }
 
@@ -417,7 +410,7 @@ function jsLint() {
 
 
 function prettyHTML() {
-  console.log("\n\t" + logSymbols.info, "Running Pretty on HTML..\n");
+  console.info(logSymbols.info, "Running Pretty on HTML..");
   return src("dist/*.html")
     .pipe(
       prettyHtml({
@@ -436,7 +429,7 @@ function HTMLAccessibility() {
         force: true,
       })
     )
-    .on("error", console.log)
+    .on("error", console.error)
     .pipe(
       accessibility.report({
         reportType: "txt",

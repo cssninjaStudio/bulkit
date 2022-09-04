@@ -2,11 +2,7 @@
 
 [![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://discord.cssninja.io/)
 
-### Note
-
-Changes should be commited to `src/` files only.
-
-### How to use
+## 👍 Features
 
 The template is built with Sass and Gulp build system with these features:
 
@@ -21,60 +17,45 @@ To use this template, your computer needs:
 
 - Node.js is used to run the build processes. https://nodejs.org/en/download/
 - Test: run `node -v` in the terminal
-- Npm (Node comes with npm installed so you should have a version of npm.) Used to manage development dependencies.
-- Test: run ` npm -v` in the terminal
-- Gulp – task runner
-  `npm install -g gulp`
-- Test: run `gulp -v ` in the terminal
 
-### Installing:
+## 👌 Usage
 
-- Install all node packages: `npm install` (or `yarn install --ignore-engines`)
-- Run `gulp dev`
-- Your site is now viewable at this URL: http://localhost:3000
+1. enable pnpm with corepack
 
-### Folder Structure:
+```bash
+corepack enable
+corepack prepare pnpm@latest --activate
+```
 
-- `dist/` - compiled distribution files
-- `node_modules` - front-end dependencies
-- `src/` - contains all of your core, working files—static assets, pages, templates, etc
-- `src/assets/` - scss files, JS files, images, and fonts are here
-- `src/data/` - external data
-- `src/layouts/` - HTML layouts templates
-- `src/pages/` - site pages
-- `src/partials/` - handlebars partials files.
-- `gulpfile.js` - all task definitions
-- `package.json` - handles the front-end dependencies
-- `.htmllintrc` - handles the HTML lint rules
-- `.sass-lint.yml` - handles the SCSS lint rules
-- `reports` - txt generated file for accessibility issues
+> _corepack is installed with Node.js from **v16.13.x**, if your version is below, install it with: `npm install -g corepack`, or upgrade Node.js_ 
 
-### Gulp Plugins:
+2. Install depedencies
 
-- [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)
-- [gulp-compile-handlebars](https://www.npmjs.com/package/gulp-compile-handlebars)
-- [gulp-concat](https://www.npmjs.com/package/gulp-concat)
-- [gulp-html-replace](https://www.npmjs.com/package/gulp-html-replace)
-- [gulp-htmllint](https://www.npmjs.com/package/gulp-htmllint)
-- [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
-- [gulp-pretty-html](https://www.npmjs.com/package/gulp-pretty-html)
-- [gulp-remove-code](https://www.npmjs.com/package/gulp-remove-code)
-- [gulp-remove-logging](https://www.npmjs.com/package/gulp-remove-logging)
-- [gulp-rename](https://www.npmjs.com/package/gulp-rename)
-- [gulp-sass](https://www.npmjs.com/package/gulp-sass)
-- [node-bourbon](https://www.npmjs.com/package/node-bourbon)
-- [gulp-sass-lint](https://www.npmjs.com/package/gulp-sass-lint)
-- [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
-- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
-- [gulp-newer](https://www.npmjs.com/package/gulp-newer)
-- [gulp-accessibility](https://www.npmjs.com/package/gulp-accessibility)
-- [gulp-jshint](https://www.npmjs.com/package/gulp-jshint)
-- [gulp-gulp-gh-pages](https://www.npmjs.com/package/gulp-gh-pages)
-- [gulp-babel](https://www.npmjs.com/package/gulp-babel)
-- [panini](https://www.npmjs.com/package/panini)
-- [run-sequence](https://www.npmjs.com/package/run-sequence)
-- [ansi-colors](https://www.npmjs.com/package/ansi-colors)
-- [fancy-log](https://www.npmjs.com/package/fancy)
+```bash
+pnpm i
+```
+
+3. To start development server
+
+```bash
+pnpm dev
+```
+
+## 💡 What to do next ?
+
+Our online documentation is a great place to learn how to use Bulkit.
+We try to keep it mostly up to date, so you can always find the latest information.
+
+> We also have a great [discord community](https://discord.cssninja.io/) where you can ask questions and show your work.
+
+### [Bulkit on docs.cssninja.io](https://docs.cssninja.io/bulkit?utm_source=readme)
+
+- [Getting started](https://docs.cssninja.io/bulkit/documentation/getting-started.html?utm_source=readme)
+- [Template structure](https://docs.cssninja.io/bulkit/documentation/template-structure.html?utm_source=readme)
+- [Working with Gulp](https://docs.cssninja.io/bulkit/documentation/working-with-gulp.html?utm_source=readme)
+- [Theming](https://docs.cssninja.io/bulkit/documentation/theming.html?utm_source=readme)
+- [Css reference](https://docs.cssninja.io/bulkit/documentation/css-reference.html?utm_source=readme)
+- [Js reference](https://docs.cssninja.io/bulkit/documentation/js-reference.html?utm_source=readme)
 
 ### Additional Resources:
 
@@ -83,3 +64,14 @@ To use this template, your computer needs:
 - [Handlebars](http://handlebarsjs.com/)
 - [Panini](https://github.com/zurb/panini)
 - [Gulp](https://gulpjs.org/getting-started)
+
+
+## 🍔 Issues
+
+If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
+
+* Issue definition
+* Expected behaviour
+* Actual behaviour
+* steps to reproduce
+* Already tried fixes (if relevant)
