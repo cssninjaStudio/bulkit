@@ -328,6 +328,20 @@ function copyImages() {
   );
 }
 
+function minifyImagesSrc() {
+  console.info('---------------OPTIMIZING IMAGES---------------');
+  return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm|ogv|ogg)')
+    .pipe(imagemin.default([
+      imagemin.gifsicle({ optimizationLevel: 3, interlaced: true }),
+      imagemin.mozjpeg({ quality: 85 }),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.svgo()
+    ], {
+      verbose: true
+    }))
+    .pipe(dest('src/assets/img/'));
+}
+
 function minifyImages() {
   console.info('---------------OPTIMIZING IMAGES---------------');
   return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|webm|ogv|ogg)')
@@ -502,4 +516,5 @@ export {
   setup,
   dev,
   build,
+  minifyImagesSrc
 }

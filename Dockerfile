@@ -9,7 +9,7 @@ COPY .npmrc ./
 RUN pnpm install
 
 COPY . .
-RUN MINIFY_IMAGES=true pnpm build
+RUN pnpm build
 
 
 FROM bitnami/nginx:1.22 AS prod

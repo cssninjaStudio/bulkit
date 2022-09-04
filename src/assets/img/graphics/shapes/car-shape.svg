@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 587.3 359.4" style="enable-background:new 0 0 587.3 359.4;" xml:space="preserve">
-<style type="text/css">
-	.st0{clip-path:url(#SVGID_2_);fill:#D7E2FF;}
-</style>
-<g>
-	<defs>
-		<rect id="SVGID_1_" width="587.3" height="359.4"/>
-	</defs>
-	<clipPath id="SVGID_2_">
-		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-	</clipPath>
-	<polygon class="st0" points="65.6,375.3 602.5,99.1 922.7,210.6 1061.9,475.5 617,629.9 6.1,465.8 	"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 587.3 359.4" style="enable-background:new 0 0 587.3 359.4" xml:space="preserve"><defs><path id="a" d="M0 0h587.3v359.4H0z"/></defs><clipPath id="b"><use xlink:href="#a" style="overflow:visible"/></clipPath><path style="clip-path:url(#b);fill:#d7e2ff" d="M65.6 375.3 602.5 99.1l320.2 111.5 139.2 264.9L617 629.9 6.1 465.8z"/></svg>
