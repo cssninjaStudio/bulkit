@@ -1,29 +1,35 @@
 "use strict";
 
-const { src, dest, watch, series } = require("gulp");
-const log = require("fancy-log");
-const colors = require("ansi-colors");
-const sass = require('gulp-sass')(require('sass'));
-const bourbon = require("node-bourbon").includePaths;
-const rename = require("gulp-rename");
-const concat = require("gulp-concat");
-const del = require("del");
-const panini = require("panini");
-const uglify = require("gulp-uglify-es").default;
-const sourcemaps = require("gulp-sourcemaps");
-const purgecss = require("gulp-purgecss");
-const imagemin = require("gulp-imagemin");
-const prettyHtml = require("gulp-pretty-html");
-const sassLint = require("gulp-sass-lint");
-const htmllint = require("gulp-htmllint");
-const jshint = require("gulp-jshint");
-const newer = require("gulp-newer");
-const autoprefixer = require("gulp-autoprefixer");
-const accessibility = require("gulp-accessibility");
-const logSymbols = require('log-symbols');
-const browserSync = require("browser-sync").create();
+import gulp from 'gulp'
+import log from 'fancy-log'
+import colors from 'ansi-colors'
+import sassCompiler from 'sass'
+import gulpSass from 'gulp-sass'
+import bourbon from 'node-bourbon'
+import rename from 'gulp-rename'
+import concat from 'gulp-concat'
+import { deleteSync } from 'del'
+import panini from 'panini'
+import uglify from 'gulp-uglify-es'
+import sourcemaps from 'gulp-sourcemaps'
+import purgecss from 'gulp-purgecss'
+import imagemin from 'gulp-imagemin'
+import prettyHtml from 'gulp-pretty-html'
+import sassLint from 'gulp-sass-lint'
+import htmllint from 'gulp-htmllint'
+import replace from 'gulp-replace'
+import jshint from 'gulp-jshint'
+import newer from 'gulp-newer'
+import autoprefixer from 'gulp-autoprefixer'
+import accessibility from 'gulp-accessibility'
+import logSymbols from 'log-symbols'
+import bc from 'browser-sync'
+import packageJson from './package.json' assert { type: "json" }
 
-sass.compiler = require("sass");
+const { src, dest, watch, series } = gulp
+const browserSync = bc.create()
+const sass = gulpSass(sassCompiler)
+sass.compiler = sassCompiler;
 
 /* ==========================================================================
 ADDITIONAL VARIABLES
@@ -56,7 +62,7 @@ function compileSCSS() {
           outputStyle: "compressed",
           sourceComments: "map",
           sourceMap: "scss",
-          includePaths: bourbon,
+          includePaths: bourbon.includePaths,
         }).on("error", sass.logError)
       )
       .pipe(autoprefixer("last 2 versions"))
@@ -80,7 +86,7 @@ function compileSCSS() {
           outputStyle: "compressed",
           sourceComments: "map",
           sourceMap: "scss",
-          includePaths: bourbon,
+          includePaths: bourbon.includePaths,
         }).on("error", sass.logError)
       )
       .pipe(autoprefixer("last 2 versions"))
@@ -154,6 +160,7 @@ function compileHTML() {
   console.info(logSymbols.info, "Compiling HTML..");
   panini.refresh();
   return src("src/pages/**/*.html")
+    .pipe(replace('{{PACKAGE_VERSION}}', packageJson.version))
     .pipe(
       panini({
         root: "src/pages/",
@@ -222,7 +229,7 @@ function concatJS() {
     "src/assets/js/main.js",
   ])
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(uglify.default())
     .pipe(concat("core.js"))
     .pipe(sourcemaps.write("./"))
     .pipe(dest("dist/assets/js"))
@@ -261,7 +268,7 @@ function concatPlugins() {
     "src/assets/vendor/js/**/*.js",
   ])
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(uglify.default())
     .pipe(concat("app.js"))
     .pipe(sourcemaps.write("./"))
     .pipe(dest("dist/assets/js"))
@@ -297,7 +304,7 @@ function watchFiles() {
 
 function cleanDist(done) {
   console.info(logSymbols.info, "Cleaning .dist folder..");
-  del.sync("dist");
+  deleteSync("dist");
   return done();
 }
 
@@ -444,16 +451,16 @@ function HTMLAccessibility() {
 }
 
 // RUN ALL LINTERS
-exports.linters = series(htmlLint, scssLint, jsLint);
+const linters = series(htmlLint, scssLint, jsLint);
 
 // RUN ACCESSIILITY CHECK
-exports.accessibility = HTMLAccessibility;
+const a11y = HTMLAccessibility;
 
 //SETUP
-exports.setup = series(setupBulma);
+const setup = series(setupBulma);
 
 // DEV
-exports.dev = series(
+const dev = series(
   cleanDist,
   copyFont,
   copyData,
@@ -472,7 +479,7 @@ exports.dev = series(
 );
 
 // BUILD
-exports.build = series(
+const build = series(
   cleanDist,
   copyFont,
   copyData,
@@ -488,3 +495,11 @@ exports.build = series(
   compileSCSS,
   purgeCSS
 );
+
+export {
+  linters,
+  a11y,
+  setup,
+  dev,
+  build,
+}
