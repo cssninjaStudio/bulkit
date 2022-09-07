@@ -2,8 +2,8 @@ name: deploy
 on:
   workflow_dispatch:
   push:
-    branch:
-      - "main"
+    branches:
+      - main
 
 concurrency: 
   group: ${{ github.workflow }}
