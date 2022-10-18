@@ -2,6 +2,10 @@ name: deploy
 on:
   workflow_dispatch:
   push:
+    paths-ignore:
+      - 'README.md'
+      - 'CHANGELOG.md'
+      - 'LICENSE.md'
     branches:
       - main
 
