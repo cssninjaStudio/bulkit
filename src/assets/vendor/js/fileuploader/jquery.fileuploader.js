@@ -3407,7 +3407,7 @@
             item2: '<li class="fileuploader-item">' +
                         '<div class="columns">' +
                             '<div class="column-thumbnail">${image}<span class="fileuploader-action-popup"></span></div>' +
-                            '<a href="${file}" target="_blank">' +
+                            '<a href="${file}" >' +
                                 '<div class="column-title">' +
                                     '<div title="${name}">${name}</div>' +
                                     '<span>${size2}</span>' +
