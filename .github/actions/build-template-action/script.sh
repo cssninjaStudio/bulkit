@@ -26,14 +26,10 @@ echo "::debug::${ARCHIVE}"
 # remove "development" in constants.js
 sed -i 's/env = "development"/env = ""/g' src/assets/js/utilities/constants.js
 
-# # remove photos
-# rm -rf ./src/assets/img/avatars
-# rm -rf ./src/assets/img/demo
-
 # top level zip release-${INPUT_PROJECT}-${INPUT_TAG}.zip 
 zip -r $ARCHIVE . \
-  -x "src/assets/img/avatars/*" \
-  -x "src/assets/img/demo/*" \
+  -x "src/assets/img/avatars/*" \ # exclude photos
+  -x "src/assets/img/demo/*" \ # exclude photos
   -x "*.zip" \
   -x "node_modules/*" \
   -x "dist/*" \
