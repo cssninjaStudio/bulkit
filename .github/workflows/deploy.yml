@@ -15,6 +15,8 @@ concurrency:
 
 jobs:
   tests:
+    # We can skip deployment by adding [skip] in the commit body
+    if: "!contains(github.event.head_commit.message, '[skip]')"
     uses: ./.github/workflows/tests.yml
 
   docker-build:
@@ -46,6 +48,8 @@ jobs:
         with:
           push: true
           tags: ${{ env.dockertags }}
+          cache-from: type=registry,ref=${{ env.dockertags }}
+          cache-to: type=inline
 
   deploy:
     runs-on: ubuntu-latest
