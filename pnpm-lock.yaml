@@ -1,12 +1,12 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@chenfengyuan/datepicker':
+    specifier: 1.0.10
+    version: 1.0.10(jquery@3.6.4)
   '@claviska/jquery-dropdown':
     specifier: 2.0.3
     version: 2.0.3
-  '@fengyuanchen/datepicker':
-    specifier: 0.6.5
-    version: 0.6.5(jquery@3.6.4)
   bulma:
     specifier: 0.9.4
     version: 0.9.4
@@ -368,17 +368,16 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@claviska/jquery-dropdown@2.0.3:
-    resolution: {integrity: sha512-oP5iD9xYDeo1lSLPvkEKHkS8nfXYsdHjAnbj/Z9tPegtekyV4lb0IKb64GcQW5A0CnmCqS55zmMW8dgbEokuJg==}
-    dev: false
-
-  /@fengyuanchen/datepicker@0.6.5(jquery@3.6.4):
-    resolution: {integrity: sha512-+HwjRUBilmoG+SnhQbbInsBSyvRMRUBZMX2hbHuqonYmp+zY70U9HrHU1TAqrMFjZ0JwoAiGQbQ65H4zKtmLvQ==}
-    deprecated: This package has been renamed to "@chenfengyuan/datepicker".
+  /@chenfengyuan/datepicker@1.0.10(jquery@3.6.4):
+    resolution: {integrity: sha512-w016ygdUgBY6hhV7HFKRy2DeSiRPPczekA6FJfIpmqQYh5leKne4WvW/YWOCY1xrQVvamdLyhMhbsn8vN5iQAg==}
     peerDependencies:
-      jquery: '>= 1.9.1'
+      jquery: '>=1.9.1'
     dependencies:
       jquery: 3.6.4
+    dev: false
+
+  /@claviska/jquery-dropdown@2.0.3:
+    resolution: {integrity: sha512-oP5iD9xYDeo1lSLPvkEKHkS8nfXYsdHjAnbj/Z9tPegtekyV4lb0IKb64GcQW5A0CnmCqS55zmMW8dgbEokuJg==}
     dev: false
 
   /@gulp-sourcemaps/identity-map@2.0.1:
