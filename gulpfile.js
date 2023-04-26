@@ -254,7 +254,7 @@ function concatPlugins() {
     nodepath + "jquery.counterup/jquery.counterup.min.js",
     nodepath + "jquery.marquee/jquery.marquee.min.js",
     nodepath + "@claviska/jquery-dropdown/jquery.dropdown.min.js",
-    nodepath + "@fengyuanchen/datepicker/dist/datepicker.min.js",
+    nodepath + "@chenfengyuan/datepicker/dist/datepicker.min.js",
     nodepath + "datedropper/datedropper.min.js",
     nodepath + "timedropper/timedropper.min.js",
     nodepath + "easy-autocomplete/dist/jquery.easy-autocomplete.min.js",
