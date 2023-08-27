@@ -68,31 +68,31 @@ function compileSCSS() {
       .pipe(autoprefixer("last 2 versions"))
       .pipe(dest("dist/assets/css"))
       .pipe(browserSync.stream());
-  } else {
-    return src([
-      "src/assets/scss/core.scss",
-      "src/assets/scss/teal.scss",
-      "src/assets/scss/green.scss",
-      "src/assets/scss/blue.scss",
-      "src/assets/scss/azur.scss",
-      "src/assets/scss/night.scss",
-      "src/assets/scss/yellow.scss",
-      "src/assets/scss/orange.scss",
-      "src/assets/scss/red.scss",
-      "src/assets/scss/purple.scss",
-    ])
-      .pipe(
-        sass({
-          outputStyle: "compressed",
-          sourceComments: "map",
-          sourceMap: "scss",
-          includePaths: bourbon.includePaths,
-        }).on("error", sass.logError)
-      )
-      .pipe(autoprefixer("last 2 versions"))
-      .pipe(dest("dist/assets/css"))
-      .pipe(browserSync.stream());
   }
+
+  return src([
+    "src/assets/scss/core.scss",
+    "src/assets/scss/teal.scss",
+    "src/assets/scss/green.scss",
+    "src/assets/scss/blue.scss",
+    "src/assets/scss/azur.scss",
+    "src/assets/scss/night.scss",
+    "src/assets/scss/yellow.scss",
+    "src/assets/scss/orange.scss",
+    "src/assets/scss/red.scss",
+    "src/assets/scss/purple.scss",
+  ])
+    .pipe(
+      sass({
+        outputStyle: "compressed",
+        sourceComments: "map",
+        sourceMap: "scss",
+        includePaths: bourbon.includePaths,
+      }).on("error", sass.logError)
+    )
+    .pipe(autoprefixer("last 2 versions"))
+    .pipe(dest("dist/assets/css"))
+    .pipe(browserSync.stream());
 }
 
 function purgeCSS() {
