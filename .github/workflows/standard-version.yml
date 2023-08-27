@@ -8,6 +8,9 @@ on:
     types: [standard-version]
 
 jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml
+
   standard-version: 
     runs-on: ubuntu-latest
 
