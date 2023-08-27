@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.7.0](https://github.com/cssninjaStudio/bulkit/compare/v5.6.1...v5.7.0) (2023-08-27)
+
+
+### Features
+
+* add prettier config and fix issues ([51f3cd3](https://github.com/cssninjaStudio/bulkit/commit/51f3cd3ff87706a1be3e1ef1fcbeab48f3f700e1))
+* replace http-server with vercel serve ([b6d77f9](https://github.com/cssninjaStudio/bulkit/commit/b6d77f9a4b90bf579c4065cbb2d0a53f7bd0c892))
+* update dependencies ([4959e6f](https://github.com/cssninjaStudio/bulkit/commit/4959e6f670082fb0de2856efba4a61cfbb813f36))
+* update docker config ([570e1ae](https://github.com/cssninjaStudio/bulkit/commit/570e1ae0663273b6f858f2bd5e7db534a03aa094))
+
 ### [5.6.1](https://github.com/cssninjaStudio/bulkit/compare/v5.6.0...v5.6.1) (2023-04-26)
 
 ## [5.6.0](https://github.com/cssninjaStudio/bulkit/compare/v5.5.0...v5.6.0) (2022-10-18)
