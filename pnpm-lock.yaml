@@ -5,12 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@chenfengyuan/datepicker':
+    specifier: 1.0.10
+    version: 1.0.10(jquery@3.7.0)
   '@claviska/jquery-dropdown':
     specifier: 2.0.3
     version: 2.0.3
-  '@fengyuanchen/datepicker':
-    specifier: 0.6.5
-    version: 0.6.5(jquery@3.7.0)
   bulma:
     specifier: 0.9.4
     version: 0.9.4
@@ -368,17 +368,16 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@claviska/jquery-dropdown@2.0.3:
-    resolution: {integrity: sha512-oP5iD9xYDeo1lSLPvkEKHkS8nfXYsdHjAnbj/Z9tPegtekyV4lb0IKb64GcQW5A0CnmCqS55zmMW8dgbEokuJg==}
-    dev: false
-
-  /@fengyuanchen/datepicker@0.6.5(jquery@3.7.0):
-    resolution: {integrity: sha512-+HwjRUBilmoG+SnhQbbInsBSyvRMRUBZMX2hbHuqonYmp+zY70U9HrHU1TAqrMFjZ0JwoAiGQbQ65H4zKtmLvQ==}
-    deprecated: This package has been renamed to "@chenfengyuan/datepicker".
+  /@chenfengyuan/datepicker@1.0.10(jquery@3.7.0):
+    resolution: {integrity: sha512-w016ygdUgBY6hhV7HFKRy2DeSiRPPczekA6FJfIpmqQYh5leKne4WvW/YWOCY1xrQVvamdLyhMhbsn8vN5iQAg==}
     peerDependencies:
-      jquery: '>= 1.9.1'
+      jquery: '>=1.9.1'
     dependencies:
       jquery: 3.7.0
+    dev: false
+
+  /@claviska/jquery-dropdown@2.0.3:
+    resolution: {integrity: sha512-oP5iD9xYDeo1lSLPvkEKHkS8nfXYsdHjAnbj/Z9tPegtekyV4lb0IKb64GcQW5A0CnmCqS55zmMW8dgbEokuJg==}
     dev: false
 
   /@gulp-sourcemaps/identity-map@2.0.1:
@@ -780,7 +779,6 @@ packages:
 
   /arch@2.2.0:
     resolution: {integrity: sha512-Of/R0wqp83cgHozfIYLbBMnej79U/SVGOOyuB3VVFv1NRM/PSFMK12x9KVtiYzJqmnU5WR2qp0Z5rHb7sWGnFQ==}
-    requiresBuild: true
     dev: true
 
   /archive-type@4.0.0:
@@ -1704,7 +1702,7 @@ packages:
     dependencies:
       ansi-align: 3.0.1
       camelcase: 7.0.1
-      chalk: 5.3.0
+      chalk: 5.0.1
       cli-boxes: 3.0.0
       string-width: 5.1.2
       type-fest: 2.19.0
@@ -2445,7 +2443,6 @@ packages:
   /cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
-    requiresBuild: true
     dependencies:
       path-key: 3.1.1
       shebang-command: 2.0.0
@@ -3357,7 +3354,6 @@ packages:
   /execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
     engines: {node: '>=10'}
-    requiresBuild: true
     dependencies:
       cross-spawn: 7.0.3
       get-stream: 6.0.1
@@ -3993,7 +3989,6 @@ packages:
   /get-stream@6.0.1:
     resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
     engines: {node: '>=10'}
-    requiresBuild: true
     dev: true
 
   /get-value@2.0.6:
@@ -4070,7 +4065,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.1.2
+      minimatch: 3.0.8
       once: 1.4.0
       path-is-absolute: 1.0.1
     dev: true
@@ -4740,7 +4735,6 @@ packages:
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
-    requiresBuild: true
     dev: true
 
   /iconv-lite@0.4.24:
@@ -5214,7 +5208,6 @@ packages:
   /is-stream@2.0.1:
     resolution: {integrity: sha512-hFoiJiTl63nn+kstHGBtewWSKnQLpyb155KHheA1l39uvtO9nWIop1p3udqPcUd/xbF1VLMO4n7OI6p7RbngDg==}
     engines: {node: '>=8'}
-    requiresBuild: true
     dev: true
 
   /is-svg@4.4.0:
@@ -5909,7 +5902,6 @@ packages:
 
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
-    requiresBuild: true
     dev: true
 
   /merge2@1.4.1:
@@ -5982,7 +5974,6 @@ packages:
   /mimic-fn@2.1.0:
     resolution: {integrity: sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==}
     engines: {node: '>=6'}
-    requiresBuild: true
     dev: true
 
   /mimic-response@1.0.1:
@@ -6229,7 +6220,6 @@ packages:
   /npm-run-path@4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
     engines: {node: '>=8'}
-    requiresBuild: true
     dependencies:
       path-key: 3.1.1
     dev: true
@@ -6359,7 +6349,6 @@ packages:
   /onetime@5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
     engines: {node: '>=6'}
-    requiresBuild: true
     dependencies:
       mimic-fn: 2.1.0
     dev: true
@@ -6617,7 +6606,6 @@ packages:
   /path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
-    requiresBuild: true
     dev: true
 
   /path-parse@1.0.7:
@@ -7660,7 +7648,6 @@ packages:
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
-    requiresBuild: true
     dependencies:
       shebang-regex: 3.0.0
     dev: true
@@ -7675,7 +7662,6 @@ packages:
   /shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
-    requiresBuild: true
     dev: true
 
   /shelljs@0.6.1:
@@ -7686,7 +7672,6 @@ packages:
 
   /signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
-    requiresBuild: true
     dev: true
 
   /simplebar-core@1.2.4:
@@ -8120,7 +8105,6 @@ packages:
   /strip-final-newline@2.0.0:
     resolution: {integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==}
     engines: {node: '>=6'}
-    requiresBuild: true
     dev: true
 
   /strip-json-comments@1.0.4:
@@ -8841,7 +8825,6 @@ packages:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
     hasBin: true
-    requiresBuild: true
     dependencies:
       isexe: 2.0.0
     dev: true
