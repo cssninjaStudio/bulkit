@@ -9,27 +9,23 @@ Barrel file
 ========================================================================== */
 
 //1. Demo
-@import "./demo";
+@import './demo';
 
 //2. Predefined sections
-@import "./auth";
-@import "./profile";
-@import "./team";
-@import "./faq";
-@import "./portfolio";
-@import "./blog";
-@import "./contact";
+@import './auth';
+@import './profile';
+@import './team';
+@import './faq';
+@import './portfolio';
+@import './blog';
+@import './contact';
 
 //3. Unique sections
-@import "./case-study";
-@import "./code";
-@import "./process";
-@import "./phone-slider";
-@import "./hover-card";
-@import "./jobs";
-@import "./conference";
-@import "./error";
-
-
-
-
+@import './case-study';
+@import './code';
+@import './process';
+@import './phone-slider';
+@import './hover-card';
+@import './jobs';
+@import './conference';
+@import './error';

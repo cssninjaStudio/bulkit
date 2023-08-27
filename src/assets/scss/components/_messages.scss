@@ -163,7 +163,7 @@ TABLE OF CONTENTS
   display: none;
   max-width: 276px;
   padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -174,9 +174,11 @@ TABLE OF CONTENTS
   background-clip: padding-box;
   border: 1px solid #ededed;
   border-radius: 4px;
-  -webkit-box-shadow: inset rgba(143, 160, 241, 0.2) 0 0 0 1px,
+  -webkit-box-shadow:
+    inset rgba(143, 160, 241, 0.2) 0 0 0 1px,
     rgba(213, 220, 247, 0.59) 0 10px 20px;
-  box-shadow: inset rgba(143, 160, 241, 0.2) 0 0 0 1px,
+  box-shadow:
+    inset rgba(143, 160, 241, 0.2) 0 0 0 1px,
     rgba(213, 220, 247, 0.59) 0 10px 20px;
 
   &.fade {
@@ -208,7 +210,7 @@ TABLE OF CONTENTS
     > .arrow > .after {
       bottom: 1px;
       margin-left: -10px;
-      content: " ";
+      content: ' ';
       border-top-color: $white;
       border-bottom-width: 0;
     }
@@ -229,7 +231,7 @@ TABLE OF CONTENTS
     > .arrow > .after {
       bottom: -10px;
       left: 1px;
-      content: " ";
+      content: ' ';
       border-right-color: $white;
       border-left-width: 0;
     }
@@ -254,7 +256,7 @@ TABLE OF CONTENTS
     > .arrow > .after {
       top: 1px;
       margin-left: -10px;
-      content: " ";
+      content: ' ';
       border-top-width: 0;
       border-bottom-color: $white;
     }
@@ -275,7 +277,7 @@ TABLE OF CONTENTS
     > .arrow > .after {
       right: 1px;
       bottom: -10px;
-      content: " ";
+      content: ' ';
       border-right-width: 0;
       border-left-color: $white;
     }
@@ -314,7 +316,7 @@ TABLE OF CONTENTS
   }
 
   .arrow > .after {
-    content: "";
+    content: '';
     border-width: 10px;
   }
 }

@@ -24,7 +24,7 @@ TABLE OF CONTENTS
     position: relative;
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 20%;
       right: 0;
@@ -34,7 +34,7 @@ TABLE OF CONTENTS
     }
 
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: 20%;
       left: 0;
@@ -116,7 +116,7 @@ TABLE OF CONTENTS
       position: absolute;
       left: -24px;
       bottom: 3px;
-      content: "";
+      content: '';
       height: 1px;
       width: 88px;
       background: $placeholder;
@@ -213,7 +213,7 @@ TABLE OF CONTENTS
   }
 
   &.has-line:after {
-    content: "";
+    content: '';
     height: 4px;
     width: 80px;
     background: $fade-grey;

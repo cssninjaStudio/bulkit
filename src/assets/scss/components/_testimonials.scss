@@ -17,60 +17,61 @@ TABLE OF CONTENTS
 0. Simple testimonials
 ========================================================================== */
 
-.testimonials, .demo {
-    position: relative;
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
+.testimonials,
+.demo {
+  position: relative;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
 
-    .testimonial-item {
-        margin: 40px;
-        outline: none !important;
+  .testimonial-item {
+    margin: 40px;
+    outline: none !important;
 
-        .testimonial-avatar {
-            display: flex;
-            justify-content: center;
+    .testimonial-avatar {
+      display: flex;
+      justify-content: center;
 
-            img {
-                border-radius: 100px;
-                width: 75px;
-                height: 75px;
-                position: relative;
-                top: -40px;
-            }
-        }
-
-        .testimonial-name {
-            text-align: center;
-
-            h3 {
-                font-family: $font-main;
-                font-size: 18px;
-                color: $primary;
-                position: relative;
-                top: -20px;
-            }
-
-            span {
-                font-family: $font-sub;
-                font-size: 14px;
-                color: $title-grey;
-                position: relative;
-                top: -15px;
-            }
-        }
-
-        .testimonial-content {
-            p {
-                padding: 0 30px 30px 30px;
-            }
-        }
+      img {
+        border-radius: 100px;
+        width: 75px;
+        height: 75px;
+        position: relative;
+        top: -40px;
+      }
     }
+
+    .testimonial-name {
+      text-align: center;
+
+      h3 {
+        font-family: $font-main;
+        font-size: 18px;
+        color: $primary;
+        position: relative;
+        top: -20px;
+      }
+
+      span {
+        font-family: $font-sub;
+        font-size: 14px;
+        color: $title-grey;
+        position: relative;
+        top: -15px;
+      }
+    }
+
+    .testimonial-content {
+      p {
+        padding: 0 30px 30px 30px;
+      }
+    }
+  }
 }
 
 .slick-dots li.slick-active button:before {
-    opacity: .75;
-    color: $accent !important;
+  opacity: 0.75;
+  color: $accent !important;
 }
 
 /* ==========================================================================
@@ -78,59 +79,61 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .vertical-testimonials {
-    max-width: 640px;
-    margin: 0 auto;
+  max-width: 640px;
+  margin: 0 auto;
 
-    .vtestimonial-item {
-        margin: 5px 80px;
-        border-radius: 12px;
-        height: 130px !important;
+  .vtestimonial-item {
+    margin: 5px 80px;
+    border-radius: 12px;
+    height: 130px !important;
 
-        &:last-child {
-            margin-bottom: 100px;
-        }
-
-        .vt-avatar {
-            height: 55px;
-            border-radius: 100px;
-        }
-
-        .vt-content {
-            margin: 0 10px;
-
-            .vt-name {
-                font-family: $font-main;
-                font-weight: 500;
-                color: $primary;
-                margin-bottom: 0 !important;
-            }
-
-            .vt-text {
-                font-family: $font-text;
-                padding-right: 5px;
-                font-size: 12px;
-            }
-
-            .star-rating {
-                float: right;
-                position: relative;
-                top: -5px;
-                right: 5px;
-                color: #f5c62c;
-            }
-        }
+    &:last-child {
+      margin-bottom: 100px;
     }
 
-    .slick-current.slick-active.slick-center {
-        transform: scale(1.1);
-        box-shadow: inset rgba(143, 160, 241, 0.2) 0 0 0 1px, rgba(213, 220, 247, 0.59) 0 10px 20px;
+    .vt-avatar {
+      height: 55px;
+      border-radius: 100px;
     }
 
-    .slick-slide {
-        &:not(.slick-current) {
-            opacity: 0.1 !important;
-        }
+    .vt-content {
+      margin: 0 10px;
+
+      .vt-name {
+        font-family: $font-main;
+        font-weight: 500;
+        color: $primary;
+        margin-bottom: 0 !important;
+      }
+
+      .vt-text {
+        font-family: $font-text;
+        padding-right: 5px;
+        font-size: 12px;
+      }
+
+      .star-rating {
+        float: right;
+        position: relative;
+        top: -5px;
+        right: 5px;
+        color: #f5c62c;
+      }
     }
+  }
+
+  .slick-current.slick-active.slick-center {
+    transform: scale(1.1);
+    box-shadow:
+      inset rgba(143, 160, 241, 0.2) 0 0 0 1px,
+      rgba(213, 220, 247, 0.59) 0 10px 20px;
+  }
+
+  .slick-slide {
+    &:not(.slick-current) {
+      opacity: 0.1 !important;
+    }
+  }
 }
 
 /* ==========================================================================
@@ -138,104 +141,104 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .flat-testimonials {
-    .flat-testimonial-item {
-        margin: 0 20px 50px 20px;
+  .flat-testimonial-item {
+    margin: 0 20px 50px 20px;
 
-        .image-container {
-            position: relative;
-            overflow: hidden;
+    .image-container {
+      position: relative;
+      overflow: hidden;
 
-            img {
-                border-radius: 10px;
-                box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.18);
-            }
+      img {
+        border-radius: 10px;
+        box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.18);
+      }
 
-            .skewed-overlay {
-                position: absolute;
-                top: 95%;
-                left: 0;
-                height: 40%;
-                width: 200%;
-                transform: skewY(8deg);
-                padding: 20px;
-                background: $white;
-            }
-        }
-
-        .testimonial-text {
-            .quoted-text {
-                color: $basaltic-grey;
-            }
-
-            .client-name {
-                margin-top: 20px;
-                font-family: $font-main;
-                font-weight: 400;
-                font-size: 1.2rem;
-            }
-
-            .client-position {
-                font-family: $font-sub;
-                font-size: 0.9rem;
-                color: $blue-grey;
-            }
-
-            .company {
-                max-height: 60px;
-                margin-right: 50px;
-                float: right;
-            }
-
-            .fa-quote-left {
-                margin: 20px 0 !important;
-            }
-        }
-
-        &.primary {
-            .skewed-overlay {
-                background: $primary;
-            }
-
-            .client-name {
-                color: $primary;
-            }
-
-            .fa-quote-left {
-                color: $primary;
-            }
-        }
-
-        &.secondary {
-            .skewed-overlay {
-                background: $secondary;
-            }
-
-            .client-name {
-                color: $secondary;
-            }
-
-            .fa-quote-left {
-                color: $secondary;
-            }
-        }
-
-        &.accent {
-            .skewed-overlay {
-                background: $accent;
-            }
-
-            .client-name {
-                color: $accent;
-            }
-
-            .fa-quote-left {
-                color: $accent;
-            }
-        }
-
-        .company {
-            max-width: 100px;
-            margin-right: 0 !important;
-        }
+      .skewed-overlay {
+        position: absolute;
+        top: 95%;
+        left: 0;
+        height: 40%;
+        width: 200%;
+        transform: skewY(8deg);
+        padding: 20px;
+        background: $white;
+      }
     }
+
+    .testimonial-text {
+      .quoted-text {
+        color: $basaltic-grey;
+      }
+
+      .client-name {
+        margin-top: 20px;
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+
+      .client-position {
+        font-family: $font-sub;
+        font-size: 0.9rem;
+        color: $blue-grey;
+      }
+
+      .company {
+        max-height: 60px;
+        margin-right: 50px;
+        float: right;
+      }
+
+      .fa-quote-left {
+        margin: 20px 0 !important;
+      }
+    }
+
+    &.primary {
+      .skewed-overlay {
+        background: $primary;
+      }
+
+      .client-name {
+        color: $primary;
+      }
+
+      .fa-quote-left {
+        color: $primary;
+      }
+    }
+
+    &.secondary {
+      .skewed-overlay {
+        background: $secondary;
+      }
+
+      .client-name {
+        color: $secondary;
+      }
+
+      .fa-quote-left {
+        color: $secondary;
+      }
+    }
+
+    &.accent {
+      .skewed-overlay {
+        background: $accent;
+      }
+
+      .client-name {
+        color: $accent;
+      }
+
+      .fa-quote-left {
+        color: $accent;
+      }
+    }
+
+    .company {
+      max-width: 100px;
+      margin-right: 0 !important;
+    }
+  }
 }

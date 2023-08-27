@@ -23,18 +23,19 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .content {
-    ul {
-        list-style-type: disc;
-    }
+  ul {
+    list-style-type: disc;
+  }
 
-    ol {
-        list-style-type: decimal;
-    }
+  ol {
+    list-style-type: decimal;
+  }
 }
 
-ul, ol {
-    list-style-type: none;
-    font-family: $font-text;
+ul,
+ol {
+  list-style-type: none;
+  font-family: $font-text;
 }
 
 /* ==========================================================================
@@ -42,23 +43,23 @@ ul, ol {
 ========================================================================== */
 
 .icon-bullet-list {
-    list-style: none;
-    padding: 0;
-    font-family: $font-text;
+  list-style: none;
+  padding: 0;
+  font-family: $font-text;
 
-    li {
-        padding-left: 1.3em;
-        padding: 3px 0 3px 1.3em;
+  li {
+    padding-left: 1.3em;
+    padding: 3px 0 3px 1.3em;
 
-        &:before {
-            content: "\f10c";
-            font-family: FontAwesome;
-            display: inline-block;
-            margin-left: -1.3em;
-            margin-right: 0.7rem;
-            width: 1.3em;
-        }
+    &:before {
+      content: '\f10c';
+      font-family: FontAwesome;
+      display: inline-block;
+      margin-left: -1.3em;
+      margin-right: 0.7rem;
+      width: 1.3em;
     }
+  }
 }
 
 /* ==========================================================================
@@ -66,24 +67,24 @@ ul, ol {
 ========================================================================== */
 
 .solid-list {
-    display: inline-block;
-    font-family: $font-text;
+  display: inline-block;
+  font-family: $font-text;
 
-    .solid-list-item {
-        display: flex;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: center;
-        margin: 5px 0;
+  .solid-list-item {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    margin: 5px 0;
 
-        .list-bullet i {
-            font-size: 1.5rem;
-            margin-right: 10px;
-            position: relative;
-            top: 2px;
-            color: $title-grey;
-        }
+    .list-bullet i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      position: relative;
+      top: 2px;
+      color: $title-grey;
     }
+  }
 }
 
 /* ==========================================================================
@@ -91,17 +92,17 @@ ul, ol {
 ========================================================================== */
 
 .inline-list {
-    display: flex !important;
-    flex-wrap: wrap;
-    font-family: $font-text;
+  display: flex !important;
+  flex-wrap: wrap;
+  font-family: $font-text;
 
-    i.inline-bullet {
-        font-size: 0.4rem;
-        margin: 0 10px;
-        color: $fade-grey;
-        position: relative;
-        top: 8px;
-    }
+  i.inline-bullet {
+    font-size: 0.4rem;
+    margin: 0 10px;
+    color: $fade-grey;
+    position: relative;
+    top: 8px;
+  }
 }
 
 /* ==========================================================================
@@ -109,69 +110,69 @@ ul, ol {
 ========================================================================== */
 
 .list-block {
-    border: 1px solid $fade-grey;
-    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid $fade-grey;
+  box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+
+  li {
+    padding: 10px 20px;
+    font-family: $font-text;
+
+    a {
+      color: $coal;
+    }
+
+    &.is-active {
+      background: $primary;
+
+      &:hover {
+        background: $primary;
+      }
+
+      .b-badge {
+        border: 1px solid $white;
+        background: transparent;
+      }
+    }
+
+    &.is-active a {
+      color: $white;
+    }
+
+    &:hover {
+      background: $light-grey;
+    }
+  }
+
+  &.bordered {
+    li:not(last-child) {
+      border-bottom: 1px solid $fade-grey;
+    }
+  }
+
+  &.minimal {
+    border: none;
+    box-shadow: none;
 
     li {
-        padding: 10px 20px;
-        font-family: $font-text;
-
-        a {
-            color: $coal;
-        }
-
-        &.is-active {
-            background: $primary;
-
-            &:hover {
-                background: $primary;
-            }
-
-            .b-badge {
-                border: 1px solid $white;
-                background: transparent;
-            }
-        }
-
-        &.is-active a {
-            color: $white;
-        }
-
-        &:hover {
-            background: $light-grey;
-        }
+      border-bottom: 1px solid $fade-grey;
     }
+  }
 
-    &.bordered {
-        li:not(last-child) {
-            border-bottom: 1px solid $fade-grey;
-        }
+  .b-badge {
+    float: right;
+  }
+
+  &.is-secondary {
+    li.is-active {
+      background: $secondary;
     }
+  }
 
-    &.minimal {
-        border: none;
-        box-shadow: none;
-
-        li {
-            border-bottom: 1px solid $fade-grey;
-        }
+  &.is-accent {
+    li.is-active {
+      background: $accent;
     }
-
-    .b-badge {
-        float: right;
-    }
-
-    &.is-secondary {
-        li.is-active {
-            background: $secondary;
-        }
-    }
-
-    &.is-accent {
-        li.is-active {
-            background: $accent;
-        }
-    }
+  }
 }
 
 /* ==========================================================================
@@ -179,25 +180,25 @@ ul, ol {
 ========================================================================== */
 
 .level.nav-level {
-    padding: 20px 40px;
-    border: 1px solid $fade-grey;
-    background: $white;
+  padding: 20px 40px;
+  border: 1px solid $fade-grey;
+  background: $white;
 
-    i {
-        cursor: pointer;
+  i {
+    cursor: pointer;
 
-        &:hover {
-            color: $primary;
-        }
+    &:hover {
+      color: $primary;
     }
+  }
 }
 
 .level {
-    &.centered-level {
-        padding: 20px 40px;
-        border: 1px solid $fade-grey;
-        background: $white;
-    }
+  &.centered-level {
+    padding: 20px 40px;
+    border: 1px solid $fade-grey;
+    background: $white;
+  }
 }
 
 /* ==========================================================================
@@ -205,53 +206,53 @@ ul, ol {
 ========================================================================== */
 
 .user-list {
-    li {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 10px 15px;
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  .user-list-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+  }
+
+  .user-list-info {
+    margin: 0 10px;
+
+    .name {
+      font-size: 14px;
+      font-weight: 500;
+      color: $blue-grey;
     }
 
-    .user-list-avatar img {
-        width: 40px;
-        height: 40px;
-        border-radius: 100px;
+    .position {
+      font-size: 12px;
+      color: $title-grey;
+    }
+  }
+
+  .user-list-status {
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+    background: $title-grey;
+    margin-left: auto;
+
+    &.is-offline {
+      background: $fade-grey;
     }
 
-    .user-list-info {
-        margin: 0 10px;
-
-        .name {
-            font-size: 14px;
-            font-weight: 500;
-            color: $blue-grey;
-        }
-
-        .position {
-            font-size: 12px;
-            color: $title-grey;
-        }
+    &.is-online {
+      background: $green;
     }
 
-    .user-list-status {
-        height: 10px;
-        width: 10px;
-        border-radius: 100px;
-        background: $title-grey;
-        margin-left: auto;
-
-        &.is-offline {
-            background: $fade-grey;
-        }
-
-        &.is-online {
-            background: $green;
-        }
-
-        &.is-busy {
-            background: $orange;
-        }
+    &.is-busy {
+      background: $orange;
     }
+  }
 }
 
 /* ==========================================================================
@@ -259,38 +260,38 @@ ul, ol {
 ========================================================================== */
 
 .user-media-list {
-    li {
-        margin: 15px 0;
+  li {
+    margin: 15px 0;
+  }
+
+  .media-left .image {
+    position: relative;
+
+    .avatar-status {
+      height: 10px;
+      width: 10px;
+      border-radius: 200px;
+      background: $title-grey;
+      position: absolute;
+      right: 1px;
+      top: 3px;
+
+      &.is-offline {
+        background: $fade-grey;
+      }
+
+      &.is-online {
+        background: $green;
+      }
+
+      &.is-busy {
+        background: $orange;
+      }
     }
+  }
 
-    .media-left .image {
-        position: relative;
-
-        .avatar-status {
-            height: 10px;
-            width: 10px;
-            border-radius: 200px;
-            background: $title-grey;
-            position: absolute;
-            right: 1px;
-            top: 3px;
-
-            &.is-offline {
-                background: $fade-grey;
-            }
-
-            &.is-online {
-                background: $green;
-            }
-
-            &.is-busy {
-                background: $orange;
-            }
-        }
-    }
-
-    .media-content span {
-        color: $blue-grey;
-        font-weight: 500;
-    }
+  .media-content span {
+    color: $blue-grey;
+    font-weight: 500;
+  }
 }

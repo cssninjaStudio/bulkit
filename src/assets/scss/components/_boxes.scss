@@ -31,7 +31,7 @@ TABLE OF CONTENTS
 @use 'sass:math';
 
 @mixin prefix($prop, $val) {
-  @each $prefix in "-webkit-", "-moz-", "-ms-", "" {
+  @each $prefix in '-webkit-', '-moz-', '-ms-', '' {
     #{$prefix}#{$prop}: $val;
   }
 }
@@ -312,7 +312,7 @@ TABLE OF CONTENTS
       &:after {
         width: 76px;
         height: 76px;
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         z-index: 1;
@@ -917,7 +917,7 @@ $length: 75;
       overflow: hidden;
 
       &:before {
-        content: "";
+        content: '';
         background-color: rgba(72, 27, 174, 0.7);
         position: absolute;
         top: 50%;
@@ -1006,7 +1006,9 @@ $length: 75;
       height: 0;
       padding: 25%;
       border-radius: 50%;
-      transition: transform 0.3s ease, opacity 0.3s ease-out;
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease-out;
       will-change: opacity, transform;
       opacity: 0;
       transform: translate(-50%, -50%) scale(0);

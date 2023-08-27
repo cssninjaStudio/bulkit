@@ -28,176 +28,176 @@ $size-large: 2rem !default;
 ========================================================================== */
 
 @mixin badge-size($size) {
-    $badgeSize: $size;
-    $leftPosition: calc(100% - ( #{$badgeSize} / 2 ));
-    $topPosition: calc(0px - ( #{$badgeSize} / 2 ));
+  $badgeSize: $size;
+  $leftPosition: calc(100% - (#{$badgeSize} / 2));
+  $topPosition: calc(0px - (#{$badgeSize} / 2));
 
-    &[data-badge]::after {
-        top: $topPosition;
-        left: $leftPosition;
-        min-height: $badgeSize;
-        min-width: $badgeSize;
-    }
+  &[data-badge]::after {
+    top: $topPosition;
+    left: $leftPosition;
+    min-height: $badgeSize;
+    min-width: $badgeSize;
+  }
 
-    &:not([data-badge=""])::after {
-        font-size: $size * 0.75;
-        line-height: $size * 0.5;
-    }
+  &:not([data-badge=''])::after {
+    font-size: $size * 0.75;
+    line-height: $size * 0.5;
+  }
 
-    &[data-badge=""]::after {
-        width: $badgeSize;
-    }
+  &[data-badge='']::after {
+    width: $badgeSize;
+  }
 
-    &.is-badge-left {
-        &::after {
-            left: calc(0px - ( #{$badgeSize} / 2 ));
-        }
+  &.is-badge-left {
+    &::after {
+      left: calc(0px - (#{$badgeSize} / 2));
     }
+  }
 
-    &.is-badge-bottom {
-        &::after {
-            top: calc(100% - ( #{$badgeSize} / 2 ));
-        }
+  &.is-badge-bottom {
+    &::after {
+      top: calc(100% - (#{$badgeSize} / 2));
     }
+  }
 
-    &.is-badge-bottom-left {
-        &::after {
-            left: calc(0px - ( #{$badgeSize} / 2 ));
-            top: calc(100% - ( #{$badgeSize} / 2 ));
-        }
+  &.is-badge-bottom-left {
+    &::after {
+      left: calc(0px - (#{$badgeSize} / 2));
+      top: calc(100% - (#{$badgeSize} / 2));
     }
+  }
 }
 
 /* ==========================================================================
 2. Main styles
 ========================================================================== */
 .badge {
-    position: relative;
-    white-space: nowrap;
-    position: relative;
+  position: relative;
+  white-space: nowrap;
+  position: relative;
 
-    &[data-badge]::after {
-        position: absolute;
-        left: 100%;
-        z-index: 99;
-        margin: 0;
-        background: $blue-grey;
-        -webkit-background-clip: padding-box;
-        background-clip: padding-box;
-        border-radius: $badge-border-radius;
-        box-shadow: 0 0 0 $badge-border-size $white;
-        color: $white;
-        content: attr(data-badge);
-        display: inline-block;
-
-        &.is-badge-outlined {
-            background: $white;
-            border: 1px solid $blue-grey;
-            color: $blue-grey;
-        }
-    }
-
-    &:not([data-badge=""])::after {
-        padding: 0.3rem 0.5rem;
-        text-align: center;
-        white-space: nowrap;
-    }
-
-    &[data-badge=""]::after {
-        display: inline-block;
-        vertical-align: inherit;
-    }
+  &[data-badge]::after {
+    position: absolute;
+    left: 100%;
+    z-index: 99;
+    margin: 0;
+    background: $blue-grey;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: $badge-border-radius;
+    box-shadow: 0 0 0 $badge-border-size $white;
+    color: $white;
+    content: attr(data-badge);
+    display: inline-block;
 
     &.is-badge-outlined {
-        &[data-badge]::after {
-            background-color: $white;
-            box-shadow: none;
-            border: $badge-border-size solid $blue-grey;
-            color: $blue-grey;
-        }
-
-        &.badge-primary::after {
-            background: $white;
-            border: $badge-border-size solid $primary;
-            color: $primary;
-        }
-
-        &.badge-secondary::after {
-            background: $white;
-            border: $badge-border-size solid $secondary;
-            color: $secondary;
-        }
-
-        &.badge-accent::after {
-            background: $white;
-            border: $badge-border-size solid $accent;
-            color: $accent;
-        }
-
-        &.badge-success::after {
-            background: $white;
-            border: $badge-border-size solid $green;
-            color: $green;
-        }
-
-        &.badge-warning::after {
-            background: $white;
-            border: $badge-border-size solid $orange;
-            color: $orange;
-        }
-
-        &.badge-danger::after {
-            background: $white;
-            border: $badge-border-size solid $red;
-            color: $red;
-        }
-
-        &.badge-info::after {
-            background: $white;
-            border: $badge-border-size solid $blue;
-            color: $blue;
-        }
+      background: $white;
+      border: 1px solid $blue-grey;
+      color: $blue-grey;
     }
+  }
 
-    @include badge-size($size-normal);
+  &:not([data-badge=''])::after {
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+    white-space: nowrap;
+  }
 
-    &.is-badge-small {
-        @include badge-size($size-small);
-    }
+  &[data-badge='']::after {
+    display: inline-block;
+    vertical-align: inherit;
+  }
 
-    &.is-badge-medium {
-        @include badge-size($size-medium);
-    }
-
-    &.is-badge-large {
-        @include badge-size($size-large);
+  &.is-badge-outlined {
+    &[data-badge]::after {
+      background-color: $white;
+      box-shadow: none;
+      border: $badge-border-size solid $blue-grey;
+      color: $blue-grey;
     }
 
     &.badge-primary::after {
-        background: $primary;
+      background: $white;
+      border: $badge-border-size solid $primary;
+      color: $primary;
     }
 
     &.badge-secondary::after {
-        background: $secondary;
+      background: $white;
+      border: $badge-border-size solid $secondary;
+      color: $secondary;
     }
 
     &.badge-accent::after {
-        background: $accent;
+      background: $white;
+      border: $badge-border-size solid $accent;
+      color: $accent;
     }
 
     &.badge-success::after {
-        background: $green;
+      background: $white;
+      border: $badge-border-size solid $green;
+      color: $green;
     }
 
     &.badge-warning::after {
-        background: $orange;
+      background: $white;
+      border: $badge-border-size solid $orange;
+      color: $orange;
     }
 
     &.badge-danger::after {
-        background: $red;
+      background: $white;
+      border: $badge-border-size solid $red;
+      color: $red;
     }
 
     &.badge-info::after {
-        background: $blue;
+      background: $white;
+      border: $badge-border-size solid $blue;
+      color: $blue;
     }
+  }
+
+  @include badge-size($size-normal);
+
+  &.is-badge-small {
+    @include badge-size($size-small);
+  }
+
+  &.is-badge-medium {
+    @include badge-size($size-medium);
+  }
+
+  &.is-badge-large {
+    @include badge-size($size-large);
+  }
+
+  &.badge-primary::after {
+    background: $primary;
+  }
+
+  &.badge-secondary::after {
+    background: $secondary;
+  }
+
+  &.badge-accent::after {
+    background: $accent;
+  }
+
+  &.badge-success::after {
+    background: $green;
+  }
+
+  &.badge-warning::after {
+    background: $orange;
+  }
+
+  &.badge-danger::after {
+    background: $red;
+  }
+
+  &.badge-info::after {
+    background: $blue;
+  }
 }

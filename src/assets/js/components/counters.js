@@ -2,13 +2,13 @@
 Counters
 ========================================================================== */
 
-"use strict";
+'use strict'
 
 function initCounters() {
-  if ($(".counter").length) {
-    $(".counter").counterUp({
+  if ($('.counter').length) {
+    $('.counter').counterUp({
       delay: 10,
       time: 1000,
-    });
+    })
   }
 }

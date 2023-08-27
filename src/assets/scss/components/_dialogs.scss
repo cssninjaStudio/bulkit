@@ -18,29 +18,29 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .modal {
-    transition: all 0.5s;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: 1000;
+
+  .modal-content {
+    transition: all 0.4s;
     transform: scale(0);
-    z-index: 1000;
+    opacity: 0;
+    z-index: 99 !important;
+  }
 
-    .modal-content {
-        transition: all 0.4s;
-        transform: scale(0);
-        opacity: 0;
-        z-index: 99 !important;
+  .modal-close {
+    transition: all 0.4s;
+    z-index: 100 !important;
+
+    &:hover {
+      transform: rotate(135deg);
     }
+  }
 
-    .modal-close {
-        transition: all 0.4s;
-        z-index: 100 !important;
-
-        &:hover {
-            transform: rotate(135deg);
-        }
-    }
-
-    a {
-        border-radius: 6px;
-    }
+  a {
+    border-radius: 6px;
+  }
 }
 
 /* ==========================================================================
@@ -48,150 +48,151 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .modal {
-    &.is-active {
-        transform: scale(1);
+  &.is-active {
+    transform: scale(1);
 
-        .modal-background {
-            background: $webkit-modal-gradient;
-            background: $modal-gradient;
-            background-color: $primary;
-            width: 1000px;
-            height: 1000px;
-            border-radius: 10000px;
-            transition: all 0.5s;
-            transform: scale(0);
-            margin-left: auto;
-            margin-right: auto;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: 98 !important;
-            overflow: hidden !important;
+    .modal-background {
+      background: $webkit-modal-gradient;
+      background: $modal-gradient;
+      background-color: $primary;
+      width: 1000px;
+      height: 1000px;
+      border-radius: 10000px;
+      transition: all 0.5s;
+      transform: scale(0);
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 98 !important;
+      overflow: hidden !important;
 
-            &.scaleInCircle {
-                transform: scale(7);
-            }
-        }
-
-        .modal-content {
-            &.scaleIn {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .modal-close {
-            z-index: 100 !important;
-        }
-
-        &.image-modal {
-            .modal-background {
-                background: $webkit-coal-gradient;
-                background: $coal-gradient;
-                background-color: $blue-grey;
-            }
-
-            img {
-                border-radius: 6px;
-            }
-
-            .gallery-item figure {
-                background: none;
-            }
-        }
-
-        .modal-card {
-            .modal-card-head, .modal-card-foot {
-                padding: 15px;
-            }
-
-            .modal-card-head {
-                background-color: $white;
-
-                p {
-                    color: $blue-grey;
-                }
-
-                .delete {
-                    background: transparent !important;
-                    transition: all 0.3s;
-
-                    &:before {
-                        background: $accent;
-                    }
-
-                    &:after {
-                        background: $accent;
-                    }
-
-                    &:hover {
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-
-            .modal-card-body {
-                &::-webkit-scrollbar {
-                    width: 10px;
-                }
-
-                &::-webkit-scrollbar-thumb {
-                    border-radius: 5px;
-                    background: rgba(0, 0, 0, 0.2);
-                }
-            }
-
-            .modal-card-foot {
-                background-color: $white;
-                justify-content: flex-end;
-                border-top: none;
-            }
-        }
-
-        &.modal-sm {
-            .modal-card-body {
-                max-height: 400px;
-            }
-        }
-
-        &.modal-hero {
-            .modal-background {
-                background: $webkit-hero-gradient;
-                background: $hero-gradient;
-                background-color: $secondary;
-            }
-        }
-
-        &.modal-success {
-            .modal-background {
-                background: $green;
-            }
-        }
-
-        &.modal-error {
-            .modal-background {
-                background: $red;
-            }
-        }
-
-        &.modal-warning {
-            .modal-background {
-                background: $orange;
-            }
-        }
-
-        &.modal-info {
-            .modal-background {
-                background: $blue;
-            }
-        }
-
-        .modal-svg {
-            max-width: 110px;
-            margin: 0 auto !important;
-        }
+      &.scaleInCircle {
+        transform: scale(7);
+      }
     }
+
+    .modal-content {
+      &.scaleIn {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .modal-close {
+      z-index: 100 !important;
+    }
+
+    &.image-modal {
+      .modal-background {
+        background: $webkit-coal-gradient;
+        background: $coal-gradient;
+        background-color: $blue-grey;
+      }
+
+      img {
+        border-radius: 6px;
+      }
+
+      .gallery-item figure {
+        background: none;
+      }
+    }
+
+    .modal-card {
+      .modal-card-head,
+      .modal-card-foot {
+        padding: 15px;
+      }
+
+      .modal-card-head {
+        background-color: $white;
+
+        p {
+          color: $blue-grey;
+        }
+
+        .delete {
+          background: transparent !important;
+          transition: all 0.3s;
+
+          &:before {
+            background: $accent;
+          }
+
+          &:after {
+            background: $accent;
+          }
+
+          &:hover {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .modal-card-body {
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .modal-card-foot {
+        background-color: $white;
+        justify-content: flex-end;
+        border-top: none;
+      }
+    }
+
+    &.modal-sm {
+      .modal-card-body {
+        max-height: 400px;
+      }
+    }
+
+    &.modal-hero {
+      .modal-background {
+        background: $webkit-hero-gradient;
+        background: $hero-gradient;
+        background-color: $secondary;
+      }
+    }
+
+    &.modal-success {
+      .modal-background {
+        background: $green;
+      }
+    }
+
+    &.modal-error {
+      .modal-background {
+        background: $red;
+      }
+    }
+
+    &.modal-warning {
+      .modal-background {
+        background: $orange;
+      }
+    }
+
+    &.modal-info {
+      .modal-background {
+        background: $blue;
+      }
+    }
+
+    .modal-svg {
+      max-width: 110px;
+      margin: 0 auto !important;
+    }
+  }
 }
 
 /* ==========================================================================
@@ -199,15 +200,17 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @media screen and (min-width: 769px) {
-    .modal.modal-lg {
-        .modal-card, .modal-content {
-            width: 800px !important;
-        }
+  .modal.modal-lg {
+    .modal-card,
+    .modal-content {
+      width: 800px !important;
     }
+  }
 
-    .modal.modal-sm {
-        .modal-card, .modal-content {
-            width: 400px !important;
-        }
+  .modal.modal-sm {
+    .modal-card,
+    .modal-content {
+      width: 400px !important;
     }
+  }
 }

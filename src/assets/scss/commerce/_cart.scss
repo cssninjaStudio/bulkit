@@ -51,7 +51,7 @@ TABLE OF CONTENTS
       .input {
         padding-left: 58px;
         height: 58px;
-        border-radius: .65rem;
+        border-radius: 0.65rem;
         font-size: 1.1rem;
       }
 
@@ -63,7 +63,7 @@ TABLE OF CONTENTS
         min-width: 164px;
         font-size: 0.9rem;
         font-weight: 500;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
         transform: translateY(-50%);
 
         &:hover {
@@ -117,7 +117,7 @@ TABLE OF CONTENTS
     @extend .card;
 
     padding: 2rem;
-    border-radius: .65rem;
+    border-radius: 0.65rem;
     border: 1px solid darken($fade-grey, 3%);
     box-shadow: $light-box-shadow;
 
@@ -182,7 +182,7 @@ TABLE OF CONTENTS
           color: $blue-grey;
 
           &:before {
-            content: "$";
+            content: '$';
           }
 
           &.is-total {
@@ -197,7 +197,7 @@ TABLE OF CONTENTS
             color: $light-blue-grey;
 
             &:before {
-              content: "";
+              content: '';
             }
           }
         }
@@ -215,7 +215,7 @@ TABLE OF CONTENTS
       font-weight: 600;
       color: $blue-grey;
       font-size: 1.1rem;
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
     }
 
     p {
@@ -230,7 +230,6 @@ TABLE OF CONTENTS
     }
   }
 }
-
 
 @media only screen and (max-width: 767px) {
   .cart-summary {

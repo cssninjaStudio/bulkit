@@ -164,7 +164,9 @@ TABLE OF CONTENTS
         height: 20px;
         width: 20px;
         margin-left: 0.5rem;
-        transition: transform 0.3s, stroke 0.3s;
+        transition:
+          transform 0.3s,
+          stroke 0.3s;
       }
     }
   }
@@ -183,7 +185,10 @@ TABLE OF CONTENTS
       border-radius: 0.75rem;
       padding: 1.75rem;
       box-shadow: $light-box-shadow;
-      transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+      transition:
+        background-color 0.3s,
+        border 0.3s,
+        box-shadow 0.3s;
       cursor: pointer;
       margin-bottom: 1.5rem;
 
@@ -297,7 +302,7 @@ TABLE OF CONTENTS
         color: $blue-grey;
 
         &::before {
-          content: "$";
+          content: '$';
         }
       }
 
@@ -553,7 +558,8 @@ TABLE OF CONTENTS
     }
   }
 
-  .popular-categories, .grid-products {
+  .popular-categories,
+  .grid-products {
     .columns {
       padding: 0;
       display: flex;
@@ -578,23 +584,22 @@ TABLE OF CONTENTS
     overflow: hidden;
 
     .shop-hero-box {
+      .overlay-layer {
+        .inner-content {
+          padding: 25px !important;
 
-        .overlay-layer {
-            .inner-content {
-                padding: 25px !important;
+          .episode-title {
+            font-size: 2rem !important;
+            line-height: 26px !important;
+          }
 
-                .episode-title {
-                    font-size: 2rem !important;
-                    line-height: 26px !important;
-                }
-
-                .episode-meta {
-                    .meta-item {
-                        font-size: .68rem !important;
-                    }
-                }
+          .episode-meta {
+            .meta-item {
+              font-size: 0.68rem !important;
             }
+          }
         }
+      }
     }
-}
+  }
 }

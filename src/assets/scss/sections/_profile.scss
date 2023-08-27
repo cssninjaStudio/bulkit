@@ -468,7 +468,9 @@ TABLE OF CONTENTS
       border: 1px solid $border-light;
       border-radius: 0.65rem;
       padding: 2.5rem;
-      transition: box-shadow 0.3s, border 0.3s;
+      transition:
+        box-shadow 0.3s,
+        border 0.3s;
 
       &:hover {
         box-shadow: $light-box-shadow;
@@ -492,7 +494,10 @@ TABLE OF CONTENTS
         border: 1px solid $border-light;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s, box-shadow 0.3s, border 0.3s;
+        transition:
+          opacity 0.3s,
+          box-shadow 0.3s,
+          border 0.3s;
         color: $blue-grey;
         border-radius: 50%;
         font-size: 0.8rem;

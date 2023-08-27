@@ -20,41 +20,56 @@ TABLE OF CONTENTS
 0. Resets and base setup
 ========================================================================== */
 
-*::selection { 
-    background: $primary; 
-    color: $white;
+*::selection {
+  background: $primary;
+  color: $white;
 }
 
 body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    overflow: hidden !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  overflow: hidden !important;
 }
 
-a, a:active, i, i:active, div, div:active, div:focus, span:focus, span:active {
-    outline: none !important;
+a,
+a:active,
+i,
+i:active,
+div,
+div:active,
+div:focus,
+span:focus,
+span:active {
+  outline: none !important;
 }
 
 a:focus {
-    color: $primary;
+  color: $primary;
 }
 
-.button.is-active, .button:active, .button:focus {
-    box-shadow: none !important;
+.button.is-active,
+.button:active,
+.button:focus {
+  box-shadow: none !important;
 }
 
 section:focus {
-    outline: none !important;
+  outline: none !important;
 }
 
 @font-face {
-    font-family: 'Nexa Light';
-    src: url("../fonts/text/nexa/NexaLight.woff") format("woff"), url("../fonts/text/nexa/NexaLight.ttf") format("truetype");
+  font-family: 'Nexa Light';
+  src:
+    url('../fonts/text/nexa/NexaLight.woff') format('woff'),
+    url('../fonts/text/nexa/NexaLight.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Nexa Bold';
-    font-weight: bold;
-    src: url("../fonts/text/nexa/NexaBold.woff") format("woff"), url("../fonts/text/nexa/NexaBold.ttf") format("truetype");
+  font-family: 'Nexa Bold';
+  font-weight: bold;
+  src:
+    url('../fonts/text/nexa/NexaBold.woff') format('woff'),
+    url('../fonts/text/nexa/NexaBold.ttf') format('truetype');
 }
 
 /* ==========================================================================
@@ -62,185 +77,185 @@ section:focus {
 ========================================================================== */
 
 #backtotop {
-    position: fixed;
-    right: 0;
-    opacity: 0;
-    visibility: hidden;
-    bottom: 25px;
-    margin: 0 25px 0 0;
-    z-index: 9999;
-    transition: 0.35s;
-    transform: scale(0.7);
-    transition: all 0.5s;
+  position: fixed;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  bottom: 25px;
+  margin: 0 25px 0 0;
+  z-index: 9999;
+  transition: 0.35s;
+  transform: scale(0.7);
+  transition: all 0.5s;
 }
 
 #backtotop.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
 }
 
 #backtotop.visible a:hover {
-    outline: none;
-    opacity: 0.9;
-    background: $secondary;
+  outline: none;
+  opacity: 0.9;
+  background: $secondary;
 }
 
 #backtotop a {
-    outline: none;
-    text-decoration: none;
-    border: 0 none;
-    display: block;
-    width: 46px;
-    height: 46px;
-    background-color: $medium-grey;
-    opacity: 1;
-    transition: all 0.3s;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 26px;
+  outline: none;
+  text-decoration: none;
+  border: 0 none;
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-color: $medium-grey;
+  opacity: 1;
+  transition: all 0.3s;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
 }
 
 body #backtotop a {
-    outline: none;
-    color: #fff;
+  outline: none;
+  color: #fff;
 }
 
 #backtotop a:after {
-    outline: none;
-    content: "\e607";
-    font-family: "simple-line-icons";
-    font-weight: 900;
-    font-size: .9rem;
-    position: relative;
-    display: block;
-    top: 50%;
-    -webkit-transform: translateY(-55%);
-    transform: translateY(-55%);
+  outline: none;
+  content: '\e607';
+  font-family: 'simple-line-icons';
+  font-weight: 900;
+  font-size: 0.9rem;
+  position: relative;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-55%);
+  transform: translateY(-55%);
 }
 
 .style-switcher {
-    position: fixed;
-    top: 15%;
-    right: 20px;
-    opacity: 0;
-    pointer-events: none;
-    background: $white;
-    padding: 12px;
-    border: 1px solid darken($fade-grey, 3%);
-    border-radius: 12px;
+  position: fixed;
+  top: 15%;
+  right: 20px;
+  opacity: 0;
+  pointer-events: none;
+  background: $white;
+  padding: 12px;
+  border: 1px solid darken($fade-grey, 3%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  transform: translate(150px);
+  box-shadow: $light-box-shadow;
+  transition: all 0.3s;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(0);
+  }
+
+  &.force-visible {
+    opacity: 1 !important;
+    pointer-events: all !important;
+    transform: translate(0) !important;
+  }
+
+  &.away {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translate(150px) !important;
+  }
+
+  .switcher-close {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    z-index: 9999;
-    transform: translate(150px);
-    box-shadow: $light-box-shadow;
-    transition: all 0.3s;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $blue-grey;
+    transition: all !important;
 
-    &.visible {
-        opacity: 1;
-        pointer-events: all;
-        transform: translate(0);
+    &:hover {
+      background: $widget-grey;
     }
 
-    &.force-visible {
-        opacity: 1 !important;
-        pointer-events: all !important;
-        transform: translate(0) !important;
+    .material-icons {
+      font-size: 18px;
     }
+  }
 
-    &.away {
-        opacity: 0 !important;
-        pointer-events: none !important;
-        transform: translate(150px) !important;
-    }
+  .style-dot {
+    position: relative;
+    margin: 3px 0;
 
-    .switcher-close {
-        height: 32px;
-        width: 32px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        color: $blue-grey;
-        transition: all !important;
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 1;
 
-        &:hover {
-            background: $widget-grey;
+      &:checked {
+        + .style-dot-inner {
+          transform: scale(1);
         }
-        
-        .material-icons {
-            font-size: 18px;
-        }
+      }
     }
 
-    .style-dot {
-        position: relative;
-        margin: 3px 0;
+    .style-dot-inner {
+      position: relative;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      background: #8c8cf9;
+      transform: scale(0.7);
+      transition: all 0.5s;
 
-        input {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            cursor: pointer;
-            z-index: 1;
+      &.is-teal {
+        background: #00d1b2;
+      }
 
-            &:checked {
-                + .style-dot-inner {
-                    transform: scale(1);
-                }
-            }
-        }
+      &.is-green {
+        background: #00b289;
+      }
 
-        .style-dot-inner {
-            position: relative;
-            height: 32px;
-            width: 32px;
-            border-radius: 50%;
-            background: #8c8cf9;
-            transform: scale(0.7);
-            transition: all .5s;
+      &.is-blue {
+        background: #0f7cff;
+      }
 
-            &.is-teal {
-                background: #00D1B2;
-            }
+      &.is-azur {
+        background: #039be5;
+      }
 
-            &.is-green {
-                background: #00b289;
-            }
+      &.is-night {
+        background: #4a00e0;
+      }
 
-            &.is-blue {
-                background: #0f7cff;
-            }
+      &.is-orange {
+        background: #f83600;
+      }
 
-            &.is-azur {
-                background: #039be5;
-            }
+      &.is-red {
+        background: #ff5555;
+      }
 
-            &.is-night {
-                background: #4A00E0;
-            }
+      &.is-purple {
+        background: #837fcb;
+      }
 
-            &.is-orange {
-                background: #f83600;
-            }
-
-            &.is-red {
-                background: #ff5555;
-            }
-
-            &.is-purple {
-                background: #837FCB;
-            }
-
-            &.is-yellow {
-                background: #f5c62c;
-            }
-        }
+      &.is-yellow {
+        background: #f5c62c;
+      }
     }
+  }
 }
 
 /* ==========================================================================
@@ -248,15 +263,15 @@ body #backtotop a {
 ========================================================================== */
 
 .progress {
-    width: 100% !important;
+  width: 100% !important;
 }
 
 .progress.primary::-webkit-progress-value {
-    background-color: $primary !important;
+  background-color: $primary !important;
 }
 
 .progress.secondary::-moz-progress-bar {
-    background-color: $secondary !important;
+  background-color: $secondary !important;
 }
 
 /* ==========================================================================
@@ -264,19 +279,19 @@ body #backtotop a {
 ========================================================================== */
 
 ::-webkit-input-placeholder {
-    color: $placeholder;
+  color: $placeholder;
 }
 
 ::-moz-placeholder {
-    color: $placeholder;
+  color: $placeholder;
 }
 
 :-ms-input-placeholder {
-    color: $placeholder;
+  color: $placeholder;
 }
 
 :-moz-placeholder {
-    color: $placeholder;
+  color: $placeholder;
 }
 
 /* ==========================================================================
@@ -284,10 +299,10 @@ body #backtotop a {
 ========================================================================== */
 
 body::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
 }

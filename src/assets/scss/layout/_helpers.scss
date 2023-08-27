@@ -27,87 +27,87 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .body-color {
-    color: $blue-grey-light !important;
+  color: $blue-grey-light !important;
 }
 
 .color-primary {
-    color: $primary !important;
+  color: $primary !important;
 }
 
 .color-secondary {
-    color: $secondary !important;
+  color: $secondary !important;
 }
 
 .color-accent {
-    color: $accent !important;
+  color: $accent !important;
 }
 
 .color-red {
-    color: $red !important;
+  color: $red !important;
 }
 
 .border-light {
-    border-color: $white !important;
+  border-color: $white !important;
 }
 
 .dark-text {
-    color: $blue-grey !important;
+  color: $blue-grey !important;
 }
 
 .white-text {
-    color: $white !important;
+  color: $white !important;
 }
 
 .light-text {
-    color: $white !important;
+  color: $white !important;
 }
 
 .muted-text {
-    color: $muted-grey !important;
+  color: $muted-grey !important;
 }
 
 .primary-text {
-    color: $primary !important;
+  color: $primary !important;
 }
 
 .secondary-text {
-    color: $secondary !important;
+  color: $secondary !important;
 }
 
 .accent-text {
-    color: $accent !important;
+  color: $accent !important;
 }
 
 .info-text {
-    color: $blue !important;
+  color: $blue !important;
 }
 
 .success-text {
-    color: $green !important;
+  color: $green !important;
 }
 
 .warning-text {
-    color: $orange !important;
+  color: $orange !important;
 }
 
 .danger-text {
-    color: $red !important;
+  color: $red !important;
 }
 
 .dark-bg {
-    background: $coal !important;
+  background: $coal !important;
 }
 
 .light-bg {
-    background: $white !important;
+  background: $white !important;
 }
 
 .has-light-shadow {
-    box-shadow: $light-box-shadow;
+  box-shadow: $light-box-shadow;
 }
 
 .has-light-border {
-    border: 1px solid lighten($border, 2%);
+  border: 1px solid lighten($border, 2%);
 }
 
 /* ==========================================================================
@@ -115,78 +115,78 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .title {
-    &.is-styled {
-        font-family: $font-main;
-        color: $blue-grey;
-    }
+  &.is-styled {
+    font-family: $font-main;
+    color: $blue-grey;
+  }
 }
 
 .font-w-400 {
-    font-weight: 400 !important;
+  font-weight: 400 !important;
 }
 
 .font-w-500 {
-    font-weight: 500 !important;
+  font-weight: 500 !important;
 }
 
 .font-w-600 {
-    font-weight: 600 !important;
+  font-weight: 600 !important;
 }
 
 .text-decoration-none {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .text-upper {
-    text-transform: uppercase !important;
+  text-transform: uppercase !important;
 }
 
 .text-bold {
-    font-weight: 600 !important;
+  font-weight: 600 !important;
 }
 
 .text-bolder {
-    font-weight: 700 !important;
+  font-weight: 700 !important;
 }
 
 .font-size-normal {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .font-size-2x {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .font-size-small {
-    font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .is-size-1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .is-size-2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .is-size-3 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .is-size-4 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .is-size-5 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .is-size-6 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .is-size-7 {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 /* ==========================================================================
@@ -195,84 +195,84 @@ TABLE OF CONTENTS
 
 //quick flex
 .is-flex {
-    display: flex;
+  display: flex;
 
-    &.is-start {
-        justify-content: flex-start;
-    }
+  &.is-start {
+    justify-content: flex-start;
+  }
 
-    &.is-center {
-        justify-content: center;
-    }
+  &.is-center {
+    justify-content: center;
+  }
 
-    &.is-end {
-        justify-content: flex-end;
-    }
+  &.is-end {
+    justify-content: flex-end;
+  }
 
-    &.is-vcenter {
-        align-items: center;
-        align-content: center;
-    }
+  &.is-vcenter {
+    align-items: center;
+    align-content: center;
+  }
 }
 
 //Block display
 .is-block {
-    display: block !important;
+  display: block !important;
 }
 
 .z-index-0 {
-    z-index: 0 !important;
+  z-index: 0 !important;
 }
 
 .z-index-2 {
-    z-index: 2 !important;
+  z-index: 2 !important;
 }
 
 .z-index-101 {
-    z-index: 101 !important;
+  z-index: 101 !important;
 }
 
 //Scrollbar
 .has-slimscroll {
-    &::-webkit-scrollbar {
-        width: 6px !important;
-    }
+  &::-webkit-scrollbar {
+    width: 6px !important;
+  }
 
-    &::-webkit-scrollbar-thumb {
-        border-radius: 10px !important;
-        background: rgba(0, 0, 0, 0.2) !important;
-    }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
 }
 
 .has-slimscroll-xs {
-    &::-webkit-scrollbar {
-        width: 3px !important;
-    }
+  &::-webkit-scrollbar {
+    width: 3px !important;
+  }
 
-    &::-webkit-scrollbar-thumb {
-        border-radius: 10px !important;
-        background: rgba(0, 0, 0, 0.2) !important;
-    }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
 }
 
 .has-slimscroll-xs-h {
-    &::-webkit-scrollbar {
-        height: 6px !important;
-    }
+  &::-webkit-scrollbar {
+    height: 6px !important;
+  }
 
-    &::-webkit-scrollbar-thumb {
-        border-radius: 10px !important;
-        background: rgba(0, 0, 0, 0.2) !important;
-    }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
 }
 
 .bottom-spacer {
-    margin-bottom: 80px;
-    min-height: 100px;
+  margin-bottom: 80px;
+  min-height: 100px;
 }
 
 .is-relative {
-    position:  relative !important;
+  position: relative !important;
 }
 
 /* ==========================================================================
@@ -280,232 +280,232 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .no-padding {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .no-padding-top {
-    padding-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .no-padding-bottom {
-    padding-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .no-padding-right {
-    padding-right: 0 !important;
+  padding-right: 0 !important;
 }
 
 .no-padding-left {
-    padding-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 .padding-10 {
-    padding: 10px;
+  padding: 10px;
 }
 
 .padding-15 {
-    padding: 15px;
+  padding: 15px;
 }
 
 .padding-20 {
-    padding: 20px;
+  padding: 20px;
 }
 
 .padding-25 {
-    padding: 25px;
+  padding: 25px;
 }
 
 .padding-30 {
-    padding: 30px;
+  padding: 30px;
 }
 
 .padding-40 {
-    padding: 40px;
+  padding: 40px;
 }
 
 .padding-50 {
-    padding: 50px;
+  padding: 50px;
 }
 
 .padding-60 {
-    padding: 60px;
+  padding: 60px;
 }
 
 .padding-70 {
-    padding: 70px;
+  padding: 70px;
 }
 
 .padding-80 {
-    padding: 80px;
+  padding: 80px;
 }
 
 .padding-90 {
-    padding: 90px;
+  padding: 90px;
 }
 
 .padding-100 {
-    padding: 100px;
+  padding: 100px;
 }
 
 .pt-5 {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
 .pt-10 {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .pt-20 {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .pt-30 {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .pt-40 {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 
 .pt-50 {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .pt-60 {
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 .pt-70 {
-    padding-top: 70px;
+  padding-top: 70px;
 }
 
 .pt-80 {
-    padding-top: 80px;
+  padding-top: 80px;
 }
 
 .pb-5 {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .pb-10 {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .pb-20 {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .pb-30 {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .pb-40 {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .pb-50 {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .pb-60 {
-    padding-bottom: 60px;
+  padding-bottom: 60px;
 }
 
 .pb-70 {
-    padding-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .pb-80 {
-    padding-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .pl-5 {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .pl-10 {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .pl-20 {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .pl-30 {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .pl-40 {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 
 .pl-50 {
-    padding-left: 50px;
+  padding-left: 50px;
 }
 
 .pl-60 {
-    padding-left: 60px;
+  padding-left: 60px;
 }
 
 .pl-70 {
-    padding-left: 70px;
+  padding-left: 70px;
 }
 
 .pl-80 {
-    padding-left: 80px;
+  padding-left: 80px;
 }
 
 .pr-5 {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 
 .pr-10 {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .pr-20 {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .pr-30 {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 
 .pr-40 {
-    padding-right: 40px;
+  padding-right: 40px;
 }
 
 .pr-50 {
-    padding-right: 50px;
+  padding-right: 50px;
 }
 
 .pr-60 {
-    padding-right: 60px;
+  padding-right: 60px;
 }
 
 .pr-70 {
-    padding-right: 70px;
+  padding-right: 70px;
 }
 
 .pr-80 {
-    padding-right: 80px;
+  padding-right: 80px;
 }
 
 .huge-pt {
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 .huge-pb {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .giant-pb {
-    padding-bottom: 150px;
+  padding-bottom: 150px;
 }
 
 .hr {
-    height: 1px;
-    background: darken($fade-grey, 4%);
+  height: 1px;
+  background: darken($fade-grey, 4%);
 }
 
 /* ==========================================================================
@@ -513,227 +513,227 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .no-margin {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .no-margin-left {
-    margin-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 .no-margin-right {
-    margin-right: 0 !important;
+  margin-right: 0 !important;
 }
 
 .no-margin-top {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .no-margin-bottom {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .margin-x-auto {
-    margin: 0 auto !important;
+  margin: 0 auto !important;
 }
 
 .mr-auto {
-    margin-right: auto !important;
+  margin-right: auto !important;
 }
 
 .ml-auto {
-    margin-left: auto !important;
+  margin-left: auto !important;
 }
 
 .margin-10 {
-    margin: 10px;
+  margin: 10px;
 }
 
 .margin-20 {
-    margin: 20px;
+  margin: 20px;
 }
 
 .margin-25 {
-    margin: 25px;
+  margin: 25px;
 }
 
 .margin-30 {
-    margin: 30px;
+  margin: 30px;
 }
 
 .margin-40 {
-    margin: 40px;
+  margin: 40px;
 }
 
 .margin-50 {
-    margin: 50px;
+  margin: 50px;
 }
 
 .margin-60 {
-    margin: 60px;
+  margin: 60px;
 }
 
 .margin-70 {
-    margin: 70px;
+  margin: 70px;
 }
 
 .margin-80 {
-    margin: 80px;
+  margin: 80px;
 }
 
 .margin-90 {
-    margin: 90px;
+  margin: 90px;
 }
 
 .margin-100 {
-    margin: 100px;
+  margin: 100px;
 }
 
 .mt-5 {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .mt-10 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .mt-20 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .mt-30 {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .mt-40 {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .mt-50 {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .mt-60 {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .mt-70 {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 .mt-80 {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .mt-120 {
-    margin-top: 120px;
+  margin-top: 120px;
 }
 
 .mb-5 {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .mb-10 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .mb-20 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .mb-30 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .mb-40 {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .mb-50 {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .mb-60 {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .mb-70 {
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 .mb-80 {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .ml-5 {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .ml-10 {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .ml-20 {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .ml-30 {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .ml-40 {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .ml-50 {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 .ml-60 {
-    margin-left: 60px;
+  margin-left: 60px;
 }
 
 .ml-70 {
-    margin-left: 70px;
+  margin-left: 70px;
 }
 
 .ml-80 {
-    margin-left: 80px;
+  margin-left: 80px;
 }
 
 .mr-5 {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .mr-10 {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .mr-20 {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .mr-30 {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 .mr-40 {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .mr-50 {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .mr-60 {
-    margin-right: 60px;
+  margin-right: 60px;
 }
 
 .mr-70 {
-    margin-right: 70px;
+  margin-right: 70px;
 }
 
 .mr-80 {
-    margin-right: 80px;
+  margin-right: 80px;
 }
 
 /* ==========================================================================
@@ -741,121 +741,121 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .width-40 {
-    width: 40px !important;
+  width: 40px !important;
 }
 
 .width-100 {
-    width: 100px !important;
+  width: 100px !important;
 }
 
 .width-250 {
-    width: 250px !important;
+  width: 250px !important;
 }
 
 .height-30 {
-    height: 30px !important;
+  height: 30px !important;
 }
 
 .height-60 {
-    height: 60px !important;
+  height: 60px !important;
 }
 
 .height-60 {
-    height: 60px !important;
+  height: 60px !important;
 }
 
 .height-70 {
-    height: 60px !important;
+  height: 60px !important;
 }
 
 .height-80 {
-    height: 60px !important;
+  height: 60px !important;
 }
 
 .height-90 {
-    height: 60px !important;
+  height: 60px !important;
 }
 
 .max-w-center {
-    width: 100%;
-    margin-left:  auto !important;
-    margin-right: auto !important;
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
 
-    &.max-w-440 {
-        max-width: 440px !important;
-    }
+  &.max-w-440 {
+    max-width: 440px !important;
+  }
 
-    &.max-w-540 {
-        max-width: 540px !important;
-    }
+  &.max-w-540 {
+    max-width: 540px !important;
+  }
 
-    &.max-w-640 {
-        max-width: 640px;
-    }
+  &.max-w-640 {
+    max-width: 640px;
+  }
 
-    &.max-w-680 {
-        max-width: 680px;
-    }
+  &.max-w-680 {
+    max-width: 680px;
+  }
 
-    &.max-w-740 {
-        max-width: 740px;
-    }
+  &.max-w-740 {
+    max-width: 740px;
+  }
 
-    &.max-w-780 {
-        max-width: 780px;
-    }
+  &.max-w-780 {
+    max-width: 780px;
+  }
 
-    &.max-w-840 {
-        max-width: 840px;
-    }
+  &.max-w-840 {
+    max-width: 840px;
+  }
 
-    &.max-w-880 {
-        max-width: 880px;
-    }
+  &.max-w-880 {
+    max-width: 880px;
+  }
 
-    &.max-w-940 {
-        max-width: 940px;
-    }
+  &.max-w-940 {
+    max-width: 940px;
+  }
 
-    &.max-w-1040 {
-        max-width: 1040px;
-    }
+  &.max-w-1040 {
+    max-width: 1040px;
+  }
 }
 
 .max-w {
-    width: 100%;
+  width: 100%;
 
-    &.max-w-640 {
-        max-width: 640px;
-    }
+  &.max-w-640 {
+    max-width: 640px;
+  }
 
-    &.max-w-680 {
-        max-width: 680px;
-    }
+  &.max-w-680 {
+    max-width: 680px;
+  }
 
-    &.max-w-740 {
-        max-width: 740px;
-    }
+  &.max-w-740 {
+    max-width: 740px;
+  }
 
-    &.max-w-780 {
-        max-width: 780px;
-    }
+  &.max-w-780 {
+    max-width: 780px;
+  }
 
-    &.max-w-840 {
-        max-width: 840px;
-    }
+  &.max-w-840 {
+    max-width: 840px;
+  }
 
-    &.max-w-880 {
-        max-width: 880px;
-    }
+  &.max-w-880 {
+    max-width: 880px;
+  }
 
-    &.max-w-940 {
-        max-width: 940px;
-    }
+  &.max-w-940 {
+    max-width: 940px;
+  }
 
-    &.max-w-1040 {
-        max-width: 1040px;
-    }
+  &.max-w-1040 {
+    max-width: 1040px;
+  }
 }
 
 /* ==========================================================================
@@ -863,17 +863,17 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .pull-right {
-    float: right;
+  float: right;
 }
 
 .pull-left {
-    float: left;
+  float: left;
 }
 
 .is-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 /* ==========================================================================
@@ -881,29 +881,29 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .is-hidden {
-    display: none !important;
+  display: none !important;
 }
 
 .is-vhidden {
-    visibility: hidden !important;
+  visibility: hidden !important;
 }
 
 .is-disabled {
-    pointer-events: none;
-    opacity: 0.4;
-    cursor: default !important;
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: default !important;
 }
 
 .no-click {
-    pointer-events: none !important;
+  pointer-events: none !important;
 }
 
 .stuck {
-    position: fixed !important;
-    top: 0 !important;
-    z-index: 999 !important;
-    animation-name: translateDown;
-    animation-duration: 0.4s;
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 999 !important;
+  animation-name: translateDown;
+  animation-duration: 0.4s;
 }
 
 /* ==========================================================================
@@ -911,37 +911,39 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .overflow-auto {
-    overflow: auto !important;
+  overflow: auto !important;
 }
 
 /* ==========================================================================
 9. Icon helpers
 ========================================================================== */
 
-.im, .sl, .material-icons {
-    &.is-icon-xs {
-        font-size: 0.8rem !important;
-    }
+.im,
+.sl,
+.material-icons {
+  &.is-icon-xs {
+    font-size: 0.8rem !important;
+  }
 
-    &.is-icon-md {
-        font-size: 1.5rem !important;
-    }
+  &.is-icon-md {
+    font-size: 1.5rem !important;
+  }
 
-    &.is-icon-2x {
-        font-size: 2rem;
-    }
+  &.is-icon-2x {
+    font-size: 2rem;
+  }
 
-    &.is-icon-3x {
-        font-size: 3rem;
-    }
+  &.is-icon-3x {
+    font-size: 3rem;
+  }
 
-    &.is-icon-4x {
-        font-size: 4rem;
-    }
+  &.is-icon-4x {
+    font-size: 4rem;
+  }
 
-    &.is-gigantic {
-        font-size: 12rem;
-    }
+  &.is-gigantic {
+    font-size: 12rem;
+  }
 }
 
 /* ==========================================================================
@@ -949,7 +951,7 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .img-circle {
-    border-radius: 1000px;
+  border-radius: 1000px;
 }
 
 /* ==========================================================================
@@ -957,15 +959,15 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @media (max-width: 767px) {
-    .mobile-padding-20 {
-        padding: 20px 30px;
-    }
+  .mobile-padding-20 {
+    padding: 20px 30px;
+  }
 
-    .mobile-padding-40 {
-        padding: 40px;
-    }
+  .mobile-padding-40 {
+    padding: 40px;
+  }
 
-    .has-text-centered-mobile {
-        text-align: center !important;
-    }
+  .has-text-centered-mobile {
+    text-align: center !important;
+  }
 }

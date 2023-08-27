@@ -49,54 +49,54 @@ $contrast: 0% !default;
 ========================================================================== */
 
 @mixin track {
-    width: $track-width;
-    height: $track-height;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  width: $track-width;
+  height: $track-height;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 @mixin thumb {
-    position: relative;
-    border: $thumb-border-width solid $thumb-border-color;
-    height: $thumb-height;
-    width: $thumb-width;
-    border-radius: $thumb-radius;
-    background: $thumb-color;
-    cursor: pointer;
-    z-index: 1;
+  position: relative;
+  border: $thumb-border-width solid $thumb-border-color;
+  height: $thumb-height;
+  width: $thumb-width;
+  border-radius: $thumb-radius;
+  background: $thumb-color;
+  cursor: pointer;
+  z-index: 1;
 }
 
 @mixin thumb-primary {
-    position: relative;
-    border: $thumb-border-width solid lighten($primary, 20%);
-    height: $thumb-height;
-    width: $thumb-width;
-    border-radius: $thumb-radius;
-    background: $primary;
-    cursor: pointer;
-    z-index: 1;
+  position: relative;
+  border: $thumb-border-width solid lighten($primary, 20%);
+  height: $thumb-height;
+  width: $thumb-width;
+  border-radius: $thumb-radius;
+  background: $primary;
+  cursor: pointer;
+  z-index: 1;
 }
 
 @mixin thumb-secondary {
-    position: relative;
-    border: $thumb-border-width solid lighten($secondary, 20%);
-    height: $thumb-height;
-    width: $thumb-width;
-    border-radius: $thumb-radius;
-    background: $secondary;
-    cursor: pointer;
-    z-index: 1;
+  position: relative;
+  border: $thumb-border-width solid lighten($secondary, 20%);
+  height: $thumb-height;
+  width: $thumb-width;
+  border-radius: $thumb-radius;
+  background: $secondary;
+  cursor: pointer;
+  z-index: 1;
 }
 
 @mixin thumb-accent {
-    position: relative;
-    border: $thumb-border-width solid lighten($accent, 20%);
-    height: $thumb-height;
-    width: $thumb-width;
-    border-radius: $thumb-radius;
-    background: $accent;
-    cursor: pointer;
-    z-index: 1;
+  position: relative;
+  border: $thumb-border-width solid lighten($accent, 20%);
+  height: $thumb-height;
+  width: $thumb-width;
+  border-radius: $thumb-radius;
+  background: $accent;
+  cursor: pointer;
+  z-index: 1;
 }
 
 /* ==========================================================================
@@ -106,77 +106,77 @@ $contrast: 0% !default;
 $trackCalc: -$track-border-width * 2 + $track-height;
 
 .bubble-range {
+  -webkit-appearance: none;
+  margin: (math.div($thumb-height, 2)) 0;
+  width: $track-width;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb;
+
     -webkit-appearance: none;
-    margin: (math.div($thumb-height, 2)) 0;
-    width: $track-width;
+    margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
+  }
 
-    &:focus {
-        outline: none;
-    }
+  &:focus::-webkit-slider-runnable-track {
+    background: lighten($track-color, $contrast);
+  }
 
-    &::-webkit-slider-thumb {
-        @include thumb;
+  &::-moz-range-thumb {
+    @include thumb;
+  }
 
-        -webkit-appearance: none;
-        margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
-    }
+  &::-ms-thumb {
+    @include thumb;
+  }
 
-    &:focus::-webkit-slider-runnable-track {
-        background: lighten($track-color, $contrast);
-    }
+  &:focus::-ms-fill-lower {
+    background: $track-color;
+  }
 
-    &::-moz-range-thumb {
-        @include thumb;
-    }
+  &:focus::-ms-fill-upper {
+    background: lighten($track-color, $contrast);
+  }
 
-    &::-ms-thumb {
-        @include thumb;
-    }
+  &::-webkit-slider-runnable-track {
+    @include track;
 
-    &:focus::-ms-fill-lower {
-        background: $track-color;
-    }
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius;
+  }
 
-    &:focus::-ms-fill-upper {
-        background: lighten($track-color, $contrast);
-    }
+  &::-moz-range-track {
+    @include track;
 
-    &::-webkit-slider-runnable-track {
-        @include track;
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius;
+  }
 
-        background: $track-color;
-        border: $track-border-width solid $track-border-color;
-        border-radius: $track-radius;
-    }
+  &::-ms-track {
+    @include track;
 
-    &::-moz-range-track {
-        @include track;
+    background: transparent;
+    border-color: transparent;
+    border-width: $thumb-width 0;
+    color: transparent;
+  }
 
-        background: $track-color;
-        border: $track-border-width solid $track-border-color;
-        border-radius: $track-radius;
-    }
+  &::-ms-fill-lower {
+    background: darken($track-color, $contrast);
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius * 2;
+  }
 
-    &::-ms-track {
-        @include track;
-
-        background: transparent;
-        border-color: transparent;
-        border-width: $thumb-width 0;
-        color: transparent;
-    }
-
-    &::-ms-fill-lower {
-        background: darken($track-color, $contrast);
-        border: $track-border-width solid $track-border-color;
-        border-radius: $track-radius * 2;
-    }
-
-    &::-ms-fill-upper {
-        background: $track-color;
-        border: $track-border-width solid $track-border-color;
-        border-radius: $track-radius * 2;
-    }
+  &::-ms-fill-upper {
+    background: $track-color;
+    border: $track-border-width solid $track-border-color;
+    border-radius: $track-radius * 2;
+  }
 }
 
 /* ==========================================================================
@@ -184,85 +184,85 @@ $trackCalc: -$track-border-width * 2 + $track-height;
 ========================================================================== */
 
 .range {
-    box-sizing: border-box;
-    position: relative;
-    padding: 0 50px;
-    width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 50px;
+  width: 100%;
 
-    @for $i from 0 through 100 {
-        &[data-value='#{$i}'] .bubble-label {
-            left: percentage(math.div($i, 100));
-        }
+  @for $i from 0 through 100 {
+    &[data-value='#{$i}'] .bubble-label {
+      left: percentage(math.div($i, 100));
+    }
+  }
+
+  &.is-primary {
+    .bubble-label .drop {
+      background: $primary !important;
     }
 
-    &.is-primary {
-        .bubble-label .drop {
-            background: $primary !important;
-        }
+    .bubble-range {
+      &::-webkit-slider-thumb {
+        @include thumb-primary;
 
-        .bubble-range {
-            &::-webkit-slider-thumb {
-                @include thumb-primary;
+        -webkit-appearance: none;
+        margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
+      }
 
-                -webkit-appearance: none;
-                margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
-            }
+      &::-moz-range-thumb {
+        @include thumb-primary;
+      }
 
-            &::-moz-range-thumb {
-                @include thumb-primary;
-            }
+      &::-ms-thumb {
+        @include thumb-primary;
+      }
+    }
+  }
 
-            &::-ms-thumb {
-                @include thumb-primary;
-            }
-        }
+  &.is-secondary {
+    .bubble-label .drop {
+      background: $secondary !important;
     }
 
-    &.is-secondary {
-        .bubble-label .drop {
-            background: $secondary !important;
-        }
+    .bubble-range {
+      &::-webkit-slider-thumb {
+        @include thumb-secondary;
 
-        .bubble-range {
-            &::-webkit-slider-thumb {
-                @include thumb-secondary;
+        -webkit-appearance: none;
+        margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
+      }
 
-                -webkit-appearance: none;
-                margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
-            }
+      &::-moz-range-thumb {
+        @include thumb-secondary;
+      }
 
-            &::-moz-range-thumb {
-                @include thumb-secondary;
-            }
+      &::-ms-thumb {
+        @include thumb-secondary;
+      }
+    }
+  }
 
-            &::-ms-thumb {
-                @include thumb-secondary;
-            }
-        }
+  &.is-accent {
+    .bubble-label .drop {
+      background: $accent !important;
     }
 
-    &.is-accent {
-        .bubble-label .drop {
-            background: $accent !important;
-        }
+    .bubble-range {
+      &::-webkit-slider-thumb {
+        @include thumb-accent;
 
-        .bubble-range {
-            &::-webkit-slider-thumb {
-                @include thumb-accent;
+        -webkit-appearance: none;
+        margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
+      }
 
-                -webkit-appearance: none;
-                margin-top: math.div($trackCalc, 2) - math.div($thumb-height, 2);
-            }
+      &::-moz-range-thumb {
+        @include thumb-accent;
+      }
 
-            &::-moz-range-thumb {
-                @include thumb-accent;
-            }
-
-            &::-ms-thumb {
-                @include thumb-accent;
-            }
-        }
+      &::-ms-thumb {
+        @include thumb-accent;
+      }
     }
+  }
 }
 
 /* ==========================================================================
@@ -270,36 +270,36 @@ $trackCalc: -$track-border-width * 2 + $track-height;
 ========================================================================== */
 
 .bubble-label {
-    position: relative;
-    top: 0;
-    margin-left: -40px;
-    margin-bottom: 20px;
+  position: relative;
+  top: 0;
+  margin-left: -40px;
+  margin-bottom: 20px;
+  width: 80px;
+  transform: scale(0.8);
+
+  .value {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    z-index: 1;
+  }
+
+  //drop
+  .drop {
+    box-sizing: content-box !important;
     width: 80px;
-    transform: scale(0.8);
-
-    .value {
-        position: absolute;
-        top: 30px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 700;
-        color: #fff;
-        z-index: 1;
-    }
-
-    //drop
-    .drop {
-        box-sizing: content-box !important;
-        width: 80px;
-        height: 80px;
-        border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
-        background: $main-color;
-        -webkit-transform: rotateZ(135deg);
-        transform: rotateZ(135deg);
-    }
+    height: 80px;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    background: $main-color;
+    -webkit-transform: rotateZ(135deg);
+    transform: rotateZ(135deg);
+  }
 }
 
 /* ==========================================================================
@@ -307,33 +307,33 @@ $trackCalc: -$track-border-width * 2 + $track-height;
 ========================================================================== */
 
 .input-box {
-    position: relative;
-    margin: 0 -12.5px;
+  position: relative;
+  margin: 0 -12.5px;
+  height: 60px;
+
+  input[type='range'] {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
     height: 60px;
+    background: transparent;
+  }
 
-    input[type="range"] {
-        display: block;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 60px;
-        background: transparent;
-    }
+  .bar {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    margin: 0 0 -2.5px;
+    height: 5px;
+    background: $main-color;
+    z-index: 0;
+  }
 
-    .bar {
-        position: absolute;
-        bottom: 50%;
-        left: 0;
-        margin: 0 0 -2.5px;
-        height: 5px;
-        background: $main-color;
-        z-index: 0;
+  @for $i from 0 through 100 {
+    &[data-value='#{$i}'] .bar {
+      margin-right: 25px;
+      width: calc(#{$i}% - math.div(#{$thumb-width}, math.div(100, #{$i})));
     }
-
-    @for $i from 0 through 100 {
-        &[data-value='#{$i}'] .bar {
-            margin-right: 25px;
-            width: calc(#{$i}% - math.div(#{$thumb-width}, math.div(100, #{$i})));
-        }
-    }
+  }
 }

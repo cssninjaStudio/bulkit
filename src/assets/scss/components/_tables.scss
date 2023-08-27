@@ -175,7 +175,7 @@ TABLE OF CONTENTS
   }
 
   td:before {
-    content: attr(data-th) ": ";
+    content: attr(data-th) ': ';
     font-weight: bold;
     width: 120px;
     display: inline-block;
@@ -197,7 +197,7 @@ TABLE OF CONTENTS
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
+
       &::before {
         text-align: left !important;
       }

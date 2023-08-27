@@ -17,14 +17,18 @@ TABLE OF CONTENTS
 /* ==========================================================================
 0. Theme color variables
 ========================================================================== */
-$primary: #4A00E0;
+$primary: #4a00e0;
 $secondary: #23a6d5;
-$accent: #8E2DE2;
+$accent: #8e2de2;
 
 /* ==========================================================================
 1. Theme gradient
 ========================================================================== */
-$webkit-hero-prime-gradient: linear-gradient(to right, $primary, darken($primary, 12%));
+$webkit-hero-prime-gradient: linear-gradient(
+  to right,
+  $primary,
+  darken($primary, 12%)
+);
 $hero-prime-gradient: linear-gradient(to top, $primary, darken($primary, 12%));
 
 $webkit-hero-gradient: linear-gradient(to right, $secondary, $accent);
@@ -34,38 +38,39 @@ $hero-gradient: linear-gradient(to top, $secondary, $accent);
 2. Pageloader
 ========================================================================== */
 .pageloader {
-    background-color: $primary !important;
+  background-color: $primary !important;
 }
 
 /* ==========================================================================
 3. Theme specific Hero
 ========================================================================== */
-.hero, .section {
-    &.is-theme-primary {
-        background-color: $primary;
-        background: $webkit-hero-prime-gradient;
-        background: $hero-prime-gradient;
+.hero,
+.section {
+  &.is-theme-primary {
+    background-color: $primary;
+    background: $webkit-hero-prime-gradient;
+    background: $hero-prime-gradient;
 
-        .title {
-            color: $white;
-        }
-
-        .subtitle {
-            color: $white;
-        }
+    .title {
+      color: $white;
     }
 
-    &.is-theme-secondary {
-        background-color: $secondary;
-        background: $webkit-hero-gradient;
-        background: $hero-gradient;
-
-        .title {
-            color: $white;
-        }
-
-        .subtitle {
-            color: $white;
-        }
+    .subtitle {
+      color: $white;
     }
+  }
+
+  &.is-theme-secondary {
+    background-color: $secondary;
+    background: $webkit-hero-gradient;
+    background: $hero-gradient;
+
+    .title {
+      color: $white;
+    }
+
+    .subtitle {
+      color: $white;
+    }
+  }
 }

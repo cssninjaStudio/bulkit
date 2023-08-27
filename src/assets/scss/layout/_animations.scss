@@ -34,10 +34,10 @@ TABLE OF CONTENTS
 0. Default settings
 ========================================================================== */
 .animated {
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
 }
 
 /* ==========================================================================
@@ -45,19 +45,19 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes translateLeft {
-    from {
-        transform: translate3d(100%, 0, 0);
-    }
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
 
-    to {
-        transform: translate3d(0, 0, 0);
-    }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .translateLeft {
-    animation-name: translateLeft;
-    animation-duration: 0.3s;
-    transition: all 500ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  animation-name: translateLeft;
+  animation-duration: 0.3s;
+  transition: all 500ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
 /* ==========================================================================
@@ -65,19 +65,19 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes translateDown {
-    from {
-        transform: translate3d(0, -100px, 0);
-    }
+  from {
+    transform: translate3d(0, -100px, 0);
+  }
 
-    to {
-        transform: translate3d(0, 0, 0);
-    }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .translateDown {
-    animation-name: translateDown;
-    animation-duration: 0.3s;
-    transition: all 500ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  animation-name: translateDown;
+  animation-duration: 0.3s;
+  transition: all 500ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
 /* ==========================================================================
@@ -85,19 +85,19 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes translateUp {
-    from {
-        transform: translate3d(0, 100%, 0);
-    }
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
 
-    to {
-        transform: translate3d(0, 0, 0);
-    }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .translateUp {
-    animation-name: translateUp;
-    animation-duration: 0.3s;
-    transition: all 500ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  animation-name: translateUp;
+  animation-duration: 0.3s;
+  transition: all 500ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
 
 /* ==========================================================================
@@ -105,18 +105,18 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .fadeIn {
-    opacity: 0;
-    animation-name: fadeIn;
+  opacity: 0;
+  animation-name: fadeIn;
 }
 
 /* ==========================================================================
@@ -124,24 +124,24 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes fadeInLeft {
-    from {
-        transform: translate3d(20px, 0, 0);
-        opacity: 0;
-    }
+  from {
+    transform: translate3d(20px, 0, 0);
+    opacity: 0;
+  }
 
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 .preFadeInLeft {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fadeInLeft {
-    opacity: 0;
-    animation-name: fadeInLeft;
+  opacity: 0;
+  animation-name: fadeInLeft;
 }
 
 /* ==========================================================================
@@ -149,25 +149,25 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes fadeInRight {
-    from {
-        transform: translate3d(-20px, 0, 0);
-        opacity: 0;
-    }
+  from {
+    transform: translate3d(-20px, 0, 0);
+    opacity: 0;
+  }
 
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 //Settings
 .preFadeInRight {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fadeInRight {
-    opacity: 0;
-    animation-name: fadeInRight;
+  opacity: 0;
+  animation-name: fadeInRight;
 }
 
 /* ==========================================================================
@@ -175,23 +175,23 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes fadeInUp {
-    from {
-        transform: translate3d(0, 20px, 0);
-    }
+  from {
+    transform: translate3d(0, 20px, 0);
+  }
 
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 .preFadeInUp {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fadeInUp {
-    opacity: 0;
-    animation-name: fadeInUp;
+  opacity: 0;
+  animation-name: fadeInUp;
 }
 
 /* ==========================================================================
@@ -199,23 +199,23 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes fadeInDown {
-    from {
-        transform: translate3d(0, -20px, 0);
-    }
+  from {
+    transform: translate3d(0, -20px, 0);
+  }
 
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-    }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 .preFadeInDown {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fadeInDown {
-    opacity: 0;
-    animation-name: fadeInDown;
+  opacity: 0;
+  animation-name: fadeInDown;
 }
 
 /* ==========================================================================
@@ -223,24 +223,24 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes fadeOutUp {
-    from {
-        transform: translate3d(0, 20px, 0);
-    }
+  from {
+    transform: translate3d(0, 20px, 0);
+  }
 
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 0;
-    }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
 }
 
 //Settings
 .preFadeOutUp {
-    opacity: 1;
+  opacity: 1;
 }
 
 .fadeOutUp {
-    opacity: 1;
-    animation-name: fadeOutUp;
+  opacity: 1;
+  animation-name: fadeOutUp;
 }
 
 /* ==========================================================================
@@ -248,24 +248,24 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes levitate {
-    from {
-        transform: translate(0, 0);
-    }
+  from {
+    transform: translate(0, 0);
+  }
 
-    50% {
-        transform: translate(0, 10px);
-    }
+  50% {
+    transform: translate(0, 10px);
+  }
 
-    to {
-        transform: translate(0, 0);
-    }
+  to {
+    transform: translate(0, 0);
+  }
 }
 
 .levitate {
-    animation-name: levitate;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+  animation-name: levitate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 /* ==========================================================================
@@ -273,28 +273,29 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes gelatine {
-    from, to {
-        transform: scale(1, 1);
-    }
+  from,
+  to {
+    transform: scale(1, 1);
+  }
 
-    25% {
-        transform: scale(0.9, 1.1);
-    }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
 
-    50% {
-        transform: scale(1.1, 0.9);
-    }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
 
-    75% {
-        transform: scale(0.95, 1.05);
-    }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }
 
 //Settings
 .gelatine {
-    animation: gelatine 0.6s;
-    animation-duration: 0.6s;
-    animation-fill-mode: both;
+  animation: gelatine 0.6s;
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
 }
 
 /* ==========================================================================
@@ -302,23 +303,24 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes unzoom {
-    from, to {
-        transform: scale(1, 0);
-    }
+  from,
+  to {
+    transform: scale(1, 0);
+  }
 
-    25% {
-        transform: scale(0.9, 1.1);
-    }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
 
-    50% {
-        transform: scale(1.1, 0);
-    }
+  50% {
+    transform: scale(1.1, 0);
+  }
 }
 
 .unzoom {
-    animation: unzoom 0.7s;
-    animation-duration: 0.6s;
-    animation-fill-mode: both;
+  animation: unzoom 0.7s;
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
 }
 
 /* ==========================================================================
@@ -326,15 +328,15 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes dotPulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
 
-    100% {
-        transform: scale(1.8);
-        opacity: 0;
-    }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
 /* ==========================================================================
@@ -342,29 +344,29 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes entrance {
-    from {
-        transform: scale(0);
-    }
+  from {
+    transform: scale(0);
+  }
 
-    25% {
-        transform: scale(1.05);
-    }
+  25% {
+    transform: scale(1.05);
+  }
 
-    50% {
-        transform: scale(0.95);
-    }
+  50% {
+    transform: scale(0.95);
+  }
 
-    75% {
-        transform: scale(1.05);
-    }
+  75% {
+    transform: scale(1.05);
+  }
 
-    to {
-        transform: none;
-    }
+  to {
+    transform: none;
+  }
 }
 
 .entrance {
-    animation: entrance 0.8s;
+  animation: entrance 0.8s;
 }
 
 /* ==========================================================================
@@ -372,18 +374,18 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes scaleIn {
-    from {
-        transform: scale(0);
-    }
+  from {
+    transform: scale(0);
+  }
 
-    to {
-        transform: scale(1);
-    }
+  to {
+    transform: scale(1);
+  }
 }
 
 .scaleIn {
-    animation: scaleIn 0.5s;
-    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation: scaleIn 0.5s;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* ==========================================================================
@@ -391,18 +393,18 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes scaleInCircle {
-    from {
-        transform: scale(0);
-    }
+  from {
+    transform: scale(0);
+  }
 
-    to {
-        transform: scale(7);
-    }
+  to {
+    transform: scale(7);
+  }
 }
 
 .scaleInCircle {
-    animation: scaleInCircle 0.6s;
-    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation: scaleInCircle 0.6s;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* ==========================================================================
@@ -410,17 +412,17 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes scaleOut {
-    from {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(1);
+  }
 
-    to {
-        transform: scale(0);
-    }
+  to {
+    transform: scale(0);
+  }
 }
 
 .scaleOut {
-    animation: scaleOut 0.6s;
+  animation: scaleOut 0.6s;
 }
 
 /* ==========================================================================
@@ -428,23 +430,23 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 @keyframes pulsate {
-    0% {
-        opacity: 0.0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    50% {
-        opacity: 1.0;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0.0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 .pulsate {
-    animation: pulsate 1s ease-out;
-    animation-iteration-count: infinite;
-    opacity: 0.0;
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
 }
 
 /* ==========================================================================
@@ -452,45 +454,45 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 .delay-1 {
-    animation-delay: .25s;
+  animation-delay: 0.25s;
 }
 
 .delay-2 {
-    animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 .delay-3 {
-    animation-delay: .75s;
+  animation-delay: 0.75s;
 }
 
 .delay-4 {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .delay-5 {
-    animation-delay: 1.25s;
+  animation-delay: 1.25s;
 }
 
 .delay-6 {
-    animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 
 .delay-7 {
-    animation-delay: 1.75s;
+  animation-delay: 1.75s;
 }
 
 .delay-8 {
-    animation-delay: 2.25s;
+  animation-delay: 2.25s;
 }
 
 .delay-9 {
-    animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
 
 .delay-10 {
-    animation-delay: 2.75s;
+  animation-delay: 2.75s;
 }
 
 .delay-11 {
-    animation-delay: 3s;
+  animation-delay: 3s;
 }

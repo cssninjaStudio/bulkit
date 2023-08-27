@@ -130,13 +130,19 @@ TABLE OF CONTENTS
   left: 0;
   width: 100%;
   height: 580px;
-  
+
   transform: translateY(-100%);
   transition: all 0.3s;
 
   &.is-landing-demo {
     background: $primary;
-    background: linear-gradient(-45deg, $secondary, $primary, $primary, $secondary);
+    background: linear-gradient(
+      -45deg,
+      $secondary,
+      $primary,
+      $primary,
+      $secondary
+    );
   }
 
   .header-inner {
@@ -1134,7 +1140,7 @@ TABLE OF CONTENTS
 .components-title,
 .handwritten-title,
 .handwritten-text {
-  font-family: "Nexa Bold", cursive;
+  font-family: 'Nexa Bold', cursive;
 
   &.is-cta {
     font-size: 3.4rem !important;
@@ -1206,7 +1212,9 @@ TABLE OF CONTENTS
 //Hero heading
 .hero-heading {
   font-size: 3rem !important;
-  font-family: Open Sans, sans-serif !important;
+  font-family:
+    Open Sans,
+    sans-serif !important;
 
   + h2 {
     padding: 0;
@@ -1365,7 +1373,9 @@ code.hljs span {
       font-size: 14px;
       background-color: #fff;
       border: 1px solid #e0e0e0;
-      transition: background-color 0.2s, color 0.2s;
+      transition:
+        background-color 0.2s,
+        color 0.2s;
       padding: 16px 27px;
       margin: -1px 0 0 0;
 
@@ -1864,7 +1874,7 @@ code.hljs span {
 //Parallax hero title
 .parallax-hero-title {
   font-size: 6rem !important;
-  font-family: "Nexa Bold", cursive !important;
+  font-family: 'Nexa Bold', cursive !important;
 
   &.is-smaller {
     font-size: 4rem !important;

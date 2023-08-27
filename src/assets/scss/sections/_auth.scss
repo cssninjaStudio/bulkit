@@ -66,7 +66,7 @@ TABLE OF CONTENTS
 
   //Signup hero
   #signup-banner .hero {
-    background: url("https://source.unsplash.com/DWui9DmfCXA/");
+    background: url('https://source.unsplash.com/DWui9DmfCXA/');
     background-position: center;
     background-size: cover;
     background-blend-mode: screen;
@@ -534,7 +534,9 @@ TABLE OF CONTENTS
     overflow: hidden;
     margin-left: 50%;
     position: absolute;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow:
+      0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
   }
 
   .topLayer {
@@ -653,7 +655,9 @@ TABLE OF CONTENTS
     line-height: 1em;
     letter-spacing: 0.6px;
     border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.1),
+      0 3px 6px rgba(0, 0, 0, 0.1);
     border: 0;
     outline: 0;
     transition: all 0.25s;
@@ -688,7 +692,9 @@ TABLE OF CONTENTS
   a:focus,
   a:active,
   a:hover {
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 4px 7px rgba(0, 0, 0, 0.1),
+      0 3px 6px rgba(0, 0, 0, 0.1);
 
     &.signup {
       background: darken($secondary, 5%);
@@ -912,7 +918,7 @@ TABLE OF CONTENTS
             }
           }
 
-          button[type="submit"] {
+          button[type='submit'] {
             width: 290px;
             height: 44px;
             border: none;

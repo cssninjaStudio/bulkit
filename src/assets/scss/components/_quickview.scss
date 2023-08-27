@@ -27,30 +27,30 @@ $quickview-divider: 1px solid $light-grey !default;
 ========================================================================== */
 
 .quickview {
-    display: flex;
-    flex-direction: column;
-    background-color: $white;
-    min-width: 300px;
-    max-width: 300px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: -310px;
-    z-index: 999;
-    transform: translateZ(0);
-    transition: 0.3s ease;
-    backface-visibility: hidden;
-    perspective: 1000;
-    will-change: transform;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  min-width: 300px;
+  max-width: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -310px;
+  z-index: 999;
+  transform: translateZ(0);
+  transition: 0.3s ease;
+  backface-visibility: hidden;
+  perspective: 1000;
+  will-change: transform;
 
-    &.is-active {
-        right: 0;
-        box-shadow: $quickview-shadow;
+  &.is-active {
+    right: 0;
+    box-shadow: $quickview-shadow;
 
-        &.is-left {
-            left: 0;
-        }
+    &.is-left {
+      left: 0;
     }
+  }
 }
 
 /* ==========================================================================
@@ -58,39 +58,39 @@ $quickview-divider: 1px solid $light-grey !default;
 ========================================================================== */
 
 .quickview-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    min-height: 66px !important;
-    border-bottom: $quickview-divider;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  min-height: 66px !important;
+  border-bottom: $quickview-divider;
 
-    .title {
-        margin-bottom: 0;
+  .title {
+    margin-bottom: 0;
+  }
+
+  &.is-secondary {
+    background: $secondary;
+
+    p {
+      color: $white;
+      font-size: 1.4rem;
+      font-weight: 400;
     }
 
-    &.is-secondary {
-        background: $secondary;
-
-        p {
-            color: $white;
-            font-size: 1.4rem;
-            font-weight: 400;
-        }
-
-        i {
-            color: $white;
-            font-size: 20px;
-        }
+    i {
+      color: $white;
+      font-size: 20px;
     }
+  }
 
-    .cross-container {
-        transition: transform 0.3s;
+  .cross-container {
+    transition: transform 0.3s;
 
-        &:hover {
-            transform: rotate(90deg);
-        }
+    &:hover {
+      transform: rotate(90deg);
     }
+  }
 }
 
 /* ==========================================================================
@@ -98,8 +98,8 @@ $quickview-divider: 1px solid $light-grey !default;
 ========================================================================== */
 
 .quickview-body {
-    -webkit-box-flex: 1;
-    flex: 1 1 0%;
+  -webkit-box-flex: 1;
+  flex: 1 1 0%;
 }
 
 /* ==========================================================================
@@ -107,15 +107,15 @@ $quickview-divider: 1px solid $light-grey !default;
 ========================================================================== */
 
 .quickview-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    min-height: 4rem;
-    background-color: $white;
-    border-top: $quickview-divider;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  min-height: 4rem;
+  background-color: $white;
+  border-top: $quickview-divider;
 
-    > * {
-        margin: 0 0.4rem;
-    }
+  > * {
+    margin: 0 0.4rem;
+  }
 }

@@ -15,50 +15,50 @@ TABLE OF CONTENTS
 0. Video Background
 ========================================================================== */
 .covervid-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .videobg-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba($primary, 0.5);
+    z-index: 1;
+  }
+
+  .video-caption {
+    text-align: center;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 3;
 
-    .videobg-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba($primary, 0.5);
-        z-index: 1;
+    .content {
+      position: relative;
+      top: 35%;
     }
 
-    .video-caption {
-        text-align: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0 auto;
-        z-index: 3;
-
-        .content {
-            position: relative;
-            top: 35%;
-        }
-
-        h1 {
-            font-family: $font-main;
-            font-size: 3.5rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 1.5rem;
-            font-family: $font-sub;
-        }
+    h1 {
+      font-family: $font-main;
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    video {
-        display: inline-block;
-        max-width: none !important;
+    p {
+      font-size: 1.5rem;
+      font-family: $font-sub;
     }
+  }
+
+  video {
+    display: inline-block;
+    max-width: none !important;
+  }
 }

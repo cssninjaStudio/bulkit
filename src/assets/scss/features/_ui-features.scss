@@ -265,7 +265,7 @@ body #bulchat div {
 #bulchat div:after {
   outline: none;
   content: url(../img/graphics/legacy/smile.svg);
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   position: relative;
   display: block;
   top: 50%;
@@ -280,7 +280,7 @@ body #bulchat div {
 #bulchat div.close:after {
   outline: none;
   content: url(../img/graphics/legacy/close.svg);
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   position: relative;
   display: block;
   top: 50%;
@@ -455,7 +455,7 @@ body #bulchat div {
         padding-left: 30px;
         width: 100%;
         height: 100%;
-        font-family: "intercom-font", "Helvetica Neue", Helvetica, Arial,
+        font-family: 'intercom-font', 'Helvetica Neue', Helvetica, Arial,
           sans-serif;
         font-size: 15px;
         font-weight: 400;
@@ -490,7 +490,7 @@ body #bulchat div {
             background-image: url(https://image.ibb.co/gH13KQ/emoji_icon.png);
             background-size: 18px 18px;
             background-repeat: no-repeat;
-            content: " ";
+            content: ' ';
             width: 18px;
             height: 18px;
             left: 5px;
@@ -514,7 +514,7 @@ body #bulchat div {
             background-image: url(https://image.ibb.co/hSE165/attach_icon.png);
             background-size: 16px 18px;
             background-repeat: no-repeat;
-            content: " ";
+            content: ' ';
             width: 16px;
             height: 18px;
             left: 5px;
@@ -806,7 +806,7 @@ a:not(.button) {
           }
 
           &:before {
-            content: "-";
+            content: '-';
             color: $default-input;
             position: absolute;
             text-align: center;
@@ -925,7 +925,7 @@ a:not(.button) {
     }
   }
 
-  .checkbox input[type="checkbox"] {
+  .checkbox input[type='checkbox'] {
     margin-left: 0px;
   }
 
@@ -958,8 +958,8 @@ a:not(.button) {
     }
   }
 
-  .checkbox input[type="checkbox"],
-  label input[type="checkbox"] {
+  .checkbox input[type='checkbox'],
+  label input[type='checkbox'] {
     opacity: 0;
     position: absolute;
     margin: 0;
@@ -982,7 +982,7 @@ a:not(.button) {
     z-index: 1;
   }
 
-  .checkbox input[type="checkbox"]:checked ~ .checkbox-material .check {
+  .checkbox input[type='checkbox']:checked ~ .checkbox-material .check {
     color: $primary;
     padding: 1px 0 0px 1px;
     cursor: pointer;
@@ -995,13 +995,13 @@ a:not(.button) {
     margin-right: 5px;
   }
 
-  .checkbox input[type="checkbox"]:checked ~ .checkbox-material .check:before {
+  .checkbox input[type='checkbox']:checked ~ .checkbox-material .check:before {
     position: relative;
     top: -2px;
     color: $primary;
     font: normal normal normal 14px/1 FontAwesome;
-    content: "\f00c";
-    -webkit-font-feature-settings: "liga";
+    content: '\f00c';
+    -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -1260,12 +1260,14 @@ $check-length: 36px;
   animation: 1s ease-out 0s 1 both scaleAnimation;
 
   .SuccessAnimationCircle {
-    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+    animation:
+      1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
       0.3s linear 0.9s 1 both fadeOut;
   }
 
   .SuccessAnimationCheck {
-    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+    animation:
+      1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
       0.3s linear 0.9s 1 both fadeOut;
   }
 

@@ -2,21 +2,21 @@
 Autocompletes
 ========================================================================== */
 
-"use strict";
+'use strict'
 
 function initAutocompletes() {
   //Basic autocomplete
-  if ($("#basic-autocpl").length) {
+  if ($('#basic-autocpl').length) {
     var options = {
-      url: "assets/data/persons.json",
+      url: 'assets/data/persons.json',
       getValue: function (element) {
-        return element.name;
+        return element.name
       },
       highlightPhrase: false,
       list: {
         maxNumberOfElements: 5,
         showAnimation: {
-          type: "fade", //normal|slide|fade
+          type: 'fade', //normal|slide|fade
           time: 400,
           callback: function () {},
         },
@@ -24,29 +24,29 @@ function initAutocompletes() {
           enabled: true,
         },
       },
-    };
+    }
 
-    $("#basic-autocpl").easyAutocomplete(options);
+    $('#basic-autocpl').easyAutocomplete(options)
   }
 
   //Description autocomplete
-  if ($("#desc-autocpl").length) {
+  if ($('#desc-autocpl').length) {
     var options = {
-      url: "assets/data/persons.json",
+      url: 'assets/data/persons.json',
       getValue: function (element) {
-        return element.name;
+        return element.name
       },
       template: {
-        type: "description",
+        type: 'description',
         fields: {
-          description: "position",
+          description: 'position',
         },
       },
       highlightPhrase: false,
       list: {
         maxNumberOfElements: 5,
         showAnimation: {
-          type: "fade", //normal|slide|fade
+          type: 'fade', //normal|slide|fade
           time: 400,
           callback: function () {},
         },
@@ -54,41 +54,41 @@ function initAutocompletes() {
           enabled: true,
         },
       },
-    };
+    }
 
-    $("#desc-autocpl").easyAutocomplete(options);
+    $('#desc-autocpl').easyAutocomplete(options)
   }
 
   //Users autocomplete
-  if ($("#users-autocpl").length) {
+  if ($('#users-autocpl').length) {
     var usersOptions = {
-      url: "assets/data/persons.json",
-      getValue: "name",
+      url: 'assets/data/persons.json',
+      getValue: 'name',
       template: {
-        type: "custom",
+        type: 'custom',
         method: function (value, item) {
           return (
-            "<div class=" +
-            "template-wrapper" +
-            "><img class=" +
-            "autocpl-avatar" +
+            '<div class=' +
+            'template-wrapper' +
+            '><img class=' +
+            'autocpl-avatar' +
             " src='" +
             item.pic +
             "' /><div class=" +
-            "entry-text" +
-            ">" +
+            'entry-text' +
+            '>' +
             value +
-            "<br><span>" +
+            '<br><span>' +
             item.email +
-            "</span></div></div> "
-          );
+            '</span></div></div> '
+          )
         },
       },
       highlightPhrase: false,
       list: {
         maxNumberOfElements: 3,
         showAnimation: {
-          type: "fade", //normal|slide|fade
+          type: 'fade', //normal|slide|fade
           time: 400,
           callback: function () {},
         },
@@ -96,8 +96,8 @@ function initAutocompletes() {
           enabled: true,
         },
       },
-    };
+    }
 
-    $("#users-autocpl").easyAutocomplete(usersOptions);
+    $('#users-autocpl').easyAutocomplete(usersOptions)
   }
 }

@@ -62,7 +62,9 @@ TABLE OF CONTENTS
             object-fit: contain;
             filter: grayscale(1);
             opacity: 0.6;
-            transition: filter 0.3s, opacity 0.3s;
+            transition:
+              filter 0.3s,
+              opacity 0.3s;
           }
         }
       }
@@ -119,7 +121,7 @@ TABLE OF CONTENTS
             color: $blue-grey;
 
             &::before {
-              content: "$";
+              content: '$';
             }
           }
         }
@@ -150,7 +152,7 @@ TABLE OF CONTENTS
             display: inline-block;
           }
 
-          input[type="radio"] {
+          input[type='radio'] {
             display: none;
 
             + label {
@@ -201,15 +203,15 @@ TABLE OF CONTENTS
             }
           }
 
-          input[type="radio"]#red + label span {
+          input[type='radio']#red + label span {
             background-color: #c91524;
           }
 
-          input[type="radio"]#blue + label span {
+          input[type='radio']#blue + label span {
             background-color: #314780;
           }
 
-          input[type="radio"]#black + label span {
+          input[type='radio']#black + label span {
             background-color: #323232;
           }
         }
@@ -303,7 +305,9 @@ TABLE OF CONTENTS
           border-radius: 6px;
           background: $white;
           border: 1px solid #e1e8ee;
-          transition: border 0.3s, box-shadow 0.3s;
+          transition:
+            border 0.3s,
+            box-shadow 0.3s;
 
           &:hover {
             border-color: $danger;
@@ -527,7 +531,7 @@ TABLE OF CONTENTS
             color: $blue-grey;
 
             &::before {
-              content: "$";
+              content: '$';
             }
           }
 
@@ -592,7 +596,6 @@ TABLE OF CONTENTS
     }
   }
 }
-
 
 /* ==========================================================================
 2. Media Queries

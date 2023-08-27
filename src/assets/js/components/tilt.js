@@ -2,43 +2,43 @@
 Tilt
 ========================================================================== */
 
-"use strict";
+'use strict'
 
 $.fn.tilt = function () {
-  var perspective = "300px",
+  var perspective = '300px',
     delta = 20,
     width = this.width(),
     height = this.height(),
     midWidth = width / 2,
-    midHeight = height / 2;
+    midHeight = height / 2
   this.on({
     mousemove: function (e) {
       var pos = $(this).offset(),
         cursPosX = e.pageX - pos.left,
         cursPosY = e.pageY - pos.top,
         cursCenterX = midWidth - cursPosX,
-        cursCenterY = midHeight - cursPosY;
+        cursCenterY = midHeight - cursPosY
 
       $(this).css(
-        "transform",
-        "perspective(" +
+        'transform',
+        'perspective(' +
           perspective +
-          ") rotateX(" +
+          ') rotateX(' +
           cursCenterY / delta +
-          "deg) rotateY(" +
+          'deg) rotateY(' +
           -(cursCenterX / delta) +
-          "deg)"
-      );
-      $(this).removeClass("is-out");
+          'deg)',
+      )
+      $(this).removeClass('is-out')
     },
     mouseleave: function () {
-      $(this).addClass("is-out");
+      $(this).addClass('is-out')
     },
-  });
+  })
   //Return
-  return this;
-};
+  return this
+}
 
 function initTiltCards() {
-  $(".tilt-card").tilt();
+  $('.tilt-card').tilt()
 }

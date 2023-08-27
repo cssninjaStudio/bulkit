@@ -391,7 +391,8 @@ TABLE OF CONTENTS
         }
       }
 
-      .badge, .tag {
+      .badge,
+      .tag {
         margin-bottom: 0 !important;
       }
     }
@@ -459,7 +460,7 @@ TABLE OF CONTENTS
 
       span {
         &:before {
-          content: "$";
+          content: '$';
         }
       }
     }
@@ -481,7 +482,7 @@ TABLE OF CONTENTS
 
       span {
         &:before {
-          content: "$";
+          content: '$';
         }
       }
     }
@@ -609,7 +610,7 @@ TABLE OF CONTENTS
 
     .quantity {
       &:before {
-        content: "Quantity";
+        content: 'Quantity';
         position: absolute;
         top: 0;
         left: 0;
@@ -618,7 +619,7 @@ TABLE OF CONTENTS
 
     .price {
       &:before {
-        content: "Price";
+        content: 'Price';
         position: absolute;
         top: 0;
         left: 0;
@@ -627,7 +628,7 @@ TABLE OF CONTENTS
 
     .discount {
       &:before {
-        content: "Discount";
+        content: 'Discount';
         position: absolute;
         top: 0;
         left: 0;
@@ -636,7 +637,7 @@ TABLE OF CONTENTS
 
     .total {
       &:before {
-        content: "Total";
+        content: 'Total';
         position: absolute;
         top: 0;
         left: 0;

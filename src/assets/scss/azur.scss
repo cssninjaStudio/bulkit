@@ -9,37 +9,37 @@ Azur Theme
 ========================================================================== */
 
 //1. Bulkit main variables
-@import "abstracts/variables";
-@import "abstracts/themes-azur";
-@import "abstracts/shadows";
+@import 'abstracts/variables';
+@import 'abstracts/themes-azur';
+@import 'abstracts/shadows';
 
 //2. Bulma source sass
-@import "../sass/bulma.sass";
+@import '../sass/bulma.sass';
 
 //3. Layout styles
-@import "layout/all";
+@import 'layout/all';
 
 //4. Components styles
-@import "components/all";
+@import 'components/all';
 
 //5. Features styles
-@import "features/all";
+@import 'features/all';
 
 //6. Sections styles
-@import "sections/all";
+@import 'sections/all';
 
 //7. Commerce styles
-@import "commerce/all";
+@import 'commerce/all';
 
 //8. CSS Utilities
-@import "utilities/all";
+@import 'utilities/all';
 
 //9. Global Media Queries
-@import "layout/responsive";
+@import 'layout/responsive';
 
 //10. Slick carousel optimization
-$slick-font-path: "/assets/fonts/";
-$slick-loader-path: "/assets/fonts/";
+$slick-font-path: '/assets/fonts/';
+$slick-loader-path: '/assets/fonts/';
 
-@import "../../../node_modules/slick-carousel/slick/slick.scss";
-@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';

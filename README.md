@@ -27,12 +27,12 @@ corepack enable
 corepack prepare pnpm@latest --activate
 ```
 
-> _corepack is installed with Node.js from **v16.13.x**, if your version is below, install it with: `npm install -g corepack`, or upgrade Node.js_ 
+> _corepack is installed with Node.js from **v16.13.x**, if your version is below, install it with: `npm install -g corepack`, or upgrade Node.js_
 
 2. Install depedencies
 
 ```bash
-pnpm i
+pnpm install
 ```
 
 3. To start development server
@@ -65,13 +65,12 @@ We try to keep it mostly up to date, so you can always find the latest informati
 - [Panini](https://github.com/zurb/panini)
 - [Gulp](https://gulpjs.org/getting-started)
 
-
 ## 🍔 Issues
 
 If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
 
-* Issue definition
-* Expected behaviour
-* Actual behaviour
-* steps to reproduce
-* Already tried fixes (if relevant)
+- Issue definition
+- Expected behaviour
+- Actual behaviour
+- steps to reproduce
+- Already tried fixes (if relevant)

@@ -188,13 +188,13 @@ TABLE OF CONTENTS
 
 .plyr--video .plyr__control.plyr__tab-focus,
 .plyr--video .plyr__control:hover,
-.plyr--video .plyr__control[aria-expanded="true"],
+.plyr--video .plyr__control[aria-expanded='true'],
 .plyr__menu__container
-  .plyr__control[role="menuitemradio"][aria-checked="true"]::before {
+  .plyr__control[role='menuitemradio'][aria-checked='true']::before {
   background: $primary;
 }
 
-.plyr--full-ui input[type="range"] {
+.plyr--full-ui input[type='range'] {
   color: $primary;
 }
 

@@ -9,45 +9,42 @@ Breadcrumb styles
 0. Breadcrumb
 =============================================================================***/
 
-
 /***=============================================================================
 0. Breadcrumb
 =============================================================================***/
 
 .breadcrumb {
+  &.is-narrow {
+    margin-bottom: 10px;
+  }
 
-    &.is-narrow {
-        margin-bottom: 10px;
-    }
+  ul {
+    li {
+      a {
+        font-family: $font-text;
+        color: $light-blue-grey;
 
-    ul {
-        li {
-            a {
-                font-family: $font-text;
-                color: $light-blue-grey;
-
-                &:hover {
-                    color: $primary;
-                }
-
-                .icon {
-
-                    &.is-solo {
-                        margin-right: 0;
-
-                        svg {
-                            top: 2px;
-                        }
-                    }
-
-                    svg {
-                        position: relative;
-                        top: 0;
-                        height: 16px;
-                        min-width: 16px;
-                    }
-                }
-            }
+        &:hover {
+          color: $primary;
         }
+
+        .icon {
+          &.is-solo {
+            margin-right: 0;
+
+            svg {
+              top: 2px;
+            }
+          }
+
+          svg {
+            position: relative;
+            top: 0;
+            height: 16px;
+            min-width: 16px;
+          }
+        }
+      }
     }
+  }
 }
