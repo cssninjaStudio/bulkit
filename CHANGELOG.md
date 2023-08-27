@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.7.1](https://github.com/cssninjaStudio/bulkit/compare/v5.7.0...v5.7.1) (2023-08-27)
+
+
+### Bug Fixes
+
+* release template environment value ([8d4e02a](https://github.com/cssninjaStudio/bulkit/commit/8d4e02af386510cff97aba4c536060cbe2a7785e))
+* remove gulp lint tasks ([cab9a6e](https://github.com/cssninjaStudio/bulkit/commit/cab9a6e20c3efbecaaf6a99b11a0d7f003b1b126))
+
 ## [5.7.0](https://github.com/cssninjaStudio/bulkit/compare/v5.6.1...v5.7.0) (2023-08-27)
 
 
