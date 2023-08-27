@@ -1,6 +1,4 @@
 import gulp from 'gulp'
-import log from 'fancy-log'
-import colors from 'ansi-colors'
 import sassCompiler from 'sass'
 import gulpSass from 'gulp-sass'
 import bourbon from 'node-bourbon'
@@ -13,10 +11,7 @@ import sourcemaps from 'gulp-sourcemaps'
 import purgecss from 'gulp-purgecss'
 import * as imagemin from 'gulp-imagemin'
 import prettyHtml from 'gulp-pretty-html'
-import sassLint from 'gulp-sass-lint'
-import htmllint from 'gulp-htmllint'
 import replace from 'gulp-replace'
-import jshint from 'gulp-jshint'
 import newer from 'gulp-newer'
 import autoprefixer from 'gulp-autoprefixer'
 import accessibility from 'gulp-accessibility'
@@ -409,44 +404,6 @@ function cssVendor() {
 OPTIMIZATION TASKS
 ========================================================================== */
 
-function scssLint() {
-  console.info(logSymbols.info, 'Linting Sass...')
-  return src('src/assets/scss/**/*.scss')
-    .pipe(
-      sassLint({
-        configFile: '.scss-lint.yml',
-      }),
-    )
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
-}
-
-function htmlLint() {
-  console.info(logSymbols.info, 'Linting HTML...')
-  return src('dist/*.html').pipe(htmllint({}, htmllintReporter))
-}
-
-function htmllintReporter(filepath, issues) {
-  if (issues.length > 0) {
-    issues.forEach(function (issue) {
-      log(
-        colors.cyan('[gulp-htmllint] ') +
-          colors.white(filepath + ' [' + issue.line + ']: ') +
-          colors.red('(' + issue.code + ') ' + issue.msg),
-      )
-    })
-    process.exitCode = 1
-  } else {
-    console.info(logSymbols.info, 'No Linting Errors...')
-  }
-}
-
-function jsLint() {
-  return src('src/assets/js/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-}
-
 function prettyHTML() {
   console.info(logSymbols.info, 'Running Pretty on HTML...')
   return src('dist/*.html')
@@ -480,9 +437,6 @@ function HTMLAccessibility() {
     )
     .pipe(dest('accessibility-reports'))
 }
-
-// RUN ALL LINTERS
-const linters = series(htmlLint, scssLint, jsLint)
 
 // RUN ACCESSIILITY CHECK
 const a11y = HTMLAccessibility
