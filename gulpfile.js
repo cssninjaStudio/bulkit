@@ -1,5 +1,3 @@
-'use strict'
-
 import gulp from 'gulp'
 import log from 'fancy-log'
 import colors from 'ansi-colors'
