@@ -20,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build (pnpm)
-        run: pnpm build
+      - name: Prettier
+        run: pnpm test:lint
