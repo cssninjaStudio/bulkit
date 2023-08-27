@@ -17,6 +17,8 @@ services:
       traefik.http.routers.bulkit-demo-https.tls: true
       traefik.http.routers.bulkit-demo-https.entrypoints: "https"
       traefik.http.routers.bulkit-demo-https.tls.certresolver: "http"
+      traefik.http.routers.bulkit-demo-https.middlewares: bulkit-demo-middleware@docker
+      traefik.http.middlewares.bulkit-demo-middleware.compress: true
 
 networks:
   cssninja-services:

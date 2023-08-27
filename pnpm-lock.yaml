@@ -164,7 +164,7 @@ devDependencies:
     specifier: 1.66.1
     version: 1.66.1
   serve:
-    specifier: ^14.2.1
+    specifier: 14.2.1
     version: 14.2.1
 
 packages:
