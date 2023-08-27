@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "preview": "http-server dist -s -p 5000"
+    "preview": "serve -p 5000 dist"
   },
   "devDependencies": {
     "@babel/core": "7.22.11",
@@ -42,12 +42,12 @@
     "gulp-sass-lint": "1.4.0",
     "gulp-sourcemaps": "3.0.0",
     "gulp-uglify-es": "3.0.0",
-    "http-server": "14.1.1",
     "jshint": "2.13.6",
     "log-symbols": "5.1.0",
     "node-bourbon": "4.2.8",
     "panini": "1.7.2",
-    "sass": "1.66.1"
+    "sass": "1.66.1",
+    "serve": "14.2.1"
   },
   "dependencies": {
     "@claviska/jquery-dropdown": "2.0.3",
