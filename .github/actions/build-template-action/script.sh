@@ -24,7 +24,7 @@ echo "::group::building ${ARCHIVE}"
 echo "::debug::${ARCHIVE}"
 
 # remove "development" in constants.js
-sed -i 's/env = "development"/env = ""/g' src/assets/js/utilities/constants.js
+sed -i 's/env = 'development'/env = ''/g' src/assets/js/utilities/constants.js
 
 # top level zip release-${INPUT_PROJECT}-${INPUT_TAG}.zip 
 zip -r $ARCHIVE . \
