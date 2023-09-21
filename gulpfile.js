@@ -481,4 +481,4 @@ const build = series(
   purgeCSS,
 )
 
-export { linters, a11y, setup, dev, build, minifyImagesSrc }
+export { a11y, setup, dev, build, minifyImagesSrc }
