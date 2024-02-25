@@ -14,7 +14,6 @@ import prettyHtml from 'gulp-pretty-html'
 import replace from 'gulp-replace'
 import newer from 'gulp-newer'
 import autoprefixer from 'gulp-autoprefixer'
-import accessibility from 'gulp-accessibility'
 import logSymbols from 'log-symbols'
 import bc from 'browser-sync'
 import packageJson from './package.json' assert { type: 'json' }
@@ -417,30 +416,6 @@ function prettyHTML() {
     .pipe(dest('dist'))
 }
 
-function HTMLAccessibility() {
-  return src('dist/*.html')
-    .pipe(
-      accessibility({
-        force: true,
-      }),
-    )
-    .on('error', console.error)
-    .pipe(
-      accessibility.report({
-        reportType: 'txt',
-      }),
-    )
-    .pipe(
-      rename({
-        extname: '.txt',
-      }),
-    )
-    .pipe(dest('accessibility-reports'))
-}
-
-// RUN ACCESSIILITY CHECK
-const a11y = HTMLAccessibility
-
 //SETUP
 const setup = series(setupBulma)
 
@@ -481,4 +456,4 @@ const build = series(
   purgeCSS,
 )
 
-export { a11y, setup, dev, build, minifyImagesSrc }
+export { setup, dev, build, minifyImagesSrc }
