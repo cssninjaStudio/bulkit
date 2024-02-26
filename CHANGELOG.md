@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.7.2](https://github.com/cssninjaStudio/bulkit/compare/v5.7.1...v5.7.2) (2024-02-26)
+
+
+### Bug Fixes
+
+* remove linters gulp task ([81f3aa9](https://github.com/cssninjaStudio/bulkit/commit/81f3aa99a693d61857acfeba9bf152ff9d0de4e0))
+* remove phantomjs to fix install on macos ([18a2634](https://github.com/cssninjaStudio/bulkit/commit/18a26342ed12c9193c33f52d9bdb5a81da00939a))
+
 ### [5.7.1](https://github.com/cssninjaStudio/bulkit/compare/v5.7.0...v5.7.1) (2023-08-27)
 
 
