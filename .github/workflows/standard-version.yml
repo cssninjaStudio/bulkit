@@ -16,15 +16,15 @@ jobs:
     needs: [tests]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # needed for git history
           token: ${{ secrets.APP_GITHUB_TOKEN }}
         
       - run: corepack enable
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "pnpm"
 
       - run: | 

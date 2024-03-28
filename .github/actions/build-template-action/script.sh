@@ -50,4 +50,4 @@ echo "::endgroup::"
 
 echo "### ${INPUT_PROJECT^} ${INPUT_TAG} :rocket:" >> $GITHUB_STEP_SUMMARY
 
-echo "::set-output name=filepath::${ARCHIVE}"
+echo "filepath=${ARCHIVE}" >> "$GITHUB_OUTPUT"

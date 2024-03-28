@@ -1,4 +1,6 @@
-version: "3.7"
+networks:
+  cssninja-services:
+    external: true
 
 services:
   bulkit-demo:
@@ -20,6 +22,3 @@ services:
       traefik.http.routers.bulkit-demo-https.middlewares: bulkit-demo-middleware@docker
       traefik.http.middlewares.bulkit-demo-middleware.compress: true
 
-networks:
-  cssninja-services:
-    external: true
