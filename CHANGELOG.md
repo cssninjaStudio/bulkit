@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.8.0](https://github.com/cssninjaStudio/bulkit/compare/v5.7.2...v5.8.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([84ca801](https://github.com/cssninjaStudio/bulkit/commit/84ca801c74ca1ade78dceb3f33142ddcf5aac24a))
+
 ### [5.7.2](https://github.com/cssninjaStudio/bulkit/compare/v5.7.1...v5.7.2) (2024-02-26)
 
 
